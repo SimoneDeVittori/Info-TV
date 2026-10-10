@@ -378,3 +378,14 @@ main{position:fixed}
  .plan.screen:not(.van-screen){height:auto;min-height:calc(100dvh - 77px);padding:0}
  .plan.screen:not(.van-screen) .work-plan{width:100%;height:auto;aspect-ratio:1672 / 941;max-height:none;margin:0}
 }
+
+/* Two month buttons share the phone navigation; the next plan unlocks on the 15th. */
+@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+ .phone-navigation{gap:8px}
+ .phone-navigation .phone-plan-buttons{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;flex:1;min-width:0}
+ .phone-navigation .phone-plan-buttons button{flex-direction:column;gap:4px;padding:6px;font-size:14px;line-height:1.15;white-space:normal}
+ .phone-navigation .phone-plan-buttons button small{font:10px/1.2 system-ui,sans-serif}
+ .phone-navigation .phone-plan-buttons button:disabled{background:#a5a8ab;color:#fff;cursor:default;opacity:1}
+ .phone-navigation .phone-plan-buttons button[aria-pressed="true"]{box-shadow:inset 0 0 0 2px #bd390e}
+ .phone-navigation .phone-home-button{width:56px;flex:0 0 56px;padding:8px}
+}

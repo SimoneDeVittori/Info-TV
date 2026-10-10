@@ -1,4 +1,4 @@
-import {PLAN_FILE,PLAN_METADATA,renderWorkPlanPdf} from './plan-pdf.js?v=20261011-plan-pdf';
+import {PLAN_FILE,PLAN_METADATA,renderWorkPlanPdf,NEXT_PLAN_FILE,NEXT_PLAN_METADATA,renderNextPlanPdf,isNextPlanAvailable,NEXT_PLAN_AVAILABLE_LABEL,planRotation} from './plan-pdf.js?v=20261011-next-plan';
 'use client';
 import {useEffect,useState,createElement as rainElement} from 'react';
 import {Cloud,Sun,CloudSun,CloudRain,CloudLightning,Snowflake,Droplets} from 'lucide-react';
@@ -32,22 +32,27 @@ function renderTodayRain(hourly,now){
  h('div',{className:'today-rain-axis'},...['00','02','04','06','08','10','12','14','16','18','20','22','24'].map(t=>h('span',{key:t},t))));
 }
 
-function renderWorkPlan(now){
+function renderWorkPlan(now,nextMonth=false){
+ const file=nextMonth?NEXT_PLAN_FILE:PLAN_FILE;
+ const meta=nextMonth?NEXT_PLAN_METADATA:PLAN_METADATA;
+ const renderer=nextMonth?renderNextPlanPdf:renderWorkPlanPdf;
+ const gradient=nextMonth?'next-plan-title-gradient':'plan-title-gradient';
+ const crop=nextMonth?{x:17,y:53,width:998,height:674,dayStart:151.7,dayStep:28.68,bottom:725.62}:{x:17,y:53,width:1056,height:695,dayStart:156.02,dayStep:29.52,bottom:746.856};
  const day=(now||new Date()).toLocaleDateString('sv-SE',{timeZone:'Europe/Zurich'});
- const period=String(PLAN_METADATA.year)+'-'+String(PLAN_METADATA.month).padStart(2,'0');
+ const period=String(meta.year)+'-'+String(meta.month).padStart(2,'0');
  const current=day.slice(0,7)===period?Number(day.slice(-2)):0;
  const h=rainElement;
- return h('div',{className:'work-plan',role:'img','aria-label':'Piano dei turni '+PLAN_METADATA.title+'. Aggiornato al '+PLAN_METADATA.updated+(current?'. Giorno '+current+' evidenziato':'')},
+ return h('div',{className:'work-plan',role:'img','aria-label':'Piano dei turni '+meta.title+(nextMonth?'':'. Aggiornato al '+meta.updated)+(current?'. Giorno '+current+' evidenziato':'')},
  h('div',{className:'work-plan-stage'},
  h('div',{className:'plan-pdf-surface','data-status':'loading'},
- h('canvas',{ref:renderWorkPlanPdf,'aria-label':'Tabella del piano '+PLAN_METADATA.title}),
+ h('canvas',{ref:renderer,'aria-label':'Tabella del piano '+meta.title}),
  h('span',{className:'plan-pdf-loading'},'Caricamento del piano…'),
- h('a',{className:'plan-pdf-error',href:PLAN_FILE.url,target:'_blank',rel:'noreferrer'},'Apri il piano PDF')),
+ h('a',{className:'plan-pdf-error',href:file.url,target:'_blank',rel:'noreferrer'},'Apri il piano PDF')),
  h('svg',{className:'work-plan-overlay',viewBox:'0 0 1672 941','aria-hidden':true,preserveAspectRatio:'none'},
- h('defs',null,h('linearGradient',{id:'plan-title-gradient',x1:'0%',y1:'0%',x2:'100%',y2:'0%'},h('stop',{offset:'0%',stopColor:'#f09600'}),h('stop',{offset:'100%',stopColor:'#de3c20'}))),
- h('text',{transform:'translate(145 751) rotate(-90)',fontSize:88,fontWeight:800,fontFamily:'Arial, sans-serif',textLength:680,lengthAdjust:'spacingAndGlyphs',fill:'url(#plan-title-gradient)'},PLAN_METADATA.title),
- h('text',{transform:'translate(195 460) rotate(-90)',fontSize:34,fontWeight:700,fontFamily:'Arial, sans-serif',fill:'#454545'},'AGGIORNATO AL '+PLAN_METADATA.updated),
- current?h('rect',{className:'plan-today-highlight',x:263+(156.02-17)/1056*1400+(current-1)*(29.52/1056*1400),y:6+922/695,width:29.52/1056*1400,height:(746.856-54)/695*922,fill:'#f09600',fillOpacity:0.22,stroke:'#e86b00',strokeOpacity:0.7,strokeWidth:1.5,pointerEvents:'none'}):null)));
+ h('defs',null,h('linearGradient',{id:gradient,x1:'0%',y1:'0%',x2:'100%',y2:'0%'},h('stop',{offset:'0%',stopColor:'#f09600'}),h('stop',{offset:'100%',stopColor:'#de3c20'}))),
+ h('text',{transform:'translate(145 751) rotate(-90)',fontSize:88,fontWeight:800,fontFamily:'Arial, sans-serif',textLength:680,lengthAdjust:'spacingAndGlyphs',fill:'url(#'+gradient+')'},meta.title),
+ nextMonth?null:h('text',{transform:'translate(195 460) rotate(-90)',fontSize:34,fontWeight:700,fontFamily:'Arial, sans-serif',fill:'#454545'},'AGGIORNATO AL '+meta.updated),
+ current?h('rect',{className:'plan-today-highlight',x:263+(crop.dayStart-crop.x)/crop.width*1400+(current-1)*(crop.dayStep/crop.width*1400),y:6+922/crop.height,width:crop.dayStep/crop.width*1400,height:(crop.bottom-54)/crop.height*922,fill:'#f09600',fillOpacity:0.22,stroke:'#e86b00',strokeOpacity:0.7,strokeWidth:1.5,pointerEvents:'none'}):null)));
 }
 
 function isPhoneDisplay(){return window.matchMedia("(pointer: coarse) and (max-width: 600px), (pointer: coarse) and (max-height: 600px)").matches;}
@@ -57,13 +62,24 @@ function renderPhoneHomeIcon(){
  h('path',{d:'M8 29 32 9 56 29V54a3 3 0 0 1-3 3H11a3 3 0 0 1-3-3Z',fill:'none',stroke:'#fff',strokeWidth:3,strokeLinecap:'round',strokeLinejoin:'round'}),
  h('svg',{x:20,y:25,width:24,height:24,viewBox:'0 0 120 121',overflow:'hidden'},h('path',{className:'home-unilabs-symbol',d:"M42,1 52,1 52,2 55,4 55,32 56,32 57,35 61,36 61,35 63,35 64,32 65,32 65,5 66,5 66,3 67,3 68,1 78,1 78,16 79,16 79,15 80,15 80,14 81,14 81,13 82,13 82,12 83,12 88,6 91,6 91,7 95,10 95,12 96,12 96,18 95,18 95,19 94,19 94,20 93,20 93,21 92,21 92,22 91,22 91,23 90,23 90,24 89,24 89,25 88,25 88,26 87,26 87,27 86,27 86,28 85,28 85,29 84,29 84,30 83,30 83,31 77,36 77,38 76,38 77,43 78,43 78,44 83,44 83,43 85,43 85,42 86,42 86,41 87,41 87,40 88,40 88,39 89,39 89,38 90,38 90,37 91,37 91,36 92,36 92,35 93,35 93,34 94,34 94,33 95,33 95,32 96,32 96,31 97,31 102,25 109,25 109,26 111,26 111,27 115,30 115,32 114,32 114,33 113,33 113,34 112,34 112,35 111,35 111,36 105,41 105,43 120,43 120,51 119,51 119,53 118,53 117,55 115,55 115,56 87,56 87,57 85,58 85,63 86,63 87,65 114,65 114,66 117,66 117,67 119,68 119,70 120,70 120,78 104,78 104,79 105,79 105,80 106,80 106,81 107,81 107,82 108,82 108,83 109,83 109,84 115,89 115,91 114,91 110,96 105,97 105,96 102,96 102,95 101,95 101,94 100,94 100,93 99,93 99,92 98,92 98,91 97,91 97,90 96,90 96,89 95,89 95,88 94,88 94,87 93,87 93,86 92,86 92,85 91,85 91,84 90,84 85,78 83,78 83,77 78,77 77,80 76,80 77,85 78,85 78,86 79,86 79,87 80,87 80,88 81,88 81,89 82,89 82,90 83,90 83,91 84,91 84,92 85,92 85,93 86,93 86,94 87,94 87,95 88,95 88,96 89,96 89,97 90,97 90,98 96,103 96,109 95,109 95,111 94,111 91,115 88,115 88,114 87,114 87,113 86,113 86,112 85,112 85,111 84,111 84,110 78,105 78,120 77,120 68,120 68,119 66,118 66,116 65,116 65,89 64,89 63,86 59,85 59,86 57,86 56,89 55,89 55,117 54,117 52,120 42,120 42,105 41,105 41,106 40,106 40,107 39,107 39,108 38,108 38,109 37,109 32,115 29,115 29,114 25,111 25,109 24,109 24,104 25,104 25,102 26,102 26,101 27,101 27,100 28,100 28,99 29,99 29,98 30,98 30,97 31,97 31,96 32,96 32,95 33,95 33,94 34,94 34,93 35,93 35,92 36,92 36,91 37,91 37,90 43,85 43,83 44,83 44,79 43,79 42,77 37,77 37,78 35,78 35,79 34,79 34,80 33,80 33,81 32,81 32,82 31,82 31,83 30,83 30,84 29,84 29,85 28,85 28,86 27,86 27,87 26,87 26,88 25,88 25,89 24,89 24,90 23,90 18,96 15,96 15,97 14,97 14,96 9,95 9,94 5,91 5,89 6,89 6,88 7,88 7,87 8,87 8,86 9,86 9,85 10,85 10,84 11,84 16,78 0,78 0,70 1,70 1,68 2,68 3,66 6,66 6,65 33,65 33,64 35,63 35,58 34,58 33,56 5,56 5,55 3,55 3,54 1,53 1,51 0,51 0,43 16,43 16,42 15,42 15,41 14,41 14,40 13,40 13,39 12,39 12,38 11,38 11,37 5,32 5,30 6,30 9,26 11,26 11,25 18,25 18,26 19,26 19,27 20,27 20,28 21,28 21,29 22,29 22,30 23,30 23,31 24,31 24,32 25,32 25,33 26,33 26,34 27,34 27,35 28,35 28,36 29,36 29,37 30,37 35,43 37,43 37,44 42,44 42,43 44,42 44,38 43,38 43,36 42,36 42,35 41,35 41,34 40,34 40,33 39,33 39,32 38,32 38,31 37,31 37,30 36,30 36,29 35,29 35,28 34,28 34,27 33,27 33,26 32,26 32,25 31,25 31,24 25,19 25,17 24,17 24,12 26,11 26,9 27,9 29,6 32,6 32,7 33,7 33,8 34,8 34,9 35,9 35,10 36,10 36,11 42,16Z M55,46 54,46 54,47 53,47 53,48 52,48 52,49 46,54 46,67 47,67 47,68 48,68 48,69 49,69 54,75 67,75 67,73 68,73 68,72 69,72 69,71 75,66 75,65 74,65 74,56 75,56 75,55 74,55 74,54 73,54 73,53 72,53 72,52 71,52 66,46Z",fill:'#fff',fillRule:'evenodd',opacity:1})));
 }
-function renderPhoneNavigation(page,setPage){return rainElement('nav',{className:'phone-navigation','aria-label':'Navigazione mobile'},rainElement('button',{type:'button','aria-label':page===1?'Homepage':'Piano di lavoro',onClick:()=>{setPage(page===1?0:1);window.scrollTo(0,0);}},page===1?renderPhoneHomeIcon():'Piano di lavoro'));}
+function renderPhoneNavigation(page,setPage,now){
+ const h=rainElement,available=isNextPlanAvailable(now||new Date());
+ const go=target=>{setPage(target);window.scrollTo(0,0);};
+ return h('nav',{className:'phone-navigation','aria-label':'Navigazione mobile'},
+ page!==0?h('button',{type:'button',className:'phone-home-button','aria-label':'Homepage',onClick:()=>go(0)},renderPhoneHomeIcon()):null,
+ h('div',{className:'phone-plan-buttons'},
+ h('button',{type:'button','aria-pressed':page===1,onClick:()=>go(1)},'Piano di '+PLAN_METADATA.name),
+ h('button',{type:'button',disabled:!available,'aria-pressed':page===4,onClick:()=>{if(available)go(4);}},
+ h('span',null,'Piano di '+NEXT_PLAN_METADATA.name),
+ !available?h('small',null,'Disponibile dal '+NEXT_PLAN_AVAILABLE_LABEL):null)));
+}
 
 export default function Home(){
  const [phone,setPhone]=useState(()=>isPhoneDisplay());
  const [now,setNow]=useState<Date|null>(null);const [page,setPage]=useState(0);const [data,setData]=useState<any>({});const [failed,setFailed]=useState(false);const [controls,setControls]=useState(false);
- useEffect(()=>{const resize=()=>{document.documentElement.style.setProperty('--tv-scale',String(Math.min(window.innerWidth/1920,window.innerHeight/1080)));const mobile=isPhoneDisplay();setPhone(mobile);if(mobile)setPage(p=>p>1?0:p);};resize();window.addEventListener('resize',resize);setNow(new Date());const clock=setInterval(()=>{setNow(new Date());if(!isSwissMapTime())setPage(p=>p===3?0:p);},1000);let alive=true;async function refresh(){try{const r=await fetch('./data.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error();const d=await r.json();if(alive){setData((old:any)=>({...d,weather:d.weather??old.weather,news:d.news??old.news}));setFailed(false);}}catch{if(alive)setFailed(true);}}refresh();const poll=setInterval(refresh,180000);const visibility=()=>{if(!document.hidden)refresh();};document.addEventListener('visibilitychange',visibility);return()=>{window.removeEventListener('resize',resize);alive=false;clearInterval(clock);clearInterval(poll);document.removeEventListener('visibilitychange',visibility);};},[]);
- useEffect(()=>{if(phone)return;const rotation=setTimeout(()=>setPage(p=>{if(isPhoneDisplay())return p;const next=(p+1)%4;return next===3&&!isSwissMapTime()?0:next;}),page===0?25000:page===2?7000:page===3?10000:20000);return()=>clearTimeout(rotation);},[page,phone]);
+ useEffect(()=>{const resize=()=>{document.documentElement.style.setProperty('--tv-scale',String(Math.min(window.innerWidth/1920,window.innerHeight/1080)));const mobile=isPhoneDisplay();setPhone(mobile);if(mobile)setPage(p=>p===2||p===3?0:p);};resize();window.addEventListener('resize',resize);setNow(new Date());const clock=setInterval(()=>{setNow(new Date());if(!isSwissMapTime())setPage(p=>p===3?0:p);},1000);let alive=true;async function refresh(){try{const r=await fetch('./data.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error();const d=await r.json();if(alive){setData((old:any)=>({...d,weather:d.weather??old.weather,news:d.news??old.news}));setFailed(false);}}catch{if(alive)setFailed(true);}}refresh();const poll=setInterval(refresh,180000);const visibility=()=>{if(!document.hidden)refresh();};document.addEventListener('visibilitychange',visibility);return()=>{window.removeEventListener('resize',resize);alive=false;clearInterval(clock);clearInterval(poll);document.removeEventListener('visibilitychange',visibility);};},[]);
+ const nextPlanAvailable=isNextPlanAvailable(now||new Date());
+ useEffect(()=>{if(phone)return;const rotation=setTimeout(()=>setPage(p=>{if(isPhoneDisplay())return p;const pages=planRotation();return pages[(pages.indexOf(p)+1)%pages.length];}),page===0?25000:page===2?7000:page===3?10000:20000);return()=>clearTimeout(rotation);},[page,phone,nextPlanAvailable]);
  useEffect(()=>{if(!controls)return;const t=setTimeout(()=>setControls(false),3500);return()=>clearTimeout(t);},[controls]);
  const week=data.week;
  const rainWindow=(day:string)=>{
@@ -75,7 +91,7 @@ export default function Home(){
  };
  const w=data.weather;const n=data.news;const traffic=data.traffic;const staleTraffic=failed||data.trafficError||(traffic&&Date.now()-new Date(traffic.updatedAt).getTime()>1800000);const staleWeather=failed||data.weatherError||(w&&Date.now()-new Date(w.updatedAt).getTime()>1800000);const staleNews=failed||data.newsError||(n&&Date.now()-new Date(n.updatedAt).getTime()>1800000);
  return <main onPointerMove={()=>setControls(true)}>
-  {renderPhoneNavigation(page,setPage)}
+  {renderPhoneNavigation(page,setPage,now)}
   <section className={'dashboard screen '+(page===0?'active':'')} aria-hidden={page!==0}>
    <header><div><div className="date">{renderBrandDate(now)}</div></div><time className="header-clock">{now?fmtTime(now):'—'}</time><img className="logo" src="./unilabs-logo.png" alt="Unilabs"/></header>
    <div className="content"><article className="weather card"><div className="weather-heading"><div className="section-label">METEO LOCALE</div><h1>Manno</h1></div><div className="weather-now"><span className="temperature">{w?Math.round(w.current.temperature)+'°':'—'}</span><span className="weather-icon">{w&&<WeatherIcon code={w.current.iconV2??w.current.icon} size={120} current/>}</span></div><p className="weather-note">{w?'Temperatura attuale':staleWeather?'Meteo temporaneamente non disponibile':'Caricamento del meteo…'}</p>
@@ -88,6 +104,7 @@ export default function Home(){
    <footer><small className="creator-copyright">© SimDev3D</small><span>Unilabs Ticino · Centro Galleria 3, Via Cantonale 4, 6928 Manno</span><div className="page-dots"><i className="selected"/><i/><i/><i/></div></footer><div className="progress" key={page===0?'dashboard':'hidden'}/>
   </section>
   <section className={'plan screen '+(page===1?'active':'')} aria-hidden={page!==1}>{renderWorkPlan(now)}<div className="progress" key={page===1?"plan":"plan-hidden"}/></section>
+  {nextPlanAvailable&&<section className={'plan next-plan screen '+(page===4?'active':'')} aria-hidden={page!==4}>{renderWorkPlan(now,true)}<div className="progress" key={page===4?"next-plan":"next-plan-hidden"}/></section>}
   <section className={'plan van-screen screen '+(page===2?'active':'')} aria-hidden={page!==2}><img src="./furgone-autunno.png" alt="Servizio Esterno Unilabs in autunno"/><div className="progress" style={{animationDuration:"7s"}} key={page===2?"autumn":"autumn-hidden"}/>{renderTravelVan(page===2)}</section>
   <section className={'dashboard swiss-map-screen screen '+(page===3?'active':'')} aria-hidden={page!==3}>
    <header><div><div className="date">{renderBrandDate(now)}</div></div><time className="header-clock">{now?fmtTime(now):'—'}</time><img className="logo" src="./unilabs-logo.png" alt="Unilabs"/></header>
