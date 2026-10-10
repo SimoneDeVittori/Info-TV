@@ -107,13 +107,15 @@ function usePhonePullRefresh(phone){
  const [pull,setPull]=useState({distance:0,busy:false});
  useEffect(()=>{
   if(!phone)return;
-  let startX=0,startY=0,distance=0,tracking=false,dragging=false,reloading=false,reloadTimer;
+  let startX=0,startY=0,distance=0,tracking=false,dragging=false,reloading=false,reloadTimer,fromNavigation=false;
   const reset=()=>{tracking=false;dragging=false;distance=0;setPull({distance:0,busy:false});};
   const start=(event)=>{
-   if(reloading||event.touches.length!==1||window.scrollY>1)return;
+   if(reloading||event.touches.length!==1)return;
+   fromNavigation=!!event.target.closest?.('.phone-navigation');
+   if(!fromNavigation&&window.scrollY>4)return;
    // Allow ordinary scrolling inside any independently scrollable content.
-   for(let el=event.target;el&&el!==document.body;el=el.parentElement){
-    if(el.scrollTop>1&&el.scrollHeight>el.clientHeight)return;
+   for(let el=event.target;!fromNavigation&&el&&el!==document.body&&el!==document.documentElement;el=el.parentElement){
+    if(el.scrollTop>4&&/(auto|scroll)/.test(window.getComputedStyle(el).overflowY)&&el.scrollHeight>el.clientHeight)return;
    }
    startX=event.touches[0].clientX;startY=event.touches[0].clientY;
    distance=0;tracking=true;dragging=false;
@@ -123,8 +125,8 @@ function usePhonePullRefresh(phone){
    if(event.touches.length!==1){reset();return;}
    const dy=event.touches[0].clientY-startY,dx=Math.abs(event.touches[0].clientX-startX);
    if(!dragging&&(dy<0||dx>Math.max(12,dy))){reset();return;}
-   if(dy<=8&&!dragging)return;
-   if(window.scrollY>1){reset();return;}
+   if(dy<=0&&!dragging)return;
+   if(!fromNavigation&&window.scrollY>4){reset();return;}
    dragging=true;
    if(event.cancelable)event.preventDefault();
    distance=Math.min(80,Math.max(0,dy*.5));
@@ -137,13 +139,13 @@ function usePhonePullRefresh(phone){
     reloadTimer=window.setTimeout(()=>window.location.reload(),240);
    }else reset();
   };
-  window.addEventListener('touchstart',start,{passive:true});
-  window.addEventListener('touchmove',move,{passive:false});
-  window.addEventListener('touchend',end);
-  window.addEventListener('touchcancel',reset);
+  document.addEventListener('touchstart',start,{passive:true,capture:true});
+  document.addEventListener('touchmove',move,{passive:false,capture:true});
+  document.addEventListener('touchend',end,true);
+  document.addEventListener('touchcancel',reset,true);
   return()=>{
-   window.removeEventListener('touchstart',start);window.removeEventListener('touchmove',move);
-   window.removeEventListener('touchend',end);window.removeEventListener('touchcancel',reset);
+   document.removeEventListener('touchstart',start,true);document.removeEventListener('touchmove',move,true);
+   document.removeEventListener('touchend',end,true);document.removeEventListener('touchcancel',reset,true);
    window.clearTimeout(reloadTimer);
   };
  },[phone]);

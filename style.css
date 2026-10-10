@@ -413,3 +413,5 @@ main{position:fixed}
 }
 @keyframes phone-refresh-spin{to{transform:rotate(360deg)}}
 @media (prefers-reduced-motion:reduce){.phone-pull-refresh .phone-pull-refresh-icon{animation:none}}
+
+@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){body,main{overscroll-behavior-y:none}}
