@@ -79,8 +79,56 @@ function renderPhoneNavigation(page,setPage,now){
  !available?h('small',null,state.unlocked?'PDF non ancora disponibile':'Disponibile dal '+state.availableLabel):null)));
 }
 
+function renderRefreshLogo(){return rainElement('svg',{className:'phone-pull-refresh-icon',width:26,height:26,viewBox:'0 0 120 121','aria-hidden':true,focusable:'false'},rainElement('path',{d:"M42,1 52,1 52,2 55,4 55,32 56,32 57,35 61,36 61,35 63,35 64,32 65,32 65,5 66,5 66,3 67,3 68,1 78,1 78,16 79,16 79,15 80,15 80,14 81,14 81,13 82,13 82,12 83,12 88,6 91,6 91,7 95,10 95,12 96,12 96,18 95,18 95,19 94,19 94,20 93,20 93,21 92,21 92,22 91,22 91,23 90,23 90,24 89,24 89,25 88,25 88,26 87,26 87,27 86,27 86,28 85,28 85,29 84,29 84,30 83,30 83,31 77,36 77,38 76,38 77,43 78,43 78,44 83,44 83,43 85,43 85,42 86,42 86,41 87,41 87,40 88,40 88,39 89,39 89,38 90,38 90,37 91,37 91,36 92,36 92,35 93,35 93,34 94,34 94,33 95,33 95,32 96,32 96,31 97,31 102,25 109,25 109,26 111,26 111,27 115,30 115,32 114,32 114,33 113,33 113,34 112,34 112,35 111,35 111,36 105,41 105,43 120,43 120,51 119,51 119,53 118,53 117,55 115,55 115,56 87,56 87,57 85,58 85,63 86,63 87,65 114,65 114,66 117,66 117,67 119,68 119,70 120,70 120,78 104,78 104,79 105,79 105,80 106,80 106,81 107,81 107,82 108,82 108,83 109,83 109,84 115,89 115,91 114,91 110,96 105,97 105,96 102,96 102,95 101,95 101,94 100,94 100,93 99,93 99,92 98,92 98,91 97,91 97,90 96,90 96,89 95,89 95,88 94,88 94,87 93,87 93,86 92,86 92,85 91,85 91,84 90,84 85,78 83,78 83,77 78,77 77,80 76,80 77,85 78,85 78,86 79,86 79,87 80,87 80,88 81,88 81,89 82,89 82,90 83,90 83,91 84,91 84,92 85,92 85,93 86,93 86,94 87,94 87,95 88,95 88,96 89,96 89,97 90,97 90,98 96,103 96,109 95,109 95,111 94,111 91,115 88,115 88,114 87,114 87,113 86,113 86,112 85,112 85,111 84,111 84,110 78,105 78,120 77,120 68,120 68,119 66,118 66,116 65,116 65,89 64,89 63,86 59,85 59,86 57,86 56,89 55,89 55,117 54,117 52,120 42,120 42,105 41,105 41,106 40,106 40,107 39,107 39,108 38,108 38,109 37,109 32,115 29,115 29,114 25,111 25,109 24,109 24,104 25,104 25,102 26,102 26,101 27,101 27,100 28,100 28,99 29,99 29,98 30,98 30,97 31,97 31,96 32,96 32,95 33,95 33,94 34,94 34,93 35,93 35,92 36,92 36,91 37,91 37,90 43,85 43,83 44,83 44,79 43,79 42,77 37,77 37,78 35,78 35,79 34,79 34,80 33,80 33,81 32,81 32,82 31,82 31,83 30,83 30,84 29,84 29,85 28,85 28,86 27,86 27,87 26,87 26,88 25,88 25,89 24,89 24,90 23,90 18,96 15,96 15,97 14,97 14,96 9,95 9,94 5,91 5,89 6,89 6,88 7,88 7,87 8,87 8,86 9,86 9,85 10,85 10,84 11,84 16,78 0,78 0,70 1,70 1,68 2,68 3,66 6,66 6,65 33,65 33,64 35,63 35,58 34,58 33,56 5,56 5,55 3,55 3,54 1,53 1,51 0,51 0,43 16,43 16,42 15,42 15,41 14,41 14,40 13,40 13,39 12,39 12,38 11,38 11,37 5,32 5,30 6,30 9,26 11,26 11,25 18,25 18,26 19,26 19,27 20,27 20,28 21,28 21,29 22,29 22,30 23,30 23,31 24,31 24,32 25,32 25,33 26,33 26,34 27,34 27,35 28,35 28,36 29,36 29,37 30,37 35,43 37,43 37,44 42,44 42,43 44,42 44,38 43,38 43,36 42,36 42,35 41,35 41,34 40,34 40,33 39,33 39,32 38,32 38,31 37,31 37,30 36,30 36,29 35,29 35,28 34,28 34,27 33,27 33,26 32,26 32,25 31,25 31,24 25,19 25,17 24,17 24,12 26,11 26,9 27,9 29,6 32,6 32,7 33,7 33,8 34,8 34,9 35,9 35,10 36,10 36,11 42,16Z M55,46 54,46 54,47 53,47 53,48 52,48 52,49 46,54 46,67 47,67 47,68 48,68 48,69 49,69 54,75 67,75 67,73 68,73 68,72 69,72 69,71 75,66 75,65 74,65 74,56 75,56 75,55 74,55 74,54 73,54 73,53 72,53 72,52 71,52 66,46Z",fill:'#f7a600',fillRule:'evenodd'}));}
+
+function usePhonePullRefresh(phone){
+ const [pull,setPull]=useState({distance:0,busy:false});
+ useEffect(()=>{
+  if(!phone)return;
+  let startX=0,startY=0,distance=0,tracking=false,dragging=false,reloading=false;
+  const reset=()=>{tracking=false;dragging=false;distance=0;setPull({distance:0,busy:false});};
+  const start=(event)=>{
+   if(reloading||event.touches.length!==1||window.scrollY>1)return;
+   // Allow ordinary scrolling inside any independently scrollable content.
+   for(let el=event.target;el&&el!==document.body;el=el.parentElement){
+    if(el.scrollTop>1&&el.scrollHeight>el.clientHeight)return;
+   }
+   startX=event.touches[0].clientX;startY=event.touches[0].clientY;
+   distance=0;tracking=true;dragging=false;
+  };
+  const move=(event)=>{
+   if(!tracking||reloading)return;
+   if(event.touches.length!==1){reset();return;}
+   const dy=event.touches[0].clientY-startY,dx=Math.abs(event.touches[0].clientX-startX);
+   if(!dragging&&(dy<0||dx>Math.max(12,dy))){reset();return;}
+   if(dy<=8&&!dragging)return;
+   if(window.scrollY>1){reset();return;}
+   dragging=true;
+   if(event.cancelable)event.preventDefault();
+   distance=Math.min(80,Math.max(0,dy*.5));
+   setPull({distance,busy:false});
+  };
+  const end=()=>{
+   if(!tracking)return;
+   if(dragging&&distance>=60){
+    tracking=false;reloading=true;setPull({distance:60,busy:true});window.location.reload();
+   }else reset();
+  };
+  window.addEventListener('touchstart',start,{passive:true});
+  window.addEventListener('touchmove',move,{passive:false});
+  window.addEventListener('touchend',end);
+  window.addEventListener('touchcancel',reset);
+  return()=>{
+   window.removeEventListener('touchstart',start);window.removeEventListener('touchmove',move);
+   window.removeEventListener('touchend',end);window.removeEventListener('touchcancel',reset);
+  };
+ },[phone]);
+ return pull;
+}
+
 export default function Home(){
  const [phone,setPhone]=useState(()=>isPhoneDisplay());
+ const pull=usePhonePullRefresh(phone);
  const [now,setNow]=useState<Date|null>(null);const [page,setPage]=useState(()=>isNextPlanPreview()?(isNextPlanAvailable()?4:1):0);const [data,setData]=useState<any>({});const [failed,setFailed]=useState(false);const [controls,setControls]=useState(false);
  useEffect(()=>{const resize=()=>{document.documentElement.style.setProperty('--tv-scale',String(Math.min(window.innerWidth/1920,window.innerHeight/1080)));const mobile=isPhoneDisplay();setPhone(mobile);if(mobile)setPage(p=>p===2||p===3?0:p);};resize();window.addEventListener('resize',resize);setNow(new Date());const clock=setInterval(()=>{setNow(new Date());if(!isSwissMapTime())setPage(p=>p===3?0:p);},1000);let alive=true;async function refresh(){try{const r=await fetch('./data.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error();const d=await r.json();if(alive){setData((old:any)=>({...d,weather:d.weather??old.weather,news:d.news??old.news}));setFailed(false);}}catch{if(alive)setFailed(true);}}refresh();const poll=setInterval(refresh,180000);const visibility=()=>{if(!document.hidden)refresh();};document.addEventListener('visibilitychange',visibility);return()=>{window.removeEventListener('resize',resize);alive=false;clearInterval(clock);clearInterval(poll);document.removeEventListener('visibilitychange',visibility);};},[]);
  const planState=getPlanState(now||new Date());
@@ -98,6 +146,10 @@ export default function Home(){
  };
  const w=data.weather;const n=data.news;const traffic=data.traffic;const staleTraffic=failed||data.trafficError||(traffic&&Date.now()-new Date(traffic.updatedAt).getTime()>1800000);const staleWeather=failed||data.weatherError||(w&&Date.now()-new Date(w.updatedAt).getTime()>1800000);const staleNews=failed||data.newsError||(n&&Date.now()-new Date(n.updatedAt).getTime()>1800000);
  return <main onPointerMove={()=>setControls(true)}>
+  {phone&&<div className={'phone-pull-refresh '+(pull.busy?'is-refreshing':'')} style={{opacity:pull.distance>8?1:0,transform:'translate(-50%, '+(Math.min(pull.distance,60)-70)+'px)'}} role="status" aria-live="polite">
+   {renderRefreshLogo()}
+   <span>{pull.busy?'Aggiornamento…':pull.distance>=60?'Rilascia per aggiornare':'Tira per aggiornare'}</span>
+  </div>}
   {renderPhoneNavigation(page,setPage,now)}
   <section className={'dashboard screen '+(page===0?'active':'')} aria-hidden={page!==0}>
    <header><div><div className="date">{renderBrandDate(now)}</div></div><time className="header-clock">{now?fmtTime(now):'—'}</time><img className="logo" src="./unilabs-logo.png" alt="Unilabs"/></header>

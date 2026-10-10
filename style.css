@@ -402,3 +402,14 @@ main{position:fixed}
 
 /* Realistic transparent van vignettes replace the vector seasonal sketches. */
 .plan.screen:not(.van-screen) .plan-season-scene{left:.25%;bottom:.35%;width:15.2%;height:auto;max-height:none;aspect-ratio:3 / 2;object-fit:contain}
+
+/* Phone-only pull to refresh; suppress the browser's duplicate overscroll action. */
+.phone-pull-refresh{display:none}
+@media (pointer: coarse) and (max-width: 600px), (pointer: coarse) and (max-height: 600px){
+ html{overscroll-behavior-y:none}
+ .phone-pull-refresh{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);left:50%;z-index:30;display:flex;align-items:center;gap:8px;padding:10px 15px;border-radius:24px;background:#fff;color:#b83e16;box-shadow:0 3px 16px #0002;font:600 13px/1.2 system-ui,sans-serif;white-space:nowrap;pointer-events:none}
+ .phone-pull-refresh-icon{font-size:23px;line-height:1}
+ .phone-pull-refresh .phone-pull-refresh-icon{animation:phone-refresh-spin .8s linear infinite}
+}
+@keyframes phone-refresh-spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.phone-pull-refresh .phone-pull-refresh-icon{animation:none}}
