@@ -1,4 +1,4 @@
-import {PLAN_FILE,PLAN_METADATA,renderWorkPlanPdf,NEXT_PLAN_FILE,NEXT_PLAN_METADATA,renderNextPlanPdf,isNextPlanAvailable,NEXT_PLAN_AVAILABLE_LABEL,planRotation} from './plan-pdf.js?v=20261011-next-plan';
+import {PLAN_FILE,PLAN_METADATA,renderWorkPlanPdf,NEXT_PLAN_FILE,NEXT_PLAN_METADATA,renderNextPlanPdf,isNextPlanAvailable,NEXT_PLAN_AVAILABLE_LABEL,planRotation,isNextPlanPreview} from './plan-pdf.js?v=20261011-november-preview';
 'use client';
 import {useEffect,useState,createElement as rainElement} from 'react';
 import {Cloud,Sun,CloudSun,CloudRain,CloudLightning,Snowflake,Droplets} from 'lucide-react';
@@ -76,10 +76,10 @@ function renderPhoneNavigation(page,setPage,now){
 
 export default function Home(){
  const [phone,setPhone]=useState(()=>isPhoneDisplay());
- const [now,setNow]=useState<Date|null>(null);const [page,setPage]=useState(0);const [data,setData]=useState<any>({});const [failed,setFailed]=useState(false);const [controls,setControls]=useState(false);
+ const [now,setNow]=useState<Date|null>(null);const [page,setPage]=useState(()=>isNextPlanPreview()?4:0);const [data,setData]=useState<any>({});const [failed,setFailed]=useState(false);const [controls,setControls]=useState(false);
  useEffect(()=>{const resize=()=>{document.documentElement.style.setProperty('--tv-scale',String(Math.min(window.innerWidth/1920,window.innerHeight/1080)));const mobile=isPhoneDisplay();setPhone(mobile);if(mobile)setPage(p=>p===2||p===3?0:p);};resize();window.addEventListener('resize',resize);setNow(new Date());const clock=setInterval(()=>{setNow(new Date());if(!isSwissMapTime())setPage(p=>p===3?0:p);},1000);let alive=true;async function refresh(){try{const r=await fetch('./data.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error();const d=await r.json();if(alive){setData((old:any)=>({...d,weather:d.weather??old.weather,news:d.news??old.news}));setFailed(false);}}catch{if(alive)setFailed(true);}}refresh();const poll=setInterval(refresh,180000);const visibility=()=>{if(!document.hidden)refresh();};document.addEventListener('visibilitychange',visibility);return()=>{window.removeEventListener('resize',resize);alive=false;clearInterval(clock);clearInterval(poll);document.removeEventListener('visibilitychange',visibility);};},[]);
  const nextPlanAvailable=isNextPlanAvailable(now||new Date());
- useEffect(()=>{if(phone)return;const rotation=setTimeout(()=>setPage(p=>{if(isPhoneDisplay())return p;const pages=planRotation();return pages[(pages.indexOf(p)+1)%pages.length];}),page===0?25000:page===2?7000:page===3?10000:20000);return()=>clearTimeout(rotation);},[page,phone,nextPlanAvailable]);
+ useEffect(()=>{if(phone||isNextPlanPreview())return;const rotation=setTimeout(()=>setPage(p=>{if(isPhoneDisplay())return p;const pages=planRotation();return pages[(pages.indexOf(p)+1)%pages.length];}),page===0?25000:page===2?7000:page===3?10000:20000);return()=>clearTimeout(rotation);},[page,phone,nextPlanAvailable]);
  useEffect(()=>{if(!controls)return;const t=setTimeout(()=>setControls(false),3500);return()=>clearTimeout(t);},[controls]);
  const week=data.week;
  const rainWindow=(day:string)=>{

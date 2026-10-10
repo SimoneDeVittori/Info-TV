@@ -15,8 +15,11 @@ export const PLAN_METADATA=metadata(PLAN_FILE,PLAN_FILE.uploadedAt.slice(0,4));
 export const NEXT_PLAN_METADATA=metadata(NEXT_PLAN_FILE,PLAN_METADATA.year+(PLAN_METADATA.month===12?1:0));
 export const NEXT_PLAN_AVAILABLE_DATE=String(PLAN_METADATA.year)+'-'+String(PLAN_METADATA.month).padStart(2,'0')+'-15';
 export const NEXT_PLAN_AVAILABLE_LABEL='15.'+String(PLAN_METADATA.month).padStart(2,'0');
+export function isNextPlanPreview(){
+ return typeof window!=='undefined'&&new URLSearchParams(window.location.search).get('anteprima')==='novembre';
+}
 export function isNextPlanAvailable(now=new Date()){
- return now.toLocaleDateString('sv-SE',{timeZone:'Europe/Zurich'})>=NEXT_PLAN_AVAILABLE_DATE;
+ return isNextPlanPreview()||now.toLocaleDateString('sv-SE',{timeZone:'Europe/Zurich'})>=NEXT_PLAN_AVAILABLE_DATE;
 }
 export function planRotation(now=new Date()){
  const time=now.toLocaleTimeString('en-GB',{timeZone:'Europe/Zurich',hour:'2-digit',minute:'2-digit',hourCycle:'h23'});
