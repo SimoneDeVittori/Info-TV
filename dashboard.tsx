@@ -36,7 +36,6 @@ function renderWorkPlan(now,nextMonth=false){
  const file=nextMonth?NEXT_PLAN_FILE:PLAN_FILE;
  const meta=nextMonth?NEXT_PLAN_METADATA:PLAN_METADATA;
  const renderer=nextMonth?renderNextPlanPdf:renderWorkPlanPdf;
- const gradient=nextMonth?'next-plan-title-gradient':'plan-title-gradient';
  const crop=nextMonth?{x:17,y:53,width:998,height:674,dayStart:151.7,dayStep:28.68,bottom:725.62}:{x:17,y:53,width:1056,height:695,dayStart:156.02,dayStep:29.52,bottom:746.856};
  const day=(now||new Date()).toLocaleDateString('sv-SE',{timeZone:'Europe/Zurich'});
  const period=String(meta.year)+'-'+String(meta.month).padStart(2,'0');
@@ -48,9 +47,8 @@ function renderWorkPlan(now,nextMonth=false){
  h('canvas',{ref:renderer,'aria-label':'Tabella del piano '+meta.title}),
  h('span',{className:'plan-pdf-loading'},'Caricamento del piano…'),
  h('a',{className:'plan-pdf-error',href:file.url,target:'_blank',rel:'noreferrer'},'Apri il piano PDF')),
+ h('div',{className:'plan-month-title','aria-hidden':true},h('span',{className:'plan-month-name'},meta.name.toUpperCase()),h('span',{className:'plan-month-year'},String(meta.year))),
  h('svg',{className:'work-plan-overlay',viewBox:'0 0 1672 941','aria-hidden':true,preserveAspectRatio:'none'},
- h('defs',null,h('linearGradient',{id:gradient,x1:'0%',y1:'0%',x2:'100%',y2:'0%'},h('stop',{offset:'0%',stopColor:'#f09600'}),h('stop',{offset:'100%',stopColor:'#de3c20'}))),
- h('text',{transform:'translate(145 751) rotate(-90)',fontSize:88,fontWeight:800,fontFamily:'Arial, sans-serif',textLength:680,lengthAdjust:'spacingAndGlyphs',fill:'url(#'+gradient+')'},meta.title),
  nextMonth?null:h('text',{transform:'translate(195 460) rotate(-90)',fontSize:34,fontWeight:700,fontFamily:'Arial, sans-serif',fill:'#454545'},'AGGIORNATO AL '+meta.updated),
  current?h('rect',{className:'plan-today-highlight',x:263+(crop.dayStart-crop.x)/crop.width*1400+(current-1)*(crop.dayStep/crop.width*1400),y:6+922/crop.height,width:crop.dayStep/crop.width*1400,height:(crop.bottom-54)/crop.height*922,fill:'#f09600',fillOpacity:0.22,stroke:'#e86b00',strokeOpacity:0.7,strokeWidth:1.5,pointerEvents:'none'}):null)));
 }
