@@ -395,3 +395,7 @@ main{position:fixed}
 .plan-month-title{--month-start:#f09600;--month-end:#de3c20;position:absolute;left:6.5789473684%;top:50%;width:max-content;display:flex;align-items:center;gap:1.0765550239cqw;transform:translate(-50%,-50%) rotate(-90deg);font:800 6.2200956938cqw/1 Arial,Helvetica,sans-serif;letter-spacing:-.015em;white-space:nowrap;pointer-events:none}
 .plan-month-title span{display:block;background:linear-gradient(90deg,var(--month-start),var(--month-end));background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
 .next-plan .plan-month-title{--month-start:#48afe0;--month-end:#1766b2;left:7.8648325359%}
+
+/* A compact monthly scene stays inside the blank left strip of both plans. */
+.plan-month-title{top:43%;font-size:5.7416267943cqw}
+.plan-season-scene{position:absolute;left:.5%;bottom:.4%;display:block;width:14.7%;height:auto;aspect-ratio:260 / 165;overflow:visible;pointer-events:none}
