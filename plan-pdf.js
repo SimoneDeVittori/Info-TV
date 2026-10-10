@@ -18,8 +18,20 @@ export const NEXT_PLAN_AVAILABLE_LABEL='15.'+String(PLAN_METADATA.month).padStar
 export function isNextPlanPreview(){
  return typeof window!=='undefined'&&new URLSearchParams(window.location.search).get('anteprima')==='novembre';
 }
+export function getPlanState(now=new Date()){
+ const day=now.toLocaleDateString('sv-SE',{timeZone:'Europe/Zurich'});
+ const year=Number(day.slice(0,4)),month=Number(day.slice(5,7));
+ const followingMonth=month===12?1:month+1,followingYear=year+(month===12?1:0);
+ const entries=[
+ {file:PLAN_FILE,meta:PLAN_METADATA,renderer:renderWorkPlanPdf,crop:{x:17,y:53,width:1056,height:695,dayStart:156.02,dayStep:29.52,bottom:746.856}},
+ {file:NEXT_PLAN_FILE,meta:NEXT_PLAN_METADATA,renderer:renderNextPlanPdf,crop:{x:17,y:53,width:998,height:674,dayStart:151.7,dayStep:28.68,bottom:725.62}}];
+ const current=entries.find(p=>p.meta.year===year&&p.meta.month===month);
+ const upcoming=entries.find(p=>p.meta.year===followingYear&&p.meta.month===followingMonth);
+ const unlocked=Number(day.slice(8,10))>=15;
+ return {current,upcoming,currentMonthName:months[month-1],upcomingMonthName:months[followingMonth-1],period:day.slice(0,7),availableLabel:'15.'+String(month).padStart(2,'0'),unlocked,nextAvailable:Boolean(upcoming)&&(unlocked||isNextPlanPreview())};
+}
 export function isNextPlanAvailable(now=new Date()){
- return isNextPlanPreview()||now.toLocaleDateString('sv-SE',{timeZone:'Europe/Zurich'})>=NEXT_PLAN_AVAILABLE_DATE;
+ return getPlanState(now).nextAvailable;
 }
 export function planRotation(now=new Date()){
  const time=now.toLocaleTimeString('en-GB',{timeZone:'Europe/Zurich',hour:'2-digit',minute:'2-digit',hourCycle:'h23'});
