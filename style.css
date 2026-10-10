@@ -399,3 +399,6 @@ main{position:fixed}
 /* A compact monthly scene stays inside the blank left strip of both plans. */
 .plan-month-title{top:43%;font-size:5.7416267943cqw}
 .plan-season-scene{position:absolute;left:.5%;bottom:.4%;display:block;width:14.7%;height:auto;aspect-ratio:260 / 165;overflow:visible;pointer-events:none}
+
+/* Realistic transparent van vignettes replace the vector seasonal sketches. */
+.plan.screen:not(.van-screen) .plan-season-scene{left:.25%;bottom:.35%;width:15.2%;height:auto;max-height:none;aspect-ratio:3 / 2;object-fit:contain}
