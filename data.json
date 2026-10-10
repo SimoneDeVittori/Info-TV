@@ -1,10 +1,10 @@
 {
   "weather": {
     "current": {
-      "time": 1791672000000,
+      "time": 1791672600000,
       "icon": 101,
       "iconV2": 101,
-      "temperature": 12.2
+      "temperature": 12.1
     },
     "forecast": [
       {
@@ -48,7 +48,7 @@
         "precipitationMax": 0.0
       }
     ],
-    "updatedAt": "2026-10-10T23:00:11.802632+00:00"
+    "updatedAt": "2026-10-10T23:07:14.953676+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -64,14 +64,14 @@
       },
       {
         "dayDate": "2026-10-12",
-        "temperatureMin": 10,
-        "temperatureMax": 20,
+        "temperatureMin": 11,
+        "temperatureMax": 19,
         "iconDay": 1,
         "precipitation": 0.0
       },
       {
         "dayDate": "2026-10-13",
-        "temperatureMin": 11,
+        "temperatureMin": 10,
         "temperatureMax": 19,
         "iconDay": 2,
         "precipitation": 0.0
@@ -86,7 +86,7 @@
       {
         "dayDate": "2026-10-15",
         "temperatureMin": 11,
-        "temperatureMax": 21,
+        "temperatureMax": 20,
         "iconDay": 2,
         "precipitation": 0.0
       },
@@ -1202,8 +1202,8 @@
         "amount": 0.0
       }
     ],
-    "model": "202610102200",
-    "updatedAt": "2026-10-10T23:00:11.833959+00:00"
+    "model": "202610102300",
+    "updatedAt": "2026-10-10T23:07:14.978240+00:00"
   },
   "weekError": false,
   "news": {
@@ -1233,7 +1233,7 @@
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1onwp.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-10-10T23:00:11.802632+00:00",
+    "updatedAt": "2026-10-10T23:07:14.953676+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -2040,7 +2040,7 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-10T23:00:11.802632+00:00",
+    "updatedAt": "2026-10-10T23:07:14.953676+00:00",
     "version": "20261010_2240"
   },
   "swissWeatherError": false,
@@ -2156,7 +2156,7 @@
       }
     ],
     "total": 46,
-    "updatedAt": "2026-10-10T23:00:11.802632+00:00",
+    "updatedAt": "2026-10-10T23:07:14.953676+00:00",
     "source": "Viasuisse"
   }
 }
