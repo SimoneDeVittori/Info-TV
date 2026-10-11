@@ -198,11 +198,11 @@ function StudioMap({studio}:{studio:MedicalStudio}){
 function studioStartLabel(startsOn:string|undefined,now:Date){
  if(!startsOn)return null;
  const today=now.toLocaleDateString('sv-SE',{timeZone:'Europe/Zurich'});
- if(today===startsOn)return 'Passaggi da oggi';
+ if(today===startsOn)return 'Inizia oggi';
  const date=new Date(startsOn+'T12:00:00');
  if(!Number.isFinite(date.getTime()))return null;
- if(today>startsOn)return 'Passaggi attivi dal '+date.toLocaleDateString('it-CH',{day:'numeric',month:'long',timeZone:'Europe/Zurich'});
- return 'Passaggi da '+date.toLocaleDateString('it-CH',{weekday:'long',day:'numeric',month:'long',timeZone:'Europe/Zurich'});
+ if(today>startsOn)return 'Iniziato il '+date.toLocaleDateString('it-CH',{day:'numeric',month:'long',timeZone:'Europe/Zurich'});
+ return 'Inizia '+date.toLocaleDateString('it-CH',{weekday:'long',day:'numeric',month:'long',timeZone:'Europe/Zurich'});
 }
 function isMedicalStudioPreview(){return new URLSearchParams(window.location.search).get('anteprima')==='studio';}
 function isMedicalStudioVisible(studio:MedicalStudio,now:Date){
