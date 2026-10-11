@@ -43,7 +43,7 @@ function WorkPlanStage({children}:{children:any}){
   const stage=ref.current;if(!stage)return;
   const measure=()=>{
    if(stage.clientWidth>0)stage.style.setProperty('--plan-unit',stage.clientWidth/100+'px');
-   const month=stage.querySelector('.plan-month-name'),updated=stage.querySelector('.plan-updated-desktop');
+   const month=stage.querySelector('.plan-month-name'),updated=stage.querySelector('.plan-updated-text');
    const frame=stage.getBoundingClientRect();
    if(month&&updated&&frame.height>0){const range=document.createRange();range.selectNodeContents(month);const start=(range.getBoundingClientRect().bottom-frame.top)/frame.height*941;updated.setAttribute('transform','translate(198 '+start+') rotate(-90)');}
   };
@@ -75,7 +75,7 @@ function renderWorkPlan(now,nextMonth=false){
  renderPlanSeason(meta.month),
  h('div',{className:'plan-month-title',style:{'--month-start':colors[0],'--month-end':colors[1],'--plan-month-font':(meta.name.length>8?'6.7':'7.5')+'cqw'},'aria-hidden':true},h('span',{className:'plan-month-name'},meta.name.toUpperCase()),h('span',{className:'plan-month-year'},String(meta.year))),
  h('svg',{className:'work-plan-overlay',viewBox:'0 0 1672 941','aria-hidden':true,preserveAspectRatio:'none'},
- nextMonth?null:h('g',null,h('text',{className:'plan-updated-desktop',transform:'translate(198 750) rotate(-90)',textAnchor:'start',fontSize:28,fontWeight:700,fontFamily:'Arial, sans-serif',fill:'#454545'},'AGGIORNATO '+age),h('text',{className:'plan-updated-mobile',transform:'translate(195 460) rotate(-90)',fontSize:34,fontWeight:700,fontFamily:'Arial, sans-serif',fill:'#454545'},'AGGIORNATO AL '+meta.updated)),
+ nextMonth?null:h('text',{className:'plan-updated-text',transform:'translate(198 750) rotate(-90)',textAnchor:'start',fontSize:28,fontWeight:700,fontFamily:'Arial, sans-serif',fill:'#454545'},'AGGIORNATO '+age),
  current?h('rect',{className:'plan-today-highlight',x:263+(crop.dayStart-crop.x)/crop.width*1400+(current-1)*(crop.dayStep/crop.width*1400),y:6+922/crop.height,width:crop.dayStep/crop.width*1400,height:(crop.bottom-54)/crop.height*922,fill:'#f09600',fillOpacity:0.22,stroke:'#e86b00',strokeOpacity:0.7,strokeWidth:1.5,pointerEvents:'none'}):null)));
 }
 
@@ -269,7 +269,7 @@ export default function Home(){
  useEffect(()=>{if(studios.length&&page>=5&&page-5>=visibleStudios.length)setPage(0);},[studioRotationKey,page]);
  const nextPlanAvailable=planState.nextAvailable;
  useEffect(()=>{if(page===4&&!nextPlanAvailable)setPage(1);},[planState.period,nextPlanAvailable,page]);
- useEffect(()=>{if(phone||isCurrentPlanPreview()||isNextPlanPreview()||isMedicalStudioPreview())return;const rotation=setTimeout(()=>setPage(p=>{if(isPhoneDisplay())return p;const pages=[...planRotation(),...visibleStudios.map((studio,index)=>5+index)];return pages[(pages.indexOf(p)+1)%pages.length];}),page===0?25000:page===2?7000:page===3?10000:page>=5?15000:20000);return()=>clearTimeout(rotation);},[page,phone,nextPlanAvailable,studioRotationKey]);
+ useEffect(()=>{if(phone||isCurrentPlanPreview()||isNextPlanPreview()||isMedicalStudioPreview())return;const rotation=setTimeout(()=>setPage(p=>{if(isPhoneDisplay())return p;const pages=[...planRotation(),...visibleStudios.map((studio,index)=>5+index)];return pages[(pages.indexOf(p)+1)%pages.length];}),page===0?25000:page===2?7000:page===3?10000:page>=5?18000:20000);return()=>clearTimeout(rotation);},[page,phone,nextPlanAvailable,studioRotationKey]);
  useEffect(()=>{if(!controls)return;const t=setTimeout(()=>setControls(false),3500);return()=>clearTimeout(t);},[controls]);
  const week=data.week;
  const rainWindow=(day:string)=>{
@@ -319,7 +319,7 @@ export default function Home(){
     <article className="clinic-address-card card"><div className="section-label">STUDIO MEDICO</div><h1>{studio.name}</h1><address><strong>{studio.street}</strong><span>{studio.postalCode} {studio.locality}</span></address></article>
     <article className="clinic-schedule-card card"><div className="section-label">Orario di Ritiro Fisso</div>{studio.startsOn&&<p className="clinic-start-date">{studioStartLabel(studio.startsOn,now||new Date())}</p>}<div className="clinic-week">{[['Lu','Lunedì'],['Ma','Martedì'],['Me','Mercoledì'],['Gio','Giovedì'],['Ve','Venerdì']].map(([key,label])=><div key={key} className="clinic-day"><span>{label}</span><div className={'clinic-slot '+(studio.pickups[key]?.morning?'has-pickup':'no-pickup')}><small>Mattina</small><strong>{studio.pickups[key]?.morning||'—'}</strong></div><div className={'clinic-slot '+(studio.pickups[key]?.afternoon?'has-pickup':'no-pickup')}><small>Pomeriggio</small><strong>{studio.pickups[key]?.afternoon||'—'}</strong></div></div>)}</div></article>
    </div><article className="clinic-map-card card"><div className="clinic-map-heading"><div className="section-label">DOVE TROVARLO</div><span>{studio.postalCode} {studio.locality}</span></div><StudioMap studio={studio} active={page===5+studioIndex}/><div className="source"><span>Google Maps</span><span>{studio.street} · {studio.locality}</span></div></article></div>:<div className="empty">Caricamento dello studio medico…</div>}
-   <footer><small className="creator-copyright">© SimDev3D</small><span>— Unilabs Ticino · Centro Galleria 3, Via Cantonale 4, 6928 Manno —</span><div className="page-dots"><i/><i/><i/><i/><i className="selected"/></div></footer><div className="progress" style={{animationDuration:'15s'}} key={page===5+studioIndex?'medical-studio-'+studio.id:'medical-studio-hidden-'+studio.id}/>
+   <footer><small className="creator-copyright">© SimDev3D</small><span>— Unilabs Ticino · Centro Galleria 3, Via Cantonale 4, 6928 Manno —</span><div className="page-dots"><i/><i/><i/><i/><i className="selected"/></div></footer><div className="progress" style={{animationDuration:'18s'}} key={page===5+studioIndex?'medical-studio-'+studio.id:'medical-studio-hidden-'+studio.id}/>
   </section>)}
   <button className={'fullscreen '+(controls?'show':'')} onFocus={()=>setControls(true)} onClick={()=>{if(!document.fullscreenElement)document.documentElement.requestFullscreen?.();else document.exitFullscreen?.();}}>Schermo intero</button>
  </main>;
