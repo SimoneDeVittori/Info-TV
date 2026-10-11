@@ -152,7 +152,36 @@ function usePhonePullRefresh(phone){
  return pull;
 }
 
+function useLiveViasuisse(){
+ const [state,setState]=useState<any>({traffic:null,error:false,loading:true});
+ useEffect(()=>{
+  let alive=true,busy=false,controller;
+  async function refreshTraffic(){
+   if(busy||document.hidden)return;
+   busy=true;controller=new AbortController();
+   const timeout=setTimeout(()=>controller.abort(),20000);
+   try{
+    const response=await fetch('https://unilabs-traffic-service.keengrove16.chatgpt.site/api/traffic',{cache:'no-store',credentials:'omit',signal:controller.signal});
+    if(!response.ok)throw Error('Traffic service unavailable');
+    const payload=await response.json();
+    if(payload.traffic?.source!=='Viasuisse'||!Array.isArray(payload.traffic?.items)||!Number.isFinite(Date.parse(payload.traffic.updatedAt)))throw Error('Invalid traffic data');
+    if(alive)setState({traffic:payload.traffic,error:!!payload.trafficError,loading:false});
+   }catch{
+    if(alive)setState(old=>({...old,error:true,loading:false}));
+   }finally{clearTimeout(timeout);busy=false;}
+  }
+  refreshTraffic();
+  const interval=setInterval(refreshTraffic,180000);
+  const visible=()=>{if(!document.hidden)refreshTraffic();};
+  document.addEventListener('visibilitychange',visible);
+  window.addEventListener('online',refreshTraffic);
+  return()=>{alive=false;controller?.abort();clearInterval(interval);document.removeEventListener('visibilitychange',visible);window.removeEventListener('online',refreshTraffic);};
+ },[]);
+ return state;
+}
+
 export default function Home(){
+ const liveTraffic=useLiveViasuisse();
  const [phone,setPhone]=useState(()=>isPhoneDisplay());
  const pull=usePhonePullRefresh(phone);
  const [now,setNow]=useState<Date|null>(null);const [page,setPage]=useState(()=>isNextPlanPreview()?(isNextPlanAvailable()?4:1):0);const [data,setData]=useState<any>({});const [failed,setFailed]=useState(false);const [controls,setControls]=useState(false);
@@ -170,7 +199,7 @@ export default function Home(){
   const groups:any[]=[];slots.forEach((h:any)=>{const last=groups[groups.length-1];if(last&&last.end===h.start)last.end=h.end;else groups.push({...h});});
   return groups.map(g=>fmtTime(g.start)+'–'+fmtTime(g.end)).join(', ');
  };
- const w=data.weather;const n=data.news;const traffic=data.traffic;const staleTraffic=failed||data.trafficError||(traffic&&Date.now()-new Date(traffic.updatedAt).getTime()>1800000);const staleWeather=failed||data.weatherError||(w&&Date.now()-new Date(w.updatedAt).getTime()>1800000);const staleNews=failed||data.newsError||(n&&Date.now()-new Date(n.updatedAt).getTime()>1800000);
+ const w=data.weather;const n=data.news;const trafficCandidate=liveTraffic.traffic||data.traffic;const trafficAge=trafficCandidate?Date.now()-Date.parse(trafficCandidate.updatedAt):Infinity;const traffic=trafficAge<=900000?trafficCandidate:null;const staleTraffic=liveTraffic.error||(!liveTraffic.loading&&!traffic)||trafficAge>900000;const staleWeather=failed||data.weatherError||(w&&Date.now()-new Date(w.updatedAt).getTime()>1800000);const staleNews=failed||data.newsError||(n&&Date.now()-new Date(n.updatedAt).getTime()>1800000);
  return <main onPointerMove={()=>setControls(true)}>
   {phone&&<div className={'phone-pull-refresh '+(pull.busy?'is-refreshing':'')} style={{opacity:pull.distance>8?1:0,transform:'translate(-50%, '+(Math.min(pull.distance,60)-70)+'px)'}} role="status" aria-live="polite">
    {renderRefreshLogo()}
