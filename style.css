@@ -437,3 +437,6 @@ main{position:fixed}
 /* Highlight the news location without changing its timestamp. */
 .news-location{color:#e7531b}
 
+
+/* Match today's weather typography to the date and clock on home and map. */
+.weather-heading h1,.weather-now .temperature{font-family:"SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
