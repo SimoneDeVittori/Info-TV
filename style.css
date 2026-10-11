@@ -510,3 +510,20 @@ main{position:fixed}
 
 .clinic-schedule-card .clinic-start-date{margin-top:14px}
 /* Single heading above the pickup schedule. */
+
+/* Shared logo caption on all dashboard screens. */
+.unilabs-brand{justify-self:end;display:flex;flex-direction:column;align-items:center;width:326.4px;max-width:390px;gap:8px}
+.unilabs-brand .logo{width:100%;max-width:100%}
+.unilabs-brand>span{align-self:flex-end;width:64%;color:#737f88;font-size:18px;line-height:1.2;text-align:center;white-space:nowrap}
+.studio-map{position:relative;flex:1;min-height:0;overflow:hidden;border-radius:12px;background:#e9eee4;isolation:isolate}
+.studio-map-tiles{position:absolute;inset:0;pointer-events:none}
+.studio-map-tiles img{position:absolute;width:256px;height:256px;max-width:none}
+.studio-map-marker{position:absolute;left:50%;top:50%;transform:translate(-50%,-100%);filter:drop-shadow(0 2px 3px #0005)}
+.studio-map-attribution{position:absolute;right:0;bottom:0;padding:3px 6px;background:#fffffff0;color:#53616b;font:12px/1.2 Arial,sans-serif}
+.studio-map-status{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:22px;color:#737f88}
+@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+ .dashboard>header>.unilabs-brand{grid-column:2;grid-row:1;width:130px;min-width:0;align-self:center;gap:5px}
+ .unilabs-brand>span{font-size:7px}
+ .studio-map{height:320px;min-height:320px;flex:none}
+ .studio-map-status{font-size:15px}
+}

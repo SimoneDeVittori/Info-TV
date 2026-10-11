@@ -1,6 +1,6 @@
 import {PLAN_FILE,PLAN_METADATA,renderWorkPlanPdf,NEXT_PLAN_FILE,NEXT_PLAN_METADATA,renderNextPlanPdf,isNextPlanAvailable,NEXT_PLAN_AVAILABLE_LABEL,planRotation,isNextPlanPreview,getPlanState} from './plan-pdf.js?v=20261011-medical-studio';
 'use client';
-import {useEffect,useState,createElement as rainElement} from 'react';
+import {useEffect,useState,useRef,createElement as rainElement} from 'react';
 import {Cloud,Sun,CloudSun,CloudRain,CloudLightning,Snowflake,Droplets} from 'lucide-react';
 function isSwissNight(date=new Date()){const hour=Number(date.toLocaleTimeString('en-GB',{timeZone:'Europe/Zurich',hour:'2-digit',hourCycle:'h23'}));return hour>=18||hour<7;}
 function renderNightWeather(code,size){
@@ -190,7 +190,26 @@ function useLiveViasuisse(){
 }
 
 
-type MedicalStudio={id:string;createdOn:string;name:string;street:string;postalCode:string;locality:string;pickups:Record<string,{morning?:string|null;afternoon?:string|null}>;startsOn?:string};
+type MedicalStudio={id:string;createdOn:string;name:string;street:string;postalCode:string;locality:string;pickups:Record<string,{morning?:string|null;afternoon?:string|null}>;startsOn?:string;coordinates?:{lat:number;lon:number}};
+function UnilabsBrand(){return <div className="unilabs-brand"><img className="logo" src="./unilabs-logo.png" alt="Unilabs"/><span>Servizio Esterno Unilabs</span></div>;}
+function StudioMap({studio}:{studio:MedicalStudio}){
+ const container=useRef<HTMLDivElement>(null);
+ const [size,setSize]=useState({width:800,height:550});
+ const [coordinates,setCoordinates]=useState(studio.coordinates);
+ const [unavailable,setUnavailable]=useState(false);
+ useEffect(()=>{const element=container.current;if(!element)return;const observer=new ResizeObserver(()=>setSize({width:element.clientWidth,height:element.clientHeight}));observer.observe(element);return()=>observer.disconnect();},[]);
+ useEffect(()=>{if(studio.coordinates){setCoordinates(studio.coordinates);return;}const controller=new AbortController();setUnavailable(false);setCoordinates(undefined);fetch('https://api3.geo.admin.ch/rest/services/api/SearchServer?type=locations&origins=address&limit=1&searchText='+encodeURIComponent(studio.street+' '+studio.postalCode+' '+studio.locality),{signal:controller.signal}).then(response=>{if(!response.ok)throw Error();return response.json();}).then(result=>{const point=result.results?.[0]?.attrs;if(!Number.isFinite(point?.lat)||!Number.isFinite(point?.lon))throw Error();setCoordinates({lat:point.lat,lon:point.lon});}).catch(()=>{if(!controller.signal.aborted)setUnavailable(true);});return()=>controller.abort();},[studio.street,studio.postalCode,studio.locality,studio.coordinates?.lat,studio.coordinates?.lon]);
+ const zoom=17,tileSize=256,count=2**zoom;
+ const x=coordinates?(coordinates.lon+180)/360*count:0;
+ const latitude=coordinates?coordinates.lat*Math.PI/180:0;
+ const y=coordinates?(1-Math.asinh(Math.tan(latitude))/Math.PI)/2*count:0;
+ const left=x*tileSize-size.width/2,top=y*tileSize-size.height/2;
+ const tiles=[];
+ if(coordinates)for(let row=Math.floor(top/tileSize);row<=Math.floor((top+size.height)/tileSize);row++)for(let col=Math.floor(left/tileSize);col<=Math.floor((left+size.width)/tileSize);col++)tiles.push(<img key={col+'-'+row} src={'https://tile.openstreetmap.org/'+zoom+'/'+col+'/'+row+'.png'} alt="" draggable={false} style={{left:col*tileSize-left,top:row*tileSize-top}}/>);
+ return <div ref={container} className="studio-map" role="img" aria-label={'Mappa di '+studio.street+', '+studio.postalCode+' '+studio.locality}>
+ {coordinates?<><div className="studio-map-tiles">{tiles}</div><span className="studio-map-marker" aria-hidden="true"><svg viewBox="0 0 32 42" width="32" height="42"><path d="M16 40C13 35 2 23 2 16a14 14 0 0 1 28 0c0 7-11 19-14 24Z" fill="#e7531b" stroke="white" strokeWidth="2"/><circle cx="16" cy="16" r="5" fill="white"/></svg></span></>:<span className="studio-map-status">{unavailable?'Mappa temporaneamente non disponibile':'Caricamento della mappa…'}</span>}
+ <a className="studio-map-attribution" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">© OpenStreetMap</a></div>;
+}
 function studioStartLabel(startsOn:string|undefined,now:Date){
  if(!startsOn)return null;
  const today=now.toLocaleDateString('sv-SE',{timeZone:'Europe/Zurich'});
@@ -247,7 +266,7 @@ export default function Home(){
   </div>}
   {renderPhoneNavigation(page,setPage,now)}
   <section className={'dashboard screen '+(page===0?'active':'')} aria-hidden={page!==0}>
-   <header><div><div className="date">{renderBrandDate(now)}</div></div>{!phone&&<time className="header-clock">{now?fmtTime(now):'—'}</time>}<img className="logo" src="./unilabs-logo.png" alt="Unilabs"/></header>
+   <header><div><div className="date">{renderBrandDate(now)}</div></div>{!phone&&<time className="header-clock">{now?fmtTime(now):'—'}</time>}<UnilabsBrand/></header>
    <div className="content"><article className="weather card"><div className="weather-heading"><div className="section-label">METEO LOCALE</div><h1>Manno</h1></div><div className="weather-now"><span className="temperature">{w?Math.round(w.current.temperature)+'°':'—'}</span><span className="weather-icon">{w&&<WeatherIcon code={w.current.iconV2??w.current.icon} size={120} current/>}</span></div><p className="weather-note">{w?'Temperatura attuale':staleWeather?'Meteo temporaneamente non disponibile':'Caricamento del meteo…'}</p>
     {w&&<><div className="today"><div><span>Minima</span><strong>{w.forecast[0].temperatureMin}°</strong></div><div><span>Massima</span><strong>{w.forecast[0].temperatureMax}°</strong></div><div><span>Pioggia</span><strong>{w.forecast[0].precipitation} <small>mm</small></strong></div></div></>}
     {renderTodayRain(week?.hourly,now)}
@@ -261,7 +280,7 @@ export default function Home(){
   {nextPlanAvailable&&<section className={'plan next-plan screen '+(page===4?'active':'')} aria-hidden={page!==4}>{renderWorkPlan(now,true)}<div className="progress" key={page===4?"next-plan":"next-plan-hidden"}/></section>}
   <section className={'plan van-screen screen '+(page===2?'active':'')} aria-hidden={page!==2}><img src="./furgone-autunno.png" alt="Servizio Esterno Unilabs in autunno"/><div className="progress" style={{animationDuration:"7s"}} key={page===2?"autumn":"autumn-hidden"}/>{renderTravelVan(page===2)}</section>
   <section className={'dashboard swiss-map-screen screen '+(page===3?'active':'')} aria-hidden={page!==3}>
-   <header><div><div className="date">{renderBrandDate(now)}</div></div>{!phone&&<time className="header-clock">{now?fmtTime(now):'—'}</time>}<img className="logo" src="./unilabs-logo.png" alt="Unilabs"/></header>
+   <header><div><div className="date">{renderBrandDate(now)}</div></div>{!phone&&<time className="header-clock">{now?fmtTime(now):'—'}</time>}<UnilabsBrand/></header>
    <article className="swiss-map-card card"><div className="map-heading"><div><div className="section-label">METEO IN SVIZZERA</div><h2>Le previsioni di oggi</h2></div><div className="map-legend">Temperature minime / massime · °C</div></div>
    <svg className="national-map" viewBox="0 0 1400 760" role="img" aria-label="Previsioni meteo nelle principali città della Svizzera">
     <svg x="160" y="20" width="1080" height="720" viewBox="3 3 2042 1359" overflow="hidden"><image href="./switzerland-relief-new.png" width="2048" height="1365"/></svg>
@@ -273,12 +292,12 @@ export default function Home(){
   </section>
 
   {(!phone||isMedicalStudioPreview())&&visibleStudios.map((studio,studioIndex)=><section key={studio.id} className={'dashboard clinic-screen screen '+(page===5+studioIndex?'active':'')} aria-hidden={page!==5+studioIndex}>
-   <header><div><div className="date">{renderBrandDate(now)}</div></div>{!phone&&<time className="header-clock">{now?fmtTime(now):'—'}</time>}<img className="logo" src="./unilabs-logo.png" alt="Unilabs"/></header>
-   <div className="clinic-title-row"><h2>Nuovo Studio Medico</h2><span>Servizio Esterno Unilabs</span></div>
+   <header><div><div className="date">{renderBrandDate(now)}</div></div>{!phone&&<time className="header-clock">{now?fmtTime(now):'—'}</time>}<UnilabsBrand/></header>
+   <div className="clinic-title-row"><h2>Nuovo Studio Medico</h2></div>
    {studio?<div className="clinic-content"><div className="clinic-details">
     <article className="clinic-address-card card"><div className="section-label">STUDIO MEDICO</div><h1>{studio.name}</h1><address><strong>{studio.street}</strong><span>{studio.postalCode} {studio.locality}</span></address></article>
     <article className="clinic-schedule-card card"><div className="section-label">Orari di ritiro</div>{studio.startsOn&&<p className="clinic-start-date">{studioStartLabel(studio.startsOn,now||new Date())}</p>}<div className="clinic-week">{[['Lu','Lunedì'],['Ma','Martedì'],['Me','Mercoledì'],['Gio','Giovedì'],['Ve','Venerdì']].map(([key,label])=><div key={key} className="clinic-day"><span>{label}</span><div className={'clinic-slot '+(studio.pickups[key]?.morning?'has-pickup':'no-pickup')}><small>Mattina</small><strong>{studio.pickups[key]?.morning||'—'}</strong></div><div className={'clinic-slot '+(studio.pickups[key]?.afternoon?'has-pickup':'no-pickup')}><small>Pomeriggio</small><strong>{studio.pickups[key]?.afternoon||'—'}</strong></div></div>)}</div></article>
-   </div><article className="clinic-map-card card"><div className="clinic-map-heading"><div className="section-label">DOVE TROVARLO</div><span>{studio.postalCode} {studio.locality}</span></div><iframe title={'Google Maps — '+studio.name+', '+studio.street+', '+studio.locality} src={'https://maps.google.com/maps?q='+encodeURIComponent(studio.street+', '+studio.postalCode+' '+studio.locality+', Svizzera')+'&z=17&output=embed'} referrerPolicy="no-referrer-when-downgrade" allowFullScreen/><div className="source"><span>Google Maps</span><span>{studio.street} · {studio.locality}</span></div></article></div>:<div className="empty">Caricamento dello studio medico…</div>}
+   </div><article className="clinic-map-card card"><div className="clinic-map-heading"><div className="section-label">DOVE TROVARLO</div><span>{studio.postalCode} {studio.locality}</span></div><StudioMap studio={studio}/><div className="source"><span>Mappa stradale</span><span>{studio.street} · {studio.locality}</span></div></article></div>:<div className="empty">Caricamento dello studio medico…</div>}
    <footer><small className="creator-copyright">© SimDev3D</small><span>Unilabs Ticino · Centro Galleria 3, Via Cantonale 4, 6928 Manno</span><div className="page-dots"><i/><i/><i/><i/><i className="selected"/></div></footer><div className="progress" style={{animationDuration:'15s'}} key={page===5+studioIndex?'medical-studio-'+studio.id:'medical-studio-hidden-'+studio.id}/>
   </section>)}
   <button className={'fullscreen '+(controls?'show':'')} onFocus={()=>setControls(true)} onClick={()=>{if(!document.fullscreenElement)document.documentElement.requestFullscreen?.();else document.exitFullscreen?.();}}>Schermo intero</button>

@@ -25,7 +25,11 @@
       },
       "startsOn": "2026-10-12",
       "id": "chiara-rossi-stabio",
-      "createdOn": "2026-10-11"
+      "createdOn": "2026-10-11",
+      "coordinates": {
+        "lat": 45.85107421875,
+        "lon": 8.943638801574707
+      }
     }
   ]
 }
