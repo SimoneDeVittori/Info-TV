@@ -442,4 +442,4 @@ main{position:fixed}
 .weather-heading h1,.weather-now .temperature{font-family:"SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 
 /* Larger month and year, matching the homepage date and clock font. */
-.plan-month-title{font-family:"SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;font-size:6.9cqw;-webkit-font-smoothing:antialiased}
+.plan-month-title{font-family:"SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;font-size:6.4cqw;font-weight:600;top:50%;-webkit-font-smoothing:antialiased}
