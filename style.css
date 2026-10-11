@@ -556,3 +556,7 @@ main{position:fixed}
 /* Shared home background on both monthly plan pages and all display sizes. */
 :root{--screen-background:#efefef}
 .dashboard,.plan.screen:not(.van-screen),.work-plan-stage{background:var(--screen-background)}
+
+/* Match the weather update footer to news and traffic. */
+.weather .source{flex-direction:row;flex-wrap:wrap;align-items:baseline}
+.weather .source .warning{flex-basis:100%}
