@@ -41,10 +41,15 @@ function WorkPlanStage({children}:{children:any}){
  const ref=useRef<HTMLDivElement>(null);
  useEffect(()=>{
   const stage=ref.current;if(!stage)return;
-  const measure=()=>{if(stage.clientWidth>0)stage.style.setProperty('--plan-unit',stage.clientWidth/100+'px');};
+  const measure=()=>{
+   if(stage.clientWidth>0)stage.style.setProperty('--plan-unit',stage.clientWidth/100+'px');
+   const month=stage.querySelector('.plan-month-name'),updated=stage.querySelector('.plan-updated-desktop');
+   const frame=stage.getBoundingClientRect();
+   if(month&&updated&&frame.height>0){const range=document.createRange();range.selectNodeContents(month);const start=(range.getBoundingClientRect().bottom-frame.top)/frame.height*941;updated.setAttribute('transform','translate(198 '+start+') rotate(-90)');}
+  };
   measure();
   const observer=typeof ResizeObserver!=='undefined'?new ResizeObserver(measure):null;
-  observer?.observe(stage);window.addEventListener('resize',measure);
+  observer?.observe(stage);const month=stage.querySelector('.plan-month-name');if(month)observer?.observe(month);window.addEventListener('resize',measure);
   return()=>{observer?.disconnect();window.removeEventListener('resize',measure);};
  },[]);
  return rainElement('div',{className:'work-plan-stage',ref},children);
@@ -70,7 +75,7 @@ function renderWorkPlan(now,nextMonth=false){
  renderPlanSeason(meta.month),
  h('div',{className:'plan-month-title',style:{'--month-start':colors[0],'--month-end':colors[1],'--plan-month-font':(meta.name.length>8?'6.7':'7.5')+'cqw'},'aria-hidden':true},h('span',{className:'plan-month-name'},meta.name.toUpperCase()),h('span',{className:'plan-month-year'},String(meta.year))),
  h('svg',{className:'work-plan-overlay',viewBox:'0 0 1672 941','aria-hidden':true,preserveAspectRatio:'none'},
- nextMonth?null:h('g',null,h('text',{className:'plan-updated-desktop',transform:'translate(198 440) rotate(-90)',textAnchor:'middle',fontSize:28,fontWeight:700,fontFamily:'Arial, sans-serif',fill:'#454545'},'AGGIORNATO '+age),h('text',{className:'plan-updated-mobile',transform:'translate(195 460) rotate(-90)',fontSize:34,fontWeight:700,fontFamily:'Arial, sans-serif',fill:'#454545'},'AGGIORNATO AL '+meta.updated)),
+ nextMonth?null:h('g',null,h('text',{className:'plan-updated-desktop',transform:'translate(198 750) rotate(-90)',textAnchor:'start',fontSize:28,fontWeight:700,fontFamily:'Arial, sans-serif',fill:'#454545'},'AGGIORNATO '+age),h('text',{className:'plan-updated-mobile',transform:'translate(195 460) rotate(-90)',fontSize:34,fontWeight:700,fontFamily:'Arial, sans-serif',fill:'#454545'},'AGGIORNATO AL '+meta.updated)),
  current?h('rect',{className:'plan-today-highlight',x:263+(crop.dayStart-crop.x)/crop.width*1400+(current-1)*(crop.dayStep/crop.width*1400),y:6+922/crop.height,width:crop.dayStep/crop.width*1400,height:(crop.bottom-54)/crop.height*922,fill:'#f09600',fillOpacity:0.22,stroke:'#e86b00',strokeOpacity:0.7,strokeWidth:1.5,pointerEvents:'none'}):null)));
 }
 
