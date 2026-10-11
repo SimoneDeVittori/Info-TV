@@ -424,3 +424,7 @@ main{position:fixed}
  .dashboard>header .date{white-space:normal;line-height:1.3;text-align:left}
  .dashboard>header .logo{grid-column:2;grid-row:1;align-self:center}
 }
+
+/* Humanist bold lettering echoes the Unilabs wordmark on home and map. */
+@font-face{font-family:"Unilabs Date";src:url("./source-sans-3-bold.woff2") format("woff2");font-style:normal;font-weight:700;font-display:swap}
+.date{font-family:"Unilabs Date","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;font-weight:700;letter-spacing:-.015em}
