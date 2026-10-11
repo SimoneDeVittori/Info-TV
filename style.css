@@ -527,3 +527,5 @@ main{position:fixed}
  .studio-map{height:320px;min-height:320px;flex:none}
  .studio-map-status{font-size:15px}
 }
+
+.clinic-schedule-card .section-label{text-transform:uppercase}
