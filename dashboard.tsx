@@ -1,6 +1,6 @@
 import {PLAN_FILE,PLAN_METADATA,renderWorkPlanPdf,NEXT_PLAN_FILE,NEXT_PLAN_METADATA,renderNextPlanPdf,isNextPlanAvailable,NEXT_PLAN_AVAILABLE_LABEL,planRotation,isNextPlanPreview,getPlanState} from './plan-pdf.js?v=20261011-medical-studio';
 'use client';
-import {useEffect,useState,createElement as rainElement} from 'react';
+import {useEffect,useState,useRef,createElement as rainElement} from 'react';
 import {Cloud,Sun,CloudSun,CloudRain,CloudLightning,Snowflake,Droplets} from 'lucide-react';
 function isSwissNight(date=new Date()){const hour=Number(date.toLocaleTimeString('en-GB',{timeZone:'Europe/Zurich',hour:'2-digit',hourCycle:'h23'}));return hour>=18||hour<7;}
 function renderNightWeather(code,size){
@@ -37,6 +37,18 @@ function renderPlanSeason(month){
  return rainElement('img',{className:'plan-season-scene',src:'./plan-scene-'+theme+'.png',alt:'','aria-hidden':true,loading:'eager',decoding:'async'});
 }
 
+function WorkPlanStage({children}:{children:any}){
+ const ref=useRef<HTMLDivElement>(null);
+ useEffect(()=>{
+  const stage=ref.current;if(!stage)return;
+  const measure=()=>{if(stage.clientWidth>0)stage.style.setProperty('--plan-unit',stage.clientWidth/100+'px');};
+  measure();
+  const observer=typeof ResizeObserver!=='undefined'?new ResizeObserver(measure):null;
+  observer?.observe(stage);window.addEventListener('resize',measure);
+  return()=>{observer?.disconnect();window.removeEventListener('resize',measure);};
+ },[]);
+ return rainElement('div',{className:'work-plan-stage',ref},children);
+}
 function renderWorkPlan(now,nextMonth=false){
  const state=getPlanState(now||new Date());
  const entry=nextMonth?state.upcoming:state.current;
@@ -48,7 +60,7 @@ function renderWorkPlan(now,nextMonth=false){
  const current=day.slice(0,7)===period?Number(day.slice(-2)):0;
  const h=rainElement;
  return h('div',{className:'work-plan',role:'img','aria-label':'Piano dei turni '+meta.title+(nextMonth?'':'. Aggiornato al '+meta.updated)+(current?'. Giorno '+current+' evidenziato':'')},
- h('div',{className:'work-plan-stage'},
+ h(WorkPlanStage,null,
  h('div',{className:'plan-pdf-surface','data-status':'loading'},
  h('canvas',{key:file.url,ref:renderer,'aria-label':'Tabella del piano '+meta.title}),
  h('span',{className:'plan-pdf-loading'},'Caricamento del piano…'),

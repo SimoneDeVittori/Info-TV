@@ -539,3 +539,7 @@ main{position:fixed}
 @media (prefers-reduced-motion:reduce){.clinic-map-card .google-map-sequence iframe{transition:none;transform:none}}
 
 .plan-month-title,.next-plan .plan-month-title{gap:.3cqw}
+
+/* Measure the unscaled plan width so Safari matches Chrome and iOS. */
+.work-plan-stage{container-type:normal}
+.plan-month-title,.next-plan .plan-month-title{font-size:calc(var(--plan-unit,19.2px) * 6.7);gap:calc(var(--plan-unit,19.2px) * .3)}
