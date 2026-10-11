@@ -190,22 +190,26 @@ function useLiveViasuisse(){
 }
 
 
-type MedicalStudio={id:string;createdOn:string;name:string;street:string;postalCode:string;locality:string;pickups:Record<string,{morning?:string|null;afternoon?:string|null}>;startsOn?:string;coordinates?:{lat:number;lon:number}};
+type MedicalStudio={id:string;createdOn:string;name:string;street:string;postalCode:string;locality:string;pickups:Record<string,{morning?:string|null;afternoon?:string|null}>;startsOn?:string;streetViewEmbedUrl?:string;coordinates?:{lat:number;lon:number}};
 function UnilabsBrand(){return <div className="unilabs-brand"><img className="logo" src="./unilabs-logo.png" alt="Unilabs"/><span>Servizio Esterno Unilabs</span></div>;}
 function StudioMap({studio,active}:{studio:MedicalStudio;active:boolean}){
  const [step,setStep]=useState(0);
- const [loaded,setLoaded]=useState([false,false,false]);
+ const [loaded,setLoaded]=useState([false,false,false,false,false]);
  const query=encodeURIComponent(studio.street+', '+studio.postalCode+' '+studio.locality+', Svizzera');
- useEffect(()=>{setStep(0);setLoaded([false,false,false]);},[query]);
+ useEffect(()=>{setStep(0);setLoaded([false,false,false,false,false]);},[query]);
  useEffect(()=>{
   setStep(0);
   if(!active||!loaded[0])return;
   const neighborhood=setTimeout(()=>setStep(1),3000);
   const address=setTimeout(()=>setStep(2),6000);
-  return()=>{clearTimeout(neighborhood);clearTimeout(address);};
+  const satellite=setTimeout(()=>setStep(3),9000);
+  const streetView=setTimeout(()=>setStep(4),12000);
+  return()=>{clearTimeout(neighborhood);clearTimeout(address);clearTimeout(satellite);clearTimeout(streetView);};
  },[active,loaded[0],query]);
- const shown=step===2&&loaded[2]?2:step>=1&&loaded[1]?1:0;
- return <div className="google-map-sequence">{[14,16,17].map((zoom,index)=><iframe key={query+'-'+zoom} className={'google-map-view '+(shown===index?'is-current':shown>index?'is-past':'')} title={'Google Maps — '+(['Panoramica della zona','Quartiere dello studio','Indirizzo dello studio'][index])+', '+studio.street+', '+studio.locality} src={'https://maps.google.com/maps?q='+query+'&z='+zoom+'&output=embed'} onLoad={()=>setLoaded(current=>current.map((value,i)=>i===index?true:value))} aria-hidden={shown!==index} tabIndex={shown===index?0:-1} referrerPolicy="no-referrer-when-downgrade" allowFullScreen/>)}</div>;
+ const shown=step>=4&&loaded[4]?4:step>=3&&loaded[3]?3:step>=2&&loaded[2]?2:step>=1&&loaded[1]?1:0;
+ const views=[14,16,17,19].map((zoom,index)=>({title:['Panoramica della zona','Quartiere dello studio','Indirizzo dello studio','Vista satellitare ravvicinata dello studio'][index],src:'https://maps.google.com/maps?q='+query+'&z='+zoom+(index===3?'&t=k':'')+'&output=embed'}));
+ if(studio.streetViewEmbedUrl?.startsWith('https://www.google.com/maps/embed?'))views.push({title:'Street View della facciata dello studio',src:studio.streetViewEmbedUrl});
+ return <div className="google-map-sequence">{views.map((view,index)=><iframe key={view.src} className={'google-map-view '+(shown===index?'is-current':shown>index?'is-past':'')} title={'Google Maps — '+view.title+', '+studio.street+', '+studio.locality} src={view.src} onLoad={()=>setLoaded(current=>current.map((value,i)=>i===index?true:value))} aria-hidden={shown!==index} tabIndex={shown===index?0:-1} referrerPolicy="no-referrer-when-downgrade" allowFullScreen/>)}</div>;
 }
 function studioStartLabel(startsOn:string|undefined,now:Date){
  if(!startsOn)return null;

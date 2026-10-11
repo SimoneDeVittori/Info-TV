@@ -29,7 +29,8 @@
       "coordinates": {
         "lat": 45.85107421875,
         "lon": 8.943638801574707
-      }
+      },
+      "streetViewEmbedUrl": "https://www.google.com/maps/embed?pb=!4v1791754473875!6m8!1m7!1sKUfcN_de16AuwXaXU8HW7g!2m2!1d45.85106768266762!2d8.943776088120396!3f253.7192!4f0!5f0.7820865974627469"
     }
   ]
 }
