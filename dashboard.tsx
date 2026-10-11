@@ -191,7 +191,7 @@ function useLiveViasuisse(){
 
 
 type MedicalStudio={id:string;createdOn:string;name:string;street:string;postalCode:string;locality:string;pickups:Record<string,{morning?:string|null;afternoon?:string|null}>;startsOn?:string;streetViewEmbedUrl?:string;coordinates?:{lat:number;lon:number}};
-function UnilabsBrand(){return <div className="unilabs-brand"><img className="logo" src="./unilabs-logo.png" alt="Unilabs"/><span>Servizio Esterno</span></div>;}
+function UnilabsBrand(){return <div className="unilabs-brand"><img className="logo" src="./unilabs-logo.png" alt="Unilabs"/><span><span>Servizio</span>{' '}<span>Esterno</span></span></div>;}
 function StudioMap({studio,active}:{studio:MedicalStudio;active:boolean}){
  const [step,setStep]=useState(0);
  const [loaded,setLoaded]=useState([false,false,false,false,false]);
