@@ -507,3 +507,6 @@ main{position:fixed}
  .clinic-address-card{padding:18px}.clinic-address-card h1{font-size:30px;margin:16px 0}.clinic-address-card address{font-size:26px}
  .clinic-day{padding:12px 3px;gap:10px}.clinic-slot{padding:10px 2px;gap:8px}.clinic-slot small{font-size:9px}.clinic-slot strong{font-size:20px}
 }
+
+.clinic-schedule-card .clinic-start-date{margin-top:14px}
+/* Single heading above the pickup schedule. */
