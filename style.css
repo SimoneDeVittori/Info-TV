@@ -443,3 +443,8 @@ main{position:fixed}
 
 /* Larger month and year, matching the homepage date and clock font. */
 .plan-month-title{font-family:"SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;font-size:6.4cqw;font-weight:600;top:43%;letter-spacing:-.075em;-webkit-font-smoothing:antialiased}
+
+/* Keep large plan lettering inside the rail, with safe glyph space for Safari. */
+.plan-month-title,.next-plan .plan-month-title{left:0;top:0;width:15.4%;height:100%;display:block;transform:none;font-family:"SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;font-weight:600;letter-spacing:-.075em}
+.plan-month-title .plan-month-name{position:absolute;left:50%;top:35%;width:max-content;font-size:var(--plan-month-font,7.5cqw);line-height:1.2;padding:.05em;transform:translate(-50%,-50%) rotate(-90deg)}
+.plan-month-title .plan-month-year{position:absolute;left:50%;bottom:15.6%;width:max-content;font-size:7.2cqw;line-height:1.15;padding:.03em;transform:translateX(-50%)}

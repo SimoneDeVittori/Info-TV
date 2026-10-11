@@ -42,7 +42,7 @@ function renderWorkPlan(now,nextMonth=false){
  const entry=nextMonth?state.upcoming:state.current;
  if(!entry)return rainElement('p',{className:'empty'},'Piano di '+(nextMonth?state.upcomingMonthName:state.currentMonthName)+' non ancora disponibile');
  const {file,meta,renderer,crop}=entry;
- const colors=[['#28647e','#4e8ca1'],['#665278','#93768f'],['#3f755b','#6b9255'],['#34785d','#6a9d70'],['#437644','#719340'],['#9c791a','#c19a26'],['#bb5a31','#dd7c32'],['#aa5432','#c58042'],['#a26e23','#bf963d'],['#b35422','#d1862e'],['#765644','#a07856'],['#285c4d','#547464']][meta.month-1];
+ const colors=[['#28647e','#4e8ca1'],['#665278','#93768f'],['#3f755b','#6b9255'],['#34785d','#6a9d70'],['#437644','#719340'],['#9c791a','#c19a26'],['#bb5a31','#dd7c32'],['#aa5432','#c58042'],['#a26e23','#bf963d'],['#ef761b','#c94522'],['#386c73','#849653'],['#285c4d','#547464']][meta.month-1];
  const day=(now||new Date()).toLocaleDateString('sv-SE',{timeZone:'Europe/Zurich'});
  const period=String(meta.year)+'-'+String(meta.month).padStart(2,'0');
  const current=day.slice(0,7)===period?Number(day.slice(-2)):0;
@@ -54,9 +54,9 @@ function renderWorkPlan(now,nextMonth=false){
  h('span',{className:'plan-pdf-loading'},'Caricamento del piano…'),
  h('a',{className:'plan-pdf-error',href:file.url,target:'_blank',rel:'noreferrer'},'Apri il piano PDF')),
  renderPlanSeason(meta.month),
- h('div',{className:'plan-month-title',style:{'--month-start':colors[0],'--month-end':colors[1]},'aria-hidden':true},h('span',{className:'plan-month-name'},meta.name.toUpperCase()),h('span',{className:'plan-month-year'},String(meta.year))),
+ h('div',{className:'plan-month-title',style:{'--month-start':colors[0],'--month-end':colors[1],'--plan-month-font':(meta.name.length>8?'6.7':'7.5')+'cqw'},'aria-hidden':true},h('span',{className:'plan-month-name'},meta.name.toUpperCase()),h('span',{className:'plan-month-year'},String(meta.year))),
  h('svg',{className:'work-plan-overlay',viewBox:'0 0 1672 941','aria-hidden':true,preserveAspectRatio:'none'},
- nextMonth?null:h('text',{transform:'translate(195 460) rotate(-90)',fontSize:34,fontWeight:700,fontFamily:'Arial, sans-serif',fill:'#454545'},'AGGIORNATO AL '+meta.updated),
+ nextMonth?null:h('text',{transform:'translate(235 460) rotate(-90)',fontSize:26,fontWeight:700,fontFamily:'Arial, sans-serif',fill:'#454545'},'AGGIORNATO AL '+meta.updated),
  current?h('rect',{className:'plan-today-highlight',x:263+(crop.dayStart-crop.x)/crop.width*1400+(current-1)*(crop.dayStep/crop.width*1400),y:6+922/crop.height,width:crop.dayStep/crop.width*1400,height:(crop.bottom-54)/crop.height*922,fill:'#f09600',fillOpacity:0.22,stroke:'#e86b00',strokeOpacity:0.7,strokeWidth:1.5,pointerEvents:'none'}):null)));
 }
 
@@ -246,15 +246,3 @@ export default function Home(){
 
 import {createRoot} from "react-dom/client";
 createRoot(document.getElementById("root")!).render(<Home/>);
-
-
-
-
-
-
-
-
-
-
-
-
