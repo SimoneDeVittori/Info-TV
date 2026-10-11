@@ -433,3 +433,7 @@ main{position:fixed}
 /* Only the weekday uses regular weight; the rest of the date stays bold. */
 .date-weekday{font-weight:400}
 
+
+/* Highlight the news location without changing its timestamp. */
+.news-location{color:#e7531b}
+
