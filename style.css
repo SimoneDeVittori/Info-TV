@@ -445,7 +445,7 @@ main{position:fixed}
 .plan-month-title{font-family:"SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;font-size:6.4cqw;font-weight:600;top:43%;letter-spacing:-.075em;-webkit-font-smoothing:antialiased}
 
 /* Vertical month and year with extra glyph space for Safari. */
-.plan-month-title,.next-plan .plan-month-title{top:43%;width:max-content;height:auto;display:flex;align-items:center;gap:1.0765550239cqw;transform:translate(-50%,-50%) rotate(-90deg);font-family:"SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;font-size:6.1cqw;font-weight:600;line-height:1.22;letter-spacing:-.065em}
+.plan-month-title,.next-plan .plan-month-title{top:43%;width:max-content;height:auto;display:flex;align-items:center;gap:1.0765550239cqw;transform:translate(-50%,-50%) rotate(-90deg);font-family:"SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;font-size:6.7cqw;font-weight:600;line-height:1.22;letter-spacing:-.075em}
 .plan-month-title{left:6.5789473684%}.next-plan .plan-month-title{left:7.8648325359%}
 .plan-month-title .plan-month-name,.plan-month-title .plan-month-year{position:static;width:auto;font-size:inherit;line-height:inherit;padding:.04em .035em;transform:none}
 
@@ -514,7 +514,7 @@ main{position:fixed}
 /* Shared logo caption on all dashboard screens. */
 .unilabs-brand{position:relative;justify-self:end;display:flex;flex-direction:column;align-items:center;width:326.4px;max-width:390px;gap:0}
 .unilabs-brand .logo{width:100%;max-width:100%}
-.unilabs-brand>span{position:absolute;right:0;top:calc(72% + 4px);width:64%;color:#737f88;font-size:18px;line-height:1.2;text-align:center;white-space:nowrap}
+.unilabs-brand>span{position:absolute;right:0;top:calc(72% + 4px);width:64%;color:#737f88;font-size:26px;font-weight:500;line-height:1.1;text-align:center;white-space:nowrap}
 .studio-map{position:relative;flex:1;min-height:0;overflow:hidden;border-radius:12px;background:#e9eee4;isolation:isolate}
 .studio-map-tiles{position:absolute;inset:0;pointer-events:none}
 .studio-map-tiles img{position:absolute;width:256px;height:256px;max-width:none}
@@ -523,7 +523,7 @@ main{position:fixed}
 .studio-map-status{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:22px;color:#737f88}
 @media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
  .dashboard>header>.unilabs-brand{grid-column:2;grid-row:1;width:130px;min-width:0;align-self:center;gap:0}
- .unilabs-brand>span{font-size:7px;top:calc(72% + 2px)}
+ .unilabs-brand>span{font-size:10px;top:calc(72% + 2px)}
  .studio-map{height:320px;min-height:320px;flex:none}
  .studio-map-status{font-size:15px}
 }
@@ -537,3 +537,5 @@ main{position:fixed}
 .clinic-map-card .google-map-sequence iframe.is-past{transform:scale(1.08);z-index:1}
 @media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){.google-map-sequence{height:320px;min-height:320px;flex:none}}
 @media (prefers-reduced-motion:reduce){.clinic-map-card .google-map-sequence iframe{transition:none;transform:none}}
+
+.plan-month-title,.next-plan .plan-month-title{gap:.3cqw}
