@@ -550,6 +550,6 @@ main{position:fixed}
 @media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){.plan-updated-desktop{display:none}.plan-updated-mobile{display:block}}
 
 .studio-map-with-note{display:flex;flex-direction:column;flex:1;min-height:0}
-.streetview-date-note{display:flex;align-items:flex-start;gap:9px;flex-shrink:0;margin:13px 0 0;color:#c62828;font-size:18px;font-weight:500;line-height:1.35}
-.streetview-date-note svg{flex-shrink:0;margin-top:1px}
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){.studio-map-with-note{flex:none}.streetview-date-note{font-size:12px;gap:7px;margin-top:10px}.streetview-date-note svg{width:18px;height:18px}}
+.streetview-date-note{display:flex;align-items:baseline;gap:9px;flex-shrink:0;margin:13px 0 0;color:#c62828;font-size:18px;font-weight:500;line-height:1.35}
+.streetview-date-note svg{flex-shrink:0;margin-top:0;transform:translateY(2px)}
+@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){.studio-map-with-note{flex:none}.streetview-date-note{font-size:12px;gap:7px;margin-top:10px}.streetview-date-note svg{width:18px;height:18px;transform:translateY(1.5px)}}
