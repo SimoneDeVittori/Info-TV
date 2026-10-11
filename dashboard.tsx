@@ -192,8 +192,20 @@ function useLiveViasuisse(){
 
 type MedicalStudio={id:string;createdOn:string;name:string;street:string;postalCode:string;locality:string;pickups:Record<string,{morning?:string|null;afternoon?:string|null}>;startsOn?:string;coordinates?:{lat:number;lon:number}};
 function UnilabsBrand(){return <div className="unilabs-brand"><img className="logo" src="./unilabs-logo.png" alt="Unilabs"/><span>Servizio Esterno Unilabs</span></div>;}
-function StudioMap({studio}:{studio:MedicalStudio}){
- return <iframe title={'Google Maps — '+studio.name+', '+studio.street+', '+studio.locality} src={'https://maps.google.com/maps?q='+encodeURIComponent(studio.street+', '+studio.postalCode+' '+studio.locality+', Svizzera')+'&z=17&output=embed'} referrerPolicy="no-referrer-when-downgrade" allowFullScreen/>;
+function StudioMap({studio,active}:{studio:MedicalStudio;active:boolean}){
+ const [step,setStep]=useState(0);
+ const [loaded,setLoaded]=useState([false,false,false]);
+ const query=encodeURIComponent(studio.street+', '+studio.postalCode+' '+studio.locality+', Svizzera');
+ useEffect(()=>{setStep(0);setLoaded([false,false,false]);},[query]);
+ useEffect(()=>{
+  setStep(0);
+  if(!active||!loaded[0])return;
+  const neighborhood=setTimeout(()=>setStep(1),3000);
+  const address=setTimeout(()=>setStep(2),6000);
+  return()=>{clearTimeout(neighborhood);clearTimeout(address);};
+ },[active,loaded[0],query]);
+ const shown=step===2&&loaded[2]?2:step>=1&&loaded[1]?1:0;
+ return <div className="google-map-sequence">{[14,16,17].map((zoom,index)=><iframe key={query+'-'+zoom} className={'google-map-view '+(shown===index?'is-current':shown>index?'is-past':'')} title={'Google Maps — '+(['Panoramica della zona','Quartiere dello studio','Indirizzo dello studio'][index])+', '+studio.street+', '+studio.locality} src={'https://maps.google.com/maps?q='+query+'&z='+zoom+'&output=embed'} onLoad={()=>setLoaded(current=>current.map((value,i)=>i===index?true:value))} aria-hidden={shown!==index} tabIndex={shown===index?0:-1} referrerPolicy="no-referrer-when-downgrade" allowFullScreen/>)}</div>;
 }
 function studioStartLabel(startsOn:string|undefined,now:Date){
  if(!startsOn)return null;
@@ -282,7 +294,7 @@ export default function Home(){
    {studio?<div className="clinic-content"><div className="clinic-details">
     <article className="clinic-address-card card"><div className="section-label">STUDIO MEDICO</div><h1>{studio.name}</h1><address><strong>{studio.street}</strong><span>{studio.postalCode} {studio.locality}</span></address></article>
     <article className="clinic-schedule-card card"><div className="section-label">Orario di Ritiro Fisso</div>{studio.startsOn&&<p className="clinic-start-date">{studioStartLabel(studio.startsOn,now||new Date())}</p>}<div className="clinic-week">{[['Lu','Lunedì'],['Ma','Martedì'],['Me','Mercoledì'],['Gio','Giovedì'],['Ve','Venerdì']].map(([key,label])=><div key={key} className="clinic-day"><span>{label}</span><div className={'clinic-slot '+(studio.pickups[key]?.morning?'has-pickup':'no-pickup')}><small>Mattina</small><strong>{studio.pickups[key]?.morning||'—'}</strong></div><div className={'clinic-slot '+(studio.pickups[key]?.afternoon?'has-pickup':'no-pickup')}><small>Pomeriggio</small><strong>{studio.pickups[key]?.afternoon||'—'}</strong></div></div>)}</div></article>
-   </div><article className="clinic-map-card card"><div className="clinic-map-heading"><div className="section-label">DOVE TROVARLO</div><span>{studio.postalCode} {studio.locality}</span></div><StudioMap studio={studio}/><div className="source"><span>Google Maps</span><span>{studio.street} · {studio.locality}</span></div></article></div>:<div className="empty">Caricamento dello studio medico…</div>}
+   </div><article className="clinic-map-card card"><div className="clinic-map-heading"><div className="section-label">DOVE TROVARLO</div><span>{studio.postalCode} {studio.locality}</span></div><StudioMap studio={studio} active={page===5+studioIndex}/><div className="source"><span>Google Maps</span><span>{studio.street} · {studio.locality}</span></div></article></div>:<div className="empty">Caricamento dello studio medico…</div>}
    <footer><small className="creator-copyright">© SimDev3D</small><span>Unilabs Ticino · Centro Galleria 3, Via Cantonale 4, 6928 Manno</span><div className="page-dots"><i/><i/><i/><i/><i className="selected"/></div></footer><div className="progress" style={{animationDuration:'15s'}} key={page===5+studioIndex?'medical-studio-'+studio.id:'medical-studio-hidden-'+studio.id}/>
   </section>)}
   <button className={'fullscreen '+(controls?'show':'')} onFocus={()=>setControls(true)} onClick={()=>{if(!document.fullscreenElement)document.documentElement.requestFullscreen?.();else document.exitFullscreen?.();}}>Schermo intero</button>
