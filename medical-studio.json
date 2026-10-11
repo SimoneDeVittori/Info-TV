@@ -1,0 +1,19 @@
+{
+  "studios": [
+    {
+      "name": "Dr.ssa Chiara Rossi",
+      "street": "Via Falcette 3",
+      "postalCode": "6855",
+      "locality": "Stabio",
+      "pickups": {
+        "Lu": "14:45",
+        "Ma": "14:45",
+        "Gio": "14:45",
+        "Ve": "14:45"
+      },
+      "startsOn": "2026-10-12",
+      "id": "chiara-rossi-stabio",
+      "createdOn": "2026-10-11"
+    }
+  ]
+}

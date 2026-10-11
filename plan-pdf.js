@@ -75,3 +75,4 @@ return async function renderPdf(canvas) {
 }
 export const renderWorkPlanPdf=createPlanRenderer(PLAN_FILE,{x:17,y:53,width:1056,height:695});
 export const renderNextPlanPdf=createPlanRenderer(NEXT_PLAN_FILE,{x:17,y:53,width:998,height:674});
+// Medical studio pages are appended dynamically by the dashboard.

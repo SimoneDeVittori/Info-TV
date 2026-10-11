@@ -1,4 +1,4 @@
-import {PLAN_FILE,PLAN_METADATA,renderWorkPlanPdf,NEXT_PLAN_FILE,NEXT_PLAN_METADATA,renderNextPlanPdf,isNextPlanAvailable,NEXT_PLAN_AVAILABLE_LABEL,planRotation,isNextPlanPreview,getPlanState} from './plan-pdf.js?v=20261011-month-rollover';
+import {PLAN_FILE,PLAN_METADATA,renderWorkPlanPdf,NEXT_PLAN_FILE,NEXT_PLAN_METADATA,renderNextPlanPdf,isNextPlanAvailable,NEXT_PLAN_AVAILABLE_LABEL,planRotation,isNextPlanPreview,getPlanState} from './plan-pdf.js?v=20261011-medical-studio';
 'use client';
 import {useEffect,useState,createElement as rainElement} from 'react';
 import {Cloud,Sun,CloudSun,CloudRain,CloudLightning,Snowflake,Droplets} from 'lucide-react';
@@ -189,16 +189,47 @@ function useLiveViasuisse(){
  return state;
 }
 
+
+type MedicalStudio={id:string;createdOn:string;name:string;street:string;postalCode:string;locality:string;pickups:Record<string,string>;startsOn?:string};
+function studioStartLabel(startsOn:string|undefined,now:Date){
+ if(!startsOn)return null;
+ const today=now.toLocaleDateString('sv-SE',{timeZone:'Europe/Zurich'});
+ if(today===startsOn)return 'Passaggi da oggi';
+ const date=new Date(startsOn+'T12:00:00');
+ if(!Number.isFinite(date.getTime()))return null;
+ if(today>startsOn)return 'Passaggi attivi dal '+date.toLocaleDateString('it-CH',{day:'numeric',month:'long',timeZone:'Europe/Zurich'});
+ return 'Passaggi da '+date.toLocaleDateString('it-CH',{weekday:'long',day:'numeric',month:'long',timeZone:'Europe/Zurich'});
+}
+function isMedicalStudioPreview(){return new URLSearchParams(window.location.search).get('anteprima')==='studio';}
+function isMedicalStudioVisible(studio:MedicalStudio,now:Date){
+ const day=now.toLocaleDateString('sv-SE',{timeZone:'Europe/Zurich'});
+ if(studio.createdOn&&day<studio.createdOn)return false;
+ if(!studio.startsOn)return true;
+ const expiry=new Date(studio.startsOn+'T00:00:00Z');
+ if(!Number.isFinite(expiry.getTime()))return false;
+ expiry.setUTCDate(expiry.getUTCDate()+3);
+ return day<=expiry.toISOString().slice(0,10);
+}
+function useMedicalStudios(){
+ const [studio,setStudio]=useState<MedicalStudio[]>([]);
+ useEffect(()=>{let alive=true;async function refresh(){try{const response=await fetch('./medical-studio.json?t='+Date.now(),{cache:'no-store'});if(!response.ok)throw Error('Studio non disponibile');const value=await response.json();if(alive&&Array.isArray(value.studios))setStudio(value.studios.filter((entry:any)=>entry.id&&entry.name&&entry.street&&entry.locality&&entry.pickups));}catch{}}refresh();const timer=setInterval(refresh,180000);return()=>{alive=false;clearInterval(timer);};},[]);
+ return studio;
+}
+
 export default function Home(){
+ const studios=useMedicalStudios();
  const liveTraffic=useLiveViasuisse();
  const [phone,setPhone]=useState(()=>isPhoneDisplay());
  const pull=usePhonePullRefresh(phone);
- const [now,setNow]=useState<Date|null>(null);const [page,setPage]=useState(()=>isNextPlanPreview()?(isNextPlanAvailable()?4:1):0);const [data,setData]=useState<any>({});const [failed,setFailed]=useState(false);const [controls,setControls]=useState(false);
- useEffect(()=>{const resize=()=>{document.documentElement.style.setProperty('--tv-scale',String(Math.min(window.innerWidth/1920,window.innerHeight/1080)));const mobile=isPhoneDisplay();setPhone(mobile);if(mobile)setPage(p=>p===2||p===3?0:p);};resize();window.addEventListener('resize',resize);setNow(new Date());const clock=setInterval(()=>{setNow(new Date());if(!isSwissMapTime())setPage(p=>p===3?0:p);},1000);let alive=true;async function refresh(){try{const r=await fetch('./data.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error();const d=await r.json();if(alive){setData((old:any)=>({...d,weather:d.weather??old.weather,news:d.news??old.news}));setFailed(false);}}catch{if(alive)setFailed(true);}}refresh();const poll=setInterval(refresh,180000);const visibility=()=>{if(!document.hidden)refresh();};document.addEventListener('visibilitychange',visibility);return()=>{window.removeEventListener('resize',resize);alive=false;clearInterval(clock);clearInterval(poll);document.removeEventListener('visibilitychange',visibility);};},[]);
+ const [now,setNow]=useState<Date|null>(null);const [page,setPage]=useState(()=>isMedicalStudioPreview()?5:isNextPlanPreview()?(isNextPlanAvailable()?4:1):0);const [data,setData]=useState<any>({});const [failed,setFailed]=useState(false);const [controls,setControls]=useState(false);
+ useEffect(()=>{const resize=()=>{document.documentElement.style.setProperty('--tv-scale',String(Math.min(window.innerWidth/1920,window.innerHeight/1080)));const mobile=isPhoneDisplay();setPhone(mobile);if(mobile&&!isMedicalStudioPreview())setPage(p=>p===2||p===3||p>=5?0:p);};resize();window.addEventListener('resize',resize);setNow(new Date());const clock=setInterval(()=>{setNow(new Date());if(!isSwissMapTime())setPage(p=>p===3?0:p);},1000);let alive=true;async function refresh(){try{const r=await fetch('./data.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error();const d=await r.json();if(alive){setData((old:any)=>({...d,weather:d.weather??old.weather,news:d.news??old.news}));setFailed(false);}}catch{if(alive)setFailed(true);}}refresh();const poll=setInterval(refresh,180000);const visibility=()=>{if(!document.hidden)refresh();};document.addEventListener('visibilitychange',visibility);return()=>{window.removeEventListener('resize',resize);alive=false;clearInterval(clock);clearInterval(poll);document.removeEventListener('visibilitychange',visibility);};},[]);
+ const visibleStudios=studios.filter(studio=>isMedicalStudioVisible(studio,now||new Date()));
+ const studioRotationKey=visibleStudios.map(studio=>studio.id).join('|');
  const planState=getPlanState(now||new Date());
+ useEffect(()=>{if(studios.length&&page>=5&&page-5>=visibleStudios.length)setPage(0);},[studioRotationKey,page]);
  const nextPlanAvailable=planState.nextAvailable;
  useEffect(()=>{if(page===4&&!nextPlanAvailable)setPage(1);},[planState.period,nextPlanAvailable,page]);
- useEffect(()=>{if(phone||isNextPlanPreview())return;const rotation=setTimeout(()=>setPage(p=>{if(isPhoneDisplay())return p;const pages=planRotation();return pages[(pages.indexOf(p)+1)%pages.length];}),page===0?25000:page===2?7000:page===3?10000:20000);return()=>clearTimeout(rotation);},[page,phone,nextPlanAvailable]);
+ useEffect(()=>{if(phone||isNextPlanPreview()||isMedicalStudioPreview())return;const rotation=setTimeout(()=>setPage(p=>{if(isPhoneDisplay())return p;const pages=[...planRotation(),...visibleStudios.map((studio,index)=>5+index)];return pages[(pages.indexOf(p)+1)%pages.length];}),page===0?25000:page===2?7000:page===3?10000:page>=5?15000:20000);return()=>clearTimeout(rotation);},[page,phone,nextPlanAvailable,studioRotationKey]);
  useEffect(()=>{if(!controls)return;const t=setTimeout(()=>setControls(false),3500);return()=>clearTimeout(t);},[controls]);
  const week=data.week;
  const rainWindow=(day:string)=>{
@@ -224,7 +255,7 @@ export default function Home(){
     
     <div className="source"><a href="https://www.meteosvizzera.admin.ch/previsioni-locali/manno/6928.html" target="_blank" rel="noreferrer">Fonte: MeteoSvizzera</a>{staleWeather&&<span className="warning">{w?'Ultimi dati ricevuti · aggiornamento in attesa':'Connessione alla fonte in attesa'}</span>}</div>
    </article><div className="right-column"><article className="news card"><div className="news-header"><div><div className="section-label">ULTIME NOTIZIE DAL TICINO</div></div><img className="tio-logo" src="./tio-logo.png" alt="Ticinonline"/></div><div className="news-list">{n?n.items.slice(0,3).map((item:any,i:number)=><a className="news-item" key={item.link} href={item.link} target="_blank" rel="noreferrer">{item.image&&<img className="news-photo" src={item.image} alt="" onError={e=>{e.currentTarget.style.visibility='hidden';}}/>}<div className="news-copy"><div className="news-meta"><span className="news-location">{item.category||'Attualità'}</span>{item.date&&!isNaN(Date.parse(item.date))?' · '+fmtTime(item.date):''}</div><h3>{item.title}</h3>{item.description&&<p className="news-description">{item.description}</p>}</div></a>):<div className="empty">{staleNews?'Notizie temporaneamente non disponibili':'Caricamento delle ultime notizie…'}</div>}</div><div className="source"><a href="https://www.tio.ch/ticino" target="_blank" rel="noreferrer">Fonte: tio.ch</a><span>{staleNews?'Aggiornamento in attesa':n?'Aggiornato alle '+fmtTime(n.updatedAt):''}</span></div></article><article className="traffic card"><div className="traffic-header"><div><div className="section-label">VIABILITÀ IN TICINO</div></div></div><div className="traffic-list">{traffic?.items?.length?[...traffic.items].sort((a:any,b:any)=>(Date.parse(b.changedAt)||0)-(Date.parse(a.changedAt)||0)).slice(0,2).map((item:any)=><div className="traffic-item" key={item.id}><p>{item.changedAt&&!isNaN(Date.parse(item.changedAt))&&<time dateTime={item.changedAt} title="Ultimo aggiornamento della segnalazione" style={{fontWeight:700,fontVariantNumeric:"tabular-nums"}}>{fmtTime(item.changedAt)} · </time>}{item.location&&item.text.startsWith(item.location)?<><strong className="traffic-location">{item.location}</strong>{item.text.slice(item.location.length)}</>:item.text}</p></div>):<p className="traffic-empty">{staleTraffic?'Informazioni sul traffico temporaneamente non disponibili':traffic?'Nessuna segnalazione attiva in Ticino':'Caricamento delle informazioni sul traffico…'}</p>}</div><div className="source"><a href="https://viasuisse.ch/it/home-2/" target="_blank" rel="noreferrer">Fonte: Viasuisse</a><span>{staleTraffic?'Aggiornamento in attesa':traffic?'Aggiornato alle '+fmtTime(traffic.updatedAt):''}</span></div></article></div></div>
-   <footer><small className="creator-copyright">© SimDev3D</small><span>Unilabs Ticino · Centro Galleria 3, Via Cantonale 4, 6928 Manno</span><div className="page-dots"><i className="selected"/><i/><i/><i/></div></footer><div className="progress" key={page===0?'dashboard':'hidden'}/>
+   <footer><small className="creator-copyright">© SimDev3D</small><span>Unilabs Ticino · Centro Galleria 3, Via Cantonale 4, 6928 Manno</span><div className="page-dots"><i className="selected"/><i/><i/><i/><i/></div></footer><div className="progress" key={page===0?'dashboard':'hidden'}/>
   </section>
   <section className={'plan screen '+(page===1?'active':'')} aria-hidden={page!==1}>{renderWorkPlan(now)}<div className="progress" key={page===1?"plan":"plan-hidden"}/></section>
   {nextPlanAvailable&&<section className={'plan next-plan screen '+(page===4?'active':'')} aria-hidden={page!==4}>{renderWorkPlan(now,true)}<div className="progress" key={page===4?"next-plan":"next-plan-hidden"}/></section>}
@@ -238,11 +269,25 @@ export default function Home(){
    </svg>
    {!data.swissWeather&&<p className="map-unavailable">Previsioni temporaneamente non disponibili</p>}
    <div className="source"><a href="https://www.meteosvizzera.admin.ch/#tab=forecast-map" target="_blank" rel="noreferrer">Fonte: MeteoSvizzera</a><span>{data.swissWeatherError||failed?'Aggiornamento in attesa':data.swissWeather?'Aggiornato alle '+fmtTime(data.swissWeather.updatedAt):''}</span></div></article>
-   <footer><small className="creator-copyright">© SimDev3D</small><span>Unilabs Ticino · Centro Galleria 3, Via Cantonale 4, 6928 Manno</span><div className="page-dots"><i/><i/><i/><i className="selected"/></div></footer><div className="progress" style={{animationDuration:'10s'}} key={page===3?'swiss-map':'swiss-map-hidden'}/>
+   <footer><small className="creator-copyright">© SimDev3D</small><span>Unilabs Ticino · Centro Galleria 3, Via Cantonale 4, 6928 Manno</span><div className="page-dots"><i/><i/><i/><i className="selected"/><i/></div></footer><div className="progress" style={{animationDuration:'10s'}} key={page===3?'swiss-map':'swiss-map-hidden'}/>
   </section>
+
+  {(!phone||isMedicalStudioPreview())&&visibleStudios.map((studio,studioIndex)=><section key={studio.id} className={'dashboard clinic-screen screen '+(page===5+studioIndex?'active':'')} aria-hidden={page!==5+studioIndex}>
+   <header><div><div className="date">{renderBrandDate(now)}</div></div>{!phone&&<time className="header-clock">{now?fmtTime(now):'—'}</time>}<img className="logo" src="./unilabs-logo.png" alt="Unilabs"/></header>
+   <div className="clinic-title-row"><h2>Nuovo Studio Medico</h2><span>Servizio Esterno Unilabs</span></div>
+   {studio?<div className="clinic-content"><div className="clinic-details">
+    <article className="clinic-address-card card"><div className="section-label">STUDIO MEDICO</div><h1>{studio.name}</h1><address><strong>{studio.street}</strong><span>{studio.postalCode} {studio.locality}</span></address><a className="clinic-directions" href={'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(studio.street+', '+studio.postalCode+' '+studio.locality+', Svizzera')} target="_blank" rel="noreferrer">Apri in Google Maps</a></article>
+    <article className="clinic-schedule-card card"><div className="section-label">Orari di passaggio</div><p className="clinic-schedule-note">Orari di ritiro</p>{studio.startsOn&&<p className="clinic-start-date">{studioStartLabel(studio.startsOn,now||new Date())}</p>}<div className="clinic-week">{[['Lu','Lunedì'],['Ma','Martedì'],['Me','Mercoledì'],['Gio','Giovedì'],['Ve','Venerdì']].map(([key,label])=><div key={key} className={'clinic-day '+(studio.pickups[key]?'has-pickup':'no-pickup')}><span>{label}</span><strong>{studio.pickups[key]||'—'}</strong><small>{studio.pickups[key]?'Ritiro':'Nessun ritiro'}</small></div>)}</div></article>
+   </div><article className="clinic-map-card card"><div className="clinic-map-heading"><div className="section-label">DOVE TROVARLO</div><span>{studio.postalCode} {studio.locality}</span></div><iframe title={'Google Maps — '+studio.name+', '+studio.street+', '+studio.locality} src={'https://maps.google.com/maps?q='+encodeURIComponent(studio.street+', '+studio.postalCode+' '+studio.locality+', Svizzera')+'&z=17&output=embed'} referrerPolicy="no-referrer-when-downgrade" allowFullScreen/><div className="source"><span>Google Maps</span><span>{studio.street} · {studio.locality}</span></div></article></div>:<div className="empty">Caricamento dello studio medico…</div>}
+   <footer><small className="creator-copyright">© SimDev3D</small><span>Unilabs Ticino · Centro Galleria 3, Via Cantonale 4, 6928 Manno</span><div className="page-dots"><i/><i/><i/><i/><i className="selected"/></div></footer><div className="progress" style={{animationDuration:'15s'}} key={page===5+studioIndex?'medical-studio-'+studio.id:'medical-studio-hidden-'+studio.id}/>
+  </section>)}
   <button className={'fullscreen '+(controls?'show':'')} onFocus={()=>setControls(true)} onClick={()=>{if(!document.fullscreenElement)document.documentElement.requestFullscreen?.();else document.exitFullscreen?.();}}>Schermo intero</button>
  </main>;
 }
 
 import {createRoot} from "react-dom/client";
 createRoot(document.getElementById("root")!).render(<Home/>);
+// Medical studio pickup start date follows Europe/Zurich calendar days.
+// Each medical studio owns its creation date, start date and expiry window.
+// Direct studio preview also supports phones without changing home rotation.
+// Studio expiry is now three days following the first pickup date.
