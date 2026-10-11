@@ -6,10 +6,22 @@
       "postalCode": "6855",
       "locality": "Stabio",
       "pickups": {
-        "Lu": "14:45",
-        "Ma": "14:45",
-        "Gio": "14:45",
-        "Ve": "14:45"
+        "Lu": {
+          "morning": null,
+          "afternoon": "14:45"
+        },
+        "Ma": {
+          "morning": null,
+          "afternoon": "14:45"
+        },
+        "Gio": {
+          "morning": null,
+          "afternoon": "14:45"
+        },
+        "Ve": {
+          "morning": null,
+          "afternoon": "14:45"
+        }
       },
       "startsOn": "2026-10-12",
       "id": "chiara-rossi-stabio",

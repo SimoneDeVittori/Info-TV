@@ -488,3 +488,22 @@ main{position:fixed}
  .clinic-day>span{font-size:11px}.clinic-day strong{font-size:20px}.clinic-day small{font-size:9px}.clinic-map-heading>span{font-size:17px}.clinic-map-card iframe{height:320px;min-height:320px;flex:none}
 }
 /* Medical studio preview adapts to phones. */
+
+/* Smaller address card and two pickup periods per weekday. */
+.clinic-details{grid-template-rows:auto minmax(0,1fr)}
+.clinic-address-card{padding:26px 30px}
+.clinic-address-card h1{font-size:44px;margin:18px 0}
+.clinic-address-card address{font-size:34px;gap:8px}
+.clinic-schedule-card{min-height:0}
+.clinic-week{flex:1;align-items:stretch;min-height:0}
+.clinic-day{padding:16px 6px;background:#fff;border-color:#e6e9eb;gap:12px;justify-content:space-between}
+.clinic-day>span{color:#27313b}
+.clinic-slot{width:100%;border-radius:10px;padding:12px 5px;display:flex;flex-direction:column;align-items:center;gap:7px;background:#fff4ec;border:1px solid #f0d7c5}
+.clinic-slot small{font-size:16px;color:#a35a33}
+.clinic-slot strong{font-size:32px;color:#e7531b}
+.clinic-slot.no-pickup{background:#f5f6f7;border-color:#edf0f2}
+.clinic-slot.no-pickup small,.clinic-slot.no-pickup strong{color:#798189}
+@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+ .clinic-address-card{padding:18px}.clinic-address-card h1{font-size:30px;margin:16px 0}.clinic-address-card address{font-size:26px}
+ .clinic-day{padding:12px 3px;gap:10px}.clinic-slot{padding:10px 2px;gap:8px}.clinic-slot small{font-size:9px}.clinic-slot strong{font-size:20px}
+}
