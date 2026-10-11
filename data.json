@@ -1,10 +1,10 @@
 {
   "weather": {
     "current": {
-      "time": 1791724800000,
-      "icon": 2,
-      "iconV2": 2,
-      "temperature": 20.2
+      "time": 1791730200000,
+      "icon": 26,
+      "iconV2": 26,
+      "temperature": 19.9
     },
     "forecast": [
       {
@@ -21,7 +21,7 @@
         "dayDate": "2026-10-12",
         "iconDay": 2,
         "iconDayV2": 2,
-        "temperatureMax": 19,
+        "temperatureMax": 20,
         "temperatureMin": 11,
         "precipitation": 0.0,
         "precipitationMin": 0.0,
@@ -48,7 +48,7 @@
         "precipitationMax": 0.0
       }
     ],
-    "updatedAt": "2026-10-11T13:35:12.888817+00:00"
+    "updatedAt": "2026-10-11T14:59:16.034999+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -65,7 +65,7 @@
       {
         "dayDate": "2026-10-12",
         "temperatureMin": 11,
-        "temperatureMax": 19,
+        "temperatureMax": 20,
         "iconDay": 2,
         "precipitation": 0.0
       },
@@ -1202,12 +1202,20 @@
         "amount": 0.0
       }
     ],
-    "model": "202610111300",
-    "updatedAt": "2026-10-11T13:35:12.924538+00:00"
+    "model": "202610111400",
+    "updatedAt": "2026-10-11T14:59:16.060995+00:00"
   },
   "weekError": false,
   "news": {
     "items": [
+      {
+        "title": "Tutti pazzi per la Sagra della Castagna, ma quelle servite non sono ticinesi",
+        "description": "«Affluenza elevata e posteggi pieni tutto il giorno» e il raccolto locale non basta. Daniele Kleimann: «Ecco da dove arrivano le castagne e perché». Svelata anche la località prescelta per il 2027.",
+        "link": "https://www.tio.ch/ticino/cronaca/1956049/tutti-pazzi-per-la-sagra-della-castagna-ma-quelle-servite-non-sono-ticinesi",
+        "date": "Sun, 11 Oct 2026 16:31:59 +0200",
+        "category": "MENDRISIOTTO",
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oo1h.jpg?v=1"
+      },
       {
         "title": "ClassicAscona, debutto da record: oltre 9'000 spettatori",
         "description": "La prima edizione del festival chiude con più del doppio del pubblico rispetto allo scorso anno. In programma già le date del 2027, ecco quali.",
@@ -1223,17 +1231,9 @@
         "date": "Sun, 11 Oct 2026 11:00:04 +0200",
         "category": "RIVERA",
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1onzi.jpg?v=2"
-      },
-      {
-        "title": "Solari, Quadri e Huber, regina e re del tiro al San Gottardo",
-        "description": "Si è conclusa sabato 10 ottobre la 18ª edizione del Tiro Storico del San Gottardo.",
-        "link": "https://www.tio.ch/ticino/attualita/1956019/solari-quadri-e-huber-regina-e-re-del-tiro-al-san-gottardo",
-        "date": "Sun, 11 Oct 2026 10:34:28 +0200",
-        "category": "AIROLO",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1onzj.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-10-11T13:35:12.888817+00:00",
+    "updatedAt": "2026-10-11T14:59:16.034999+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -1252,7 +1252,7 @@
         "coord_y": "1152444",
         "location_id": "100300",
         "location_type": "city",
-        "timestamp": 1791724210,
+        "timestamp": 1791729612,
         "forecasts": [
           {
             "date": "11 ottobre 2026",
@@ -1267,7 +1267,7 @@
             "date": "12 ottobre 2026",
             "date_iso": "2026-10-12",
             "weather_description": "symbol_id_1",
-            "temp_high": 16,
+            "temp_high": 15,
             "weekday": "lunedì",
             "temp_low": 8,
             "weather_symbol_id": 1
@@ -1341,7 +1341,7 @@
         "coord_y": "1118423",
         "location_id": "120100",
         "location_type": "city",
-        "timestamp": 1791724210,
+        "timestamp": 1791729612,
         "forecasts": [
           {
             "date": "11 ottobre 2026",
@@ -1355,11 +1355,11 @@
           {
             "date": "12 ottobre 2026",
             "date_iso": "2026-10-12",
-            "weather_description": "symbol_id_2",
+            "weather_description": "symbol_id_1",
             "temp_high": 16,
             "weekday": "lunedì",
             "temp_low": 6,
-            "weather_symbol_id": 2
+            "weather_symbol_id": 1
           },
           {
             "date": "13 ottobre 2026",
@@ -1430,7 +1430,7 @@
         "coord_y": "1119910",
         "location_id": "195000",
         "location_type": "city",
-        "timestamp": 1791724210,
+        "timestamp": 1791729612,
         "forecasts": [
           {
             "date": "11 ottobre 2026",
@@ -1519,7 +1519,7 @@
         "coord_y": "1202399",
         "location_id": "300400",
         "location_type": "city",
-        "timestamp": 1791724210,
+        "timestamp": 1791729612,
         "forecasts": [
           {
             "date": "11 ottobre 2026",
@@ -1608,7 +1608,7 @@
         "coord_y": "1267348",
         "location_id": "400100",
         "location_type": "city",
-        "timestamp": 1791724210,
+        "timestamp": 1791729612,
         "forecasts": [
           {
             "date": "11 ottobre 2026",
@@ -1697,7 +1697,7 @@
         "coord_y": "1211120",
         "location_id": "600300",
         "location_type": "city",
-        "timestamp": 1791724210,
+        "timestamp": 1791729612,
         "forecasts": [
           {
             "date": "11 ottobre 2026",
@@ -1705,7 +1705,7 @@
             "weather_description": "symbol_id_3",
             "temp_high": 15,
             "weekday": "Heute",
-            "temp_low": 10,
+            "temp_low": 9,
             "weather_symbol_id": 3
           },
           {
@@ -1765,11 +1765,11 @@
           {
             "date": "18 ottobre 2026",
             "date_iso": "2026-10-18",
-            "weather_description": "symbol_id_6",
+            "weather_description": "symbol_id_4",
             "temp_high": 11,
             "weekday": "domenica",
             "temp_low": 8,
-            "weather_symbol_id": 6
+            "weather_symbol_id": 4
           }
         ]
       },
@@ -1786,7 +1786,7 @@
         "coord_y": "1096327",
         "location_id": "690000",
         "location_type": "city",
-        "timestamp": 1791724210,
+        "timestamp": 1791729612,
         "forecasts": [
           {
             "date": "11 ottobre 2026",
@@ -1803,7 +1803,7 @@
             "weather_description": "symbol_id_2",
             "temp_high": 20,
             "weekday": "lunedì",
-            "temp_low": 12,
+            "temp_low": 11,
             "weather_symbol_id": 2
           },
           {
@@ -1854,11 +1854,11 @@
           {
             "date": "18 ottobre 2026",
             "date_iso": "2026-10-18",
-            "weather_description": "symbol_id_3",
+            "weather_description": "symbol_id_29",
             "temp_high": 18,
             "weekday": "domenica",
             "temp_low": 12,
-            "weather_symbol_id": 3
+            "weather_symbol_id": 29
           }
         ]
       },
@@ -1875,7 +1875,7 @@
         "coord_y": "1191534",
         "location_id": "700000",
         "location_type": "city",
-        "timestamp": 1791724210,
+        "timestamp": 1791729612,
         "forecasts": [
           {
             "date": "11 ottobre 2026",
@@ -1964,7 +1964,7 @@
         "coord_y": "1247414",
         "location_id": "800100",
         "location_type": "city",
-        "timestamp": 1791724210,
+        "timestamp": 1791729612,
         "forecasts": [
           {
             "date": "11 ottobre 2026",
@@ -1981,7 +1981,7 @@
             "weather_description": "symbol_id_1",
             "temp_high": 16,
             "weekday": "lunedì",
-            "temp_low": 6,
+            "temp_low": 7,
             "weather_symbol_id": 1
           },
           {
@@ -2053,7 +2053,7 @@
         "coord_y": "1254370",
         "location_id": "900000",
         "location_type": "city",
-        "timestamp": 1791724210,
+        "timestamp": 1791729612,
         "forecasts": [
           {
             "date": "11 ottobre 2026",
@@ -2061,7 +2061,7 @@
             "weather_description": "symbol_id_3",
             "temp_high": 12,
             "weekday": "Heute",
-            "temp_low": 7,
+            "temp_low": 8,
             "weather_symbol_id": 3
           },
           {
@@ -2130,21 +2130,12 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-11T13:35:12.888817+00:00",
-    "version": "20261011_1310"
+    "updatedAt": "2026-10-11T14:59:16.034999+00:00",
+    "version": "20261011_1440"
   },
   "swissWeatherError": false,
   "traffic": {
     "items": [
-      {
-        "id": "Viasuisser_FAVM/658815_TIC-Viasuisse/1",
-        "text": "399 - attraversamento Comano, la galleria Vedeggio-Cassarate in entrambe le direzioni chiusa, veicolo in avaria",
-        "location": "399 - attraversamento Comano, la galleria Vedeggio-Cassarate",
-        "road": "399",
-        "category": 11,
-        "changedAt": "2026-10-11T15:27:06+02:00",
-        "priority": 3
-      },
       {
         "id": "Viasuisser_FAVM/658784_TIC-Viasuisse/1",
         "text": "A2 - Chiasso direzione S. Gottardo tra Quinto e Area di dosaggio Airolo traffico bloccato per 5 km, traffico congestionato, ritardi fino a 50 minuti - La corsia CUPRA è aperta",
@@ -2243,10 +2234,19 @@
         "category": 32,
         "changedAt": "2026-09-22T11:58:11+02:00",
         "priority": 6
+      },
+      {
+        "id": "Viasuisser_FAVM/654420_TIC-Viasuisse/1",
+        "text": "A2 - Chiasso direzione S. Gottardo tra Faido e Quinto problemi di traffico, lavori stradali per 2.7 km, corsie strette, carreggiata ridotta a due corsie, limite temporaneo di larghezza di 7.75 m, fino a 20.11.2026 05:00 - ID117662",
+        "location": "A2 - Chiasso direzione S. Gottardo",
+        "road": "A2",
+        "category": 31,
+        "changedAt": "2026-09-21T17:02:59+02:00",
+        "priority": 5
       }
     ],
-    "total": 49,
-    "updatedAt": "2026-10-11T13:35:12.888817+00:00",
+    "total": 48,
+    "updatedAt": "2026-10-11T14:59:16.034999+00:00",
     "source": "Viasuisse"
   }
 }
