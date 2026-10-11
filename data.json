@@ -1,7 +1,7 @@
 {
   "weather": {
     "current": {
-      "time": 1791754800000,
+      "time": 1791755400000,
       "icon": 103,
       "iconV2": 103,
       "temperature": 14.3
@@ -48,20 +48,13 @@
         "precipitationMax": 0.0
       }
     ],
-    "updatedAt": "2026-10-11T21:56:03.247333+00:00"
+    "updatedAt": "2026-10-11T22:01:56.903010+00:00"
   },
   "weatherError": false,
   "newsError": false,
   "trafficError": false,
   "week": {
     "days": [
-      {
-        "dayDate": "2026-10-11",
-        "temperatureMin": 11,
-        "temperatureMax": 20,
-        "iconDay": 2,
-        "precipitation": 0.0
-      },
       {
         "dayDate": "2026-10-12",
         "temperatureMin": 12,
@@ -103,6 +96,13 @@
         "temperatureMax": 19,
         "iconDay": 3,
         "precipitation": 0.4
+      },
+      {
+        "dayDate": "2026-10-18",
+        "temperatureMin": 12,
+        "temperatureMax": 17,
+        "iconDay": 32,
+        "precipitation": 1.7
       }
     ],
     "hourly": [
@@ -1203,7 +1203,7 @@
       }
     ],
     "model": "202610112100",
-    "updatedAt": "2026-10-11T21:56:03.270242+00:00"
+    "updatedAt": "2026-10-11T22:01:56.935827+00:00"
   },
   "weekError": false,
   "news": {
@@ -1233,7 +1233,7 @@
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oo1h.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-10-11T21:56:03.247333+00:00",
+    "updatedAt": "2026-10-11T22:01:56.903010+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -2130,7 +2130,7 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-11T21:56:03.247333+00:00",
+    "updatedAt": "2026-10-11T22:01:56.903010+00:00",
     "version": "20261011_2140"
   },
   "swissWeatherError": false,
@@ -2219,7 +2219,7 @@
       },
       {
         "id": "Viasuisser_FAVM/654593_TIC-Viasuisse/1",
-        "text": "A2 - Chiasso direzione S. Gottardo tra  Lugano Nord e Rivera problemi di traffico, lavori stradali durante la notte per 3.1 km, nuova gestione del traffico, carreggiata ridotta a una corsia, limite temporaneo di larghezza di 3.50 m, fino a martedì, tra 21:30 e 04:00 - ID117704",
+        "text": "A2 - Chiasso direzione S. Gottardo tra  Lugano Nord e Rivera problemi di traffico, lavori stradali durante la notte per 3.1 km, nuova gestione del traffico, carreggiata ridotta a una corsia, limite temporaneo di larghezza di 3.50 m, fino a domani, tra 21:30 e 04:00 - ID117704",
         "location": "A2 - Chiasso direzione S. Gottardo",
         "road": "A2",
         "category": 32,
@@ -2228,7 +2228,7 @@
       },
       {
         "id": "Viasuisser_Viasuisse/2506798_TIC-Viasuisse/1",
-        "text": "Via Cantonale, Viale Giuseppe Cattori - Via Giulio Pocobelli - tra Paradiso e Melide in entrambe le direzioni chiusa, lavori stradali, fino a domani 05:00",
+        "text": "Via Cantonale, Viale Giuseppe Cattori - Via Giulio Pocobelli - tra Paradiso e Melide in entrambe le direzioni chiusa, lavori stradali, fino a oggi 05:00",
         "location": "Via Cantonale, Viale Giuseppe Cattori",
         "road": "TI",
         "category": 11,
@@ -2246,7 +2246,7 @@
       }
     ],
     "total": 50,
-    "updatedAt": "2026-10-11T21:56:03.247333+00:00",
+    "updatedAt": "2026-10-11T22:01:56.903010+00:00",
     "source": "Viasuisse"
   }
 }
