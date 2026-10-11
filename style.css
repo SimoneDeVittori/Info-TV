@@ -428,3 +428,10 @@ main{position:fixed}
 /* Original system date font, now in bold on home and map. */
 .date{font-family:"SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;font-weight:700;letter-spacing:-.025em}
 
+
+/* A little breathing room around the colon; one soft on/off beat per second. */
+.clock-separator{display:inline-block;margin-inline:.055em;letter-spacing:0;animation:clock-second-blink 1s steps(1,end) infinite}
+@keyframes clock-second-blink{0%,100%{opacity:1}50%{opacity:0}}
+.dashboard:not(.active) .clock-separator{animation-play-state:paused}
+@media (prefers-reduced-motion:reduce){.clock-separator{animation:none;opacity:1}}
+

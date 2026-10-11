@@ -17,6 +17,12 @@ function renderTravelVan(active){
 function renderBrandDate(now){if(!now)return 'Benvenuti';const h=rainElement;return [h('span',{className:'date-weekday',key:'weekday'},now.toLocaleDateString('it-CH',{weekday:'long',timeZone:'Europe/Zurich'})),', ',h('span',{className:'date-rest',key:'rest'},now.toLocaleDateString('it-CH',{day:'numeric',month:'long',year:'numeric',timeZone:'Europe/Zurich'}))];}
 function WeatherIcon({code,size=90,current=false}:{code:number,size?:number,current?:boolean}){const c=Number(code)%100;if(current&&isSwissNight()&&[1,2,3,26].includes(c))return renderNightWeather(c,size);const Icon=c===1?Sun:[2,3,26].includes(c)?CloudSun:[6,9,14,17,20,29,32,33].includes(c)?CloudRain:[12,13,23,24,25,36,37,38,39,40,41,42].includes(c)?CloudLightning:[7,8,10,11,15,16,18,19,21,22,30,31,34].includes(c)?Snowflake:Cloud;return <Icon size={size} strokeWidth={1.4}/>;}
 const fmtTime=(value:any)=>new Date(value).toLocaleTimeString('it-CH',{hour:'2-digit',minute:'2-digit',timeZone:'Europe/Zurich'});
+function renderHeaderClock(now){
+ const h=rainElement,value=now?fmtTime(now):'—';
+ const parts=value.split(':');
+ return h('time',{className:'header-clock',dateTime:now?now.toISOString():undefined,'aria-label':now?value:'Ora in caricamento'},
+ now?[h('span',{key:'hours'},parts[0]),h('span',{key:'separator',className:'clock-separator','aria-hidden':true},':'),h('span',{key:'minutes'},parts[1])]:'—');
+}
 function isSwissMapTime(date=new Date()){const time=date.toLocaleTimeString("en-GB",{timeZone:"Europe/Zurich",hour:"2-digit",minute:"2-digit",hourCycle:"h23"});return time>="08:00"&&time<"11:30";}
 function renderTodayRain(hourly,now){
  const day=(now||new Date()).toLocaleDateString('sv-SE',{timeZone:'Europe/Zurich'});
@@ -216,7 +222,7 @@ export default function Home(){
   </div>}
   {renderPhoneNavigation(page,setPage,now)}
   <section className={'dashboard screen '+(page===0?'active':'')} aria-hidden={page!==0}>
-   <header><div><div className="date">{renderBrandDate(now)}</div></div>{!phone&&<time className="header-clock">{now?fmtTime(now):'—'}</time>}<img className="logo" src="./unilabs-logo.png" alt="Unilabs"/></header>
+   <header><div><div className="date">{renderBrandDate(now)}</div></div>{!phone&&renderHeaderClock(now)}<img className="logo" src="./unilabs-logo.png" alt="Unilabs"/></header>
    <div className="content"><article className="weather card"><div className="weather-heading"><div className="section-label">METEO LOCALE</div><h1>Manno</h1></div><div className="weather-now"><span className="temperature">{w?Math.round(w.current.temperature)+'°':'—'}</span><span className="weather-icon">{w&&<WeatherIcon code={w.current.iconV2??w.current.icon} size={120} current/>}</span></div><p className="weather-note">{w?'Temperatura attuale':staleWeather?'Meteo temporaneamente non disponibile':'Caricamento del meteo…'}</p>
     {w&&<><div className="today"><div><span>Minima</span><strong>{w.forecast[0].temperatureMin}°</strong></div><div><span>Massima</span><strong>{w.forecast[0].temperatureMax}°</strong></div><div><span>Pioggia</span><strong>{w.forecast[0].precipitation} <small>mm</small></strong></div></div></>}
     {renderTodayRain(week?.hourly,now)}
@@ -230,7 +236,7 @@ export default function Home(){
   {nextPlanAvailable&&<section className={'plan next-plan screen '+(page===4?'active':'')} aria-hidden={page!==4}>{renderWorkPlan(now,true)}<div className="progress" key={page===4?"next-plan":"next-plan-hidden"}/></section>}
   <section className={'plan van-screen screen '+(page===2?'active':'')} aria-hidden={page!==2}><img src="./furgone-autunno.png" alt="Servizio Esterno Unilabs in autunno"/><div className="progress" style={{animationDuration:"7s"}} key={page===2?"autumn":"autumn-hidden"}/>{renderTravelVan(page===2)}</section>
   <section className={'dashboard swiss-map-screen screen '+(page===3?'active':'')} aria-hidden={page!==3}>
-   <header><div><div className="date">{renderBrandDate(now)}</div></div>{!phone&&<time className="header-clock">{now?fmtTime(now):'—'}</time>}<img className="logo" src="./unilabs-logo.png" alt="Unilabs"/></header>
+   <header><div><div className="date">{renderBrandDate(now)}</div></div>{!phone&&renderHeaderClock(now)}<img className="logo" src="./unilabs-logo.png" alt="Unilabs"/></header>
    <article className="swiss-map-card card"><div className="map-heading"><div><div className="section-label">METEO IN SVIZZERA</div><h2>Le previsioni di oggi</h2></div><div className="map-legend">Temperature minime / massime · °C</div></div>
    <svg className="national-map" viewBox="0 0 1400 760" role="img" aria-label="Previsioni meteo nelle principali città della Svizzera">
     <svg x="160" y="20" width="1080" height="720" viewBox="3 3 2042 1359" overflow="hidden"><image href="./switzerland-relief-new.png" width="2048" height="1365"/></svg>
@@ -246,6 +252,7 @@ export default function Home(){
 
 import {createRoot} from "react-dom/client";
 createRoot(document.getElementById("root")!).render(<Home/>);
+
 
 
 
