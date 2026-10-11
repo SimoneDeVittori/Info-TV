@@ -67,13 +67,22 @@ function renderPhoneHomeIcon(){
  h('path',{d:'M8 29 32 9 56 29V54a3 3 0 0 1-3 3H11a3 3 0 0 1-3-3Z',fill:'none',stroke:'#fff',strokeWidth:3,strokeLinecap:'round',strokeLinejoin:'round'}),
  h('svg',{x:20,y:25,width:24,height:24,viewBox:'0 0 120 121',overflow:'hidden'},h('path',{className:'home-unilabs-symbol',d:"M42,1 52,1 52,2 55,4 55,32 56,32 57,35 61,36 61,35 63,35 64,32 65,32 65,5 66,5 66,3 67,3 68,1 78,1 78,16 79,16 79,15 80,15 80,14 81,14 81,13 82,13 82,12 83,12 88,6 91,6 91,7 95,10 95,12 96,12 96,18 95,18 95,19 94,19 94,20 93,20 93,21 92,21 92,22 91,22 91,23 90,23 90,24 89,24 89,25 88,25 88,26 87,26 87,27 86,27 86,28 85,28 85,29 84,29 84,30 83,30 83,31 77,36 77,38 76,38 77,43 78,43 78,44 83,44 83,43 85,43 85,42 86,42 86,41 87,41 87,40 88,40 88,39 89,39 89,38 90,38 90,37 91,37 91,36 92,36 92,35 93,35 93,34 94,34 94,33 95,33 95,32 96,32 96,31 97,31 102,25 109,25 109,26 111,26 111,27 115,30 115,32 114,32 114,33 113,33 113,34 112,34 112,35 111,35 111,36 105,41 105,43 120,43 120,51 119,51 119,53 118,53 117,55 115,55 115,56 87,56 87,57 85,58 85,63 86,63 87,65 114,65 114,66 117,66 117,67 119,68 119,70 120,70 120,78 104,78 104,79 105,79 105,80 106,80 106,81 107,81 107,82 108,82 108,83 109,83 109,84 115,89 115,91 114,91 110,96 105,97 105,96 102,96 102,95 101,95 101,94 100,94 100,93 99,93 99,92 98,92 98,91 97,91 97,90 96,90 96,89 95,89 95,88 94,88 94,87 93,87 93,86 92,86 92,85 91,85 91,84 90,84 85,78 83,78 83,77 78,77 77,80 76,80 77,85 78,85 78,86 79,86 79,87 80,87 80,88 81,88 81,89 82,89 82,90 83,90 83,91 84,91 84,92 85,92 85,93 86,93 86,94 87,94 87,95 88,95 88,96 89,96 89,97 90,97 90,98 96,103 96,109 95,109 95,111 94,111 91,115 88,115 88,114 87,114 87,113 86,113 86,112 85,112 85,111 84,111 84,110 78,105 78,120 77,120 68,120 68,119 66,118 66,116 65,116 65,89 64,89 63,86 59,85 59,86 57,86 56,89 55,89 55,117 54,117 52,120 42,120 42,105 41,105 41,106 40,106 40,107 39,107 39,108 38,108 38,109 37,109 32,115 29,115 29,114 25,111 25,109 24,109 24,104 25,104 25,102 26,102 26,101 27,101 27,100 28,100 28,99 29,99 29,98 30,98 30,97 31,97 31,96 32,96 32,95 33,95 33,94 34,94 34,93 35,93 35,92 36,92 36,91 37,91 37,90 43,85 43,83 44,83 44,79 43,79 42,77 37,77 37,78 35,78 35,79 34,79 34,80 33,80 33,81 32,81 32,82 31,82 31,83 30,83 30,84 29,84 29,85 28,85 28,86 27,86 27,87 26,87 26,88 25,88 25,89 24,89 24,90 23,90 18,96 15,96 15,97 14,97 14,96 9,95 9,94 5,91 5,89 6,89 6,88 7,88 7,87 8,87 8,86 9,86 9,85 10,85 10,84 11,84 16,78 0,78 0,70 1,70 1,68 2,68 3,66 6,66 6,65 33,65 33,64 35,63 35,58 34,58 33,56 5,56 5,55 3,55 3,54 1,53 1,51 0,51 0,43 16,43 16,42 15,42 15,41 14,41 14,40 13,40 13,39 12,39 12,38 11,38 11,37 5,32 5,30 6,30 9,26 11,26 11,25 18,25 18,26 19,26 19,27 20,27 20,28 21,28 21,29 22,29 22,30 23,30 23,31 24,31 24,32 25,32 25,33 26,33 26,34 27,34 27,35 28,35 28,36 29,36 29,37 30,37 35,43 37,43 37,44 42,44 42,43 44,42 44,38 43,38 43,36 42,36 42,35 41,35 41,34 40,34 40,33 39,33 39,32 38,32 38,31 37,31 37,30 36,30 36,29 35,29 35,28 34,28 34,27 33,27 33,26 32,26 32,25 31,25 31,24 25,19 25,17 24,17 24,12 26,11 26,9 27,9 29,6 32,6 32,7 33,7 33,8 34,8 34,9 35,9 35,10 36,10 36,11 42,16Z M55,46 54,46 54,47 53,47 53,48 52,48 52,49 46,54 46,67 47,67 47,68 48,68 48,69 49,69 54,75 67,75 67,73 68,73 68,72 69,72 69,71 75,66 75,65 74,65 74,56 75,56 75,55 74,55 74,54 73,54 73,53 72,53 72,52 71,52 66,46Z",fill:'#fff',fillRule:'evenodd',opacity:1})));
 }
+function planUpdateAge(uploadedAt,now=new Date()){
+ const upload=new Date(uploadedAt);
+ if(!Number.isFinite(upload.getTime()))return null;
+ const swissDay=date=>date.toLocaleDateString('sv-SE',{timeZone:'Europe/Zurich'});
+ const days=Math.max(0,Math.round((Date.parse(swissDay(now))-Date.parse(swissDay(upload)))/86400000));
+ return days===0?'Aggiornato oggi':'Aggiornato '+days+(days===1?' giorno fa':' giorni fa');
+}
 function renderPhoneNavigation(page,setPage,now){
  const h=rainElement,state=getPlanState(now||new Date()),available=state.nextAvailable;
  const go=target=>{setPage(target);window.scrollTo(0,0);};
  return h('nav',{className:'phone-navigation','aria-label':'Navigazione mobile'},
  page!==0?h('button',{type:'button',className:'phone-home-button','aria-label':'Homepage',onClick:()=>go(0)},renderPhoneHomeIcon()):null,
  h('div',{className:'phone-plan-buttons'},
- h('button',{type:'button','aria-pressed':page===1,onClick:()=>go(1)},'Piano di '+state.currentMonthName),
+ h('button',{type:'button','aria-pressed':page===1,onClick:()=>go(1)},
+ h('span',null,'Piano di '+state.currentMonthName),
+ state.current?h('small',null,planUpdateAge(state.current.file.uploadedAt,now||new Date())):null),
  h('button',{type:'button',disabled:!available,'aria-pressed':page===4,onClick:()=>{if(available)go(4);}},
  h('span',null,'Piano di '+state.upcomingMonthName),
  !available?h('small',null,state.unlocked?'PDF non ancora disponibile':'Disponibile dal '+state.availableLabel):null)));
@@ -207,7 +216,7 @@ export default function Home(){
   </div>}
   {renderPhoneNavigation(page,setPage,now)}
   <section className={'dashboard screen '+(page===0?'active':'')} aria-hidden={page!==0}>
-   <header><div><div className="date">{renderBrandDate(now)}</div></div><time className="header-clock">{now?fmtTime(now):'—'}</time><img className="logo" src="./unilabs-logo.png" alt="Unilabs"/></header>
+   <header><div><div className="date">{renderBrandDate(now)}</div></div>{!phone&&<time className="header-clock">{now?fmtTime(now):'—'}</time>}<img className="logo" src="./unilabs-logo.png" alt="Unilabs"/></header>
    <div className="content"><article className="weather card"><div className="weather-heading"><div className="section-label">METEO LOCALE</div><h1>Manno</h1></div><div className="weather-now"><span className="temperature">{w?Math.round(w.current.temperature)+'°':'—'}</span><span className="weather-icon">{w&&<WeatherIcon code={w.current.iconV2??w.current.icon} size={120} current/>}</span></div><p className="weather-note">{w?'Temperatura attuale':staleWeather?'Meteo temporaneamente non disponibile':'Caricamento del meteo…'}</p>
     {w&&<><div className="today"><div><span>Minima</span><strong>{w.forecast[0].temperatureMin}°</strong></div><div><span>Massima</span><strong>{w.forecast[0].temperatureMax}°</strong></div><div><span>Pioggia</span><strong>{w.forecast[0].precipitation} <small>mm</small></strong></div></div></>}
     {renderTodayRain(week?.hourly,now)}
@@ -221,7 +230,7 @@ export default function Home(){
   {nextPlanAvailable&&<section className={'plan next-plan screen '+(page===4?'active':'')} aria-hidden={page!==4}>{renderWorkPlan(now,true)}<div className="progress" key={page===4?"next-plan":"next-plan-hidden"}/></section>}
   <section className={'plan van-screen screen '+(page===2?'active':'')} aria-hidden={page!==2}><img src="./furgone-autunno.png" alt="Servizio Esterno Unilabs in autunno"/><div className="progress" style={{animationDuration:"7s"}} key={page===2?"autumn":"autumn-hidden"}/>{renderTravelVan(page===2)}</section>
   <section className={'dashboard swiss-map-screen screen '+(page===3?'active':'')} aria-hidden={page!==3}>
-   <header><div><div className="date">{renderBrandDate(now)}</div></div><time className="header-clock">{now?fmtTime(now):'—'}</time><img className="logo" src="./unilabs-logo.png" alt="Unilabs"/></header>
+   <header><div><div className="date">{renderBrandDate(now)}</div></div>{!phone&&<time className="header-clock">{now?fmtTime(now):'—'}</time>}<img className="logo" src="./unilabs-logo.png" alt="Unilabs"/></header>
    <article className="swiss-map-card card"><div className="map-heading"><div><div className="section-label">METEO IN SVIZZERA</div><h2>Le previsioni di oggi</h2></div><div className="map-legend">Temperature minime / massime · °C</div></div>
    <svg className="national-map" viewBox="0 0 1400 760" role="img" aria-label="Previsioni meteo nelle principali città della Svizzera">
     <svg x="160" y="20" width="1080" height="720" viewBox="3 3 2042 1359" overflow="hidden"><image href="./switzerland-relief-new.png" width="2048" height="1365"/></svg>
@@ -237,6 +246,7 @@ export default function Home(){
 
 import {createRoot} from "react-dom/client";
 createRoot(document.getElementById("root")!).render(<Home/>);
+
 
 
 

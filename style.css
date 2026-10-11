@@ -415,3 +415,12 @@ main{position:fixed}
 @media (prefers-reduced-motion:reduce){.phone-pull-refresh .phone-pull-refresh-icon{animation:none}}
 
 @media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){body,main{overscroll-behavior-y:none}}
+
+
+/* Phone header: date and logo share a single vertically centered row. */
+@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+ .dashboard>header{grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:12px}
+ .dashboard>header>div{grid-column:1;grid-row:1;min-width:0}
+ .dashboard>header .date{white-space:normal;line-height:1.3;text-align:left}
+ .dashboard>header .logo{grid-column:2;grid-row:1;align-self:center}
+}
