@@ -611,3 +611,30 @@ main{position:fixed}
 .weather .rain-hours{display:block;line-height:1.25;overflow-wrap:break-word}
 .weather .source{flex-shrink:0;margin-top:12px;padding-top:12px;border-top:1px solid #e6e9eb;line-height:1.35}
 @media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){.weather .week-row{min-height:48px;padding:5px 0}.weather .source{margin-top:10px;padding-top:10px}}
+
+/* Fit the entire local-weather card inside the fixed TV canvas. */
+@media (pointer:fine),(min-width:601px) and (min-height:601px){
+ .weather.card{padding:24px 30px;overflow:hidden}
+ .weather .weather-heading{height:44px;min-height:44px;flex-shrink:0}
+ .weather .weather-now{margin-top:6px;min-height:76px;flex-shrink:0}
+ .weather .temperature{font-size:68px;line-height:1.1}
+ .weather .weather-note{font-size:17px;line-height:20px;margin:0 0 8px;flex-shrink:0}
+ .weather .today{padding-top:8px;flex-shrink:0}
+ .weather .today span{font-size:16px;line-height:20px;margin-bottom:3px}
+ .weather .today strong{font-size:28px;line-height:1.1}
+ .weather .ephemerides-compact{margin-top:6px}
+ .weather .today-rain{margin-top:6px;padding-top:6px}
+ .weather .today-rain-title{font-size:14px}
+ .weather .today-rain-window{font-size:14px;line-height:18px;margin:2px 0}
+ .weather .today-rain-chart{height:24px}
+ .weather .today-rain-axis{font-size:11px;line-height:14px;margin-top:2px}
+ .weather .week-heading{font-size:15px;line-height:18px;margin-top:8px;padding-top:8px;flex-shrink:0}
+ .weather .week-columns{font-size:14px;line-height:18px;margin-top:6px;flex-shrink:0}
+ .weather .week-columns small{font-size:12px;line-height:16px}
+ .weather .week-list{display:grid;grid-template-rows:repeat(5,minmax(0,1fr));flex:1 1 0;min-height:260px;margin-top:4px}
+ .weather .week-row{min-height:0;padding:4px 0;align-items:center}
+ .weather .week-rain{gap:2px}
+ .weather .week-rain strong{font-size:18px;line-height:22px}
+ .weather .rain-hours{font-size:13px;line-height:16px}
+ .weather .source{flex:0 0 auto;margin-top:8px;padding-top:8px;font-size:14px;line-height:18px;border-top:1px solid #e6e9eb}
+}
