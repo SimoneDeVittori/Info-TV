@@ -638,3 +638,6 @@ main{position:fixed}
  .weather .rain-hours{font-size:13px;line-height:16px}
  .weather .source{flex:0 0 auto;margin-top:8px;padding-top:8px;font-size:14px;line-height:18px;border-top:1px solid #e6e9eb}
 }
+
+/* Very pale orange individual weekdays inside the white pickup schedule card. */
+.clinic-day{background:#fff3e8;border-color:#ecd4c0}
