@@ -1,6 +1,6 @@
 import {PLAN_FILE,PLAN_METADATA,renderWorkPlanPdf,NEXT_PLAN_FILE,NEXT_PLAN_METADATA,renderNextPlanPdf,isNextPlanAvailable,NEXT_PLAN_AVAILABLE_LABEL,planRotation,isNextPlanPreview,getPlanState} from './plan-pdf.js?v=20261012-monday-release';
 'use client';
-import {useEffect,useState,useRef,createElement as rainElement} from 'react';
+import {useEffect,useLayoutEffect,useState,useRef,createElement as rainElement} from 'react';
 import {Cloud,Sun,CloudSun,CloudRain,CloudLightning,Snowflake,Droplets} from 'lucide-react';
 // Solar events for Manno, using NOAA/Meeus equations and a standard horizon.
 // Reference: https://gml.noaa.gov/grad/solcalc/main.js
@@ -46,6 +46,38 @@ function renderNightWeather(code,size){
  return h('svg',{xmlns:'http://www.w3.org/2000/svg',width:size,height:size,viewBox:'0 0 24 24',fill:'none',stroke:'currentColor',strokeWidth:1.4,strokeLinecap:'round',strokeLinejoin:'round',className:cloudy?'lucide lucide-cloud lucide-cloud-moon':'lucide lucide-moon','aria-hidden':true},
  cloudy?h('path',{d:'M20.9 13.2A9 9 0 1 1 10.8 3.1a7 7 0 0 0 10.1 10.1Z',transform:'translate(7 -1) scale(.65)'}):h('path',{d:'M20.9 13.2A9 9 0 1 1 10.8 3.1a7 7 0 0 0 10.1 10.1Z'}),
  cloudy?h('path',{d:'M13 22H7a5 5 0 1 1 4.9-6H13a3 3 0 0 1 0 6Z'}):null,...[[3,4,1.2,0],[20,3,1.05,-.9],[22,18,1.2,-1.8]].map(([x,y,size,delay],i)=>h('path',{key:'star-'+i,className:'weather-star',d:'M0 -1 .23 -.23 1 0 .23 .23 0 1 -.23 .23 -1 0 -.23 -.23Z',transform:'translate('+x+' '+y+') scale('+size+')',fill:'currentColor',stroke:'none',style:{animationDelay:delay+'s'}})));
+}
+function PickupVan({active}:{active:boolean}){
+ const ref=useRef<HTMLDivElement>(null);
+ const [parked,setParked]=useState(false);
+ useLayoutEffect(()=>{
+  const box=ref.current;if(!box)return;
+  const measure=()=>{
+   const card=box.closest('.clinic-schedule-card'),date=card?.querySelector('.clinic-start-date');
+   const bounds=box.getBoundingClientRect();
+   if(!card||!box.clientWidth||!bounds.width)return;
+   const scale=bounds.width/box.clientWidth;
+   const vanScale=parseFloat(window.getComputedStyle(box).getPropertyValue('--pickup-van-scale'))||.62;
+   const finish=box.clientWidth-180*vanScale;
+   let start=card.getBoundingClientRect().left+30*scale;
+   if(date){const range=document.createRange();range.selectNodeContents(date);start=range.getBoundingClientRect().right+12*scale;}
+   const offset=Math.min(finish,(start-bounds.left)/scale);
+   box.style.setProperty('--pickup-van-start',offset+'px');
+   box.style.setProperty('--pickup-van-end',finish+'px');
+  };
+  measure();
+  const observer=typeof ResizeObserver!=='undefined'?new ResizeObserver(measure):null;
+  observer?.observe(box);const card=box.closest('.clinic-schedule-card');if(card)observer?.observe(card);
+  window.addEventListener('resize',measure);
+  return()=>{observer?.disconnect();window.removeEventListener('resize',measure);};
+ },[active]);
+ useEffect(()=>{
+  setParked(false);
+  if(!active)return;
+  const timer=setTimeout(()=>setParked(true),5000);
+  return()=>clearTimeout(timer);
+ },[active]);
+ return rainElement('div',{ref,className:'clinic-pickup-van'+(active?' is-running':'')+(parked?' is-parked':''),'aria-hidden':true},renderTravelVan(active));
 }
 function renderTravelVan(active){
  const h=rainElement;
@@ -408,7 +440,7 @@ export default function Home(){
    <div className="clinic-title-row"><h2>Nuovo Studio Medico</h2></div>
    {studio?<div className="clinic-content"><div className="clinic-details">
     <article className="clinic-address-card card"><div className="section-label">STUDIO MEDICO</div><h1>{studio.name}</h1><address><strong>{studio.street}</strong><span>{studio.postalCode} {studio.locality}</span></address></article>
-    <article className="clinic-schedule-card card"><div className="section-label">Orario di Ritiro Fisso</div>{studio.startsOn&&<p className="clinic-start-date">{studioStartLabel(studio.startsOn,now||new Date())}</p>}<div className="clinic-week">{[['Lu','Lunedì'],['Ma','Martedì'],['Me','Mercoledì'],['Gio','Giovedì'],['Ve','Venerdì']].map(([key,label])=><div key={key} className={'clinic-day '+(studio.pickups[key]?.morning||studio.pickups[key]?.afternoon?'has-day-pickup':'no-day-pickup')}>{key==='Ve'&&<div className="clinic-pickup-van" aria-hidden="true">{renderTravelVan(page===5+studioIndex)}</div>}<span>{label}</span><div className={'clinic-slot '+(studio.pickups[key]?.morning?'has-pickup':'no-pickup')}><small>Mattina</small><strong>{studio.pickups[key]?.morning||'—'}</strong></div><div className={'clinic-slot '+(studio.pickups[key]?.afternoon?'has-pickup':'no-pickup')}><small>Pomeriggio</small><strong>{studio.pickups[key]?.afternoon||'—'}</strong></div></div>)}</div></article>
+    <article className="clinic-schedule-card card"><div className="section-label">Orario di Ritiro Fisso</div>{studio.startsOn&&<p className="clinic-start-date">{studioStartLabel(studio.startsOn,now||new Date())}</p>}<div className="clinic-week">{[['Lu','Lunedì'],['Ma','Martedì'],['Me','Mercoledì'],['Gio','Giovedì'],['Ve','Venerdì']].map(([key,label])=><div key={key} className={'clinic-day '+(studio.pickups[key]?.morning||studio.pickups[key]?.afternoon?'has-day-pickup':'no-day-pickup')}>{key==='Ve'&&<PickupVan active={page===5+studioIndex}/>}<span>{label}</span><div className={'clinic-slot '+(studio.pickups[key]?.morning?'has-pickup':'no-pickup')}><small>Mattina</small><strong>{studio.pickups[key]?.morning||'—'}</strong></div><div className={'clinic-slot '+(studio.pickups[key]?.afternoon?'has-pickup':'no-pickup')}><small>Pomeriggio</small><strong>{studio.pickups[key]?.afternoon||'—'}</strong></div></div>)}</div></article>
    </div><article className="clinic-map-card card"><div className="clinic-map-heading"><div className="section-label">DOVE TROVARLO</div><span>{studio.postalCode} {studio.locality}</span></div><StudioMap studio={studio} active={page===5+studioIndex}/><div className="source"><span>Google Maps</span><span>{studio.street} · {studio.locality}</span></div></article></div>:<div className="empty">Caricamento dello studio medico…</div>}
    <footer><small className="creator-copyright">© SimDev3D</small><span>— Unilabs Ticino · Centro Galleria 3, Via Cantonale 4, 6928 Manno —</span><div className="page-dots"><i/><i/><i/><i/><i className="selected"/></div></footer><div className="progress" style={{animationDuration:'28s'}} key={page===5+studioIndex?'medical-studio-'+studio.id:'medical-studio-hidden-'+studio.id}/>
   </section>)}

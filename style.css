@@ -734,3 +734,10 @@ main{position:fixed}
 @keyframes clinic-pickup-van-drive{0%,100%{transform:translate3d(calc(-1 * var(--pickup-van-shift)),0,0) scale(var(--pickup-van-scale))}50%{transform:translate3d(var(--pickup-van-shift),0,0) scale(var(--pickup-van-scale))}}
 @media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){.clinic-pickup-van{--pickup-van-scale:.28;--pickup-van-shift:2px;height:34px;bottom:calc(100% + 8px)}}
 @media (prefers-reduced-motion:reduce){.clinic-pickup-van .travel-van-runner{animation:none;transform:scale(var(--pickup-van-scale))}}
+
+/* Drive once from the service-start label to Friday, then park. */
+.clinic-pickup-van .travel-van-runner{left:0;margin-left:0;transform-origin:top left;animation:none;transform:translate3d(var(--pickup-van-end,0px),0,0) scale(var(--pickup-van-scale))}
+.clinic-pickup-van.is-running .travel-van-runner{animation:clinic-pickup-van-route 5s cubic-bezier(.2,.45,.2,1) both}
+@keyframes clinic-pickup-van-route{from{transform:translate3d(var(--pickup-van-start,0px),0,0) scale(var(--pickup-van-scale))}to{transform:translate3d(var(--pickup-van-end,0px),0,0) scale(var(--pickup-van-scale))}}
+.clinic-pickup-van.is-parked .travel-van-wheel svg{animation-play-state:paused}
+@media (prefers-reduced-motion:reduce){.clinic-pickup-van.is-running .travel-van-runner{animation:none}}
