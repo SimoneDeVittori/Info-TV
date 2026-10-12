@@ -741,3 +741,9 @@ main{position:fixed}
 @keyframes clinic-pickup-van-route{from{transform:translate3d(var(--pickup-van-start,0px),0,0) scale(var(--pickup-van-scale))}to{transform:translate3d(var(--pickup-van-end,0px),0,0) scale(var(--pickup-van-scale))}}
 .clinic-pickup-van.is-parked .travel-van-wheel svg{animation-play-state:paused}
 @media (prefers-reduced-motion:reduce){.clinic-pickup-van.is-running .travel-van-runner{animation:none}}
+
+/* Wheels complete the same five-second trip as the pickup van, then stop. */
+.clinic-pickup-van.is-running .travel-van-wheel svg{animation:clinic-pickup-wheel-trip 5s linear 1 forwards}
+@keyframes clinic-pickup-wheel-trip{from{transform:rotate(0deg)}to{transform:rotate(4680deg)}}
+.clinic-pickup-van.is-parked .travel-van-wheel svg{animation:none!important;transform:rotate(0deg)}
+@media (prefers-reduced-motion:reduce){.clinic-pickup-van.is-running .travel-van-wheel svg{animation:none}}
