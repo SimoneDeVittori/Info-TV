@@ -1,10 +1,10 @@
 {
   "weather": {
     "current": {
-      "time": 1791796800000,
+      "time": 1791798000000,
       "icon": 1,
       "iconV2": 1,
-      "temperature": 16.0
+      "temperature": 16.3
     },
     "forecast": [
       {
@@ -48,7 +48,7 @@
         "precipitationMax": 0.0
       }
     ],
-    "updatedAt": "2026-10-12T09:42:27.012955+00:00"
+    "updatedAt": "2026-10-12T09:48:40.614783+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1203,7 +1203,7 @@
       }
     ],
     "model": "202610120900",
-    "updatedAt": "2026-10-12T09:42:27.038876+00:00"
+    "updatedAt": "2026-10-12T09:48:40.666826+00:00"
   },
   "weekError": false,
   "news": {
@@ -1212,7 +1212,7 @@
         "title": "Lavori in Via Carlo Croci: strada chiusa al traffico dal 19 al 30 ottobre",
         "description": "Il passaggio dei pedoni e dei mezzi di emergenza sarà sempre garantito, anche durante le ore di chiusura.",
         "link": "https://www.tio.ch/ticino/cronaca/1956175/via-carlo-lavori-croci-traffico-strada-ottobre-chiusa",
-        "date": "Mon, 12 Oct 2026 11:39:59 +0200",
+        "date": "Mon, 12 Oct 2026 11:40:05 +0200",
         "category": "MENDRISIO",
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oo6r.jpg?v=1"
       },
@@ -1233,7 +1233,7 @@
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oo6l.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-10-12T09:42:27.012955+00:00",
+    "updatedAt": "2026-10-12T09:48:40.614783+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -2130,12 +2130,21 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-12T09:42:27.012955+00:00",
+    "updatedAt": "2026-10-12T09:48:40.614783+00:00",
     "version": "20261012_0940"
   },
   "swissWeatherError": false,
   "traffic": {
     "items": [
+      {
+        "id": "Viasuisser_FAVM/658979_TIC-Viasuisse/1",
+        "text": "A2 - Chiasso direzione S. Gottardo a Airolo chiuso raccordo autostradale in entrata",
+        "location": "A2 - Chiasso direzione S. Gottardo",
+        "road": "A2",
+        "category": 11,
+        "changedAt": "2026-10-12T11:47:46+02:00",
+        "priority": 3
+      },
       {
         "id": "Viasuisser_FAVM/658978_TIC-Viasuisse/1",
         "text": "A2 - Chiasso direzione S. Gottardo tra Quinto e Area di dosaggio Airolo traffico bloccato per 1 km, traffico congestionato, ritardi fino a 10 minuti - Ricordiamo anche che la corsia prefernziale CUPRA è aperta.",
@@ -2144,15 +2153,6 @@
         "category": 12,
         "changedAt": "2026-10-12T11:36:36+02:00",
         "priority": 0
-      },
-      {
-        "id": "Viasuisser_FAVM/658979_TIC-Viasuisse/1",
-        "text": "A2 - Chiasso direzione S. Gottardo a Airolo chiuso raccordo autostradale in entrata",
-        "location": "A2 - Chiasso direzione S. Gottardo",
-        "road": "A2",
-        "category": 11,
-        "changedAt": "2026-10-12T11:32:20+02:00",
-        "priority": 3
       },
       {
         "id": "Viasuisser_FAVM/658958_TIC-Viasuisse/1",
@@ -2246,7 +2246,7 @@
       }
     ],
     "total": 54,
-    "updatedAt": "2026-10-12T09:42:27.012955+00:00",
+    "updatedAt": "2026-10-12T09:48:40.614783+00:00",
     "source": "Viasuisse"
   }
 }
