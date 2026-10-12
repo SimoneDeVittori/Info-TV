@@ -256,8 +256,8 @@ main{position:fixed}
 @media (prefers-reduced-motion:reduce){.weather-now .weather-icon .weather-star{animation:none!important;opacity:.8}}
 
 /* Gentle pulse keeps today's orange column readable at all times. */
-.plan-today-highlight{animation:plan-today-pulse 4.5s ease-in-out infinite}
-@keyframes plan-today-pulse{0%,100%{fill-opacity:.14;stroke-opacity:.45}50%{fill-opacity:.28;stroke-opacity:.8}}
+.plan-today-highlight{animation:none}
+
 .plan:not(.active) .plan-today-highlight{animation-play-state:paused}
 @media (prefers-reduced-motion:reduce){.plan-today-highlight{animation:none;fill-opacity:.22;stroke-opacity:.7}}
 
@@ -600,3 +600,6 @@ main{position:fixed}
 @media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){.ephemerides-compact{gap:16px;margin-top:7px}.ephemerides-compact time{font-size:13px}.ephemerides-compact svg{width:16px;height:16px}}
 /* Lighter individual weekdays retain separation from the white outer card. */
 .clinic-day{background:#e9eef2;border-color:#c2cdd5}
+
+/* A steady orange column and a stronger border clearly mark today's plan. */
+.plan-today-highlight{animation:none!important;fill:#f58220;fill-opacity:.32;stroke:#c65300;stroke-opacity:1;stroke-width:3}
