@@ -212,21 +212,41 @@ function useLiveViasuisse(){
 type MedicalStudio={id:string;createdOn:string;name:string;street:string;postalCode:string;locality:string;pickups:Record<string,{morning?:string|null;afternoon?:string|null}>;startsOn?:string;streetViewEmbedUrl?:string;streetViewCapturedOn?:string;coordinates?:{lat:number;lon:number}};
 function UnilabsBrand(){return <div className="unilabs-brand"><img className="logo" src="./unilabs-logo.png" alt="Unilabs"/><span><span>Servizio</span>{' '}<span>Esterno</span></span></div>;}
 function StudioMap({studio,active}:{studio:MedicalStudio;active:boolean}){
- const [started,setStarted]=useState(active);
- const [loaded,setLoaded]=useState(false);
+ const [step,setStep]=useState(0);
+ const [requested,setRequested]=useState(0);
+ const [loaded,setLoaded]=useState([false,false,false,false,false]);
  const query=encodeURIComponent(studio.street+', '+studio.postalCode+' '+studio.locality+', Svizzera');
- useEffect(()=>{setLoaded(false);},[query]);
+ const views=[14,16,17,19].map((zoom,index)=>({title:['Panoramica della zona','Quartiere dello studio','Indirizzo dello studio','Vista satellitare ravvicinata dello studio'][index],src:'https://maps.google.com/maps?q='+query+'&z='+zoom+(index===3?'&t=k':'')+'&output=embed'}));
+ if(studio.streetViewEmbedUrl?.startsWith('https://www.google.com/maps/embed?'))views.push({title:'Street View della facciata dello studio',src:studio.streetViewEmbedUrl});
+ useEffect(()=>{setStep(0);setRequested(0);setLoaded([false,false,false,false,false]);},[query]);
  useEffect(()=>{
-  if(started)return;
-  if(active){setStarted(true);return;}
-  const timer=setTimeout(()=>{if(!document.hidden)setStarted(true);},6000);
+  if(requested)return;
+  if(active){setRequested(1);return;}
+  const timer=setTimeout(()=>{if(!document.hidden)setRequested(1);},6000);
   return()=>clearTimeout(timer);
- },[active,started]);
+ },[active,requested]);
+ // Load one additional view at a time; never discard loaded frames on rotation.
+ useEffect(()=>{
+  if(!requested||requested>=views.length)return;
+  const timer=setTimeout(()=>setRequested(requested+1),loaded[requested-1]?1200:12000);
+  return()=>clearTimeout(timer);
+ },[requested,loaded[requested-1],query,views.length]);
+ useEffect(()=>{
+  setStep(0);
+  if(!active||!loaded[0])return;
+  const timers=[1,2,3,4].map(next=>setTimeout(()=>setStep(next),next*3000));
+  return()=>timers.forEach(clearTimeout);
+ },[active,loaded[0],query]);
+ const shown=step>=4&&loaded[4]?4:step>=3&&loaded[3]?3:step>=2&&loaded[2]?2:step>=1&&loaded[1]?1:0;
+ const captured=studio.streetViewCapturedOn&&/^\d{4}-(0[1-9]|1[0-2])$/.test(studio.streetViewCapturedOn)?new Date(studio.streetViewCapturedOn+'-01T12:00:00Z').toLocaleDateString('it-CH',{month:'long',year:'numeric',timeZone:'Europe/Zurich'}):null;
  const h=rainElement;
  return h('div',{className:'studio-map-with-note'},
-  h('div',{className:'studio-map-single'},
-   started?h('iframe',{key:query,title:'Google Maps — '+studio.street+', '+studio.locality,src:'https://maps.google.com/maps?q='+query+'&z=17&output=embed',onLoad:()=>setLoaded(true),tabIndex:active?0:-1,referrerPolicy:'no-referrer-when-downgrade',allowFullScreen:true}):null,
-   !loaded?h('div',{className:'studio-map-loading',role:'status'},h('strong',null,studio.street),h('span',null,studio.postalCode+' '+studio.locality),h('small',null,'Caricamento della mappa…')):null));
+  h('div',{className:'google-map-sequence'},
+   ...views.slice(0,requested).map((view,index)=>h('iframe',{key:view.src,className:'google-map-view '+(shown===index?'is-current':''),style:{visibility:active&&shown===index?'visible':'hidden'},title:'Google Maps — '+view.title+', '+studio.street+', '+studio.locality,src:view.src,onLoad:()=>setLoaded(current=>current.map((value,i)=>i===index?true:value)),'aria-hidden':!active||shown!==index,tabIndex:active&&shown===index?0:-1,referrerPolicy:'no-referrer-when-downgrade',allowFullScreen:true})),
+   !loaded[0]?h('div',{className:'studio-map-loading',role:'status'},h('strong',null,studio.street),h('span',null,studio.postalCode+' '+studio.locality),h('small',null,'Caricamento della mappa…')):null),
+  shown===4?h('p',{className:'streetview-date-note',role:'note'},
+   h('svg',{viewBox:'0 0 24 24',width:24,height:24,fill:'none',stroke:'currentColor',strokeWidth:1.8,strokeLinejoin:'round','aria-hidden':true},h('path',{d:'M12 3 22 21H2Z'}),h('path',{d:'M12 9v5'}),h('circle',{cx:12,cy:18,r:1,fill:'currentColor',stroke:'none'})),
+   h('span',null,(captured?'Foto Street View di '+captured:'Foto Street View: data non disponibile')+' — l’aspetto attuale dello studio potrebbe essere diverso.')):null);
 }
 function studioStartLabel(startsOn:string|undefined,now:Date){
  if(!startsOn)return null;
