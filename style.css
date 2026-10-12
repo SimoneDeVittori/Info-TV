@@ -683,6 +683,6 @@ main{position:fixed}
 .plan-pdf-surface[data-status="ready"]~.work-plan-overlay .plan-today-highlight{opacity:0}
 
 /* A single approach animation plays each time the current plan comes into view. */
-.plan.screen.active .plan-pdf-surface[data-status="ready"]~.plan-day-pop{animation:plan-day-approach .7s cubic-bezier(.2,.7,.2,1) both;will-change:transform,opacity}
-@keyframes plan-day-approach{0%{opacity:0;transform:perspective(650px) translate3d(0,0,-70px) scale(.96,.99)}100%{opacity:1;transform:perspective(650px) translate3d(0,0,0) scale(1.12,1.012)}}
+.plan.screen.active .plan-pdf-surface[data-status="ready"]~.plan-day-pop{animation:plan-day-approach 2s cubic-bezier(.4,0,.2,1) both;will-change:transform,opacity}
+@keyframes plan-day-approach{0%,25%{opacity:1;transform:scale(1)}100%{opacity:1;transform:scale(1.12,1.012)}}
 @media (prefers-reduced-motion:reduce){.plan.screen.active .plan-pdf-surface[data-status="ready"]~.plan-day-pop{animation:none}}
