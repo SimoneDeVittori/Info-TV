@@ -670,3 +670,7 @@ main{position:fixed}
 .travel-van-body{animation:none}
 .travel-van-wheel svg{will-change:transform;backface-visibility:hidden}
 .travel-van-exhaust i{will-change:transform,opacity;backface-visibility:hidden}
+
+/* Center the puff origin at the rear exhaust tip, clear of the rear wheel. */
+.travel-van-exhaust{left:1%;top:72%}
+.travel-van-exhaust i{left:-7px;top:-5px}
