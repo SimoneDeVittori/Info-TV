@@ -686,3 +686,9 @@ main{position:fixed}
 .plan.screen.active .plan-pdf-surface[data-status="ready"]~.plan-day-pop{animation:plan-day-approach 2s cubic-bezier(.4,0,.2,1) both;will-change:transform,opacity}
 @keyframes plan-day-approach{0%,25%{opacity:1;transform:scale(1)}100%{opacity:1;transform:scale(1.12,1.012)}}
 @media (prefers-reduced-motion:reduce){.plan.screen.active .plan-pdf-surface[data-status="ready"]~.plan-day-pop{animation:none}}
+
+/* A finer current-day outline at phone display sizes. */
+@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+ .plan-day-pop::after{border-width:1px}
+ .plan-today-highlight{stroke-width:1.5}
+}
