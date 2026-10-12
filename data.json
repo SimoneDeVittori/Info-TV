@@ -1,10 +1,10 @@
 {
   "weather": {
     "current": {
-      "time": 1791787200000,
+      "time": 1791787800000,
       "icon": 1,
       "iconV2": 1,
-      "temperature": 10.3
+      "temperature": 10.4
     },
     "forecast": [
       {
@@ -48,7 +48,7 @@
         "precipitationMax": 0.0
       }
     ],
-    "updatedAt": "2026-10-12T06:52:42.132284+00:00"
+    "updatedAt": "2026-10-12T07:00:18.180229+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1203,11 +1203,19 @@
       }
     ],
     "model": "202610120600",
-    "updatedAt": "2026-10-12T06:52:42.159522+00:00"
+    "updatedAt": "2026-10-12T07:00:18.207035+00:00"
   },
   "weekError": false,
   "news": {
     "items": [
+      {
+        "title": "Nuova caserma dei pompieri, l'MPS voterà contro",
+        "description": "L’MPS critica la scelta di Sant’Antonino e solleva dubbi su costi, sicurezza e impatto operativo del progetto.",
+        "link": "https://www.tio.ch/ticino/attualita/1956120/mps-progetto-sant-antonino-caserma-pompieri-votera",
+        "date": "Mon, 12 Oct 2026 08:56:47 +0200",
+        "category": "BELLINZONA",
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oo4k.jpg?v=1"
+      },
       {
         "title": "Quando lo sport è gratis e a portata di click: a Biasca arrivano i BoxUp",
         "description": "Sono state installate due nuove postazioni dove basta un'app per prendere in prestito l'attrezzatura e iniziare a giocare. Ecco dove",
@@ -1223,17 +1231,9 @@
         "date": "Mon, 12 Oct 2026 08:14:22 +0200",
         "category": "ASCONA",
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oo47.jpg?v=1"
-      },
-      {
-        "title": "HelvEthica, è scontro sulla candidatura di Nussbaumer",
-        "description": "Il comitato nazionale chiede chiarezza sull’alleanza elettorale con Il Noce e sulla candidatura del medico al Consiglio di Stato. Trentaquattro soci sollecitano un’assemblea straordinaria, prevista il 18 ottobre a Pregassona. Sullo sfondo, il lancio annunciato del nuovo partito Viva Ticino.",
-        "link": "https://www.tio.ch/ticino/politica/1956113/helvethica-e-scontro-sulla-candidatura-di-nussbaumer",
-        "date": "Mon, 12 Oct 2026 08:12:22 +0200",
-        "category": "CANTONE",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oo46.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-10-12T06:52:42.132284+00:00",
+    "updatedAt": "2026-10-12T07:00:18.180229+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -2130,7 +2130,7 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-12T06:52:42.132284+00:00",
+    "updatedAt": "2026-10-12T07:00:18.180229+00:00",
     "version": "20261012_0640"
   },
   "swissWeatherError": false,
@@ -2161,15 +2161,6 @@
         "road": "398",
         "category": 13,
         "changedAt": "2026-10-12T07:37:32+02:00",
-        "priority": 1
-      },
-      {
-        "id": "Viasuisser_Viasuisse/2511558_TIC-Viasuisse/1",
-        "text": "Bizzarone direzione Genestrerio - tra frontiera Bizzarone e Genestrerio traffico fortemente rallentato, traffico congestionato",
-        "location": "Bizzarone direzione Genestrerio",
-        "road": "TI",
-        "category": 13,
-        "changedAt": "2026-10-12T06:10:18+02:00",
         "priority": 1
       },
       {
@@ -2243,10 +2234,19 @@
         "category": 31,
         "changedAt": "2026-09-30T17:01:21+02:00",
         "priority": 5
+      },
+      {
+        "id": "Viasuisser_Viasuisse/2508715_TIC-Viasuisse/1",
+        "text": "Locarno, Via Rovedo - a Locarno problemi di traffico, nuova gestione del traffico, circolazione a senso unico, seguire deviazione locale, fino a 26.02.2027",
+        "location": "Locarno, Via Rovedo",
+        "road": "TI",
+        "category": 31,
+        "changedAt": "2026-09-29T20:11:47+02:00",
+        "priority": 5
       }
     ],
-    "total": 55,
-    "updatedAt": "2026-10-12T06:52:42.132284+00:00",
+    "total": 54,
+    "updatedAt": "2026-10-12T07:00:18.180229+00:00",
     "source": "Viasuisse"
   }
 }
