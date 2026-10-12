@@ -1,7 +1,7 @@
 {
   "weather": {
     "current": {
-      "time": 1791814800000,
+      "time": 1791815400000,
       "icon": 3,
       "iconV2": 3,
       "temperature": 18.9
@@ -48,7 +48,7 @@
         "precipitationMax": 0.0
       }
     ],
-    "updatedAt": "2026-10-12T14:29:18.529329+00:00"
+    "updatedAt": "2026-10-12T14:40:56.306165+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1203,11 +1203,19 @@
       }
     ],
     "model": "202610121400",
-    "updatedAt": "2026-10-12T14:29:18.627426+00:00"
+    "updatedAt": "2026-10-12T14:40:56.355312+00:00"
   },
   "weekError": false,
   "news": {
     "items": [
+      {
+        "title": "Torna a splendere la Piccola Stella in Valle di Blenio",
+        "description": "La storica casetta torna ad accogliere ospiti con spazi rinnovati e una rete di attività per ogni stagione.",
+        "link": "https://www.tio.ch/ticino/attualita/1956246/stella-blenio-gruppi-fondazione-soggiorno",
+        "date": "Mon, 12 Oct 2026 16:32:31 +0200",
+        "category": "BLENIO",
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oobl.jpg"
+      },
       {
         "title": "Vent'anni dopo, le detenute hanno di nuovo uno spazio loro",
         "description": "La nuova sezione femminile della Stampa è ufficialmente operativa. Con 11 nuove celle, una delle quali adibita ad accogliere una madre con il figlio (fino a 3 anni). Gobbi: «L'impegno dello Stato per una dignità elevata anche in carcere»",
@@ -1223,17 +1231,9 @@
         "date": "Mon, 12 Oct 2026 15:23:24 +0200",
         "category": "CANTONE",
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oo9z.jpg?v=1"
-      },
-      {
-        "title": "Enrico Nigiotti porta il suo \"Maledetti Innamorati Tour\" a Lugano",
-        "description": "Appuntamento il 20 maggio 2027 al Palazzo dei Congressi",
-        "link": "https://www.tio.ch/ticino/attualita/1956214/enrico-nigiotti-porta-il-suo-maledetti-innamorati-tour-a-lugano",
-        "date": "Mon, 12 Oct 2026 15:17:24 +0200",
-        "category": "LUGANO",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oo9q.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-10-12T14:29:18.529329+00:00",
+    "updatedAt": "2026-10-12T14:40:56.306165+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -1252,7 +1252,7 @@
         "coord_y": "1152444",
         "location_id": "100300",
         "location_type": "city",
-        "timestamp": 1791814211,
+        "timestamp": 1791816012,
         "forecasts": [
           {
             "date": "12 ottobre 2026",
@@ -1341,7 +1341,7 @@
         "coord_y": "1118423",
         "location_id": "120100",
         "location_type": "city",
-        "timestamp": 1791814211,
+        "timestamp": 1791816012,
         "forecasts": [
           {
             "date": "12 ottobre 2026",
@@ -1400,11 +1400,11 @@
           {
             "date": "18 ottobre 2026",
             "date_iso": "2026-10-18",
-            "weather_description": "symbol_id_6",
+            "weather_description": "symbol_id_3",
             "temp_high": 14,
             "weekday": "domenica",
             "temp_low": 9,
-            "weather_symbol_id": 6
+            "weather_symbol_id": 3
           },
           {
             "date": "19 ottobre 2026",
@@ -1430,7 +1430,7 @@
         "coord_y": "1119910",
         "location_id": "195000",
         "location_type": "city",
-        "timestamp": 1791814211,
+        "timestamp": 1791816012,
         "forecasts": [
           {
             "date": "12 ottobre 2026",
@@ -1519,7 +1519,7 @@
         "coord_y": "1202399",
         "location_id": "300400",
         "location_type": "city",
-        "timestamp": 1791814211,
+        "timestamp": 1791816012,
         "forecasts": [
           {
             "date": "12 ottobre 2026",
@@ -1608,7 +1608,7 @@
         "coord_y": "1267348",
         "location_id": "400100",
         "location_type": "city",
-        "timestamp": 1791814211,
+        "timestamp": 1791816012,
         "forecasts": [
           {
             "date": "12 ottobre 2026",
@@ -1697,7 +1697,7 @@
         "coord_y": "1211120",
         "location_id": "600300",
         "location_type": "city",
-        "timestamp": 1791814211,
+        "timestamp": 1791816012,
         "forecasts": [
           {
             "date": "12 ottobre 2026",
@@ -1786,7 +1786,7 @@
         "coord_y": "1096327",
         "location_id": "690000",
         "location_type": "city",
-        "timestamp": 1791814211,
+        "timestamp": 1791816012,
         "forecasts": [
           {
             "date": "12 ottobre 2026",
@@ -1875,7 +1875,7 @@
         "coord_y": "1191534",
         "location_id": "700000",
         "location_type": "city",
-        "timestamp": 1791814211,
+        "timestamp": 1791816012,
         "forecasts": [
           {
             "date": "12 ottobre 2026",
@@ -1964,7 +1964,7 @@
         "coord_y": "1247414",
         "location_id": "800100",
         "location_type": "city",
-        "timestamp": 1791814211,
+        "timestamp": 1791816012,
         "forecasts": [
           {
             "date": "12 ottobre 2026",
@@ -2053,7 +2053,7 @@
         "coord_y": "1254370",
         "location_id": "900000",
         "location_type": "city",
-        "timestamp": 1791814211,
+        "timestamp": 1791816012,
         "forecasts": [
           {
             "date": "12 ottobre 2026",
@@ -2130,12 +2130,30 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-12T14:29:18.529329+00:00",
-    "version": "20261012_1410"
+    "updatedAt": "2026-10-12T14:40:56.306165+00:00",
+    "version": "20261012_1440"
   },
   "swissWeatherError": false,
   "traffic": {
     "items": [
+      {
+        "id": "Viasuisser_FAVM/659041_TIC-Viasuisse/1",
+        "text": "406 - Riazzino direzione Cadenazzo tra A13, rotatoria Aeroporto di Locarno e Cadenazzo traffico fortemente rallentato, traffico congestionato",
+        "location": "406 - Riazzino direzione Cadenazzo",
+        "road": "406",
+        "category": 13,
+        "changedAt": "2026-10-12T16:28:53+02:00",
+        "priority": 1
+      },
+      {
+        "id": "Viasuisser_FAVM/659037_TIC-Viasuisse/1",
+        "text": "A2 - S. Gottardo direzione Chiasso tra Chiasso Centro e frontiera Chiasso Brogeda colonna, traffico congestionato",
+        "location": "A2 - S. Gottardo direzione Chiasso",
+        "road": "A2",
+        "category": 12,
+        "changedAt": "2026-10-12T16:27:32+02:00",
+        "priority": 0
+      },
       {
         "id": "Viasuisser_Viasuisse/2511725_TIC-Viasuisse/1",
         "text": "398 - direzione Ponte Tresa tra Boschetti e Magliaso traffico fortemente rallentato, traffico congestionato",
@@ -2225,28 +2243,10 @@
         "category": 31,
         "changedAt": "2026-10-03T14:17:33+02:00",
         "priority": 5
-      },
-      {
-        "id": "Viasuisser_Viasuisse/2509765_TIC-Viasuisse/1",
-        "text": "Pregassona, Via Terzerina - a Pregassona in entrambe le direzioni problemi di traffico, lavori stradali, corsie strette, fino a 23.10.2026 17:00",
-        "location": "Pregassona, Via Terzerina",
-        "road": "TI",
-        "category": 31,
-        "changedAt": "2026-10-03T14:15:28+02:00",
-        "priority": 5
-      },
-      {
-        "id": "Viasuisser_Viasuisse/2509762_TIC-Viasuisse/1",
-        "text": "Piandera Paese, Strada Bassa a Via Cantonale - tra fine della strada e uscita di località in entrambe le direzioni problemi di traffico, lavori stradali, corsie strette, fino a venerdì 17:00",
-        "location": "Piandera Paese, Strada Bassa a Via Cantonale",
-        "road": "TI",
-        "category": 31,
-        "changedAt": "2026-10-03T14:12:08+02:00",
-        "priority": 5
       }
     ],
-    "total": 57,
-    "updatedAt": "2026-10-12T14:29:18.529329+00:00",
+    "total": 59,
+    "updatedAt": "2026-10-12T14:40:56.306165+00:00",
     "source": "Viasuisse"
   }
 }
