@@ -100,6 +100,13 @@ function renderDayPop(file,crop,current){
  return h('div',{className:'plan-day-pop','aria-hidden':true,style:{left:left+'%',top:top+'%',width:width+'%',height:height+'%'}},
   h('div',{className:'plan-day-pop-image',style:{backgroundImage:'url("'+file.url.replace(/\.pdf$/i,'-tv.png')+'?updated='+encodeURIComponent(file.uploadedAt)+'")',backgroundSize:(crop.width/crop.dayStep*100)+'% '+(crop.height/sourceHeight*100)+'%',backgroundPosition:(sourceX/(crop.width-crop.dayStep)*100)+'% '+(sourceY/(crop.height-sourceHeight)*100)+'%'}}));
 }
+function renderPlanReleaseNote(state){
+ const h=rainElement;
+ const date=new Date(state.availableDate+'T12:00:00Z').toLocaleDateString('it-CH',{weekday:'long',day:'numeric',month:'long',timeZone:'Europe/Zurich'});
+ return h('aside',{className:'plan-release-note',role:'note'},
+  h('strong',null,'Piano di '+state.upcomingMonthName),
+  h('span',null,'Uscita: '+date));
+}
 function renderWorkPlan(now,nextMonth=false){
  const state=getPlanState(now||new Date());
  const entry=nextMonth?state.upcoming:state.current;
@@ -113,6 +120,7 @@ function renderWorkPlan(now,nextMonth=false){
  const h=rainElement;
  return h('div',{className:'work-plan',role:'img','aria-label':'Piano dei turni '+meta.title+(nextMonth?'':'. Aggiornato al '+meta.updated)+(current?'. Giorno '+current+' evidenziato':'')},
  h(WorkPlanStage,null,
+ nextMonth?null:renderPlanReleaseNote(state),
  h('div',{className:'plan-pdf-surface','data-status':'loading'},
  h('canvas',{key:file.url,ref:renderer,'aria-label':'Tabella del piano '+meta.title}),
  h('span',{className:'plan-pdf-loading'},'Caricamento del piano…'),
