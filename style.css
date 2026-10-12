@@ -641,3 +641,6 @@ main{position:fixed}
 
 /* Very pale orange individual weekdays inside the white pickup schedule card. */
 .clinic-day{background:#fff3e8;border-color:#ecd4c0}
+
+/* Show the complete medical-studio slide at once on TV iframe compositors. */
+.clinic-screen{transition:none}
