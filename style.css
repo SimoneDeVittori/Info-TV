@@ -571,3 +571,10 @@ main{position:fixed}
 /* Cached map stages fade without GPU scaling; only the current frame is visible. */
 .clinic-map-card .google-map-sequence iframe{transform:none;transition:opacity .35s ease}
 .clinic-map-card .google-map-sequence iframe.is-current{transform:none}
+
+/* Give the weekly pickup table clear separation from the surrounding card. */
+.clinic-schedule-card{background:#edf1f4}
+.clinic-day{background:#fff;border-color:#bcc8d1;box-shadow:0 3px 8px #27313b12}
+.clinic-slot{background:#ffe5cf;border-color:#dfa67a}
+.clinic-slot.no-pickup{background:#e8edf1;border-color:#bcc8d1}
+.clinic-slot.no-pickup small,.clinic-slot.no-pickup strong{color:#626f79}
