@@ -1,10 +1,10 @@
 {
   "weather": {
     "current": {
-      "time": 1791787800000,
+      "time": 1791789000000,
       "icon": 1,
       "iconV2": 1,
-      "temperature": 10.4
+      "temperature": 11.2
     },
     "forecast": [
       {
@@ -48,7 +48,7 @@
         "precipitationMax": 0.0
       }
     ],
-    "updatedAt": "2026-10-12T07:10:42.193463+00:00"
+    "updatedAt": "2026-10-12T07:17:25.778417+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1203,7 +1203,7 @@
       }
     ],
     "model": "202610120700",
-    "updatedAt": "2026-10-12T07:10:42.226646+00:00"
+    "updatedAt": "2026-10-12T07:17:25.806553+00:00"
   },
   "weekError": false,
   "news": {
@@ -1233,7 +1233,7 @@
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oo47.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-10-12T07:10:42.193463+00:00",
+    "updatedAt": "2026-10-12T07:17:25.778417+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -2130,7 +2130,7 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-12T07:10:42.193463+00:00",
+    "updatedAt": "2026-10-12T07:17:25.778417+00:00",
     "version": "20261012_0710"
   },
   "swissWeatherError": false,
@@ -2138,21 +2138,12 @@
     "items": [
       {
         "id": "Viasuisser_FAVM/658940_TIC-Viasuisse/1",
-        "text": "A2 - Chiasso direzione S. Gottardo tra Quinto e Area di dosaggio Airolo traffico bloccato per 2 km, traffico congestionato, ritardi fino a 20 minuti",
+        "text": "A2 - Chiasso direzione S. Gottardo tra Quinto e Area di dosaggio Airolo traffico bloccato per 1 km, traffico congestionato, ritardi fino a 10 minuti",
         "location": "A2 - Chiasso direzione S. Gottardo",
         "road": "A2",
         "category": 12,
-        "changedAt": "2026-10-12T08:48:10+02:00",
+        "changedAt": "2026-10-12T09:09:38+02:00",
         "priority": 0
-      },
-      {
-        "id": "Viasuisser_Viasuisse/2511557_TIC-Viasuisse/1",
-        "text": "398 - Ponte Tresa direzione Lamone tra Ponte Tresa e Bioggio traffico fortemente rallentato, traffico congestionato",
-        "location": "398 - Ponte Tresa direzione Lamone",
-        "road": "398",
-        "category": 13,
-        "changedAt": "2026-10-12T07:37:32+02:00",
-        "priority": 1
       },
       {
         "id": "Viasuisser_FAVM/658331_TIC-Viasuisse/1",
@@ -2243,10 +2234,19 @@
         "category": 32,
         "changedAt": "2026-09-22T11:58:11+02:00",
         "priority": 6
+      },
+      {
+        "id": "Viasuisser_FAVM/654420_TIC-Viasuisse/1",
+        "text": "A2 - Chiasso direzione S. Gottardo tra Faido e Quinto problemi di traffico, lavori stradali per 2.7 km, corsie strette, carreggiata ridotta a due corsie, limite temporaneo di larghezza di 7.75 m, fino a 20.11.2026 05:00 - ID117662",
+        "location": "A2 - Chiasso direzione S. Gottardo",
+        "road": "A2",
+        "category": 31,
+        "changedAt": "2026-09-21T17:02:59+02:00",
+        "priority": 5
       }
     ],
-    "total": 52,
-    "updatedAt": "2026-10-12T07:10:42.193463+00:00",
+    "total": 51,
+    "updatedAt": "2026-10-12T07:17:25.778417+00:00",
     "source": "Viasuisse"
   }
 }
