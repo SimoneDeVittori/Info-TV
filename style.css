@@ -704,3 +704,7 @@ main{position:fixed}
 .plan-release-info{display:block;flex:0 0 22px;color:#e7531b;margin-top:1px}
 .plan-release-copy{min-width:0}
 @media (hover:hover) and (pointer:fine){.plan-release-note{display:flex}}
+
+/* Align the information box with the top and bottom of the plan's day-header band. */
+.plan-release-note{top:.7786%;height:4.5111%;padding:4px 10px;border-width:3px;font-size:13px;line-height:1.25;align-items:center}
+.plan-release-info{margin-top:0}
