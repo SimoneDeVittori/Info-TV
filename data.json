@@ -1,10 +1,10 @@
 {
   "weather": {
     "current": {
-      "time": 1791786000000,
+      "time": 1791787200000,
       "icon": 1,
       "iconV2": 1,
-      "temperature": 10.5
+      "temperature": 10.3
     },
     "forecast": [
       {
@@ -48,7 +48,7 @@
         "precipitationMax": 0.0
       }
     ],
-    "updatedAt": "2026-10-12T06:44:39.869421+00:00"
+    "updatedAt": "2026-10-12T06:52:42.132284+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1203,7 +1203,7 @@
       }
     ],
     "model": "202610120600",
-    "updatedAt": "2026-10-12T06:44:39.928747+00:00"
+    "updatedAt": "2026-10-12T06:52:42.159522+00:00"
   },
   "weekError": false,
   "news": {
@@ -1233,7 +1233,7 @@
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oo46.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-10-12T06:44:39.869421+00:00",
+    "updatedAt": "2026-10-12T06:52:42.132284+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -2130,7 +2130,7 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-12T06:44:39.869421+00:00",
+    "updatedAt": "2026-10-12T06:52:42.132284+00:00",
     "version": "20261012_0640"
   },
   "swissWeatherError": false,
@@ -2138,11 +2138,11 @@
     "items": [
       {
         "id": "Viasuisser_FAVM/658940_TIC-Viasuisse/1",
-        "text": "A2 - Chiasso direzione S. Gottardo tra Quinto e Area di dosaggio Airolo traffico bloccato per 1 km, traffico congestionato",
+        "text": "A2 - Chiasso direzione S. Gottardo tra Quinto e Area di dosaggio Airolo traffico bloccato per 2 km, traffico congestionato, ritardi fino a 20 minuti",
         "location": "A2 - Chiasso direzione S. Gottardo",
         "road": "A2",
         "category": 12,
-        "changedAt": "2026-10-12T08:39:19+02:00",
+        "changedAt": "2026-10-12T08:48:10+02:00",
         "priority": 0
       },
       {
@@ -2246,7 +2246,7 @@
       }
     ],
     "total": 55,
-    "updatedAt": "2026-10-12T06:44:39.869421+00:00",
+    "updatedAt": "2026-10-12T06:52:42.132284+00:00",
     "source": "Viasuisse"
   }
 }
