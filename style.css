@@ -603,3 +603,11 @@ main{position:fixed}
 
 /* A steady orange column and a stronger border clearly mark today's plan. */
 .plan-today-highlight{animation:none!important;fill:#f58220;fill-opacity:.32;stroke:#c65300;stroke-opacity:1;stroke-width:3}
+
+/* Rainfall notes keep their own row height and never collide with the source footer. */
+.weather .week-list{flex:1 0 auto;min-height:0}
+.weather .week-row{flex:1 0 auto;min-height:60px;padding:6px 0}
+.weather .week-rain{min-width:0;line-height:1.25}
+.weather .rain-hours{display:block;line-height:1.25;overflow-wrap:break-word}
+.weather .source{flex-shrink:0;margin-top:12px;padding-top:12px;border-top:1px solid #e6e9eb;line-height:1.35}
+@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){.weather .week-row{min-height:48px;padding:5px 0}.weather .source{margin-top:10px;padding-top:10px}}
