@@ -708,3 +708,12 @@ main{position:fixed}
 /* Align the information box with the top and bottom of the plan's day-header band. */
 .plan-release-note{top:.7786%;height:4.5111%;padding:4px 10px;border-width:3px;font-size:13px;line-height:1.25;align-items:center}
 .plan-release-info{margin-top:0}
+
+/* TVs may not advertise mouse hover; use the established phone breakpoint. */
+.plan-release-note{display:flex}
+@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){.plan-release-note{display:none}}
+/* Give rotated month/year glyphs independent space instead of clipping their fill. */
+.plan-month-title .plan-month-name,.plan-month-title .plan-month-year{flex-shrink:0;overflow:visible;padding:.08em .08em;line-height:1.3}
+@media (hover:none) and (min-width:601px) and (min-height:601px),(pointer:coarse) and (min-width:601px) and (min-height:601px){
+ .plan-month-title span{background:none;color:var(--month-end);-webkit-text-fill-color:var(--month-end)}
+}
