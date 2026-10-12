@@ -644,3 +644,7 @@ main{position:fixed}
 
 /* Show the complete medical-studio slide at once on TV iframe compositors. */
 .clinic-screen{transition:none}
+
+/* Almost-white warm orange for the medical-studio weekday cards. */
+.clinic-day{background:#fff9f3;border-color:#efdfd2}
+.clinic-day .clinic-slot:not(.no-pickup){background:#fff3e8;border-color:#efd9c6}
