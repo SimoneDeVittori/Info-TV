@@ -602,7 +602,7 @@ main{position:fixed}
 .clinic-day{background:#e9eef2;border-color:#c2cdd5}
 
 /* A steady orange column and a stronger border clearly mark today's plan. */
-.plan-today-highlight{animation:none!important;fill:#f58220;fill-opacity:.32;stroke:#c65300;stroke-opacity:1;stroke-width:3}
+.plan-today-highlight{animation:none!important;fill:#f58220;fill-opacity:.16;stroke:#c65300;stroke-opacity:1;stroke-width:3}
 
 /* Rainfall notes keep their own row height and never collide with the source footer. */
 .weather .week-list{flex:1 0 auto;min-height:0}
