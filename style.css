@@ -726,3 +726,11 @@ main{position:fixed}
 .clinic-day.has-day-pickup .clinic-slot.has-pickup strong{color:#2e6a36}
 .clinic-day.no-day-pickup .clinic-slot.no-pickup{background:#fff5f5;border-color:#ecd6d6}
 .clinic-day.no-day-pickup .clinic-slot.no-pickup small,.clinic-day.no-day-pickup .clinic-slot.no-pickup strong{color:#986565}
+
+/* A small moving van sits directly above the Friday pickup card. */
+.clinic-day{position:relative}
+.clinic-pickup-van{--pickup-van-scale:.62;--pickup-van-shift:6px;position:absolute;bottom:calc(100% + 12px);left:0;width:100%;height:74px;pointer-events:none}
+.clinic-pickup-van .travel-van-runner{position:absolute;top:0;bottom:auto;left:50%;margin-left:-90px;width:180px;height:120px;transform-origin:top center;animation:clinic-pickup-van-drive 3s ease-in-out infinite}
+@keyframes clinic-pickup-van-drive{0%,100%{transform:translate3d(calc(-1 * var(--pickup-van-shift)),0,0) scale(var(--pickup-van-scale))}50%{transform:translate3d(var(--pickup-van-shift),0,0) scale(var(--pickup-van-scale))}}
+@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){.clinic-pickup-van{--pickup-van-scale:.28;--pickup-van-shift:2px;height:34px;bottom:calc(100% + 8px)}}
+@media (prefers-reduced-motion:reduce){.clinic-pickup-van .travel-van-runner{animation:none;transform:scale(var(--pickup-van-scale))}}
