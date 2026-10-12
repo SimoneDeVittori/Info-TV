@@ -93,6 +93,13 @@ function WorkPlanStage({children}:{children:any}){
  return rainElement('div',{className:'work-plan-stage',ref},children);
 }
 function isCurrentPlanPreview(){return new URLSearchParams(window.location.search).get('anteprima')==='piano';}
+function renderDayPop(file,crop,current){
+ const h=rainElement,sourceX=crop.dayStart-crop.x+(current-1)*crop.dayStep,sourceY=1,sourceHeight=crop.bottom-54;
+ const left=(263+sourceX/crop.width*1400)/1672*100,top=(6+sourceY/crop.height*922)/941*100;
+ const width=crop.dayStep/crop.width*1400/1672*100,height=sourceHeight/crop.height*922/941*100;
+ return h('div',{className:'plan-day-pop','aria-hidden':true,style:{left:left+'%',top:top+'%',width:width+'%',height:height+'%'}},
+  h('div',{className:'plan-day-pop-image',style:{backgroundImage:'url("'+file.url.replace(/\.pdf$/i,'-tv.png')+'?updated='+encodeURIComponent(file.uploadedAt)+'")',backgroundSize:(crop.width/crop.dayStep*100)+'% '+(crop.height/sourceHeight*100)+'%',backgroundPosition:(sourceX/(crop.width-crop.dayStep)*100)+'% '+(sourceY/(crop.height-sourceHeight)*100)+'%'}}));
+}
 function renderWorkPlan(now,nextMonth=false){
  const state=getPlanState(now||new Date());
  const entry=nextMonth?state.upcoming:state.current;
@@ -114,7 +121,7 @@ function renderWorkPlan(now,nextMonth=false){
  h('div',{className:'plan-month-title',style:{'--month-start':colors[0],'--month-end':colors[1],'--plan-month-font':(meta.name.length>8?'6.7':'7.5')+'cqw'},'aria-hidden':true},h('span',{className:'plan-month-name'},meta.name.toUpperCase()),h('span',{className:'plan-month-year'},String(meta.year))),
  h('svg',{className:'work-plan-overlay',viewBox:'0 0 1672 941','aria-hidden':true,preserveAspectRatio:'none'},
  nextMonth?null:h('text',{className:'plan-updated-text',transform:'translate(198 750) rotate(-90)',textAnchor:'start',fontSize:28,fontWeight:700,fontFamily:'Arial, sans-serif',fill:'#454545'},'AGGIORNATO '+age),
- current?h('rect',{className:'plan-today-highlight',x:263+(crop.dayStart-crop.x)/crop.width*1400+(current-1)*(crop.dayStep/crop.width*1400),y:6+922/crop.height,width:crop.dayStep/crop.width*1400,height:(crop.bottom-54)/crop.height*922,fill:'#f09600',fillOpacity:0.22,stroke:'#e86b00',strokeOpacity:0.7,strokeWidth:1.5,pointerEvents:'none'}):null)));
+ current?h('rect',{className:'plan-today-highlight',x:263+(crop.dayStart-crop.x)/crop.width*1400+(current-1)*(crop.dayStep/crop.width*1400),y:6+922/crop.height,width:crop.dayStep/crop.width*1400,height:(crop.bottom-54)/crop.height*922,fill:'#f09600',fillOpacity:0.22,stroke:'#e86b00',strokeOpacity:0.7,strokeWidth:1.5,pointerEvents:'none'}):null),current?renderDayPop(file,crop,current):null));
 }
 
 function isPhoneDisplay(){return window.matchMedia("(pointer: coarse) and (max-width: 600px), (pointer: coarse) and (max-height: 600px)").matches;}
