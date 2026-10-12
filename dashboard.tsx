@@ -108,7 +108,7 @@ function PickupVan({active}:{active:boolean}){
   const timer=setTimeout(()=>setParked(true),10000);
   return()=>clearTimeout(timer);
  },[active]);
- return rainElement('div',{ref,className:'clinic-pickup-van'+(active?' is-running':'')+(parked?' is-parked':''),'aria-hidden':true},rainElement('span',{className:'pickup-traffic-light',key:active?'signal-go':'signal-idle'},rainElement('i',{className:'signal-red'}),rainElement('i',{className:'signal-yellow'}),rainElement('i',{className:'signal-green'})),renderTravelVan(active));
+ return rainElement('div',{ref,className:'clinic-pickup-van'+(active?' is-running':'')+(parked?' is-parked':''),'aria-hidden':true},renderTravelVan(active));
 }
 function renderTravelVan(active){
  const h=rainElement;
