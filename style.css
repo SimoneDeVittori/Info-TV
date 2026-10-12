@@ -751,3 +751,8 @@ main{position:fixed}
 /* Wait five seconds before both the van and its wheels begin the pickup trip. */
 .clinic-pickup-van.is-running .travel-van-runner{animation-delay:5s}
 .clinic-pickup-van.is-running .travel-van-wheel svg{animation-delay:5s;animation-fill-mode:both}
+
+/* Lower the pickup van slightly to leave the service-start text unobstructed. */
+.clinic-pickup-van{bottom:calc(100% - 2px)}
+.clinic-pickup-van .travel-van-exhaust i{background:radial-gradient(ellipse,#8a9199 0%,#a2a9b2f2 38%,#b2b9c2b3 62%,#b2b9c200 82%)}
+@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){.clinic-pickup-van{bottom:calc(100% - 2px)}}
