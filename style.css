@@ -771,3 +771,19 @@ main{position:fixed}
 .home-delivery-van.is-parked .travel-van-wheel svg{animation:none!important;transform:rotate(0deg)}
 .home-delivery-van .travel-van-exhaust i{background:radial-gradient(ellipse,#8a9199 0%,#a2a9b2f2 38%,#b2b9c2b3 62%,#b2b9c200 82%)}
 @media(prefers-reduced-motion:reduce){.home-delivery-van.is-running .travel-van-runner,.home-delivery-van.is-running .travel-van-wheel svg{animation:none}}
+
+/* Pickup signal: red 0–3s, yellow 3–5s, green at departure. */
+.pickup-traffic-light{position:absolute;left:calc(var(--pickup-van-start,0px) - 26px);top:12px;width:20px;height:50px;padding:4px;border-radius:6px;background:#343a40;box-shadow:0 1px 3px #0003;display:flex;flex-direction:column;justify-content:space-between;z-index:4}
+.pickup-traffic-light::after{content:"";position:absolute;top:100%;left:8px;width:4px;height:12px;background:#58616a}
+.pickup-traffic-light i{display:block;width:12px;height:12px;border-radius:50%;opacity:.22}
+.pickup-traffic-light .signal-red{background:#ff5149;opacity:1}
+.pickup-traffic-light .signal-yellow{background:#ffcf36}
+.pickup-traffic-light .signal-green{background:#44dc78}
+.clinic-pickup-van.is-running .signal-red{animation:pickup-signal-red 5s steps(1,end) forwards}
+.clinic-pickup-van.is-running .signal-yellow{animation:pickup-signal-yellow 5s steps(1,end) forwards}
+.clinic-pickup-van.is-running .signal-green{animation:pickup-signal-green 5s steps(1,end) forwards}
+@keyframes pickup-signal-red{0%{opacity:1}60%,100%{opacity:.22}}
+@keyframes pickup-signal-yellow{0%{opacity:.22}60%{opacity:1}100%{opacity:.22}}
+@keyframes pickup-signal-green{0%{opacity:.22}100%{opacity:1}}
+.screen:not(.active) .pickup-traffic-light i{animation-play-state:paused}
+@media(pointer:coarse) and (max-width:600px){.pickup-traffic-light{transform:scale(.6);transform-origin:top right;left:calc(var(--pickup-van-start,0px) - 20px);top:0}}
