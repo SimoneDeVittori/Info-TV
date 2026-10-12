@@ -48,7 +48,7 @@
         "precipitationMax": 0.0
       }
     ],
-    "updatedAt": "2026-10-12T07:00:18.180229+00:00"
+    "updatedAt": "2026-10-12T07:06:57.000472+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1202,8 +1202,8 @@
         "amount": 0.0
       }
     ],
-    "model": "202610120600",
-    "updatedAt": "2026-10-12T07:00:18.207035+00:00"
+    "model": "202610120700",
+    "updatedAt": "2026-10-12T07:06:57.045180+00:00"
   },
   "weekError": false,
   "news": {
@@ -1233,7 +1233,7 @@
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oo47.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-10-12T07:00:18.180229+00:00",
+    "updatedAt": "2026-10-12T07:06:57.000472+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -2130,7 +2130,7 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-12T07:00:18.180229+00:00",
+    "updatedAt": "2026-10-12T07:06:57.000472+00:00",
     "version": "20261012_0640"
   },
   "swissWeatherError": false,
@@ -2146,15 +2146,6 @@
         "priority": 0
       },
       {
-        "id": "Viasuisser_Viasuisse/2511589_TIC-Viasuisse/1",
-        "text": "398 - direzione Ponte Tresa tra Gravesano e Agno traffico fortemente rallentato, traffico congestionato",
-        "location": "398 - direzione Ponte Tresa",
-        "road": "398",
-        "category": 13,
-        "changedAt": "2026-10-12T07:38:13+02:00",
-        "priority": 1
-      },
-      {
         "id": "Viasuisser_Viasuisse/2511557_TIC-Viasuisse/1",
         "text": "398 - Ponte Tresa direzione Lamone tra Ponte Tresa e Bioggio traffico fortemente rallentato, traffico congestionato",
         "location": "398 - Ponte Tresa direzione Lamone",
@@ -2162,15 +2153,6 @@
         "category": 13,
         "changedAt": "2026-10-12T07:37:32+02:00",
         "priority": 1
-      },
-      {
-        "id": "Viasuisser_FAVM/658880_TIC-Viasuisse/1",
-        "text": "A2 - Chiasso direzione S. Gottardo tra Genestrerio e Melide/Bissone colonna, traffico congestionato",
-        "location": "A2 - Chiasso direzione S. Gottardo",
-        "road": "A2",
-        "category": 12,
-        "changedAt": "2026-10-12T06:08:37+02:00",
-        "priority": 0
       },
       {
         "id": "Viasuisser_FAVM/658331_TIC-Viasuisse/1",
@@ -2243,10 +2225,28 @@
         "category": 31,
         "changedAt": "2026-09-29T20:11:47+02:00",
         "priority": 5
+      },
+      {
+        "id": "Viasuisser_Viasuisse/2508008_TIC-Viasuisse/1",
+        "text": "Via Nodivra - a Carona lavori stradali, corsie strette, fino a 18.12.2026 17:00",
+        "location": "Via Nodivra",
+        "road": "TI",
+        "category": 31,
+        "changedAt": "2026-09-27T10:35:09+02:00",
+        "priority": 5
+      },
+      {
+        "id": "Viasuisser_FAVM/654593_TIC-Viasuisse/1",
+        "text": "A2 - Chiasso direzione S. Gottardo tra  Lugano Nord e Rivera problemi di traffico, lavori stradali durante la notte per 3.1 km, nuova gestione del traffico, carreggiata ridotta a una corsia, limite temporaneo di larghezza di 3.50 m, fino a domani, tra 21:30 e 04:00 - ID117704",
+        "location": "A2 - Chiasso direzione S. Gottardo",
+        "road": "A2",
+        "category": 32,
+        "changedAt": "2026-09-22T11:58:11+02:00",
+        "priority": 6
       }
     ],
-    "total": 54,
-    "updatedAt": "2026-10-12T07:00:18.180229+00:00",
+    "total": 52,
+    "updatedAt": "2026-10-12T07:06:57.000472+00:00",
     "source": "Viasuisse"
   }
 }
