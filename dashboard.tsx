@@ -279,7 +279,7 @@ function StudioMap({studio,active}:{studio:MedicalStudio;active:boolean}){
  useEffect(()=>{
   setStep(0);
   if(!active||!loaded[0])return;
-  const timers=[3000,6000,14000,17000].map((delay,index)=>setTimeout(()=>setStep(index+1),delay));
+  const timers=[3000,6000,14000,22000].map((delay,index)=>setTimeout(()=>setStep(index+1),delay));
   return()=>timers.forEach(clearTimeout);
  },[active,loaded[0],query]);
  const shown=step>=4&&loaded[4]?4:step>=3&&loaded[3]?3:step>=2&&loaded[2]?2:step>=1&&loaded[1]?1:0;
@@ -331,7 +331,7 @@ export default function Home(){
  useEffect(()=>{if(studios.length&&page>=5&&page-5>=visibleStudios.length)setPage(0);},[studioRotationKey,page]);
  const nextPlanAvailable=planState.nextAvailable;
  useEffect(()=>{if(page===4&&!nextPlanAvailable)setPage(1);},[planState.period,nextPlanAvailable,page]);
- useEffect(()=>{if(phone||isCurrentPlanPreview()||isNextPlanPreview()||isMedicalStudioPreview())return;const rotation=setTimeout(()=>setPage(p=>{if(isPhoneDisplay())return p;const pages=[...planRotation(),...visibleStudios.map((studio,index)=>5+index)];return pages[(pages.indexOf(p)+1)%pages.length];}),page===0?25000:page===2?7000:page===3?10000:page>=5?23000:20000);return()=>clearTimeout(rotation);},[page,phone,nextPlanAvailable,studioRotationKey]);
+ useEffect(()=>{if(phone||isCurrentPlanPreview()||isNextPlanPreview()||isMedicalStudioPreview())return;const rotation=setTimeout(()=>setPage(p=>{if(isPhoneDisplay())return p;const pages=[...planRotation(),...visibleStudios.map((studio,index)=>5+index)];return pages[(pages.indexOf(p)+1)%pages.length];}),page===0?25000:page===2?7000:page===3?10000:page>=5?28000:20000);return()=>clearTimeout(rotation);},[page,phone,nextPlanAvailable,studioRotationKey]);
  useEffect(()=>{if(!controls)return;const t=setTimeout(()=>setControls(false),3500);return()=>clearTimeout(t);},[controls]);
  const week=data.week;
  const rainWindow=(day:string)=>{
@@ -383,7 +383,7 @@ export default function Home(){
     <article className="clinic-address-card card"><div className="section-label">STUDIO MEDICO</div><h1>{studio.name}</h1><address><strong>{studio.street}</strong><span>{studio.postalCode} {studio.locality}</span></address></article>
     <article className="clinic-schedule-card card"><div className="section-label">Orario di Ritiro Fisso</div>{studio.startsOn&&<p className="clinic-start-date">{studioStartLabel(studio.startsOn,now||new Date())}</p>}<div className="clinic-week">{[['Lu','Lunedì'],['Ma','Martedì'],['Me','Mercoledì'],['Gio','Giovedì'],['Ve','Venerdì']].map(([key,label])=><div key={key} className="clinic-day"><span>{label}</span><div className={'clinic-slot '+(studio.pickups[key]?.morning?'has-pickup':'no-pickup')}><small>Mattina</small><strong>{studio.pickups[key]?.morning||'—'}</strong></div><div className={'clinic-slot '+(studio.pickups[key]?.afternoon?'has-pickup':'no-pickup')}><small>Pomeriggio</small><strong>{studio.pickups[key]?.afternoon||'—'}</strong></div></div>)}</div></article>
    </div><article className="clinic-map-card card"><div className="clinic-map-heading"><div className="section-label">DOVE TROVARLO</div><span>{studio.postalCode} {studio.locality}</span></div><StudioMap studio={studio} active={page===5+studioIndex}/><div className="source"><span>Google Maps</span><span>{studio.street} · {studio.locality}</span></div></article></div>:<div className="empty">Caricamento dello studio medico…</div>}
-   <footer><small className="creator-copyright">© SimDev3D</small><span>— Unilabs Ticino · Centro Galleria 3, Via Cantonale 4, 6928 Manno —</span><div className="page-dots"><i/><i/><i/><i/><i className="selected"/></div></footer><div className="progress" style={{animationDuration:'23s'}} key={page===5+studioIndex?'medical-studio-'+studio.id:'medical-studio-hidden-'+studio.id}/>
+   <footer><small className="creator-copyright">© SimDev3D</small><span>— Unilabs Ticino · Centro Galleria 3, Via Cantonale 4, 6928 Manno —</span><div className="page-dots"><i/><i/><i/><i/><i className="selected"/></div></footer><div className="progress" style={{animationDuration:'28s'}} key={page===5+studioIndex?'medical-studio-'+studio.id:'medical-studio-hidden-'+studio.id}/>
   </section>)}
   <button className={'fullscreen '+(controls?'show':'')} onFocus={()=>setControls(true)} onClick={()=>{if(!document.fullscreenElement)document.documentElement.requestFullscreen?.();else document.exitFullscreen?.();}}>Schermo intero</button>
  </main>;
