@@ -747,3 +747,7 @@ main{position:fixed}
 @keyframes clinic-pickup-wheel-trip{from{transform:rotate(0deg)}to{transform:rotate(4680deg)}}
 .clinic-pickup-van.is-parked .travel-van-wheel svg{animation:none!important;transform:rotate(0deg)}
 @media (prefers-reduced-motion:reduce){.clinic-pickup-van.is-running .travel-van-wheel svg{animation:none}}
+
+/* Wait five seconds before both the van and its wheels begin the pickup trip. */
+.clinic-pickup-van.is-running .travel-van-runner{animation-delay:5s}
+.clinic-pickup-van.is-running .travel-van-wheel svg{animation-delay:5s;animation-fill-mode:both}

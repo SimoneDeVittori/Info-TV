@@ -74,7 +74,7 @@ function PickupVan({active}:{active:boolean}){
  useEffect(()=>{
   setParked(false);
   if(!active)return;
-  const timer=setTimeout(()=>setParked(true),5000);
+  const timer=setTimeout(()=>setParked(true),10000);
   return()=>clearTimeout(timer);
  },[active]);
  return rainElement('div',{ref,className:'clinic-pickup-van'+(active?' is-running':'')+(parked?' is-parked':''),'aria-hidden':true},renderTravelVan(active));

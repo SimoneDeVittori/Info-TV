@@ -33,7 +33,7 @@ Error generating stack: `+l.message+`
  k.useEffect(()=>{
   setParked(false);
   if(!active)return;
-  const timer=setTimeout(()=>setParked(true),5000);
+  const timer=setTimeout(()=>setParked(true),10000);
   return()=>clearTimeout(timer);
  },[active]);
  return k.createElement('div',{ref,className:'clinic-pickup-van'+(active?' is-running':'')+(parked?' is-parked':''),'aria-hidden':true},Dg(active));
