@@ -578,3 +578,16 @@ main{position:fixed}
 .clinic-slot{background:#ffe5cf;border-color:#dfa67a}
 .clinic-slot.no-pickup{background:#e8edf1;border-color:#bcc8d1}
 .clinic-slot.no-pickup small,.clinic-slot.no-pickup strong{color:#626f79}
+
+/* White outer pickup card, stronger contrast on the individual day cards. */
+.clinic-schedule-card{background:#fff}
+.clinic-day{background:#dce4ea;border-color:#a8b7c2}
+/* Compact daily solar events beneath the local forecast; no remote browser calls. */
+.ephemerides{flex-shrink:0;border-top:1px solid #e0e6eb;margin-top:8px;padding-top:8px}
+.ephemerides-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:12px;font-weight:700;letter-spacing:.06em;color:#697581}
+.ephemerides-heading a{font-size:10px;font-weight:400;letter-spacing:0;color:#737f88}
+.ephemerides-values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:5px}
+.ephemerides-values>div{display:flex;flex-direction:column;gap:3px}
+.ephemerides-values span{font-size:13px;color:#737f88}
+.ephemerides-values strong{font-size:22px;line-height:1.1;font-weight:600;color:#27313b;font-variant-numeric:tabular-nums}
+@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){.ephemerides-heading{font-size:11px}.ephemerides-values span{font-size:12px}.ephemerides-values strong{font-size:19px}}

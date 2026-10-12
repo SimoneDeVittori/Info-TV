@@ -2,6 +2,43 @@ import {PLAN_FILE,PLAN_METADATA,renderWorkPlanPdf,NEXT_PLAN_FILE,NEXT_PLAN_METAD
 'use client';
 import {useEffect,useState,useRef,createElement as rainElement} from 'react';
 import {Cloud,Sun,CloudSun,CloudRain,CloudLightning,Snowflake,Droplets} from 'lucide-react';
+// Solar events for Manno, using NOAA/Meeus equations and a standard horizon.
+// Reference: https://gml.noaa.gov/grad/solcalc/main.js
+let mannoSolarCache;
+function mannoEphemerides(now){
+ const day=(now||new Date()).toLocaleDateString('sv-SE',{timeZone:'Europe/Zurich'});
+ if(mannoSolarCache?.date===day)return mannoSolarCache;
+ const [year,month,date]=day.split('-').map(Number);
+ const midnight=Date.UTC(year,month-1,date),jd=midnight/86400000+2440587.5,rad=Math.PI/180;
+ const latitude=46.035*rad,longitude=8.919;
+ function eventMinutes(julian,rise){
+  const t=(julian-2451545)/36525;
+  const meanLongitude=((280.46646+t*(36000.76983+t*.0003032))%360)*rad;
+  const anomaly=(357.52911+t*(35999.05029-.0001537*t))*rad;
+  const eccentricity=.016708634-t*(.000042037+.0000001267*t);
+  const center=Math.sin(anomaly)*(1.914602-t*(.004817+.000014*t))+Math.sin(2*anomaly)*(.019993-.000101*t)+Math.sin(3*anomaly)*.000289;
+  const omega=(125.04-1934.136*t)*rad;
+  const apparent=meanLongitude+(center-.00569-.00478*Math.sin(omega))*rad;
+  const seconds=21.448-t*(46.815+t*(.00059-t*.001813));
+  const obliquity=(23+(26+seconds/60)/60+.00256*Math.cos(omega))*rad;
+  const declination=Math.asin(Math.sin(obliquity)*Math.sin(apparent));
+  const y=Math.tan(obliquity/2)**2;
+  const equation=4/rad*(y*Math.sin(2*meanLongitude)-2*eccentricity*Math.sin(anomaly)+4*eccentricity*y*Math.sin(anomaly)*Math.cos(2*meanLongitude)-.5*y*y*Math.sin(4*meanLongitude)-1.25*eccentricity*eccentricity*Math.sin(2*anomaly));
+  const hourAngle=Math.acos(Math.cos(90.833*rad)/(Math.cos(latitude)*Math.cos(declination))-Math.tan(latitude)*Math.tan(declination))/rad;
+  return 720-4*(longitude+(rise?hourAngle:-hourAngle))-equation;
+ }
+ const rise=eventMinutes(jd+eventMinutes(jd,true)/1440,true);
+ const set=eventMinutes(jd+eventMinutes(jd,false)/1440,false);
+ mannoSolarCache={date:day,sunrise:new Date(Math.round((midnight+rise*60000)/60000)*60000),sunset:new Date(Math.round((midnight+set*60000)/60000)*60000),dayMinutes:Math.round(set-rise)};
+ return mannoSolarCache;
+}
+function renderEphemerides(now){
+ const solar=mannoEphemerides(now),h=rainElement;
+ const cell=(label,value)=>h('div',null,h('span',null,label),h('strong',null,value));
+ return h('section',{className:'ephemerides','aria-label':'Effemeridi di oggi a Manno'},
+  h('div',{className:'ephemerides-heading'},h('span',null,'EFFEMERIDI DI OGGI'),h('a',{href:'https://gml.noaa.gov/grad/solcalc/calcdetails.html',target:'_blank',rel:'noreferrer',title:'Calcolo astronomico su orizzonte libero'},'NOAA')),
+  h('div',{className:'ephemerides-values'},cell('Alba',fmtTime(solar.sunrise)),cell('Tramonto',fmtTime(solar.sunset)),cell('Ore di luce',Math.floor(solar.dayMinutes/60)+'h '+String(solar.dayMinutes%60).padStart(2,'0')+'m')));
+}
 function isSwissNight(date=new Date()){const hour=Number(date.toLocaleTimeString('en-GB',{timeZone:'Europe/Zurich',hour:'2-digit',hourCycle:'h23'}));return hour>=18||hour<7;}
 function renderNightWeather(code,size){
  const h=rainElement,cloudy=code!==1;
@@ -310,6 +347,7 @@ export default function Home(){
     {renderTodayRain(week?.hourly,now)}
     <div className="week-heading">PROSSIMI 5 GIORNI</div><div className="week-columns"><span>Giorno</span><span>Min / max °C</span><span className="rain-column"><Droplets size={19}/> Precipitazioni (mm)<small>Fascia oraria</small></span></div><div className="week-list">{week?week.days.filter((d:any)=>d.dayDate>(now||new Date()).toLocaleDateString('sv-SE',{timeZone:'Europe/Zurich'})).slice(0,5).map((d:any)=><div className="week-row" key={d.dayDate}><div className="week-day"><span>{new Date(d.dayDate+'T12:00:00').toLocaleDateString('it-CH',{weekday:'short'})}</span><span className="week-day-number">{Number(d.dayDate.slice(-2))}</span></div><WeatherIcon code={d.iconDay} size={30}/><div className="week-temperatures">{d.temperatureMin}° <strong>{d.temperatureMax}°</strong></div><div className={"week-rain "+(d.precipitation===0?"dry":"")}><strong>{Number.isFinite(d.precipitation)?d.precipitation.toLocaleString("it-CH",{maximumFractionDigits:1})+" mm":"—"}</strong>{d.precipitation>0&&<span className="rain-hours">{rainWindow(d.dayDate)==="Nessuna prevista"?"Orario non disponibile":rainWindow(d.dayDate)}</span>}</div></div>):<p className="empty">{data.weekError?'Previsioni non disponibili':'Caricamento…'}</p>}</div>
     
+    {renderEphemerides(now)}
     <div className="source"><a href="https://www.meteosvizzera.admin.ch/previsioni-locali/manno/6928.html" target="_blank" rel="noreferrer">Fonte: MeteoSvizzera</a>{w&&<span>Aggiornato alle {fmtTime(w.updatedAt)}</span>}{staleWeather&&<span className="warning">{w?'Ultimi dati ricevuti · aggiornamento in attesa':'Connessione alla fonte in attesa'}</span>}</div>
    </article><div className="right-column"><article className="news card"><div className="news-header"><div><div className="section-label">ULTIME NOTIZIE DAL TICINO</div></div><img className="tio-logo" src="./tio-logo.png" alt="Ticinonline"/></div><div className="news-list">{n?n.items.slice(0,3).map((item:any,i:number)=><a className="news-item" key={item.link} href={item.link} target="_blank" rel="noreferrer">{item.image&&<img className="news-photo" src={item.image} alt="" onError={e=>{e.currentTarget.style.visibility='hidden';}}/>}<div className="news-copy"><div className="news-meta"><span className="news-location">{item.category||'Attualità'}</span>{item.date&&!isNaN(Date.parse(item.date))?' · '+fmtTime(item.date):''}</div><h3>{item.title}</h3>{item.description&&<p className="news-description">{item.description}</p>}</div></a>):<div className="empty">{staleNews?'Notizie temporaneamente non disponibili':'Caricamento delle ultime notizie…'}</div>}</div><div className="source"><a href="https://www.tio.ch/ticino" target="_blank" rel="noreferrer">Fonte: tio.ch</a><span>{staleNews?'Aggiornamento in attesa':n?'Aggiornato alle '+fmtTime(n.updatedAt):''}</span></div></article><article className="traffic card"><div className="traffic-header"><div><div className="section-label">VIABILITÀ IN TICINO</div></div></div><div className="traffic-list">{traffic?.items?.length?[...traffic.items].sort((a:any,b:any)=>(Date.parse(b.changedAt)||0)-(Date.parse(a.changedAt)||0)).slice(0,2).map((item:any)=><div className="traffic-item" key={item.id}><p>{item.changedAt&&!isNaN(Date.parse(item.changedAt))&&<time dateTime={item.changedAt} title="Ultimo aggiornamento della segnalazione" style={{fontWeight:700,fontVariantNumeric:"tabular-nums"}}>{fmtTime(item.changedAt)} · </time>}{item.location&&item.text.startsWith(item.location)?<><strong className="traffic-location">{item.location}</strong>{item.text.slice(item.location.length)}</>:item.text}</p></div>):<p className="traffic-empty">{staleTraffic?'Informazioni sul traffico temporaneamente non disponibili':traffic?'Nessuna segnalazione attiva in Ticino':'Caricamento delle informazioni sul traffico…'}</p>}</div><div className="source"><a href="https://viasuisse.ch/it/home-2/" target="_blank" rel="noreferrer">Fonte: Viasuisse</a><span>{staleTraffic?'Aggiornamento in attesa':traffic?'Aggiornato alle '+fmtTime(traffic.updatedAt):''}</span></div></article></div></div>
    <footer><small className="creator-copyright">© SimDev3D</small><span>— Unilabs Ticino · Centro Galleria 3, Via Cantonale 4, 6928 Manno —</span><div className="page-dots"><i className="selected"/><i/><i/><i/><i/></div></footer><div className="progress" key={page===0?'dashboard':'hidden'}/>
