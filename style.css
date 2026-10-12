@@ -717,3 +717,12 @@ main{position:fixed}
 @media (hover:none) and (min-width:601px) and (min-height:601px),(pointer:coarse) and (min-width:601px) and (min-height:601px){
  .plan-month-title span{background:none;color:var(--month-end);-webkit-text-fill-color:var(--month-end)}
 }
+
+/* A day is green for any pickup, red only when both pickup periods are absent. */
+.clinic-day.has-day-pickup{background:#eff8ef;border-color:#c9dfca}
+.clinic-day.no-day-pickup{background:#fff0f0;border-color:#eccaca}
+.clinic-day.has-day-pickup .clinic-slot.has-pickup{background:#e3f2e4;border-color:#bdd9c0}
+.clinic-day.has-day-pickup .clinic-slot.has-pickup small{color:#607e64}
+.clinic-day.has-day-pickup .clinic-slot.has-pickup strong{color:#2e6a36}
+.clinic-day.no-day-pickup .clinic-slot.no-pickup{background:#fff5f5;border-color:#ecd6d6}
+.clinic-day.no-day-pickup .clinic-slot.no-pickup small,.clinic-day.no-day-pickup .clinic-slot.no-pickup strong{color:#986565}
