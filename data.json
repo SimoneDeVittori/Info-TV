@@ -1,10 +1,10 @@
 {
   "weather": {
     "current": {
-      "time": 1791795000000,
+      "time": 1791796800000,
       "icon": 1,
       "iconV2": 1,
-      "temperature": 14.3
+      "temperature": 16.0
     },
     "forecast": [
       {
@@ -25,7 +25,7 @@
         "temperatureMin": 11,
         "precipitation": 0.0,
         "precipitationMin": 0.0,
-        "precipitationMax": 0.1
+        "precipitationMax": 0.0
       },
       {
         "dayDate": "2026-10-14",
@@ -48,7 +48,7 @@
         "precipitationMax": 0.0
       }
     ],
-    "updatedAt": "2026-10-12T09:12:10.607901+00:00"
+    "updatedAt": "2026-10-12T09:27:36.325420+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1203,7 +1203,7 @@
       }
     ],
     "model": "202610120900",
-    "updatedAt": "2026-10-12T09:12:10.638170+00:00"
+    "updatedAt": "2026-10-12T09:27:36.363504+00:00"
   },
   "weekError": false,
   "news": {
@@ -1218,11 +1218,11 @@
       },
       {
         "title": "Polizia, ambulanza e Rega in azione",
-        "description": "Strada chiusa e viavai di soccorritori e forze dell'ordine in una via periferica. Una persona si troverebbe in gravi condizioni di salute.",
+        "description": "Strada chiusa e viavai di soccorritori e forze dell'ordine in una via periferica. Una persona è in gravi condizioni di salute.",
         "link": "https://www.tio.ch/ticino/cronaca/1956163/polizia-ambulanza-e-rega-in-azione",
         "date": "Mon, 12 Oct 2026 10:52:32 +0200",
         "category": "BIASCA",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oo6h.jpg?v=1"
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oo6l.jpg?v=1"
       },
       {
         "title": "Ticino digitale? ATED critica la strategia cantonale: «Le aziende sono ai margini»",
@@ -1233,7 +1233,7 @@
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oo5u.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-10-12T09:12:10.607901+00:00",
+    "updatedAt": "2026-10-12T09:27:36.325420+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -2130,7 +2130,7 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-12T09:12:10.607901+00:00",
+    "updatedAt": "2026-10-12T09:27:36.325420+00:00",
     "version": "20261012_0910"
   },
   "swissWeatherError": false,
@@ -2246,7 +2246,7 @@
       }
     ],
     "total": 52,
-    "updatedAt": "2026-10-12T09:12:10.607901+00:00",
+    "updatedAt": "2026-10-12T09:27:36.325420+00:00",
     "source": "Viasuisse"
   }
 }
