@@ -648,3 +648,10 @@ main{position:fixed}
 /* Almost-white warm orange for the medical-studio weekday cards. */
 .clinic-day{background:#fff9f3;border-color:#efdfd2}
 .clinic-day .clinic-slot:not(.no-pickup){background:#fff3e8;border-color:#efd9c6}
+
+/* Reduce empty margins around the Swiss map while retaining all city labels. */
+@media (pointer:fine),(min-width:601px) and (min-height:601px){
+ .swiss-map-card{padding:18px 24px 14px}
+ .swiss-map-card .map-heading{margin-bottom:6px}
+ .swiss-map-card .map-heading h2{font-size:30px;margin-top:4px}
+}
