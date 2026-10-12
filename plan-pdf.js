@@ -9,8 +9,17 @@ function metadata(file,fallbackYear){
 }
 export const PLAN_METADATA=metadata(PLAN_FILE,PLAN_FILE.uploadedAt.slice(0,4));
 export const NEXT_PLAN_METADATA=metadata(NEXT_PLAN_FILE,PLAN_METADATA.year+(PLAN_METADATA.month===12?1:0));
-export const NEXT_PLAN_AVAILABLE_DATE=String(PLAN_METADATA.year)+'-'+String(PLAN_METADATA.month).padStart(2,'0')+'-15';
-export const NEXT_PLAN_AVAILABLE_LABEL='15.'+String(PLAN_METADATA.month).padStart(2,'0');
+// Release the next month on the first Monday on or after the 15th.
+export function nextPlanRelease(year,month){
+ const release=new Date(Date.UTC(year,month-1,15));
+ const daysUntilMonday=(8-release.getUTCDay())%7;
+ release.setUTCDate(15+daysUntilMonday);
+ const date=release.toISOString().slice(0,10);
+ return {date,label:date.slice(8,10)+'.'+date.slice(5,7)};
+}
+const initialRelease=nextPlanRelease(PLAN_METADATA.year,PLAN_METADATA.month);
+export const NEXT_PLAN_AVAILABLE_DATE=initialRelease.date;
+export const NEXT_PLAN_AVAILABLE_LABEL=initialRelease.label;
 export function isNextPlanPreview(){
  return typeof window!=='undefined'&&new URLSearchParams(window.location.search).get('anteprima')==='novembre';
 }
@@ -23,8 +32,9 @@ export function getPlanState(now=new Date()){
  {file:NEXT_PLAN_FILE,meta:NEXT_PLAN_METADATA,renderer:renderNextPlanPdf,crop:{x:17,y:53,width:998,height:674,dayStart:151.7,dayStep:28.68,bottom:725.62}}];
  const current=entries.find(p=>p.meta.year===year&&p.meta.month===month);
  const upcoming=entries.find(p=>p.meta.year===followingYear&&p.meta.month===followingMonth);
- const unlocked=Number(day.slice(8,10))>=15;
- return {current,upcoming,currentMonthName:months[month-1],upcomingMonthName:months[followingMonth-1],period:day.slice(0,7),availableLabel:'15.'+String(month).padStart(2,'0'),unlocked,nextAvailable:Boolean(upcoming)&&(unlocked||isNextPlanPreview())};
+ const release=nextPlanRelease(year,month);
+ const unlocked=day>=release.date;
+ return {current,upcoming,currentMonthName:months[month-1],upcomingMonthName:months[followingMonth-1],period:day.slice(0,7),availableDate:release.date,availableLabel:release.label,unlocked,nextAvailable:Boolean(upcoming)&&(unlocked||isNextPlanPreview())};
 }
 export function isNextPlanAvailable(now=new Date()){
  return getPlanState(now).nextAvailable;
