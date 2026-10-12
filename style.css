@@ -756,3 +756,6 @@ main{position:fixed}
 .clinic-pickup-van{bottom:calc(100% - 2px)}
 .clinic-pickup-van .travel-van-exhaust i{background:radial-gradient(ellipse,#8a9199 0%,#a2a9b2f2 38%,#b2b9c2b3 62%,#b2b9c200 82%)}
 @media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){.clinic-pickup-van{bottom:calc(100% - 2px)}}
+
+/* Start from rest, accelerate smoothly and slow down at Friday; wheels match the van. */
+.clinic-pickup-van.is-running .travel-van-runner,.clinic-pickup-van.is-running .travel-van-wheel svg{animation-timing-function:cubic-bezier(.45,0,.3,1)}
