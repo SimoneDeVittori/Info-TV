@@ -45,10 +45,10 @@
         "temperatureMin": 11,
         "precipitation": 0.0,
         "precipitationMin": 0.0,
-        "precipitationMax": 0.1
+        "precipitationMax": 0.0
       }
     ],
-    "updatedAt": "2026-10-12T06:05:25.295131+00:00"
+    "updatedAt": "2026-10-12T06:18:42.695337+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1203,11 +1203,27 @@
       }
     ],
     "model": "202610120600",
-    "updatedAt": "2026-10-12T06:05:25.328030+00:00"
+    "updatedAt": "2026-10-12T06:18:42.724890+00:00"
   },
   "weekError": false,
   "news": {
     "items": [
+      {
+        "title": "Il Ticino ha 17 nuovi falegnami: cresce la quota rosa",
+        "description": "Si è svolta ad Ascona la cerimonia di premiazione dei neodiplomati. Luca Ramoni è il miglior apprendista, seguito da Denise Foresti e Chiara Rabaglio.",
+        "link": "https://www.tio.ch/ticino/attualita/1956111/il-ticino-ha-17-nuovi-falegnami-cresce-la-quota-rosa",
+        "date": "Mon, 12 Oct 2026 08:14:22 +0200",
+        "category": "ASCONA",
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oo47.jpg?v=1"
+      },
+      {
+        "title": "HelvEthica è scontro sulla candidatura di Nussbaumer",
+        "description": "Il comitato nazionale chiede chiarezza sull’alleanza elettorale con Il Noce e sulla candidatura del medico al Consiglio di Stato. Trentaquattro soci sollecitano un’assemblea straordinaria, prevista il 18 ottobre a Pregassona. Sullo sfondo, il lancio annunciato del nuovo partito Viva Ticino.",
+        "link": "https://www.tio.ch/ticino/politica/1956113/helvethica-e-scontro-sulla-candidatura-di-nussbaumer",
+        "date": "Mon, 12 Oct 2026 08:12:22 +0200",
+        "category": "CANTONE",
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oo46.jpg?v=1"
+      },
       {
         "title": "Bombe, proteste e giustizia: i cinque film che non potete perdervi",
         "description": "La nostra selezione dei titoli irrinunciabili dell'edizione 2026 del Film Festival Diritti Umani Lugano",
@@ -1215,25 +1231,9 @@
         "date": "Mon, 12 Oct 2026 07:40:48 +0200",
         "category": "CANTONE",
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1on1c.jpg?v=1"
-      },
-      {
-        "title": "Auto in fiamme sulla A2 e una domenica da dimenticare",
-        "description": "Il veicolo è andato completamente distrutto nell'incendio avvenuto ieri sera. Nessun ferito è rimasto ferito.",
-        "link": "https://www.tio.ch/ticino/cronaca/1956108/veicolo-a2-fuoco-biasca-sera",
-        "date": "Mon, 12 Oct 2026 06:38:48 +0200",
-        "category": "GIORNICO",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oo3u.jpg?v=1"
-      },
-      {
-        "title": "Chi torna a casa e chi la lascia",
-        "description": "La programmazione della seconda giornata del Film Festival Diritti Umani Lugano",
-        "link": "https://www.tio.ch/ticino/attualita/1955579/chi-torna-a-casa-e-chi-la-lascia",
-        "date": "Mon, 12 Oct 2026 06:30:00 +0200",
-        "category": "LUGANO",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1ondc.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-10-12T06:05:25.295131+00:00",
+    "updatedAt": "2026-10-12T06:18:42.695337+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -1252,16 +1252,16 @@
         "coord_y": "1152444",
         "location_id": "100300",
         "location_type": "city",
-        "timestamp": 1791783611,
+        "timestamp": 1791785410,
         "forecasts": [
           {
             "date": "12 ottobre 2026",
             "date_iso": "2026-10-12",
-            "weather_description": "symbol_id_1",
+            "weather_description": "symbol_id_2",
             "temp_high": 16,
             "weekday": "Heute",
             "temp_low": 9,
-            "weather_symbol_id": 1
+            "weather_symbol_id": 2
           },
           {
             "date": "13 ottobre 2026",
@@ -1341,7 +1341,7 @@
         "coord_y": "1118423",
         "location_id": "120100",
         "location_type": "city",
-        "timestamp": 1791783611,
+        "timestamp": 1791785410,
         "forecasts": [
           {
             "date": "12 ottobre 2026",
@@ -1430,7 +1430,7 @@
         "coord_y": "1119910",
         "location_id": "195000",
         "location_type": "city",
-        "timestamp": 1791783611,
+        "timestamp": 1791785410,
         "forecasts": [
           {
             "date": "12 ottobre 2026",
@@ -1519,7 +1519,7 @@
         "coord_y": "1202399",
         "location_id": "300400",
         "location_type": "city",
-        "timestamp": 1791783611,
+        "timestamp": 1791785410,
         "forecasts": [
           {
             "date": "12 ottobre 2026",
@@ -1608,7 +1608,7 @@
         "coord_y": "1267348",
         "location_id": "400100",
         "location_type": "city",
-        "timestamp": 1791783611,
+        "timestamp": 1791785410,
         "forecasts": [
           {
             "date": "12 ottobre 2026",
@@ -1616,7 +1616,7 @@
             "weather_description": "symbol_id_1",
             "temp_high": 18,
             "weekday": "Heute",
-            "temp_low": 6,
+            "temp_low": 5,
             "weather_symbol_id": 1
           },
           {
@@ -1697,7 +1697,7 @@
         "coord_y": "1211120",
         "location_id": "600300",
         "location_type": "city",
-        "timestamp": 1791783611,
+        "timestamp": 1791785410,
         "forecasts": [
           {
             "date": "12 ottobre 2026",
@@ -1786,7 +1786,7 @@
         "coord_y": "1096327",
         "location_id": "690000",
         "location_type": "city",
-        "timestamp": 1791783611,
+        "timestamp": 1791785410,
         "forecasts": [
           {
             "date": "12 ottobre 2026",
@@ -1875,7 +1875,7 @@
         "coord_y": "1191534",
         "location_id": "700000",
         "location_type": "city",
-        "timestamp": 1791783611,
+        "timestamp": 1791785410,
         "forecasts": [
           {
             "date": "12 ottobre 2026",
@@ -1964,7 +1964,7 @@
         "coord_y": "1247414",
         "location_id": "800100",
         "location_type": "city",
-        "timestamp": 1791783611,
+        "timestamp": 1791785410,
         "forecasts": [
           {
             "date": "12 ottobre 2026",
@@ -2053,16 +2053,16 @@
         "coord_y": "1254370",
         "location_id": "900000",
         "location_type": "city",
-        "timestamp": 1791783611,
+        "timestamp": 1791785410,
         "forecasts": [
           {
             "date": "12 ottobre 2026",
             "date_iso": "2026-10-12",
-            "weather_description": "symbol_id_2",
+            "weather_description": "symbol_id_3",
             "temp_high": 13,
             "weekday": "Heute",
             "temp_low": 6,
-            "weather_symbol_id": 2
+            "weather_symbol_id": 3
           },
           {
             "date": "13 ottobre 2026",
@@ -2130,8 +2130,8 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-12T06:05:25.295131+00:00",
-    "version": "20261012_0540"
+    "updatedAt": "2026-10-12T06:18:42.695337+00:00",
+    "version": "20261012_0610"
   },
   "swissWeatherError": false,
   "traffic": {
@@ -2152,24 +2152,6 @@
         "road": "398",
         "category": 13,
         "changedAt": "2026-10-12T07:37:32+02:00",
-        "priority": 1
-      },
-      {
-        "id": "Viasuisser_FAVM/658913_TIC-Viasuisse/1",
-        "text": "406 - Riazzino direzione Cadenazzo tra A13, rotatoria Aeroporto di Locarno e Cadenazzo traffico fortemente rallentato, traffico congestionato",
-        "location": "406 - Riazzino direzione Cadenazzo",
-        "road": "406",
-        "category": 13,
-        "changedAt": "2026-10-12T07:36:50+02:00",
-        "priority": 1
-      },
-      {
-        "id": "Viasuisser_FAVM/658914_TIC-Viasuisse/1",
-        "text": "406 - Cadenazzo direzione Riazzino tra Cadenazzo e Quartino traffico fortemente rallentato, traffico congestionato",
-        "location": "406 - Cadenazzo direzione Riazzino",
-        "road": "406",
-        "category": 13,
-        "changedAt": "2026-10-12T07:36:33+02:00",
         "priority": 1
       },
       {
@@ -2243,10 +2225,28 @@
         "category": 31,
         "changedAt": "2026-10-03T13:25:16+02:00",
         "priority": 5
+      },
+      {
+        "id": "Viasuisser_FAVM/626453_TIC-Viasuisse/1",
+        "text": "H2 - Göschenen - Airolo tra Ospizio San Gottardo e Motto Bartola in entrambe le direzioni problemi di traffico, lavori stradali, corsie strette, limite temporaneo di larghezza di 3.30 m, fino a 27.11.2026 17:00 - ID112879",
+        "location": "H2 - Göschenen - Airolo",
+        "road": "H2",
+        "category": 31,
+        "changedAt": "2026-09-30T17:01:21+02:00",
+        "priority": 5
+      },
+      {
+        "id": "Viasuisser_Viasuisse/2508715_TIC-Viasuisse/1",
+        "text": "Locarno, Via Rovedo - a Locarno problemi di traffico, nuova gestione del traffico, circolazione a senso unico, seguire deviazione locale, fino a 26.02.2027",
+        "location": "Locarno, Via Rovedo",
+        "road": "TI",
+        "category": 31,
+        "changedAt": "2026-09-29T20:11:47+02:00",
+        "priority": 5
       }
     ],
-    "total": 56,
-    "updatedAt": "2026-10-12T06:05:25.295131+00:00",
+    "total": 54,
+    "updatedAt": "2026-10-12T06:18:42.695337+00:00",
     "source": "Viasuisse"
   }
 }
