@@ -1,10 +1,10 @@
 {
   "weather": {
     "current": {
-      "time": 1791794400000,
+      "time": 1791795000000,
       "icon": 1,
       "iconV2": 1,
-      "temperature": 14.0
+      "temperature": 14.3
     },
     "forecast": [
       {
@@ -48,7 +48,7 @@
         "precipitationMax": 0.0
       }
     ],
-    "updatedAt": "2026-10-12T08:53:54.602737+00:00"
+    "updatedAt": "2026-10-12T09:04:16.089896+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -80,7 +80,7 @@
         "dayDate": "2026-10-15",
         "temperatureMin": 11,
         "temperatureMax": 21,
-        "iconDay": 2,
+        "iconDay": 3,
         "precipitation": 0.0
       },
       {
@@ -95,14 +95,14 @@
         "temperatureMin": 12,
         "temperatureMax": 19,
         "iconDay": 3,
-        "precipitation": 0.2
+        "precipitation": 0.4
       },
       {
         "dayDate": "2026-10-18",
         "temperatureMin": 12,
         "temperatureMax": 18,
-        "iconDay": 29,
-        "precipitation": 1.7
+        "iconDay": 32,
+        "precipitation": 2.6
       }
     ],
     "hourly": [
@@ -1202,12 +1202,20 @@
         "amount": 0.0
       }
     ],
-    "model": "202610120800",
-    "updatedAt": "2026-10-12T08:53:54.626729+00:00"
+    "model": "202610120900",
+    "updatedAt": "2026-10-12T09:04:16.218642+00:00"
   },
   "weekError": false,
   "news": {
     "items": [
+      {
+        "title": "Polizia, ambulanza e Rega in azione",
+        "description": "Incidente in una via periferica. Strada chiusa e viavai di soccorritori e forze dell'ordine. I dettagli in tempo reale.",
+        "link": "https://www.tio.ch/ticino/cronaca/1956163/polizia-ambulanza-e-rega-in-azione",
+        "date": "Mon, 12 Oct 2026 10:52:32 +0200",
+        "category": "BIASCA",
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oo6h.jpg?v=1"
+      },
       {
         "title": "Ticino digitale? ATED critica la strategia cantonale: «Le aziende sono ai margini»",
         "description": "L’associazione del settore tecnologico denuncia obiettivi poco misurabili, risorse non quantificate e difficoltà di dialogo con l’Amministrazione cantonale. La proposta: affiancare alla digitalizzazione dei servizi pubblici una strategia più ampia per l’intero territorio.",
@@ -1223,17 +1231,9 @@
         "date": "Mon, 12 Oct 2026 10:24:54 +0200",
         "category": "CANTONE",
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oo66.jpg?v=1"
-      },
-      {
-        "title": "Lastminute.com: arriva un nuovo CFO",
-        "description": "Ludovic Boisseau subentra a Diego Fiorentini, che dopo circa tre anni come CFO si dedicherà a un nuovo compito professionale.",
-        "link": "https://www.tio.ch/ticino/economia/1956143/nuovo-cfo-boisseau-dedichera-ludovic",
-        "date": "Mon, 12 Oct 2026 09:48:48 +0200",
-        "category": "CANTONE",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oo5j.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-10-12T08:53:54.602737+00:00",
+    "updatedAt": "2026-10-12T09:04:16.089896+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -2130,28 +2130,19 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-12T08:53:54.602737+00:00",
+    "updatedAt": "2026-10-12T09:04:16.089896+00:00",
     "version": "20261012_0840"
   },
   "swissWeatherError": false,
   "traffic": {
     "items": [
       {
-        "id": "Viasuisser_FAVM/658959_TIC-Viasuisse/1",
-        "text": "406 - Cadenazzo direzione Riazzino tra Cadenazzo e Quartino traffico fortemente rallentato, traffico congestionato",
-        "location": "406 - Cadenazzo direzione Riazzino",
-        "road": "406",
-        "category": 13,
-        "changedAt": "2026-10-12T09:54:12+02:00",
-        "priority": 1
-      },
-      {
         "id": "Viasuisser_FAVM/658958_TIC-Viasuisse/1",
-        "text": "406 - Riazzino direzione Cadenazzo tra Quartino e Cadenazzo traffico fortemente rallentato, traffico congestionato",
+        "text": "406 - Riazzino direzione Cadenazzo tra A13, rotatoria Aeroporto di Locarno e Cadenazzo traffico fortemente rallentato, traffico congestionato",
         "location": "406 - Riazzino direzione Cadenazzo",
         "road": "406",
         "category": 13,
-        "changedAt": "2026-10-12T09:48:12+02:00",
+        "changedAt": "2026-10-12T10:52:50+02:00",
         "priority": 1
       },
       {
@@ -2243,10 +2234,19 @@
         "category": 31,
         "changedAt": "2026-09-27T10:35:09+02:00",
         "priority": 5
+      },
+      {
+        "id": "Viasuisser_FAVM/654593_TIC-Viasuisse/1",
+        "text": "A2 - Chiasso direzione S. Gottardo tra  Lugano Nord e Rivera problemi di traffico, lavori stradali durante la notte per 3.1 km, nuova gestione del traffico, carreggiata ridotta a una corsia, limite temporaneo di larghezza di 3.50 m, fino a domani, tra 21:30 e 04:00 - ID117704",
+        "location": "A2 - Chiasso direzione S. Gottardo",
+        "road": "A2",
+        "category": 32,
+        "changedAt": "2026-09-22T11:58:11+02:00",
+        "priority": 6
       }
     ],
-    "total": 53,
-    "updatedAt": "2026-10-12T08:53:54.602737+00:00",
+    "total": 52,
+    "updatedAt": "2026-10-12T09:04:16.089896+00:00",
     "source": "Viasuisse"
   }
 }
