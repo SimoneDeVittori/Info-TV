@@ -698,3 +698,9 @@ main{position:fixed}
 .plan-release-note strong,.plan-release-note span{display:block}
 .plan-release-note strong{font-weight:600;color:#a85121;margin-bottom:2px}
 @media (hover:hover) and (pointer:fine){.plan-release-note{display:block}}
+
+/* Small desktop information box with an orange information symbol. */
+.plan-release-note{padding:9px 10px;border:1px solid #efcfb4;border-radius:8px;background:#fffaf5;align-items:flex-start;gap:8px}
+.plan-release-info{display:block;flex:0 0 22px;color:#e7531b;margin-top:1px}
+.plan-release-copy{min-width:0}
+@media (hover:hover) and (pointer:fine){.plan-release-note{display:flex}}

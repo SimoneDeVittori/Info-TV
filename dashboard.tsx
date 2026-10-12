@@ -104,8 +104,9 @@ function renderPlanReleaseNote(state){
  const h=rainElement;
  const date=new Date(state.availableDate+'T12:00:00Z').toLocaleDateString('it-CH',{weekday:'long',day:'numeric',month:'long',timeZone:'Europe/Zurich'});
  return h('aside',{className:'plan-release-note',role:'note'},
-  h('strong',null,'Piano di '+state.upcomingMonthName),
-  h('span',null,'Uscita: '+date));
+  h('svg',{className:'plan-release-info',width:22,height:22,viewBox:'0 0 24 24',fill:'none',stroke:'currentColor',strokeWidth:1.8,strokeLinecap:'round','aria-hidden':true},
+   h('circle',{cx:12,cy:12,r:9}),h('path',{d:'M12 11v6'}),h('circle',{cx:12,cy:7.5,r:1,fill:'currentColor',stroke:'none'})),
+  h('div',{className:'plan-release-copy'},h('strong',null,'Piano di '+state.upcomingMonthName),h('span',null,'Uscita: '+date)));
 }
 function renderWorkPlan(now,nextMonth=false){
  const state=getPlanState(now||new Date());
