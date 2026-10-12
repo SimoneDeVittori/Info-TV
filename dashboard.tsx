@@ -47,6 +47,37 @@ function renderNightWeather(code,size){
  cloudy?h('path',{d:'M20.9 13.2A9 9 0 1 1 10.8 3.1a7 7 0 0 0 10.1 10.1Z',transform:'translate(7 -1) scale(.65)'}):h('path',{d:'M20.9 13.2A9 9 0 1 1 10.8 3.1a7 7 0 0 0 10.1 10.1Z'}),
  cloudy?h('path',{d:'M13 22H7a5 5 0 1 1 4.9-6H13a3 3 0 0 1 0 6Z'}):null,...[[3,4,1.2,0],[20,3,1.05,-.9],[22,18,1.2,-1.8]].map(([x,y,size,delay],i)=>h('path',{key:'star-'+i,className:'weather-star',d:'M0 -1 .23 -.23 1 0 .23 .23 0 1 -.23 .23 -1 0 -.23 -.23Z',transform:'translate('+x+' '+y+') scale('+size+')',fill:'currentColor',stroke:'none',style:{animationDelay:delay+'s'}})));
 }
+function HomeVan({active}:{active:boolean}){
+ const ref=useRef<HTMLDivElement>(null);
+ const [parked,setParked]=useState(false);
+ useLayoutEffect(()=>{
+  const box=ref.current;if(!box)return;
+  const content=box.parentElement;
+  const weather=content?.querySelector('.weather'),news=content?.querySelector('.news');
+  const measure=()=>{
+   const bounds=box.getBoundingClientRect();
+   if(!weather||!news||!box.clientWidth||!bounds.width)return;
+   const scale=bounds.width/box.clientWidth;
+   const vanScale=parseFloat(window.getComputedStyle(box).getPropertyValue('--home-van-scale'))||.62;
+   const start=(weather.getBoundingClientRect().left-bounds.left)/scale;
+   const finish=Math.max(start,(news.getBoundingClientRect().right-bounds.left)/scale-180*vanScale);
+   box.style.setProperty('--home-van-start',start+'px');
+   box.style.setProperty('--home-van-end',finish+'px');
+  };
+  measure();
+  const observer=typeof ResizeObserver!=='undefined'?new ResizeObserver(measure):null;
+  observer?.observe(box);if(weather)observer?.observe(weather);if(news)observer?.observe(news);
+  window.addEventListener('resize',measure);
+  return()=>{observer?.disconnect();window.removeEventListener('resize',measure);};
+ },[active]);
+ useEffect(()=>{
+  setParked(false);
+  if(!active)return;
+  const timer=setTimeout(()=>setParked(true),13000);
+  return()=>clearTimeout(timer);
+ },[active]);
+ return rainElement('div',{ref,className:'home-delivery-van'+(active?' is-running':'')+(parked?' is-parked':''),'aria-hidden':true},renderTravelVan(active));
+}
 function PickupVan({active}:{active:boolean}){
  const ref=useRef<HTMLDivElement>(null);
  const [parked,setParked]=useState(false);
@@ -409,7 +440,7 @@ export default function Home(){
   {renderPhoneNavigation(page,setPage,now)}
   <section className={'dashboard screen '+(page===0?'active':'')} aria-hidden={page!==0}>
    <header><div><div className="date">{renderBrandDate(now)}</div></div>{!phone&&<time className="header-clock">{now?fmtTime(now):'—'}</time>}<UnilabsBrand/></header>
-   <div className="content"><article className="weather card"><div className="weather-heading"><div className="section-label">METEO LOCALE</div><h1>Manno</h1></div><div className="weather-now"><span className="temperature">{w?Math.round(w.current.temperature)+'°':'—'}</span><span className="weather-icon">{w&&<WeatherIcon code={w.current.iconV2??w.current.icon} size={120} current/>}</span></div><p className="weather-note">{w?'Temperatura attuale':staleWeather?'Meteo temporaneamente non disponibile':'Caricamento del meteo…'}</p>
+   <div className="content">{!phone&&<HomeVan active={page===0}/>}<article className="weather card"><div className="weather-heading"><div className="section-label">METEO LOCALE</div><h1>Manno</h1></div><div className="weather-now"><span className="temperature">{w?Math.round(w.current.temperature)+'°':'—'}</span><span className="weather-icon">{w&&<WeatherIcon code={w.current.iconV2??w.current.icon} size={120} current/>}</span></div><p className="weather-note">{w?'Temperatura attuale':staleWeather?'Meteo temporaneamente non disponibile':'Caricamento del meteo…'}</p>
     {w&&<><div className="today"><div><span>Minima</span><strong>{w.forecast[0].temperatureMin}°</strong></div><div><span>Massima</span><strong>{w.forecast[0].temperatureMax}°</strong></div><div><span>Pioggia</span><strong>{w.forecast[0].precipitation} <small>mm</small></strong></div></div></>}
     {renderEphemerides(now)}
     {renderTodayRain(week?.hourly,now)}

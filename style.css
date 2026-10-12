@@ -759,3 +759,15 @@ main{position:fixed}
 
 /* Start from rest, accelerate smoothly and slow down at Friday; wheels match the van. */
 .clinic-pickup-van.is-running .travel-van-runner,.clinic-pickup-van.is-running .travel-van-wheel svg{animation-timing-function:cubic-bezier(.45,0,.3,1)}
+
+/* Home van: follows the upper edge from weather to the end of news. */
+.home-delivery-van{--home-van-scale:.62;position:absolute;top:-60px;left:0;width:100%;height:74px;pointer-events:none;z-index:4}
+.home-delivery-van .travel-van-runner{position:absolute;top:0;left:0;width:180px;height:120px;transform-origin:top left;transform:translate3d(var(--home-van-start,0px),0,0) scale(var(--home-van-scale));will-change:transform;backface-visibility:hidden}
+.home-delivery-van.is-running .travel-van-runner{animation:home-van-route 8s cubic-bezier(.45,0,.3,1) 5s both}
+@keyframes home-van-route{from{transform:translate3d(var(--home-van-start,0px),0,0) scale(var(--home-van-scale))}to{transform:translate3d(var(--home-van-end,0px),0,0) scale(var(--home-van-scale))}}
+.home-delivery-van .travel-van-wheel svg{animation:none}
+.home-delivery-van.is-running .travel-van-wheel svg{animation:home-van-wheel-trip 8s cubic-bezier(.45,0,.3,1) 5s 1 both}
+@keyframes home-van-wheel-trip{from{transform:rotate(0deg)}to{transform:rotate(7200deg)}}
+.home-delivery-van.is-parked .travel-van-wheel svg{animation:none!important;transform:rotate(0deg)}
+.home-delivery-van .travel-van-exhaust i{background:radial-gradient(ellipse,#8a9199 0%,#a2a9b2f2 38%,#b2b9c2b3 62%,#b2b9c200 82%)}
+@media(prefers-reduced-motion:reduce){.home-delivery-van.is-running .travel-van-runner,.home-delivery-van.is-running .travel-van-wheel svg{animation:none}}
