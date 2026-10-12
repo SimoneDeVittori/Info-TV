@@ -73,7 +73,7 @@ function HomeVan({active}:{active:boolean}){
  useEffect(()=>{
   setParked(false);
   if(!active)return;
-  const timer=setTimeout(()=>setParked(true),13000);
+  const timer=setTimeout(()=>setParked(true),19000);
   return()=>clearTimeout(timer);
  },[active]);
  return rainElement('div',{ref,className:'home-delivery-van'+(active?' is-running':'')+(parked?' is-parked':''),'aria-hidden':true},renderTravelVan(active));
