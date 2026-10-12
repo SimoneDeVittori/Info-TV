@@ -655,3 +655,12 @@ main{position:fixed}
  .swiss-map-card .map-heading{margin-bottom:6px}
  .swiss-map-card .map-heading h2{font-size:30px;margin-top:4px}
 }
+
+/* Four small exhaust puffs trail the moving van using only opacity and transforms. */
+.travel-van-body>img{position:relative;z-index:1}
+.travel-van-wheel{z-index:2}
+.travel-van-exhaust{position:absolute;left:8%;top:79%;width:8px;height:8px;z-index:0;pointer-events:none}
+.travel-van-exhaust i{position:absolute;left:0;top:0;width:14px;height:10px;border-radius:50%;background:radial-gradient(ellipse,#7d858c99 0%,#aab0b677 55%,#bac0c600 75%);opacity:0;transform-origin:center;animation:travel-van-exhaust-puff 1.12s linear infinite}
+@keyframes travel-van-exhaust-puff{0%{opacity:0;transform:translate(0,0) scale(.35)}15%{opacity:.7}60%{opacity:.35}100%{opacity:0;transform:translate(-64px,-18px) scale(2.5)}}
+.screen:not(.active) .travel-van-exhaust i{animation-play-state:paused}
+@media (prefers-reduced-motion:reduce){.travel-van-exhaust{display:none}}
