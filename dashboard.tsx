@@ -80,14 +80,32 @@ function WorkPlanStage({children}:{children:any}){
  useEffect(()=>{
   const stage=ref.current;if(!stage)return;
   const measure=()=>{
-   if(stage.clientWidth>0)stage.style.setProperty('--plan-unit',stage.clientWidth/100+'px');
-   const month=stage.querySelector('.plan-month-name'),updated=stage.querySelector('.plan-updated-text');
+   if(stage.clientWidth<=0)return;
+   const unit=stage.clientWidth/100;
+   stage.style.setProperty('--plan-unit',unit+'px');
    const frame=stage.getBoundingClientRect();
+   const title=stage.querySelector('.plan-month-title'),notice=stage.querySelector('.plan-release-note'),scene=stage.querySelector('.plan-season-scene');
+   if(title&&frame.height>0){
+    const scale=frame.width/stage.clientWidth;
+    const top=notice&&window.getComputedStyle(notice).display!=='none'?notice.getBoundingClientRect().bottom-frame.top+12*scale:8*scale;
+    const bottom=scene?scene.getBoundingClientRect().top-frame.top-12*scale:frame.height-8*scale;
+    const available=bottom-top;
+    if(available>0){
+     title.style.fontSize=(unit*6.5)+'px';title.style.gap=(unit*1.25)+'px';
+     const size=title.getBoundingClientRect();
+     const ratio=size.height>0?Math.min(1,(available-2*scale)/size.height):1;
+     title.style.fontSize=(unit*6.5*ratio)+'px';title.style.gap=(unit*1.25*ratio)+'px';
+     title.style.top=((top+bottom)/2/frame.height*100)+'%';
+    }
+   }
+   const month=stage.querySelector('.plan-month-name'),updated=stage.querySelector('.plan-updated-text');
    if(month&&updated&&frame.height>0){const range=document.createRange();range.selectNodeContents(month);const start=(range.getBoundingClientRect().bottom-frame.top)/frame.height*941;updated.setAttribute('transform','translate(198 '+start+') rotate(-90)');}
   };
   measure();
   const observer=typeof ResizeObserver!=='undefined'?new ResizeObserver(measure):null;
-  observer?.observe(stage);const month=stage.querySelector('.plan-month-name');if(month)observer?.observe(month);window.addEventListener('resize',measure);
+  observer?.observe(stage);
+  for(const selector of ['.plan-month-name','.plan-release-note','.plan-season-scene']){const item=stage.querySelector(selector);if(item)observer?.observe(item);}
+  window.addEventListener('resize',measure);
   return()=>{observer?.disconnect();window.removeEventListener('resize',measure);};
  },[]);
  return rainElement('div',{className:'work-plan-stage',ref},children);
