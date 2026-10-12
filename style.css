@@ -591,3 +591,12 @@ main{position:fixed}
 .ephemerides-values span{font-size:13px;color:#737f88}
 .ephemerides-values strong{font-size:22px;line-height:1.1;font-weight:600;color:#27313b;font-variant-numeric:tabular-nums}
 @media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){.ephemerides-heading{font-size:11px}.ephemerides-values span{font-size:12px}.ephemerides-values strong{font-size:19px}}
+
+/* Small solar icons and times sit with today's weather, above the rain chart. */
+.ephemerides-compact{display:flex;justify-content:flex-end;align-items:center;gap:20px;flex-shrink:0;margin-top:8px;color:#65717c}
+.ephemerides-compact>span{display:inline-flex;align-items:center;gap:6px}
+.ephemerides-compact svg{display:block;flex-shrink:0;color:#e7531b}
+.ephemerides-compact time{font-size:15px;line-height:1.2;font-weight:500;font-variant-numeric:tabular-nums}
+@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){.ephemerides-compact{gap:16px;margin-top:7px}.ephemerides-compact time{font-size:13px}.ephemerides-compact svg{width:16px;height:16px}}
+/* Lighter individual weekdays retain separation from the white outer card. */
+.clinic-day{background:#e9eef2;border-color:#c2cdd5}
