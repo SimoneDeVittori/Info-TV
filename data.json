@@ -1,10 +1,10 @@
 {
   "weather": {
     "current": {
-      "time": 1791893400000,
-      "icon": 2,
-      "iconV2": 2,
-      "temperature": 19.0
+      "time": 1791894600000,
+      "icon": 1,
+      "iconV2": 1,
+      "temperature": 19.2
     },
     "forecast": [
       {
@@ -48,7 +48,7 @@
         "precipitationMax": 0.0
       }
     ],
-    "updatedAt": "2026-10-13T12:22:00.257522+00:00"
+    "updatedAt": "2026-10-13T12:41:20.430334+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1203,11 +1203,27 @@
       }
     ],
     "model": "202610131200",
-    "updatedAt": "2026-10-13T12:22:00.285537+00:00"
+    "updatedAt": "2026-10-13T12:41:20.460287+00:00"
   },
   "weekError": false,
   "news": {
     "items": [
+      {
+        "title": "Tragedia al Ritom: scoperta la causa dell'esplosione",
+        "description": "Ancora da chiarire la provenienza della sostanza che ha provocato l'esplosione costata la vita a due operai.",
+        "link": "https://www.tio.ch/ticino/cronaca/1956441/tragedia-al-ritom-scoperta-la-causa-dell-esplosione",
+        "date": "Tue, 13 Oct 2026 14:28:45 +0200",
+        "category": "QUINTO",
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1ooiz.jpg?v=1"
+      },
+      {
+        "title": "Compensi di Cda e CEO delle partecipate, ora parla il Municipio",
+        "description": "L’Esecutivo di Lugano punta a definire nuove regole per garantire trasparenza e responsabilità nelle remunerazioni dei vertici delle società partecipate.",
+        "link": "https://www.tio.ch/ticino/attualita/1956440/trasparenza-societa-municipio-partecipate-fare-chiarezza-vuole",
+        "date": "Tue, 13 Oct 2026 14:25:27 +0200",
+        "category": "LUGANO",
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oojf.jpg?v=1"
+      },
       {
         "title": "Arresto confermato per l'accoltellatore di Biasca, trovata un'arma",
         "description": "Il 17enne sospettato di tentato omicidio resterà in carcere preventivo per un mese.",
@@ -1215,25 +1231,9 @@
         "date": "Tue, 13 Oct 2026 14:01:46 +0200",
         "category": "BIASCA",
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1ooiw.jpg?v=1"
-      },
-      {
-        "title": "Borsa sospetta, scatta l'allarme",
-        "description": "Artificieri in azione e zona transennata nei pressi del palazzo Mercurio.",
-        "link": "https://www.tio.ch/ticino/cronaca/1956431/borsa-scatta-zona-chiasso-palazzo",
-        "date": "Tue, 13 Oct 2026 13:41:29 +0200",
-        "category": "CHIASSO",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1ooir.jpg?v=1"
-      },
-      {
-        "title": "Truffe agli anziani, tre arresti nel Mendrisiotto",
-        "description": "Il trio è stato fermato a Chiasso, recuperati soldi e gioielli",
-        "link": "https://www.tio.ch/ticino/cronaca/1956426/polizia-tre-mendrisiotto-truffe-anziani-mendrisio",
-        "date": "Tue, 13 Oct 2026 13:34:28 +0200",
-        "category": "MENDRISIOTTO",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1ooi7.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-10-13T12:22:00.257522+00:00",
+    "updatedAt": "2026-10-13T12:41:20.430334+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -1252,7 +1252,7 @@
         "coord_y": "1152444",
         "location_id": "100300",
         "location_type": "city",
-        "timestamp": 1791893410,
+        "timestamp": 1791895214,
         "forecasts": [
           {
             "date": "13 ottobre 2026",
@@ -1341,7 +1341,7 @@
         "coord_y": "1118423",
         "location_id": "120100",
         "location_type": "city",
-        "timestamp": 1791893410,
+        "timestamp": 1791895214,
         "forecasts": [
           {
             "date": "13 ottobre 2026",
@@ -1430,7 +1430,7 @@
         "coord_y": "1119910",
         "location_id": "195000",
         "location_type": "city",
-        "timestamp": 1791893410,
+        "timestamp": 1791895214,
         "forecasts": [
           {
             "date": "13 ottobre 2026",
@@ -1519,7 +1519,7 @@
         "coord_y": "1202399",
         "location_id": "300400",
         "location_type": "city",
-        "timestamp": 1791893410,
+        "timestamp": 1791895214,
         "forecasts": [
           {
             "date": "13 ottobre 2026",
@@ -1608,13 +1608,13 @@
         "coord_y": "1267348",
         "location_id": "400100",
         "location_type": "city",
-        "timestamp": 1791893410,
+        "timestamp": 1791895214,
         "forecasts": [
           {
             "date": "13 ottobre 2026",
             "date_iso": "2026-10-13",
             "weather_description": "symbol_id_3",
-            "temp_high": 18,
+            "temp_high": 17,
             "weekday": "Heute",
             "temp_low": 7,
             "weather_symbol_id": 3
@@ -1697,7 +1697,7 @@
         "coord_y": "1211120",
         "location_id": "600300",
         "location_type": "city",
-        "timestamp": 1791893410,
+        "timestamp": 1791895214,
         "forecasts": [
           {
             "date": "13 ottobre 2026",
@@ -1786,7 +1786,7 @@
         "coord_y": "1096327",
         "location_id": "690000",
         "location_type": "city",
-        "timestamp": 1791893410,
+        "timestamp": 1791895214,
         "forecasts": [
           {
             "date": "13 ottobre 2026",
@@ -1875,16 +1875,16 @@
         "coord_y": "1191534",
         "location_id": "700000",
         "location_type": "city",
-        "timestamp": 1791893410,
+        "timestamp": 1791895214,
         "forecasts": [
           {
             "date": "13 ottobre 2026",
             "date_iso": "2026-10-13",
-            "weather_description": "symbol_id_3",
+            "weather_description": "symbol_id_29",
             "temp_high": 16,
             "weekday": "Heute",
             "temp_low": 6,
-            "weather_symbol_id": 3
+            "weather_symbol_id": 29
           },
           {
             "date": "14 ottobre 2026",
@@ -1964,16 +1964,16 @@
         "coord_y": "1247414",
         "location_id": "800100",
         "location_type": "city",
-        "timestamp": 1791893410,
+        "timestamp": 1791895214,
         "forecasts": [
           {
             "date": "13 ottobre 2026",
             "date_iso": "2026-10-13",
-            "weather_description": "symbol_id_4",
+            "weather_description": "symbol_id_6",
             "temp_high": 17,
             "weekday": "Heute",
             "temp_low": 7,
-            "weather_symbol_id": 4
+            "weather_symbol_id": 6
           },
           {
             "date": "14 ottobre 2026",
@@ -2053,16 +2053,16 @@
         "coord_y": "1254370",
         "location_id": "900000",
         "location_type": "city",
-        "timestamp": 1791893410,
+        "timestamp": 1791895214,
         "forecasts": [
           {
             "date": "13 ottobre 2026",
             "date_iso": "2026-10-13",
-            "weather_description": "symbol_id_3",
-            "temp_high": 13,
+            "weather_description": "symbol_id_29",
+            "temp_high": 14,
             "weekday": "Heute",
             "temp_low": 5,
-            "weather_symbol_id": 3
+            "weather_symbol_id": 29
           },
           {
             "date": "14 ottobre 2026",
@@ -2130,12 +2130,21 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-13T12:22:00.257522+00:00",
-    "version": "20261013_1210"
+    "updatedAt": "2026-10-13T12:41:20.430334+00:00",
+    "version": "20261013_1240"
   },
   "swissWeatherError": false,
   "traffic": {
     "items": [
+      {
+        "id": "Viasuisser_FAVM/659249_TIC-Viasuisse/1",
+        "text": "A2 - S. Gottardo direzione Chiasso tra Chiasso Centro e frontiera Chiasso Brogeda problemi di traffico, incidente, corsia centrale bloccata",
+        "location": "A2 - S. Gottardo direzione Chiasso",
+        "road": "A2",
+        "category": 13,
+        "changedAt": "2026-10-13T14:37:28+02:00",
+        "priority": 1
+      },
       {
         "id": "Viasuisser_FAVM/659247_TIC-Viasuisse/1",
         "text": "A2 - S. Gottardo direzione Chiasso tra Chiasso Centro e frontiera Chiasso Brogeda traffico bloccato per veicoli pesanti, traffico congestionato",
@@ -2234,19 +2243,10 @@
         "category": 31,
         "changedAt": "2026-10-03T14:17:33+02:00",
         "priority": 5
-      },
-      {
-        "id": "Viasuisser_Viasuisse/2509765_TIC-Viasuisse/1",
-        "text": "Pregassona, Via Terzerina - a Pregassona in entrambe le direzioni problemi di traffico, lavori stradali, corsie strette, fino a 23.10.2026 17:00",
-        "location": "Pregassona, Via Terzerina",
-        "road": "TI",
-        "category": 31,
-        "changedAt": "2026-10-03T14:15:28+02:00",
-        "priority": 5
       }
     ],
-    "total": 58,
-    "updatedAt": "2026-10-13T12:22:00.257522+00:00",
+    "total": 59,
+    "updatedAt": "2026-10-13T12:41:20.430334+00:00",
     "source": "Viasuisse"
   }
 }
