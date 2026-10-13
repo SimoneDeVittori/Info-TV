@@ -813,3 +813,11 @@ main{position:fixed}
 @keyframes forecast-icon-rain{0%{transform:translateY(-2px);opacity:0}20%,75%{opacity:1}100%{transform:translateY(3px);opacity:0}}
 .screen:not(.active) .week-row>svg path[d="M16 14v6"],.screen:not(.active) .week-row>svg path[d="M8 14v6"],.screen:not(.active) .week-row>svg path[d="M12 16v6"]{animation-play-state:paused}
 @media(prefers-reduced-motion:reduce){.week-row>svg path[d="M16 14v6"],.week-row>svg path[d="M8 14v6"],.week-row>svg path[d="M12 16v6"]{animation:none}}
+
+/* Teardrop shapes, matching the precipitation symbol rather than rain strokes. */
+.forecast-rain-drops i{width:6px;height:6px;border-radius:0 50% 50% 50%}
+@keyframes forecast-rain-fall{0%{transform:translate3d(2px,-8px,0) rotate(45deg);opacity:0}20%,75%{opacity:.85}100%{transform:translate3d(-2px,24px,0) rotate(45deg);opacity:0}}
+.week-row>svg .forecast-icon-drop{animation:forecast-icon-rain 1.6s linear infinite}
+.screen:not(.active) .week-row>svg .forecast-icon-drop{animation-play-state:paused}
+@media(pointer:coarse) and (max-width:600px){.forecast-rain-drops i{width:4px;height:4px}}
+@media(prefers-reduced-motion:reduce){.forecast-rain-drops i{transform:translateY(8px) rotate(45deg)}.week-row>svg .forecast-icon-drop{animation:none}}
