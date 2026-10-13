@@ -821,3 +821,6 @@ main{position:fixed}
 .screen:not(.active) .week-row>svg .forecast-icon-drop{animation-play-state:paused}
 @media(pointer:coarse) and (max-width:600px){.forecast-rain-drops i{width:4px;height:4px}}
 @media(prefers-reduced-motion:reduce){.forecast-rain-drops i{transform:translateY(8px) rotate(45deg)}.week-row>svg .forecast-icon-drop{animation:none}}
+
+/* Orange forecast drops stay still; their count continues to reflect rainfall. */
+.week-row>svg .forecast-icon-drop{animation:none;transform:none;opacity:1}
