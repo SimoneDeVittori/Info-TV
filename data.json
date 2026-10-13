@@ -48,7 +48,7 @@
         "precipitationMax": 0.0
       }
     ],
-    "updatedAt": "2026-10-13T13:21:51.958909+00:00"
+    "updatedAt": "2026-10-13T13:24:40.111765+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1203,7 +1203,7 @@
       }
     ],
     "model": "202610131300",
-    "updatedAt": "2026-10-13T13:21:52.090174+00:00"
+    "updatedAt": "2026-10-13T13:24:40.134969+00:00"
   },
   "weekError": false,
   "news": {
@@ -1233,7 +1233,7 @@
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1ooji.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-10-13T13:21:51.958909+00:00",
+    "updatedAt": "2026-10-13T13:24:40.111765+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -2130,7 +2130,7 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-13T13:21:51.958909+00:00",
+    "updatedAt": "2026-10-13T13:24:40.111765+00:00",
     "version": "20261013_1310"
   },
   "swissWeatherError": false,
@@ -2138,11 +2138,11 @@
     "items": [
       {
         "id": "Viasuisser_Viasuisse/2511975_TIC-Viasuisse/1",
-        "text": "398 - Lamone direzione Ponte Tresa tra Agno e frontiera Ponte Tresa traffico fortemente rallentato, traffico congestionato",
+        "text": "398 - Lamone direzione Ponte Tresa tra Magliaso e frontiera Ponte Tresa traffico fortemente rallentato, traffico congestionato",
         "location": "398 - Lamone direzione Ponte Tresa",
         "road": "398",
         "category": 13,
-        "changedAt": "2026-10-13T15:09:16+02:00",
+        "changedAt": "2026-10-13T15:21:27+02:00",
         "priority": 1
       },
       {
@@ -2246,7 +2246,7 @@
       }
     ],
     "total": 57,
-    "updatedAt": "2026-10-13T13:21:51.958909+00:00",
+    "updatedAt": "2026-10-13T13:24:40.111765+00:00",
     "source": "Viasuisse"
   }
 }
