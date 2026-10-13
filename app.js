@@ -44,10 +44,13 @@ function isPickupElapsed(day,time,now,startsOn){
  const hour=Number(match[1]),minute=Number(match[2]);
  if(hour>23||minute>59)return false;
  const parts=Object.fromEntries(new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Zurich',weekday:'short',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(now).filter(p=>p.type!=='literal').map(p=>[p.type,p.value]));
- const localDate=parts.year+'-'+parts.month+'-'+parts.day;
- if(startsOn&&localDate<startsOn)return false;
- const today={Mon:'Lu',Tue:'Ma',Wed:'Me',Thu:'Gio',Fri:'Ve'}[parts.weekday];
- return today===day&&Number(parts.hour)*60+Number(parts.minute)>=hour*60+minute+60;
+ const weekday={Mon:0,Tue:1,Wed:2,Thu:3,Fri:4,Sat:5,Sun:6}[parts.weekday];
+ const pickupDay={Lu:0,Ma:1,Me:2,Gio:3,Ve:4}[day];
+ if(pickupDay===undefined||weekday<pickupDay)return false;
+ const daysElapsed=weekday-pickupDay;
+ const pickupDate=new Date(Date.UTC(Number(parts.year),Number(parts.month)-1,Number(parts.day)-daysElapsed)).toISOString().slice(0,10);
+ if(startsOn&&pickupDate<startsOn)return false;
+ return daysElapsed*1440+Number(parts.hour)*60+Number(parts.minute)>=hour*60+minute+60;
 }
 function renderPickupCheck(day,time,now,startsOn){
  if(!isPickupElapsed(day,time,now,startsOn))return null;
