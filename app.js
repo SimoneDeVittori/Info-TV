@@ -97,10 +97,9 @@ function forecastRainDropCount(amount){
 }
 function renderForecastWeatherIcon(code,amount){
  if(![6,9,14,17,20,29,32,33].includes(Number(code)%100))return k.createElement(fn,{code,size:30});
- const count=forecastRainDropCount(amount);
  return k.createElement('svg',{width:30,height:30,viewBox:'0 0 24 24',fill:'none',stroke:'currentColor',strokeWidth:1.4,strokeLinecap:'round',strokeLinejoin:'round','aria-hidden':true},
   k.createElement('path',{d:'M20 15.5A4.5 4.5 0 0 0 17.5 7H15a6 6 0 0 0-11.7 2.1A3.5 3.5 0 0 0 4 16'}),
-  ...Array.from({length:count},(_,index)=>{const x=count===1?12:4+index*16/(count-1);return k.createElement('path',{key:index,className:'forecast-icon-line',d:'M'+x+' 15v6',fill:'none',stroke:'currentColor'});}));
+  k.createElement('path',{className:'forecast-icon-line',d:'M9 15v6',fill:'none',stroke:'currentColor'}),k.createElement('path',{className:'forecast-icon-line',d:'M15 16v3',fill:'none',stroke:'currentColor'}));
 }
 function renderForecastRain(amount){
  const count=forecastRainDropCount(amount);
