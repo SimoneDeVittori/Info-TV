@@ -48,7 +48,7 @@
         "precipitationMax": 0.0
       }
     ],
-    "updatedAt": "2026-10-13T13:02:32.320239+00:00"
+    "updatedAt": "2026-10-13T13:05:59.378930+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1203,11 +1203,27 @@
       }
     ],
     "model": "202610131200",
-    "updatedAt": "2026-10-13T13:02:32.357944+00:00"
+    "updatedAt": "2026-10-13T13:05:59.547996+00:00"
   },
   "weekError": false,
   "news": {
     "items": [
+      {
+        "title": "«Quanto è una pigione moderata?»",
+        "description": "L'interpellanza di Più Donne chiede regole chiare al Municipio per definire criteri e benefici delle abitazioni a canone calmierato nei nuovi progetti cittadini.",
+        "link": "https://www.tio.ch/ticino/politica/1956451/mercato-affitti-citta-affitto-via",
+        "date": "Tue, 13 Oct 2026 15:03:58 +0200",
+        "category": "LUGANO",
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oojz.jpg?v=1"
+      },
+      {
+        "title": "Preparare i prof di domani",
+        "description": "Il rapporto \"Orizzonti\" chiude un anno di ascolto e indica nove azioni. Il DECS punta su più materie e più pratica, ma niente \"en emploi\"",
+        "link": "https://www.tio.ch/ticino/attualita/1956390/formazione-rapporto-competenze-esigenze-asp",
+        "date": "Tue, 13 Oct 2026 15:01:30 +0200",
+        "category": "CANTONE",
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oojk.jpg?v=1"
+      },
       {
         "title": "Una serata per riflettere sulla giustizia riparativa",
         "description": "Testimonianze e confronto tra memorie diverse per promuovere responsabilità collettiva di fronte alla violenza.",
@@ -1215,25 +1231,9 @@
         "date": "Tue, 13 Oct 2026 14:41:09 +0200",
         "category": "BELLINZONA",
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1ooji.jpg?v=1"
-      },
-      {
-        "title": "Tragedia al Ritom: scoperta la causa dell'esplosione",
-        "description": "Ancora da chiarire la provenienza della sostanza che ha provocato l'esplosione costata la vita a due operai.",
-        "link": "https://www.tio.ch/ticino/cronaca/1956441/tragedia-al-ritom-scoperta-la-causa-dell-esplosione",
-        "date": "Tue, 13 Oct 2026 14:28:45 +0200",
-        "category": "QUINTO",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1ooiz.jpg?v=1"
-      },
-      {
-        "title": "Compensi di Cda e CEO delle partecipate, ora parla il Municipio",
-        "description": "L’Esecutivo di Lugano punta a definire nuove regole per garantire trasparenza e responsabilità nelle remunerazioni dei vertici delle società partecipate.",
-        "link": "https://www.tio.ch/ticino/attualita/1956440/trasparenza-societa-municipio-partecipate-fare-chiarezza-vuole",
-        "date": "Tue, 13 Oct 2026 14:25:27 +0200",
-        "category": "LUGANO",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oojf.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-10-13T13:02:32.320239+00:00",
+    "updatedAt": "2026-10-13T13:05:59.378930+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -2130,7 +2130,7 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-13T13:02:32.320239+00:00",
+    "updatedAt": "2026-10-13T13:05:59.378930+00:00",
     "version": "20261013_1240"
   },
   "swissWeatherError": false,
@@ -2246,7 +2246,7 @@
       }
     ],
     "total": 59,
-    "updatedAt": "2026-10-13T13:02:32.320239+00:00",
+    "updatedAt": "2026-10-13T13:05:59.378930+00:00",
     "source": "Viasuisse"
   }
 }
