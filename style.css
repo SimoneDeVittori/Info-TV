@@ -805,3 +805,11 @@ main{position:fixed}
 .screen:not(.active) .forecast-rain-drops i{animation-play-state:paused}
 @media(prefers-reduced-motion:reduce){.forecast-rain-drops i{animation:none;transform:translateY(8px);opacity:.75}}
 @media(pointer:coarse) and (max-width:600px){.forecast-rain-drops{height:20px;flex-basis:18px;width:18px}.forecast-rain-drops i{width:2px;height:6px}.week-rain .forecast-rain-amount{gap:4px}}
+
+/* Animate only the orange rain strokes; the cloud remains still. */
+.week-row>svg path[d="M16 14v6"],.week-row>svg path[d="M8 14v6"],.week-row>svg path[d="M12 16v6"]{animation:forecast-icon-rain 1.6s linear infinite;transform-box:fill-box;transform-origin:center}
+.week-row>svg path[d="M8 14v6"]{animation-delay:-.5s}
+.week-row>svg path[d="M12 16v6"]{animation-delay:-1s}
+@keyframes forecast-icon-rain{0%{transform:translateY(-2px);opacity:0}20%,75%{opacity:1}100%{transform:translateY(3px);opacity:0}}
+.screen:not(.active) .week-row>svg path[d="M16 14v6"],.screen:not(.active) .week-row>svg path[d="M8 14v6"],.screen:not(.active) .week-row>svg path[d="M12 16v6"]{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){.week-row>svg path[d="M16 14v6"],.week-row>svg path[d="M8 14v6"],.week-row>svg path[d="M12 16v6"]{animation:none}}
