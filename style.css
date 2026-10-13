@@ -544,7 +544,7 @@ main{position:fixed}
 .work-plan-stage{container-type:normal}
 .plan-month-title,.next-plan .plan-month-title{top:42.8%;font-size:calc(var(--plan-unit,19.2px) * 6.5);gap:calc(var(--plan-unit,19.2px) * 1.25)}
 
-.plan.screen:not(.van-screen) .plan-season-scene{width:13.2%}
+.plan.screen:not(.van-screen) .plan-season-scene{width:15.4%}
 
 
 
