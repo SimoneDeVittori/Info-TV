@@ -100,7 +100,7 @@ function renderForecastWeatherIcon(code,amount){
  const count=forecastRainDropCount(amount);
  return k.createElement('svg',{width:30,height:30,viewBox:'0 0 24 24',fill:'none',stroke:'currentColor',strokeWidth:1.4,strokeLinecap:'round',strokeLinejoin:'round','aria-hidden':true},
   k.createElement('path',{d:'M20 15.5A4.5 4.5 0 0 0 17.5 7H15a6 6 0 0 0-11.7 2.1A3.5 3.5 0 0 0 4 16'}),
-  ...Array.from({length:count},(_,index)=>{const x=count===1?12:4+index*16/(count-1);return k.createElement('path',{key:index,className:'forecast-icon-drop',d:'M'+x+' 15c-.5 1.1-1.7 2.1-1.7 3.2a1.7 1.7 0 0 0 3.4 0c0-1.1-1.2-2.1-1.7-3.2Z',fill:'currentColor',stroke:'none',style:{animationDelay:(-index*1.6/count)+'s'}});}));
+  ...Array.from({length:count},(_,index)=>{const x=count===1?12:4+index*16/(count-1);return k.createElement('path',{key:index,className:'forecast-icon-line',d:'M'+x+' 15v6',fill:'none',stroke:'currentColor'});}));
 }
 function renderForecastRain(amount){
  const count=forecastRainDropCount(amount);
