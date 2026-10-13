@@ -130,7 +130,7 @@ function rp(){return new URLSearchParams(window.location.search).get("anteprima"
  const h=k.createElement,sourceX=crop.dayStart-crop.x+(current-1)*crop.dayStep,sourceY=1,sourceHeight=crop.bottom-54;
  const left=(263+sourceX/crop.width*1400)/1672*100,top=(6+sourceY/crop.height*922)/941*100;
  const width=crop.dayStep/crop.width*1400/1672*100,height=sourceHeight/crop.height*922/941*100;
- return h('div',{className:'plan-day-pop','aria-hidden':true,style:{left:left+'%',top:top+'%',width:width+'%',height:height+'%'}},
+ return h('div',{className:'plan-day-pop','aria-hidden':true,style:{'--plan-day-left':left+'%','--plan-day-top':top+'%','--plan-day-width':width+'%','--plan-day-height':height+'%'}},
   h('div',{className:'plan-day-pop-image',style:{backgroundImage:'url("'+file.url.replace(/\.pdf$/i,'-tv.png')+'?updated='+encodeURIComponent(file.uploadedAt)+'")',backgroundSize:(crop.width/crop.dayStep*100)+'% '+(crop.height/sourceHeight*100)+'%',backgroundPosition:(sourceX/(crop.width-crop.dayStep)*100)+'% '+(sourceY/(crop.height-sourceHeight)*100)+'%'}}));
 }
 function renderPlanReleaseNote(state){
