@@ -796,3 +796,12 @@ main{position:fixed}
 .clinic-pickup-van:not(.is-running) .travel-van-exhaust,.home-delivery-van:not(.is-running) .travel-van-exhaust{visibility:hidden}
 .screen:not(.active) .travel-van-wheel{animation-play-state:paused}
 @media(prefers-reduced-motion:reduce){.travel-van-wheel,.clinic-pickup-van.is-running .travel-van-wheel,.home-delivery-van.is-running .travel-van-wheel{animation:none}}
+
+/* Three lightweight drops mark forecast days with precipitation. */
+.week-rain .forecast-rain-amount{display:flex;justify-content:flex-end;align-items:center;gap:6px}
+.forecast-rain-drops{position:relative;display:inline-block;flex:0 0 22px;width:22px;height:24px;overflow:hidden}
+.forecast-rain-drops i{position:absolute;top:0;width:3px;height:7px;border-radius:2px;background:currentColor;opacity:0;animation:forecast-rain-fall 1.6s linear infinite;will-change:transform,opacity}
+@keyframes forecast-rain-fall{0%{transform:translate3d(2px,-7px,0);opacity:0}20%{opacity:.85}75%{opacity:.85}100%{transform:translate3d(-2px,24px,0);opacity:0}}
+.screen:not(.active) .forecast-rain-drops i{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){.forecast-rain-drops i{animation:none;transform:translateY(8px);opacity:.75}}
+@media(pointer:coarse) and (max-width:600px){.forecast-rain-drops{height:20px;flex-basis:18px;width:18px}.forecast-rain-drops i{width:2px;height:6px}.week-rain .forecast-rain-amount{gap:4px}}
