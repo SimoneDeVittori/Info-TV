@@ -78,6 +78,25 @@ function HomeVan({active}:{active:boolean}){
  },[active]);
  return rainElement('div',{ref,className:'home-delivery-van'+(active?' is-running':'')+(parked?' is-parked':''),'aria-hidden':true},renderTravelVan(active));
 }
+function isPickupElapsed(day,time,now,startsOn){
+ if(!now||typeof time!=='string')return false;
+ const match=/^(\d{1,2}):(\d{2})$/.exec(time.trim());
+ if(!match)return false;
+ const hour=Number(match[1]),minute=Number(match[2]);
+ if(hour>23||minute>59)return false;
+ const parts=Object.fromEntries(new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Zurich',weekday:'short',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(now).filter(p=>p.type!=='literal').map(p=>[p.type,p.value]));
+ const localDate=parts.year+'-'+parts.month+'-'+parts.day;
+ if(startsOn&&localDate<startsOn)return false;
+ const today={Mon:'Lu',Tue:'Ma',Wed:'Me',Thu:'Gio',Fri:'Ve'}[parts.weekday];
+ return today===day&&Number(parts.hour)*60+Number(parts.minute)>=hour*60+minute+60;
+}
+function renderPickupCheck(day,time,now,startsOn){
+ if(!isPickupElapsed(day,time,now,startsOn))return null;
+ return rainElement('span',{className:'clinic-pickup-check',role:'img','aria-label':"È trascorsa un'ora dal ritiro fisso",title:"È trascorsa un'ora dal ritiro fisso"},
+  rainElement('svg',{viewBox:'0 0 24 24',fill:'none','aria-hidden':true},
+   rainElement('circle',{cx:12,cy:12,r:11,fill:'#2e7d42'}),
+   rainElement('path',{d:'m6.5 12 3.5 3.5 7.5-7.5',stroke:'white',strokeWidth:2.5,strokeLinecap:'round',strokeLinejoin:'round'})));
+}
 function PickupVan({active}:{active:boolean}){
  const ref=useRef<HTMLDivElement>(null);
  const [parked,setParked]=useState(false);
@@ -499,7 +518,7 @@ export default function Home(){
    <div className="clinic-title-row"><h2>Nuovo Studio Medico</h2></div>
    {studio?<div className="clinic-content"><div className="clinic-details">
     <article className="clinic-address-card card"><div className="section-label">STUDIO MEDICO</div><h1>{studio.name}</h1><address><strong>{studio.street}</strong><span>{studio.postalCode} {studio.locality}</span></address></article>
-    <article className="clinic-schedule-card card"><div className="section-label">Orario di Ritiro Fisso</div>{studio.startsOn&&<p className="clinic-start-date">{studioStartLabel(studio.startsOn,now||new Date())}</p>}<div className="clinic-week">{[['Lu','Lunedì'],['Ma','Martedì'],['Me','Mercoledì'],['Gio','Giovedì'],['Ve','Venerdì']].map(([key,label])=><div key={key} className={'clinic-day '+(studio.pickups[key]?.morning||studio.pickups[key]?.afternoon?'has-day-pickup':'no-day-pickup')}>{key==='Ve'&&<PickupVan active={page===5+studioIndex}/>}<span>{label}</span><div className={'clinic-slot '+(studio.pickups[key]?.morning?'has-pickup':'no-pickup')}><small>Mattina</small><strong>{studio.pickups[key]?.morning||'—'}</strong></div><div className={'clinic-slot '+(studio.pickups[key]?.afternoon?'has-pickup':'no-pickup')}><small>Pomeriggio</small><strong>{studio.pickups[key]?.afternoon||'—'}</strong></div></div>)}</div></article>
+    <article className="clinic-schedule-card card"><div className="section-label">Orario di Ritiro Fisso</div>{studio.startsOn&&<p className="clinic-start-date">{studioStartLabel(studio.startsOn,now||new Date())}</p>}<div className="clinic-week">{[['Lu','Lunedì'],['Ma','Martedì'],['Me','Mercoledì'],['Gio','Giovedì'],['Ve','Venerdì']].map(([key,label])=><div key={key} className={'clinic-day '+(studio.pickups[key]?.morning||studio.pickups[key]?.afternoon?'has-day-pickup':'no-day-pickup')}>{key==='Ve'&&<PickupVan active={page===5+studioIndex}/>}<span>{label}</span><div className={'clinic-slot '+(studio.pickups[key]?.morning?'has-pickup':'no-pickup')}><small>Mattina</small><strong className="clinic-pickup-time">{studio.pickups[key]?.morning||'—'}{renderPickupCheck(key,studio.pickups[key]?.morning,now,studio.startsOn)}</strong></div><div className={'clinic-slot '+(studio.pickups[key]?.afternoon?'has-pickup':'no-pickup')}><small>Pomeriggio</small><strong className="clinic-pickup-time">{studio.pickups[key]?.afternoon||'—'}{renderPickupCheck(key,studio.pickups[key]?.afternoon,now,studio.startsOn)}</strong></div></div>)}</div></article>
    </div><article className="clinic-map-card card"><div className="clinic-map-heading"><div className="section-label">DOVE TROVARLO</div><span>{studio.postalCode} {studio.locality}</span></div><StudioMap studio={studio} active={page===5+studioIndex}/><div className="source"><span>Google Maps</span><span>{studio.street} · {studio.locality}</span></div></article></div>:<div className="empty">Caricamento dello studio medico…</div>}
    <footer><small className="creator-copyright">© SimDev3D</small><span>— Unilabs Ticino · Centro Galleria 3, Via Cantonale 4, 6928 Manno —</span><div className="page-dots"><i/><i/><i/><i/><i className="selected"/></div></footer><div className="progress" style={{animationDuration:'28s'}} key={page===5+studioIndex?'medical-studio-'+studio.id:'medical-studio-hidden-'+studio.id}/>
   </section>)}

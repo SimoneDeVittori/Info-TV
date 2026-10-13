@@ -772,3 +772,9 @@ main{position:fixed}
 .home-delivery-van .travel-van-exhaust i{background:radial-gradient(ellipse,#8a9199 0%,#a2a9b2f2 38%,#b2b9c2b3 62%,#b2b9c200 82%)}
 @media(prefers-reduced-motion:reduce){.home-delivery-van.is-running .travel-van-runner,.home-delivery-van.is-running .travel-van-wheel svg{animation:none}}
 
+
+/* Automatic indicator, visible after one hour for today's fixed pickup. */
+.clinic-slot .clinic-pickup-time{position:relative;display:inline-block;white-space:nowrap}
+.clinic-pickup-check{position:absolute;left:calc(100% + 6px);top:50%;transform:translateY(-50%);width:23px;height:23px;display:block}
+.clinic-pickup-check svg{display:block;width:100%;height:100%}
+@media(pointer:coarse) and (max-width:600px){.clinic-pickup-check{width:14px;height:14px;left:calc(100% + 3px)}}
