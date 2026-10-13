@@ -1,10 +1,10 @@
 {
   "weather": {
     "current": {
-      "time": 1791894600000,
+      "time": 1791895200000,
       "icon": 1,
       "iconV2": 1,
-      "temperature": 19.2
+      "temperature": 19.3
     },
     "forecast": [
       {
@@ -48,7 +48,7 @@
         "precipitationMax": 0.0
       }
     ],
-    "updatedAt": "2026-10-13T12:41:20.430334+00:00"
+    "updatedAt": "2026-10-13T12:47:28.678344+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1203,11 +1203,19 @@
       }
     ],
     "model": "202610131200",
-    "updatedAt": "2026-10-13T12:41:20.460287+00:00"
+    "updatedAt": "2026-10-13T12:47:28.714328+00:00"
   },
   "weekError": false,
   "news": {
     "items": [
+      {
+        "title": "Una serata per riflettere sulla giustizia riparativa",
+        "description": "Testimonianze e confronto tra memorie diverse per promuovere responsabilità collettiva di fronte alla violenza.",
+        "link": "https://www.tio.ch/ticino/attualita/1956446/giustizia-attentato-riparativa-fondazione-loggia",
+        "date": "Tue, 13 Oct 2026 14:41:09 +0200",
+        "category": "BELLINZONA",
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1ooji.jpg?v=1"
+      },
       {
         "title": "Tragedia al Ritom: scoperta la causa dell'esplosione",
         "description": "Ancora da chiarire la provenienza della sostanza che ha provocato l'esplosione costata la vita a due operai.",
@@ -1223,17 +1231,9 @@
         "date": "Tue, 13 Oct 2026 14:25:27 +0200",
         "category": "LUGANO",
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oojf.jpg?v=1"
-      },
-      {
-        "title": "Arresto confermato per l'accoltellatore di Biasca, trovata un'arma",
-        "description": "Il 17enne sospettato di tentato omicidio resterà in carcere preventivo per un mese.",
-        "link": "https://www.tio.ch/ticino/cronaca/1956437/arresto-confermato-per-l-accoltellatore-di-biasca-trovata-un-arma",
-        "date": "Tue, 13 Oct 2026 14:01:46 +0200",
-        "category": "BIASCA",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1ooiw.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-10-13T12:41:20.430334+00:00",
+    "updatedAt": "2026-10-13T12:47:28.678344+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -2130,21 +2130,12 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-13T12:41:20.430334+00:00",
+    "updatedAt": "2026-10-13T12:47:28.678344+00:00",
     "version": "20261013_1240"
   },
   "swissWeatherError": false,
   "traffic": {
     "items": [
-      {
-        "id": "Viasuisser_FAVM/659249_TIC-Viasuisse/1",
-        "text": "A2 - S. Gottardo direzione Chiasso tra Chiasso Centro e frontiera Chiasso Brogeda problemi di traffico, incidente, corsia centrale bloccata",
-        "location": "A2 - S. Gottardo direzione Chiasso",
-        "road": "A2",
-        "category": 13,
-        "changedAt": "2026-10-13T14:37:28+02:00",
-        "priority": 1
-      },
       {
         "id": "Viasuisser_FAVM/659247_TIC-Viasuisse/1",
         "text": "A2 - S. Gottardo direzione Chiasso tra Chiasso Centro e frontiera Chiasso Brogeda traffico bloccato per veicoli pesanti, traffico congestionato",
@@ -2243,10 +2234,19 @@
         "category": 31,
         "changedAt": "2026-10-03T14:17:33+02:00",
         "priority": 5
+      },
+      {
+        "id": "Viasuisser_Viasuisse/2509765_TIC-Viasuisse/1",
+        "text": "Pregassona, Via Terzerina - a Pregassona in entrambe le direzioni problemi di traffico, lavori stradali, corsie strette, fino a 23.10.2026 17:00",
+        "location": "Pregassona, Via Terzerina",
+        "road": "TI",
+        "category": 31,
+        "changedAt": "2026-10-03T14:15:28+02:00",
+        "priority": 5
       }
     ],
-    "total": 59,
-    "updatedAt": "2026-10-13T12:41:20.430334+00:00",
+    "total": 58,
+    "updatedAt": "2026-10-13T12:47:28.678344+00:00",
     "source": "Viasuisse"
   }
 }
