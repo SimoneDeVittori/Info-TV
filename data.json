@@ -48,7 +48,7 @@
         "precipitationMax": 0.0
       }
     ],
-    "updatedAt": "2026-10-13T12:47:28.678344+00:00"
+    "updatedAt": "2026-10-13T12:56:15.666532+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1203,7 +1203,7 @@
       }
     ],
     "model": "202610131200",
-    "updatedAt": "2026-10-13T12:47:28.714328+00:00"
+    "updatedAt": "2026-10-13T12:56:15.725890+00:00"
   },
   "weekError": false,
   "news": {
@@ -1233,7 +1233,7 @@
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oojf.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-10-13T12:47:28.678344+00:00",
+    "updatedAt": "2026-10-13T12:56:15.666532+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -2130,12 +2130,21 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-13T12:47:28.678344+00:00",
+    "updatedAt": "2026-10-13T12:56:15.666532+00:00",
     "version": "20261013_1240"
   },
   "swissWeatherError": false,
   "traffic": {
     "items": [
+      {
+        "id": "Viasuisser_Viasuisse/2511975_TIC-Viasuisse/1",
+        "text": "398 - Ponte Tresa direzione Lamone tra Ponte Tresa e Magliaso traffico fortemente rallentato, traffico congestionato",
+        "location": "398 - Ponte Tresa direzione Lamone",
+        "road": "398",
+        "category": 13,
+        "changedAt": "2026-10-13T14:45:30+02:00",
+        "priority": 1
+      },
       {
         "id": "Viasuisser_FAVM/659247_TIC-Viasuisse/1",
         "text": "A2 - S. Gottardo direzione Chiasso tra Chiasso Centro e frontiera Chiasso Brogeda traffico bloccato per veicoli pesanti, traffico congestionato",
@@ -2234,19 +2243,10 @@
         "category": 31,
         "changedAt": "2026-10-03T14:17:33+02:00",
         "priority": 5
-      },
-      {
-        "id": "Viasuisser_Viasuisse/2509765_TIC-Viasuisse/1",
-        "text": "Pregassona, Via Terzerina - a Pregassona in entrambe le direzioni problemi di traffico, lavori stradali, corsie strette, fino a 23.10.2026 17:00",
-        "location": "Pregassona, Via Terzerina",
-        "road": "TI",
-        "category": 31,
-        "changedAt": "2026-10-03T14:15:28+02:00",
-        "priority": 5
       }
     ],
-    "total": 58,
-    "updatedAt": "2026-10-13T12:47:28.678344+00:00",
+    "total": 59,
+    "updatedAt": "2026-10-13T12:56:15.666532+00:00",
     "source": "Viasuisse"
   }
 }
