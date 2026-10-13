@@ -778,3 +778,21 @@ main{position:fixed}
 .clinic-pickup-check{position:absolute;left:calc(100% + 6px);top:50%;transform:translateY(-50%);width:23px;height:23px;display:block}
 .clinic-pickup-check svg{display:block;width:100%;height:100%}
 @media(pointer:coarse) and (max-width:600px){.clinic-pickup-check{width:14px;height:14px;left:calc(100% + 3px)}}
+
+/* Composite the small van and wheel layers instead of animating SVG contents. */
+.travel-van-runner{will-change:transform;backface-visibility:hidden;isolation:isolate}
+.travel-van-body{transform:translateZ(0);backface-visibility:hidden}
+.travel-van-wheel{transform:translate3d(-50%,-50%,0);will-change:transform;backface-visibility:hidden}
+.travel-van-wheel svg{animation:none!important;will-change:auto}
+.travel-van-wheel{animation:tv-van-wheel-spin .38s linear infinite}
+@keyframes tv-van-wheel-spin{from{transform:translate3d(-50%,-50%,0) rotate(0deg)}to{transform:translate3d(-50%,-50%,0) rotate(360deg)}}
+.clinic-pickup-van .travel-van-wheel,.home-delivery-van .travel-van-wheel{animation:none}
+.clinic-pickup-van.is-running .travel-van-wheel{animation:tv-pickup-wheel-trip 5s cubic-bezier(.45,0,.3,1) 5s both}
+.home-delivery-van.is-running .travel-van-wheel{animation:tv-home-wheel-trip 14s cubic-bezier(.45,0,.3,1) 5s both}
+@keyframes tv-pickup-wheel-trip{from{transform:translate3d(-50%,-50%,0) rotate(0deg)}to{transform:translate3d(-50%,-50%,0) rotate(4680deg)}}
+@keyframes tv-home-wheel-trip{from{transform:translate3d(-50%,-50%,0) rotate(0deg)}to{transform:translate3d(-50%,-50%,0) rotate(7200deg)}}
+.clinic-pickup-van.is-parked .travel-van-wheel,.home-delivery-van.is-parked .travel-van-wheel{animation-play-state:paused}
+.clinic-pickup-van.is-parked .travel-van-exhaust,.home-delivery-van.is-parked .travel-van-exhaust{visibility:hidden}
+.clinic-pickup-van:not(.is-running) .travel-van-exhaust,.home-delivery-van:not(.is-running) .travel-van-exhaust{visibility:hidden}
+.screen:not(.active) .travel-van-wheel{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){.travel-van-wheel,.clinic-pickup-van.is-running .travel-van-wheel,.home-delivery-van.is-running .travel-van-wheel{animation:none}}
