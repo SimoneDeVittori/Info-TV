@@ -1,10 +1,10 @@
 {
   "weather": {
     "current": {
-      "time": 1791886200000,
-      "icon": 3,
-      "iconV2": 3,
-      "temperature": 17.2
+      "time": 1791887400000,
+      "icon": 2,
+      "iconV2": 2,
+      "temperature": 17.5
     },
     "forecast": [
       {
@@ -48,7 +48,7 @@
         "precipitationMax": 0.1
       }
     ],
-    "updatedAt": "2026-10-13T10:28:57.871246+00:00"
+    "updatedAt": "2026-10-13T10:39:08.207248+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1203,7 +1203,7 @@
       }
     ],
     "model": "202610131000",
-    "updatedAt": "2026-10-13T10:28:57.898001+00:00"
+    "updatedAt": "2026-10-13T10:39:08.269007+00:00"
   },
   "weekError": false,
   "news": {
@@ -1233,7 +1233,7 @@
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oohl.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-10-13T10:28:57.871246+00:00",
+    "updatedAt": "2026-10-13T10:39:08.207248+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -2130,7 +2130,7 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-13T10:28:57.871246+00:00",
+    "updatedAt": "2026-10-13T10:39:08.207248+00:00",
     "version": "20261013_1010"
   },
   "swissWeatherError": false,
@@ -2153,15 +2153,6 @@
         "category": 12,
         "changedAt": "2026-10-13T12:02:39+02:00",
         "priority": 0
-      },
-      {
-        "id": "Viasuisser_Viasuisse/2511948_TIC-Viasuisse/1",
-        "text": "398 - Ponte Tresa direzione Lamone tra Magliaso e Agno traffico fortemente rallentato, traffico congestionato",
-        "location": "398 - Ponte Tresa direzione Lamone",
-        "road": "398",
-        "category": 13,
-        "changedAt": "2026-10-13T11:45:32+02:00",
-        "priority": 1
       },
       {
         "id": "Viasuisser_FAVM/658956_TIC-Viasuisse/1",
@@ -2243,10 +2234,19 @@
         "category": 31,
         "changedAt": "2026-10-03T13:25:16+02:00",
         "priority": 5
+      },
+      {
+        "id": "Viasuisser_FAVM/626453_TIC-Viasuisse/1",
+        "text": "H2 - Göschenen - Airolo tra Ospizio San Gottardo e Motto Bartola in entrambe le direzioni problemi di traffico, lavori stradali, corsie strette, limite temporaneo di larghezza di 3.30 m, fino a 27.11.2026 17:00 - ID112879",
+        "location": "H2 - Göschenen - Airolo",
+        "road": "H2",
+        "category": 31,
+        "changedAt": "2026-09-30T17:01:21+02:00",
+        "priority": 5
       }
     ],
-    "total": 56,
-    "updatedAt": "2026-10-13T10:28:57.871246+00:00",
+    "total": 55,
+    "updatedAt": "2026-10-13T10:39:08.207248+00:00",
     "source": "Viasuisse"
   }
 }
