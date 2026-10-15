@@ -279,10 +279,14 @@ function pp(){let a=Gg(),e=zg(),liveNews=useLiveTio(),[t,l]=(0,k.useState)(()=>o
  outgoing.classList.add("dashboard-outgoing");
  if(towHome){active.classList.add("home-is-towing","home-arrival-towed")}
  for(const element of [...entering,...leaving]){element.style.willChange="transform, opacity";element.style.transformOrigin="50% 50%"}
- for(const element of leaving)animations.push(element.animate([
+ const towDoctorAway=towHome&&previous.id>=5;
+ for(const element of leaving)animations.push(element.animate(towDoctorAway?[
+ {opacity:1,transform:"translate3d(0,0,0)"},
+ {opacity:1,transform:"translate3d(2120px,0,0)"}
+ ]:[
  {opacity:1,transform:"translate3d(0,0,0)"},
  {opacity:0,transform:"translate3d(0,0,0)"}
- ],{duration:towHome?900:1000,easing:"ease-in-out",fill:"both"}));
+ ],{duration:towDoctorAway?duration:towHome?900:1000,easing:towDoctorAway?"cubic-bezier(.22,.5,.3,1)":"ease-in-out",fill:"both"}));
  for(const element of entering)animations.push(element.animate(towHome?[
  {opacity:1,transform:"translate3d(-2120px,0,0)"},
  {opacity:1,transform:"translate3d(0,0,0)"}
