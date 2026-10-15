@@ -48,10 +48,10 @@
         "temperatureMin": 13
       }
     ],
-    "updatedAt": "2026-10-15T12:25:04.470640+00:00"
+    "updatedAt": "2026-10-15T12:31:01.128171+00:00"
   },
   "weatherError": false,
-  "newsError": true,
+  "newsError": false,
   "trafficError": false,
   "week": {
     "days": [
@@ -1203,37 +1203,37 @@
       }
     ],
     "model": "202610151200",
-    "updatedAt": "2026-10-15T12:25:04.496900+00:00"
+    "updatedAt": "2026-10-15T12:31:01.256453+00:00"
   },
   "weekError": false,
   "news": {
     "items": [
       {
-        "title": "Vaccinazione contro il papillomavirus: si cambia",
-        "description": "Dal primo gennaio 2027, la svolta. Giorgio Merlani, medico cantonale, illustra le principali novità.",
-        "link": "https://www.tio.ch/ticino/attualita/1956903/vaccinazione-contro-il-papillomavirus-si-cambia",
-        "date": "Thu, 15 Oct 2026 14:10:04 +0200",
+        "title": "Nasce Viva Ticino. E Nussbaumer punta in alto: «Vorrei il DSS»",
+        "description": "Il neo partito si è presentato oggi, annunciando obiettivi ambiziosi: «Vogliamo fare un consigliere di Stato e più che raddoppiare i deputati».",
+        "link": "https://www.tio.ch/ticino/politica/1956653/nussbaumer",
+        "date": "Thu, 15 Oct 2026 14:21:43 +0200",
         "category": "CANTONE",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1op23.jpg?v=1"
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1op3i.jpg?v=1"
       },
       {
-        "title": "Acqua: un bene prezioso che «deve tornare a beneficio di noi tutti»",
-        "description": "Lanciata dal Centro l'iniziativa popolare che punta a far sì che il Cantone possa riprendere il controllo di una parte rilevante della produzione idroelettrica",
-        "link": "https://www.tio.ch/ticino/politica/1956929/cantone-iniziativa-deve-acqua-beneficio",
-        "date": "Thu, 15 Oct 2026 12:38:19 +0200",
-        "category": "CANTONE",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1op2x.jpg?v=1"
+        "title": "Locarno al Forum dei sindaci delle Nazioni Unite: «Le città devono essere ascoltate»",
+        "description": "Nicola Pini ha rappresentato Locarno al dibattito internazionale sul futuro urbano che si è tenuto a Ginevra, portando l'esperienza locale sul tavolo delle Nazioni Unite.",
+        "link": "https://www.tio.ch/ticino/attualita/1956950/citta-locarno-nazioni-ginevra-forum-sindaci-essere",
+        "date": "Thu, 15 Oct 2026 14:20:35 +0200",
+        "category": "LOCARNO/GINEVRA",
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1op3s.jpg"
       },
       {
-        "title": "La povertà dietro la porta di casa: «In Ticino è particolarmente grave»",
-        "description": "Secondo la ricercatrice dell'Università di Scienze Applicate di Berna lavorare non è sufficiente: «Ci si trova spesso a dover limitare le opportunità educative e sociali dei figli, con conseguenze anche sul loro futuro».",
-        "link": "https://www.tio.ch/ticino/attualita/1956854/la-poverta-dietro-la-porta-di-casa-in-ticino-e-particolarmente-grave",
-        "date": "Thu, 15 Oct 2026 12:33:45 +0200",
-        "category": "CANTONE",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1op03.jpg?v=1"
+        "title": "Leandro Bitetti è il nuovo Direttore della Formazione di base SUPSI",
+        "description": "Nella seduta del 15 ottobre, il Consiglio della Scuola universitaria professionale della Svizzera italiana ha deciso di affidare la direzione di mandato all’attuale responsabile del Master of Science in Business Administration.",
+        "link": "https://www.tio.ch/ticino/attualita/1956947/supsi-master-bitetti-formazione-business-base-direttore-leandro-nuovo",
+        "date": "Thu, 15 Oct 2026 14:19:30 +0200",
+        "category": "MANNO",
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1op3q.jpg?v=2"
       }
     ],
-    "updatedAt": "2026-10-15T12:18:45.568502+00:00",
+    "updatedAt": "2026-10-15T12:31:01.128171+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -2130,7 +2130,7 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-15T12:25:04.470640+00:00",
+    "updatedAt": "2026-10-15T12:31:01.128171+00:00",
     "version": "20261015_1210"
   },
   "swissWeatherError": false,
@@ -2246,7 +2246,7 @@
       }
     ],
     "total": 55,
-    "updatedAt": "2026-10-15T12:25:04.470640+00:00",
+    "updatedAt": "2026-10-15T12:31:01.128171+00:00",
     "source": "Viasuisse"
   }
 }
