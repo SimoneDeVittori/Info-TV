@@ -3,8 +3,8 @@
     "current": {
       "icon": 1,
       "iconV2": 1,
-      "temperature": 13.9,
-      "time": 1792053600000
+      "temperature": 14.3,
+      "time": 1792054200000
     },
     "forecast": [
       {
@@ -48,7 +48,7 @@
         "temperatureMin": 13
       }
     ],
-    "updatedAt": "2026-10-15T08:48:05.427115+00:00"
+    "updatedAt": "2026-10-15T08:56:55.140284+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1203,7 +1203,7 @@
       }
     ],
     "model": "202610150800",
-    "updatedAt": "2026-10-15T08:48:05.458580+00:00"
+    "updatedAt": "2026-10-15T08:56:55.163498+00:00"
   },
   "weekError": false,
   "news": {
@@ -1233,7 +1233,7 @@
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1op0x.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-10-15T08:48:05.427115+00:00",
+    "updatedAt": "2026-10-15T08:56:55.140284+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -2130,12 +2130,21 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-15T08:48:05.427115+00:00",
+    "updatedAt": "2026-10-15T08:56:55.140284+00:00",
     "version": "20261015_0840"
   },
   "swissWeatherError": false,
   "traffic": {
     "items": [
+      {
+        "id": "Viasuisser_FAVM/659687_TIC-Viasuisse/1",
+        "text": "406 - Riazzino direzione Cadenazzo tra A13, rotatoria Aeroporto di Locarno e Cadenazzo traffico fortemente rallentato, traffico congestionato",
+        "location": "406 - Riazzino direzione Cadenazzo",
+        "road": "406",
+        "category": 13,
+        "changedAt": "2026-10-15T10:53:26+02:00",
+        "priority": 1
+      },
       {
         "id": "Viasuisser_Viasuisse/2511707_TIC-Viasuisse/1",
         "text": "Vezia, Via Kosciuszko - tra entrata di località e 2 in entrambe le direzioni problemi di traffico, lavori stradali durante la notte, operazioni di pavimentazione, fino a sabato",
@@ -2234,19 +2243,10 @@
         "category": 31,
         "changedAt": "2026-09-30T17:01:21+02:00",
         "priority": 5
-      },
-      {
-        "id": "Viasuisser_Viasuisse/2508715_TIC-Viasuisse/1",
-        "text": "Locarno, Via Rovedo - a Locarno problemi di traffico, nuova gestione del traffico, circolazione a senso unico, seguire deviazione locale, fino a 26.02.2027",
-        "location": "Locarno, Via Rovedo",
-        "road": "TI",
-        "category": 31,
-        "changedAt": "2026-09-29T20:11:47+02:00",
-        "priority": 5
       }
     ],
-    "total": 52,
-    "updatedAt": "2026-10-15T08:48:05.427115+00:00",
+    "total": 53,
+    "updatedAt": "2026-10-15T08:56:55.140284+00:00",
     "source": "Viasuisse"
   }
 }
