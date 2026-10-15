@@ -854,3 +854,11 @@ main{position:fixed}
 .home-arrival-towed .home-delivery-van{visibility:hidden}
 .internal-screen-transition>.screen.dashboard-outgoing{opacity:1;visibility:visible;transition:none;pointer-events:none}
 @media(prefers-reduced-motion:reduce){.home-is-towing .home-tow-rig{display:none}}
+
+/* During screen travel, only the large card layers and van wheels animate.
+   Pause weather, exhaust and map decorations to avoid repainting moving textures. */
+.is-screen-animating .content *,.is-screen-animating .clinic-content *,.is-screen-animating .clinic-title-row *,.is-screen-animating .swiss-map-card *{animation-play-state:paused!important;will-change:auto!important}
+.is-screen-animating .home-tow-rig .travel-van-wheel{animation-play-state:running!important}
+.is-screen-animating .home-tow-rig .travel-van-exhaust{visibility:hidden}
+.is-screen-animating .card,.is-screen-animating .clinic-day{box-shadow:none}
+.is-screen-animating .clinic-map-card iframe{contain:strict}
