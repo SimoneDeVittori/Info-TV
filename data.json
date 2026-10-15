@@ -1,10 +1,10 @@
 {
   "weather": {
     "current": {
-      "icon": 1,
-      "iconV2": 1,
-      "temperature": 10.3,
-      "time": 1792047000000
+      "icon": 2,
+      "iconV2": 2,
+      "temperature": 11.5,
+      "time": 1792048800000
     },
     "forecast": [
       {
@@ -48,7 +48,7 @@
         "temperatureMin": 13
       }
     ],
-    "updatedAt": "2026-10-15T07:00:26.738593+00:00"
+    "updatedAt": "2026-10-15T07:24:49.716916+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1202,38 +1202,38 @@
         "amount": 0.0
       }
     ],
-    "model": "202610150600",
-    "updatedAt": "2026-10-15T07:00:26.764815+00:00"
+    "model": "202610150700",
+    "updatedAt": "2026-10-15T07:24:49.828006+00:00"
   },
   "weekError": false,
   "news": {
     "items": [
       {
-        "title": "«Indottrinamento a scuola», i Giovani UDC lanciano la \"Scuola neutrale\"",
-        "description": "La piattaforma dei giovani democentristi servirà a segnalare episodi di propaganda politica. Il \"casus belli\" è la \"Giornata Partecipazione Civile Giovanile\" svoltasi al Liceo di Mendrisio a fine settembre",
-        "link": "https://www.tio.ch/ticino/attualita/1956859/indottrinamento-a-scuola-i-giovani-udc-lanciano-la-scuola-neutrale",
-        "date": "Thu, 15 Oct 2026 08:29:32 +0200",
-        "category": "CANTONE",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1op02.jpg?v=1"
+        "title": "Incendi, ordine pubblico e maltempo: in 80 per la gestione delle emergenze",
+        "description": "Le esercitazioni hanno permesso di affinare la capacità decisionale e il coordinamento in situazioni critiche multisettoriali.",
+        "link": "https://www.tio.ch/ticino/cronaca/1956869/esercitazioni-ordine-maltempo-emergenze-situazioni",
+        "date": "Thu, 15 Oct 2026 09:18:02 +0200",
+        "category": "SOPRACENERI",
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1op0g.jpg?v=1"
       },
       {
-        "title": "Dalla fuga al racconto: storie di resistenza",
-        "description": "Un ricco programma al Film Festival Diritti Umani Lugano per questo giovedì 15 ottobre",
-        "link": "https://www.tio.ch/ticino/attualita/1956391/dalla-fuga-al-racconto-storie-di-resistenza",
-        "date": "Thu, 15 Oct 2026 06:30:00 +0200",
-        "category": "LUGANO",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oogv.jpg?v=1"
+        "title": "Bike Forum 2026: un confronto sulla mobilità ciclabile nei Comuni ticinesi",
+        "description": "Workshop e tavole rotonde mettono al centro esperienze concrete e soluzioni innovative per la mobilità sostenibile sul territorio.",
+        "link": "https://www.tio.ch/ticino/attualita/1956870/mobilita-esperienze-forum-territorio-bike-bellinzona-confronto-ticinesi",
+        "date": "Thu, 15 Oct 2026 09:17:16 +0200",
+        "category": "BELLINZONA",
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1op0j.jpg?v=1"
       },
       {
-        "title": "TAC e risonanze, la Svizzera fa il pieno di esami. E il Ticino è sul podio",
-        "description": "Il Ticino si distingue per il numero record di esami diagnostici rispetto alla media nazionale, ma restano dubbi sulla ripartizione tra pubblico e privato.",
-        "link": "https://www.tio.ch/ticino/attualita/1956361/tac-e-risonanze-la-svizzera-fa-il-pieno-di-esami-e-il-ticino-e-sul-podio",
-        "date": "Thu, 15 Oct 2026 06:30:00 +0200",
-        "category": "CANTONE",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oow5.jpg?v=1"
+        "title": "Da Verscio a Cavigliano, la Posta trasloca",
+        "description": "Dal 18 gennaio 2027 i servizi postali saranno disponibili presso il negozio Al Centro",
+        "link": "https://www.tio.ch/ticino/attualita/1956866/da-verscio-a-cavigliano-la-posta-trasloca",
+        "date": "Thu, 15 Oct 2026 09:17:10 +0200",
+        "category": "TERRE DI PEDEMONTE",
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1op0i.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-10-15T07:00:26.738593+00:00",
+    "updatedAt": "2026-10-15T07:24:49.716916+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -1252,7 +1252,7 @@
         "coord_y": "1152444",
         "location_id": "100300",
         "location_type": "city",
-        "timestamp": 1792046410,
+        "timestamp": 1792048213,
         "forecasts": [
           {
             "date": "15 ottobre 2026",
@@ -1341,7 +1341,7 @@
         "coord_y": "1118423",
         "location_id": "120100",
         "location_type": "city",
-        "timestamp": 1792046410,
+        "timestamp": 1792048213,
         "forecasts": [
           {
             "date": "15 ottobre 2026",
@@ -1430,7 +1430,7 @@
         "coord_y": "1119910",
         "location_id": "195000",
         "location_type": "city",
-        "timestamp": 1792046410,
+        "timestamp": 1792048213,
         "forecasts": [
           {
             "date": "15 ottobre 2026",
@@ -1519,7 +1519,7 @@
         "coord_y": "1202399",
         "location_id": "300400",
         "location_type": "city",
-        "timestamp": 1792046410,
+        "timestamp": 1792048213,
         "forecasts": [
           {
             "date": "15 ottobre 2026",
@@ -1608,7 +1608,7 @@
         "coord_y": "1267348",
         "location_id": "400100",
         "location_type": "city",
-        "timestamp": 1792046410,
+        "timestamp": 1792048213,
         "forecasts": [
           {
             "date": "15 ottobre 2026",
@@ -1697,7 +1697,7 @@
         "coord_y": "1211120",
         "location_id": "600300",
         "location_type": "city",
-        "timestamp": 1792046410,
+        "timestamp": 1792048213,
         "forecasts": [
           {
             "date": "15 ottobre 2026",
@@ -1786,7 +1786,7 @@
         "coord_y": "1096327",
         "location_id": "690000",
         "location_type": "city",
-        "timestamp": 1792046410,
+        "timestamp": 1792048213,
         "forecasts": [
           {
             "date": "15 ottobre 2026",
@@ -1875,7 +1875,7 @@
         "coord_y": "1191534",
         "location_id": "700000",
         "location_type": "city",
-        "timestamp": 1792046410,
+        "timestamp": 1792048213,
         "forecasts": [
           {
             "date": "15 ottobre 2026",
@@ -1964,7 +1964,7 @@
         "coord_y": "1247414",
         "location_id": "800100",
         "location_type": "city",
-        "timestamp": 1792046410,
+        "timestamp": 1792048213,
         "forecasts": [
           {
             "date": "15 ottobre 2026",
@@ -2053,7 +2053,7 @@
         "coord_y": "1254370",
         "location_id": "900000",
         "location_type": "city",
-        "timestamp": 1792046410,
+        "timestamp": 1792048213,
         "forecasts": [
           {
             "date": "15 ottobre 2026",
@@ -2130,8 +2130,8 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-15T07:00:26.738593+00:00",
-    "version": "20261015_0640"
+    "updatedAt": "2026-10-15T07:24:49.716916+00:00",
+    "version": "20261015_0710"
   },
   "swissWeatherError": false,
   "traffic": {
@@ -2144,24 +2144,6 @@
         "category": 12,
         "changedAt": "2026-10-15T08:52:32+02:00",
         "priority": 0
-      },
-      {
-        "id": "Viasuisser_Viasuisse/2512350_TIC-Viasuisse/1",
-        "text": "398 - Ponte Tresa direzione Lamone tra Ponte Tresa e Bioggio traffico fortemente rallentato, traffico congestionato",
-        "location": "398 - Ponte Tresa direzione Lamone",
-        "road": "398",
-        "category": 13,
-        "changedAt": "2026-10-15T07:17:19+02:00",
-        "priority": 1
-      },
-      {
-        "id": "Viasuisser_Viasuisse/2512352_TIC-Viasuisse/1",
-        "text": "Bizzarone direzione Genestrerio - tra frontiera Bizzarone e Genestrerio traffico fortemente rallentato, traffico congestionato",
-        "location": "Bizzarone direzione Genestrerio",
-        "road": "TI",
-        "category": 13,
-        "changedAt": "2026-10-15T06:01:42+02:00",
-        "priority": 1
       },
       {
         "id": "Viasuisser_Viasuisse/2511707_TIC-Viasuisse/1",
@@ -2243,10 +2225,28 @@
         "category": 31,
         "changedAt": "2026-10-03T14:12:08+02:00",
         "priority": 5
+      },
+      {
+        "id": "Viasuisser_Viasuisse/2509750_TIC-Viasuisse/1",
+        "text": "Lugano, Viale Stefano Franscini a Via Serafino Balestra - a Lugano problemi di traffico, lavori stradali, corsie strette, fino a 31.10.2026 07:15",
+        "location": "Lugano, Viale Stefano Franscini a Via Serafino Balestra",
+        "road": "TI",
+        "category": 31,
+        "changedAt": "2026-10-03T13:25:16+02:00",
+        "priority": 5
+      },
+      {
+        "id": "Viasuisser_FAVM/626453_TIC-Viasuisse/1",
+        "text": "H2 - Göschenen - Airolo tra Ospizio San Gottardo e Motto Bartola in entrambe le direzioni problemi di traffico, lavori stradali, corsie strette, limite temporaneo di larghezza di 3.30 m, fino a 27.11.2026 17:00 - ID112879",
+        "location": "H2 - Göschenen - Airolo",
+        "road": "H2",
+        "category": 31,
+        "changedAt": "2026-09-30T17:01:21+02:00",
+        "priority": 5
       }
     ],
-    "total": 55,
-    "updatedAt": "2026-10-15T07:00:26.738593+00:00",
+    "total": 53,
+    "updatedAt": "2026-10-15T07:24:49.716916+00:00",
     "source": "Viasuisse"
   }
 }
