@@ -831,7 +831,7 @@ main{position:fixed}
 .plan-release-note{box-shadow:0 2px 5px #27313b14,inset 0 1px 0 #ffffffb3}
 
 
-/* Keep shared dashboard chrome still; crossfade only its central cards. */
+/* Shared dashboard chrome stays fixed while compositor layers open from the centre. */
 @media (hover:hover) and (pointer:fine), (min-width:601px) and (min-height:601px){
  .dashboard,.dashboard:not(.swiss-map-screen),.swiss-map-screen{padding-top:36.68px}
  .dashboard>header,.dashboard:not(.swiss-map-screen)>header,.swiss-map-screen>header{min-height:130px;margin-bottom:36.68px;align-items:center}
@@ -840,13 +840,7 @@ main{position:fixed}
  .internal-screen-transition>.dashboard.active{pointer-events:auto}
  .internal-screen-transition>.dashboard>header,.internal-screen-transition>.dashboard>footer{visibility:hidden}
  .internal-screen-transition>.dashboard.active>header,.internal-screen-transition>.dashboard.active>footer{visibility:visible}
- .internal-screen-transition>.dashboard>.content,.internal-screen-transition>.dashboard>.swiss-map-card,.internal-screen-transition>.dashboard>.clinic-content,.internal-screen-transition>.dashboard>.clinic-title-row{opacity:0;visibility:hidden;transition:opacity .65s ease,visibility .65s}
- .internal-screen-transition>.dashboard.active>.content,.internal-screen-transition>.dashboard.active>.swiss-map-card,.internal-screen-transition>.dashboard.active>.clinic-content,.internal-screen-transition>.dashboard.active>.clinic-title-row{opacity:1;visibility:visible;animation:dashboard-card-enter .65s ease both}
+ .internal-screen-transition>.dashboard>.content,.internal-screen-transition>.dashboard>.swiss-map-card,.internal-screen-transition>.dashboard>.clinic-content,.internal-screen-transition>.dashboard>.clinic-title-row{opacity:0;visibility:hidden;transition:none;animation:none}
+ .internal-screen-transition>.dashboard.active>.content,.internal-screen-transition>.dashboard.active>.swiss-map-card,.internal-screen-transition>.dashboard.active>.clinic-content,.internal-screen-transition>.dashboard.active>.clinic-title-row,.internal-screen-transition>.dashboard.dashboard-outgoing>.content,.internal-screen-transition>.dashboard.dashboard-outgoing>.swiss-map-card,.internal-screen-transition>.dashboard.dashboard-outgoing>.clinic-content,.internal-screen-transition>.dashboard.dashboard-outgoing>.clinic-title-row{opacity:1;visibility:visible;backface-visibility:hidden}
  .internal-screen-transition>.dashboard:not(.active)>.progress{visibility:hidden}
 }
-@media (prefers-reduced-motion:reduce){
- .internal-screen-transition>.dashboard>.content,.internal-screen-transition>.dashboard>.swiss-map-card,.internal-screen-transition>.dashboard>.clinic-content,.internal-screen-transition>.dashboard>.clinic-title-row{transition:none}
-}
-
-@keyframes dashboard-card-enter{from{opacity:0}to{opacity:1}}
-@media (prefers-reduced-motion:reduce){.internal-screen-transition>.dashboard.active>.content,.internal-screen-transition>.dashboard.active>.swiss-map-card,.internal-screen-transition>.dashboard.active>.clinic-content,.internal-screen-transition>.dashboard.active>.clinic-title-row{animation:none}}
