@@ -865,3 +865,9 @@ main{position:fixed}
 
 /* Keep the home van's five-second delay aligned with its parking timer. */
 .is-screen-animating .home-delivery-van *{animation-play-state:running!important}
+
+/* Keep the card texture below 2048 px: the tow rig has its own small layer. */
+.home-is-towing .content>.home-tow-rig{display:none}
+.home-tow-overlay{display:block;position:absolute;z-index:6;pointer-events:none}
+.home-tow-overlay .travel-van-exhaust{display:none}
+.home-tow-overlay .travel-van-runner{backface-visibility:hidden}

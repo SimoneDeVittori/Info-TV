@@ -272,15 +272,27 @@ function pp(){let a=Gg(),e=zg(),liveNews=useLiveTio(),[t,l]=(0,k.useState)(()=>o
  if(window.matchMedia("(prefers-reduced-motion: reduce)").matches||typeof active.animate!=="function")return;
  const outgoing=previous.element,selector=":scope > .content,:scope > .swiss-map-card,:scope > .clinic-content,:scope > .clinic-title-row";
  const entering=[...active.querySelectorAll(selector)],leaving=isDashboard(previous.id)?[...outgoing.querySelectorAll(selector)]:[outgoing];
- const animations=[],duration=towHome?4600:1400,easing=towHome?"cubic-bezier(.35,0,.35,1)":"cubic-bezier(.22,.61,.36,1)";
+ const animations=[],duration=towHome?5200:1400,easing=towHome?"cubic-bezier(.35,0,.35,1)":"cubic-bezier(.22,.61,.36,1)";
  const towDoctorAway=towHome&&previous.id>=5;
  let frameOne=0,frameTwo=0,disposed=false;
  outgoing.classList.add("dashboard-outgoing");main.classList.add("is-screen-animating");
  if(towHome)active.classList.add("home-is-towing","home-arrival-towed");
  const saved=[...entering,...leaving].map(element=>({element,transform:element.style.transform,opacity:element.style.opacity,willChange:element.style.willChange,origin:element.style.transformOrigin}));
  for(const element of [...entering,...leaving]){element.style.willChange=towHome?"transform":"transform, opacity";element.style.transformOrigin="50% 50%"}
- for(const element of entering){element.style.transform=towHome?"translate3d(-2120px,0,0)":"scale(.94)";element.style.opacity=towHome?"1":"0"}
- const finish=()=>{if(disposed)return;disposed=true;cancelAnimationFrame(frameOne);cancelAnimationFrame(frameTwo);outgoing.classList.remove("dashboard-outgoing");active.classList.remove("home-is-towing");main.classList.remove("is-screen-animating");animations.forEach(animation=>animation.cancel());for(const item of saved){const s=item.element.style;s.transform=item.transform;s.opacity=item.opacity;s.willChange=item.willChange;s.transformOrigin=item.origin}};
+ // Rasterize the home in its final viewport before moving its cached layer.
+ for(const element of entering){element.style.transform=towHome?"translate3d(0,0,0)":"scale(.94)";element.style.opacity=towHome?".01":"0"}
+ let towOverlay=null;
+ if(towHome){
+  const source=active.querySelector(".home-tow-rig"),content=entering[0];
+  if(source&&content){
+   towOverlay=source.cloneNode(true);towOverlay.classList.add("home-tow-overlay");
+   towOverlay.style.left=(content.offsetLeft+content.offsetWidth)+"px";
+   towOverlay.style.top=(content.offsetTop+content.offsetHeight/2-60)+"px";
+   towOverlay.style.marginTop="0";towOverlay.style.transform="translate3d(-2120px,0,0)";
+   towOverlay.style.willChange="transform";main.appendChild(towOverlay);
+  }
+ }
+ const finish=()=>{if(disposed)return;disposed=true;cancelAnimationFrame(frameOne);cancelAnimationFrame(frameTwo);outgoing.classList.remove("dashboard-outgoing");active.classList.remove("home-is-towing");towOverlay?.remove();main.classList.remove("is-screen-animating");animations.forEach(animation=>animation.cancel());for(const item of saved){const s=item.element.style;s.transform=item.transform;s.opacity=item.opacity;s.willChange=item.willChange;s.transformOrigin=item.origin}};
  // Prepare the compositor layers for two painted frames before starting together.
  frameOne=requestAnimationFrame(()=>{frameTwo=requestAnimationFrame(()=>{
   if(disposed)return;
@@ -289,10 +301,12 @@ function pp(){let a=Gg(),e=zg(),liveNews=useLiveTio(),[t,l]=(0,k.useState)(()=>o
   ]:[{opacity:1,transform:"translate3d(0,0,0)"},{opacity:0,transform:"translate3d(0,0,0)"}],
   {duration:towDoctorAway?duration:towHome?900:1000,easing:towDoctorAway?easing:"ease-in-out",fill:"both"}));
   for(const element of entering)animations.push(element.animate(towHome?[
-   {transform:"translate3d(-2120px,0,0)"},{transform:"translate3d(0,0,0)"}
+   {opacity:1,transform:"translate3d(-2120px,0,0)"},{opacity:1,transform:"translate3d(0,0,0)"}
   ]:[{opacity:0,transform:"scale(.94)"},{opacity:1,transform:"scale(1)"}],{duration,easing,fill:"both"}));
-  const rig=towHome?active.querySelector(".home-tow-rig"):null;
-  if(rig)animations.push(rig.animate([{opacity:1,offset:0},{opacity:1,offset:.94},{opacity:0,offset:1}],{duration,fill:"both"}));
+  if(towOverlay){
+   animations.push(towOverlay.animate([{transform:"translate3d(-2120px,0,0)"},{transform:"translate3d(0,0,0)"}],{duration,easing,fill:"both"}));
+   animations.push(towOverlay.animate([{opacity:1,offset:0},{opacity:1,offset:.94},{opacity:0,offset:1}],{duration,fill:"both"}));
+  }
   const commonStart=document.timeline?.currentTime;
   if(commonStart!=null)for(const animation of animations)animation.startTime=commonStart;
   Promise.all(animations.map(animation=>animation.finished)).then(finish,()=>{});
