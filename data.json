@@ -1,8 +1,8 @@
 {
   "weather": {
     "current": {
-      "icon": 1,
-      "iconV2": 1,
+      "icon": 2,
+      "iconV2": 2,
       "temperature": 20.0,
       "time": 1792066200000
     },
@@ -48,7 +48,7 @@
         "temperatureMin": 13
       }
     ],
-    "updatedAt": "2026-10-15T12:12:24.903869+00:00"
+    "updatedAt": "2026-10-15T12:18:45.568502+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1203,7 +1203,7 @@
       }
     ],
     "model": "202610151200",
-    "updatedAt": "2026-10-15T12:12:25.020203+00:00"
+    "updatedAt": "2026-10-15T12:18:45.588162+00:00"
   },
   "weekError": false,
   "news": {
@@ -1212,7 +1212,7 @@
         "title": "Vaccinazione contro il papillomavirus: si cambia",
         "description": "Dal primo gennaio 2027, la svolta. Giorgio Merlani, medico cantonale, illustra le principali novità.",
         "link": "https://www.tio.ch/ticino/attualita/1956903/vaccinazione-contro-il-papillomavirus-si-cambia",
-        "date": "Thu, 15 Oct 2026 14:09:36 +0200",
+        "date": "Thu, 15 Oct 2026 14:10:04 +0200",
         "category": "CANTONE",
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1op23.jpg?v=1"
       },
@@ -1233,7 +1233,7 @@
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1op03.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-10-15T12:12:24.903869+00:00",
+    "updatedAt": "2026-10-15T12:18:45.568502+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -2130,7 +2130,7 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-15T12:12:24.903869+00:00",
+    "updatedAt": "2026-10-15T12:18:45.568502+00:00",
     "version": "20261015_1210"
   },
   "swissWeatherError": false,
@@ -2246,7 +2246,7 @@
       }
     ],
     "total": 55,
-    "updatedAt": "2026-10-15T12:12:24.903869+00:00",
+    "updatedAt": "2026-10-15T12:18:45.568502+00:00",
     "source": "Viasuisse"
   }
 }
