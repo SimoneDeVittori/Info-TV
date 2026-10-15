@@ -39,9 +39,24 @@ export function getPlanState(now=new Date()){
 export function isNextPlanAvailable(now=new Date()){
  return getPlanState(now).nextAvailable;
 }
+// Keep the full-screen wallpaper slot, image sizing and van animation in app.js.
+// For a replacement image, update its existing asset and set retireOnPlan to null
+// (or to the next plan that should retire it). No layout needs to be rebuilt.
+export const VAN_WALLPAPER = {enabled:true,retireOnPlan:{year:2026,month:11}};
+export function isVanWallpaperVisible(now=new Date()){
+ if(!VAN_WALLPAPER.enabled)return false;
+ const target=VAN_WALLPAPER.retireOnPlan;
+ if(!target)return true;
+ // A plan is released in the previous month, on Monday on/after the 15th.
+ const previousMonth=target.month===1?12:target.month-1;
+ const previousYear=target.year-(target.month===1?1:0);
+ const release=nextPlanRelease(previousYear,previousMonth);
+ const day=now.toLocaleDateString('sv-SE',{timeZone:'Europe/Zurich'});
+ return day<release.date;
+}
 export function planRotation(now=new Date()){
  const time=now.toLocaleTimeString('en-GB',{timeZone:'Europe/Zurich',hour:'2-digit',minute:'2-digit',hourCycle:'h23'});
- return [0,1,...(isNextPlanAvailable(now)?[4]:[]),2,...(time>='08:00'&&time<'11:30'?[3]:[])];
+ return [0,1,...(isNextPlanAvailable(now)?[4]:[]),...(isVanWallpaperVisible(now)?[2]:[]),...(time>='08:00'&&time<'11:30'?[3]:[])];
 }
 // The publishing workflow rasterizes PDFs once; TVs only decode a standard PNG.
 // Keep the canvas/ref API so the existing layout and day overlay remain unchanged.
