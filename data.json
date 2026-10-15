@@ -3,8 +3,8 @@
     "current": {
       "icon": 2,
       "iconV2": 2,
-      "temperature": 20.0,
-      "time": 1792066200000
+      "temperature": 20.1,
+      "time": 1792066800000
     },
     "forecast": [
       {
@@ -48,10 +48,10 @@
         "temperatureMin": 13
       }
     ],
-    "updatedAt": "2026-10-15T12:18:45.568502+00:00"
+    "updatedAt": "2026-10-15T12:25:04.470640+00:00"
   },
   "weatherError": false,
-  "newsError": false,
+  "newsError": true,
   "trafficError": false,
   "week": {
     "days": [
@@ -1203,7 +1203,7 @@
       }
     ],
     "model": "202610151200",
-    "updatedAt": "2026-10-15T12:18:45.588162+00:00"
+    "updatedAt": "2026-10-15T12:25:04.496900+00:00"
   },
   "weekError": false,
   "news": {
@@ -2130,7 +2130,7 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-15T12:18:45.568502+00:00",
+    "updatedAt": "2026-10-15T12:25:04.470640+00:00",
     "version": "20261015_1210"
   },
   "swissWeatherError": false,
@@ -2246,7 +2246,7 @@
       }
     ],
     "total": 55,
-    "updatedAt": "2026-10-15T12:18:45.568502+00:00",
+    "updatedAt": "2026-10-15T12:25:04.470640+00:00",
     "source": "Viasuisse"
   }
 }
