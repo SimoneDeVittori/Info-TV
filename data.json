@@ -4,7 +4,7 @@
       "icon": 35,
       "iconV2": 35,
       "temperature": 19.8,
-      "time": 1792164000000
+      "time": 1792164600000
     },
     "forecast": [
       {
@@ -31,8 +31,8 @@
         "dayDate": "2026-10-18",
         "iconDay": 20,
         "iconDayV2": 20,
-        "precipitation": 8.2,
-        "precipitationMax": 48.4,
+        "precipitation": 10.7,
+        "precipitationMax": 50.2,
         "precipitationMin": 0.0,
         "temperatureMax": 16,
         "temperatureMin": 13
@@ -41,14 +41,14 @@
         "dayDate": "2026-10-19",
         "iconDay": 9,
         "iconDayV2": 9,
-        "precipitation": 3.8,
-        "precipitationMax": 45.4,
+        "precipitation": 8.1,
+        "precipitationMax": 44.0,
         "precipitationMin": 0.0,
         "temperatureMax": 18,
         "temperatureMin": 12
       }
     ],
-    "updatedAt": "2026-10-16T15:26:15.306948+00:00"
+    "updatedAt": "2026-10-16T15:39:02.489715+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1203,11 +1203,27 @@
       }
     ],
     "model": "202610161500",
-    "updatedAt": "2026-10-16T15:26:15.345238+00:00"
+    "updatedAt": "2026-10-16T15:39:02.592278+00:00"
   },
   "weekError": false,
   "news": {
     "items": [
+      {
+        "title": "C'è una criminalità che non compare nei dati ufficiali",
+        "description": "Il Municipio di Lugano valuta una nuova indagine per far luce sul divario tra reati subiti e quelli denunciati. Le statistiche fotografano infatti solo una parte del fenomeno.",
+        "link": "https://www.tio.ch/ticino/politica/1957254/c-e-una-criminalita-che-non-compare-nei-dati-ufficiali",
+        "date": "Fri, 16 Oct 2026 17:32:01 +0200",
+        "category": "LUGANO",
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1opie.jpg?v=1"
+      },
+      {
+        "title": "«Ritrovare la rotta»: presentati dieci cantieri per il Ticino",
+        "description": "La Camera di commercio indica dieci aree chiave per favorire la crescita e la competitività del territorio. Tra le priorità proposte: spending review permanente, innovazione, formazione e una nuova strategia fiscale per il futuro del Cantone.",
+        "link": "https://www.tio.ch/ticino/attualita/1956992/ritrovare-la-rotta-presentati-dieci-cantieri-per-il-ticino",
+        "date": "Fri, 16 Oct 2026 17:30:00 +0200",
+        "category": "BELLINZONA",
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1op6x.jpg?v=1"
+      },
       {
         "title": "Foto? Queste non le metterete in cornice",
         "description": "Come ogni venerdì, la consueta mappa dei controlli della velocità per la settimana dal 19 al 25 ottobre",
@@ -1215,25 +1231,9 @@
         "date": "Fri, 16 Oct 2026 17:05:16 +0200",
         "category": "CANTONE",
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1opgt.jpg?v=1"
-      },
-      {
-        "title": "Cantieri che complicano la vita, il Municipio: «L’obiettivo è ridurre i disagi»",
-        "description": "In risposta a un'interrogazione, l'Esecutivo illustra la strategia per coordinare i lavori previsti nei prossimi anni ed evitare cantieri a ripetizione.",
-        "link": "https://www.tio.ch/ticino/politica/1957269/cantieri-interventi-lavori-evitare-anni-esecutivo-municipio-disagi-obiettivo-vita",
-        "date": "Fri, 16 Oct 2026 16:37:24 +0200",
-        "category": "LUGANO",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1opj7.jpg?v=2"
-      },
-      {
-        "title": "Rari e inconfondibili: avvistato un gruppo di ibis eremiti",
-        "description": "Sono stati immortalati questa mattina a Giubiasco.",
-        "link": "https://www.tio.ch/ticino/attualita/1957184/rari-e-inconfondibili-avvistato-un-gruppo-di-ibis-eremiti",
-        "date": "Fri, 16 Oct 2026 16:02:03 +0200",
-        "category": "GIUBIASCO",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1opeu.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-10-16T15:26:15.306948+00:00",
+    "updatedAt": "2026-10-16T15:39:02.489715+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -2130,28 +2130,28 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-16T15:26:15.306948+00:00",
+    "updatedAt": "2026-10-16T15:39:02.489715+00:00",
     "version": "20261016_1510"
   },
   "swissWeatherError": false,
   "traffic": {
     "items": [
       {
-        "id": "Viasuisser_FAVM/660024_TIC-Viasuisse/1",
-        "text": "394 - Mendrisio direzione Gaggiolo tra A24, Stabio e Gaggiolo (Dogana) colonna, traffico congestionato",
-        "location": "394 - Mendrisio direzione Gaggiolo",
-        "road": "394",
-        "category": 12,
-        "changedAt": "2026-10-16T17:15:49+02:00",
-        "priority": 0
-      },
-      {
         "id": "Viasuisser_FAVM/660023_TIC-Viasuisse/1",
-        "text": "A2 - S. Gottardo direzione Chiasso tra Chiasso Centro e frontiera Chiasso Brogeda colonna, traffico congestionato",
+        "text": "A2 - S. Gottardo direzione Chiasso tra  Mendrisio e frontiera Chiasso Brogeda colonna, traffico congestionato",
         "location": "A2 - S. Gottardo direzione Chiasso",
         "road": "A2",
         "category": 12,
-        "changedAt": "2026-10-16T17:14:46+02:00",
+        "changedAt": "2026-10-16T17:30:25+02:00",
+        "priority": 0
+      },
+      {
+        "id": "Viasuisser_FAVM/660032_TIC-Viasuisse/1",
+        "text": "A24 - Mendrisio direzione Stabio tra A2, Mendrisio e 394, Stabio colonna, traffico congestionato",
+        "location": "A24 - Mendrisio direzione Stabio",
+        "road": "A24",
+        "category": 12,
+        "changedAt": "2026-10-16T17:29:19+02:00",
         "priority": 0
       },
       {
@@ -2246,7 +2246,7 @@
       }
     ],
     "total": 62,
-    "updatedAt": "2026-10-16T15:26:15.306948+00:00",
+    "updatedAt": "2026-10-16T15:39:02.489715+00:00",
     "source": "Viasuisse"
   }
 }
