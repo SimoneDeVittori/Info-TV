@@ -863,3 +863,17 @@ main{position:fixed}
 
 /* Promote only the three compact home cards during their side entrance. */
 .is-screen-animating .home-card-entering{will-change:transform,opacity!important;backface-visibility:hidden}
+
+/* Draw the home van at its final size once; animate translation only. */
+@media (hover:hover) and (pointer:fine), (min-width:601px) and (min-height:601px){
+ .home-delivery-van .travel-van-runner{width:112px;height:74.667px;transform:translate3d(var(--home-van-start,0px),0,0);transform-origin:initial}
+ .home-delivery-van .travel-van-body,.home-delivery-van .travel-van-body>img{width:112px;height:74.667px}
+ .home-delivery-van.is-running .travel-van-runner{animation:home-van-route-tv 14s cubic-bezier(.25,0,.75,1) 5s both}
+ .home-delivery-van.is-running .travel-van-wheel{animation-timing-function:cubic-bezier(.25,0,.75,1)}
+ .home-delivery-van .travel-van-exhaust i{width:8px;height:6px;background:#929aa3}
+ /* Temporarily pause only the large weather icon while the van crosses. */
+ .home-delivery-van.is-moving~.weather .weather-now .weather-icon svg,
+ .home-delivery-van.is-moving~.weather .weather-now .weather-icon svg *{animation-play-state:paused}
+}
+@keyframes home-van-route-tv{from{transform:translate3d(var(--home-van-start,0px),0,0)}to{transform:translate3d(var(--home-van-end,0px),0,0)}}
+@media(prefers-reduced-motion:reduce){.home-delivery-van.is-running .travel-van-runner{animation:none}}
