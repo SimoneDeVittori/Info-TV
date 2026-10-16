@@ -1,10 +1,10 @@
 {
   "weather": {
     "current": {
-      "icon": 2,
-      "iconV2": 2,
-      "temperature": 21.0,
-      "time": 1792159200000
+      "icon": 3,
+      "iconV2": 3,
+      "temperature": 20.8,
+      "time": 1792159800000
     },
     "forecast": [
       {
@@ -48,7 +48,7 @@
         "temperatureMin": 12
       }
     ],
-    "updatedAt": "2026-10-16T14:10:52.491685+00:00"
+    "updatedAt": "2026-10-16T14:17:56.770946+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1203,7 +1203,7 @@
       }
     ],
     "model": "202610161400",
-    "updatedAt": "2026-10-16T14:10:52.579036+00:00"
+    "updatedAt": "2026-10-16T14:17:56.843368+00:00"
   },
   "weekError": false,
   "news": {
@@ -1233,7 +1233,7 @@
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oozq.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-10-16T14:10:52.491685+00:00",
+    "updatedAt": "2026-10-16T14:17:56.770946+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -2130,12 +2130,30 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-16T14:10:52.491685+00:00",
+    "updatedAt": "2026-10-16T14:17:56.770946+00:00",
     "version": "20261016_1410"
   },
   "swissWeatherError": false,
   "traffic": {
     "items": [
+      {
+        "id": "Viasuisser_FAVM/659894_TIC-Viasuisse/1",
+        "text": "A2 - Chiasso direzione S. Gottardo tra Quinto e Area di dosaggio Airolo traffico congestionato, traffico bloccato per 4 km, ritardi fino a 40 minuti - Ricordiamo anche che la corsia preferenziale CUPRA è aperta.",
+        "location": "A2 - Chiasso direzione S. Gottardo",
+        "road": "A2",
+        "category": 12,
+        "changedAt": "2026-10-16T16:11:27+02:00",
+        "priority": 0
+      },
+      {
+        "id": "Viasuisser_Viasuisse/2512765_TIC-Viasuisse/1",
+        "text": "Lugano, Via Pretorio a Corso Enrico Pestalozzi - a Lugano in entrambe le direzioni problemi di traffico, lavori stradali, corsie strette, fino a lunedì 05:30",
+        "location": "Lugano, Via Pretorio a Corso Enrico Pestalozzi",
+        "road": "TI",
+        "category": 31,
+        "changedAt": "2026-10-16T16:09:56+02:00",
+        "priority": 5
+      },
       {
         "id": "Viasuisser_FAVM/659971_TIC-Viasuisse/1",
         "text": "A24 - Mendrisio direzione Stabio tra A2, Mendrisio e 394, Stabio colonna, traffico congestionato",
@@ -2200,15 +2218,6 @@
         "priority": 1
       },
       {
-        "id": "Viasuisser_FAVM/659894_TIC-Viasuisse/1",
-        "text": "A2 - Chiasso direzione S. Gottardo tra Quinto e Area di dosaggio Airolo traffico congestionato, traffico bloccato per 5 km, ritardi fino a 50 minuti - Ricordiamo anche che la corsia preferenziale CUPRA è aperta.",
-        "location": "A2 - Chiasso direzione S. Gottardo",
-        "road": "A2",
-        "category": 12,
-        "changedAt": "2026-10-16T14:59:21+02:00",
-        "priority": 0
-      },
-      {
         "id": "Viasuisser_FAVM/659895_TIC-Viasuisse/1",
         "text": "A2 - Chiasso direzione S. Gottardo a Airolo chiuso raccordo autostradale in entrata",
         "location": "A2 - Chiasso direzione S. Gottardo",
@@ -2234,19 +2243,10 @@
         "category": 32,
         "changedAt": "2026-10-08T16:53:07+02:00",
         "priority": 6
-      },
-      {
-        "id": "Viasuisser_FAVM/620496_TIC-Viasuisse/1",
-        "text": "2 - Göschenen - Airolo tra Göschenen e Airolo in entrambe le direzioni problemi di traffico, lavori stradali durante il giorno per 0.1 km, limite temporaneo di larghezza di 3.50 m, fino a 18.12.2026, lun - ven tra 07:00 e 17:00 - ID112048",
-        "location": "2 - Göschenen - Airolo",
-        "road": "2",
-        "category": 31,
-        "changedAt": "2026-10-07T07:31:34+02:00",
-        "priority": 5
       }
     ],
-    "total": 56,
-    "updatedAt": "2026-10-16T14:10:52.491685+00:00",
+    "total": 57,
+    "updatedAt": "2026-10-16T14:17:56.770946+00:00",
     "source": "Viasuisse"
   }
 }
