@@ -3,8 +3,8 @@
     "current": {
       "icon": 3,
       "iconV2": 3,
-      "temperature": 20.8,
-      "time": 1792159800000
+      "temperature": 20.6,
+      "time": 1792160400000
     },
     "forecast": [
       {
@@ -48,7 +48,7 @@
         "temperatureMin": 12
       }
     ],
-    "updatedAt": "2026-10-16T14:17:56.770946+00:00"
+    "updatedAt": "2026-10-16T14:23:25.136463+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1203,7 +1203,7 @@
       }
     ],
     "model": "202610161400",
-    "updatedAt": "2026-10-16T14:17:56.843368+00:00"
+    "updatedAt": "2026-10-16T14:23:25.258164+00:00"
   },
   "weekError": false,
   "news": {
@@ -1233,7 +1233,7 @@
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oozq.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-10-16T14:17:56.770946+00:00",
+    "updatedAt": "2026-10-16T14:23:25.136463+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -2130,12 +2130,21 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-16T14:17:56.770946+00:00",
+    "updatedAt": "2026-10-16T14:23:25.136463+00:00",
     "version": "20261016_1410"
   },
   "swissWeatherError": false,
   "traffic": {
     "items": [
+      {
+        "id": "Viasuisser_Viasuisse/2512768_TIC-Viasuisse/1",
+        "text": "Lugano, Via Pretorio - a Lugano problemi di traffico, lavori stradali, corsie strette, fino a 06.11.2026 17:00",
+        "location": "Lugano, Via Pretorio",
+        "road": "TI",
+        "category": 31,
+        "changedAt": "2026-10-16T16:12:54+02:00",
+        "priority": 5
+      },
       {
         "id": "Viasuisser_FAVM/659894_TIC-Viasuisse/1",
         "text": "A2 - Chiasso direzione S. Gottardo tra Quinto e Area di dosaggio Airolo traffico congestionato, traffico bloccato per 4 km, ritardi fino a 40 minuti - Ricordiamo anche che la corsia preferenziale CUPRA è aperta.",
@@ -2234,19 +2243,10 @@
         "category": 32,
         "changedAt": "2026-10-12T15:40:04+02:00",
         "priority": 6
-      },
-      {
-        "id": "Viasuisser_FAVM/658331_TIC-Viasuisse/1",
-        "text": "A2 - Chiasso - S. Gottardo tra Chiasso Centro e Rivera in entrambe le direzioni problemi di traffico per 40.5 km, lavori stradali durante la notte, nuova gestione del traffico, carreggiata ridotta a una corsia, limite temporaneo di larghezza di 4.50 m, fino a 23.10.2026, tra 21:00 e 04:30 - ID118247",
-        "location": "A2 - Chiasso - S. Gottardo",
-        "road": "A2",
-        "category": 32,
-        "changedAt": "2026-10-08T16:53:07+02:00",
-        "priority": 6
       }
     ],
-    "total": 57,
-    "updatedAt": "2026-10-16T14:17:56.770946+00:00",
+    "total": 58,
+    "updatedAt": "2026-10-16T14:23:25.136463+00:00",
     "source": "Viasuisse"
   }
 }
