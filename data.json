@@ -41,14 +41,14 @@
         "dayDate": "2026-10-19",
         "iconDay": 9,
         "iconDayV2": 9,
-        "precipitation": 4.2,
+        "precipitation": 3.8,
         "precipitationMax": 45.4,
         "precipitationMin": 0.0,
         "temperatureMax": 17,
         "temperatureMin": 12
       }
     ],
-    "updatedAt": "2026-10-16T14:31:44.438203+00:00"
+    "updatedAt": "2026-10-16T14:38:11.668891+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1203,7 +1203,7 @@
       }
     ],
     "model": "202610161400",
-    "updatedAt": "2026-10-16T14:31:44.462489+00:00"
+    "updatedAt": "2026-10-16T14:38:11.696308+00:00"
   },
   "weekError": false,
   "news": {
@@ -1233,7 +1233,7 @@
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oozq.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-10-16T14:31:44.438203+00:00",
+    "updatedAt": "2026-10-16T14:38:11.668891+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -2130,12 +2130,48 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-16T14:31:44.438203+00:00",
+    "updatedAt": "2026-10-16T14:38:11.668891+00:00",
     "version": "20261016_1410"
   },
   "swissWeatherError": false,
   "traffic": {
     "items": [
+      {
+        "id": "Viasuisser_Viasuisse/2512698_TIC-Viasuisse/1",
+        "text": "398 - Lamone direzione Ponte Tresa tra Bioggio e frontiera Ponte Tresa traffico fortemente rallentato, traffico congestionato",
+        "location": "398 - Lamone direzione Ponte Tresa",
+        "road": "398",
+        "category": 13,
+        "changedAt": "2026-10-16T16:35:53+02:00",
+        "priority": 1
+      },
+      {
+        "id": "Viasuisser_FAVM/659970_TIC-Viasuisse/1",
+        "text": "A2 - S. Gottardo direzione Chiasso tra  Lugano Nord e la galleria San Nicolao colonna, traffico congestionato",
+        "location": "A2 - S. Gottardo direzione Chiasso",
+        "road": "A2",
+        "category": 12,
+        "changedAt": "2026-10-16T16:33:08+02:00",
+        "priority": 0
+      },
+      {
+        "id": "Viasuisser_Viasuisse/2512783_TIC-Viasuisse/1",
+        "text": "attraversamento Davesco-Soragno, Strada della Stampa - in entrambe le direzioni problemi di traffico, lavori stradali, corsie strette, fino a lunedì 16:00",
+        "location": "attraversamento Davesco-Soragno, Strada della Stampa",
+        "road": "TI",
+        "category": 31,
+        "changedAt": "2026-10-16T16:29:24+02:00",
+        "priority": 5
+      },
+      {
+        "id": "Viasuisser_Viasuisse/2512780_TIC-Viasuisse/1",
+        "text": "Cimadera, Strada Bassa a Via Cantonale - tra fine della strada e uscita di località in entrambe le direzioni problemi di traffico, lavori stradali, corsie strette, fino a 30.10.2026 17:00",
+        "location": "Cimadera, Strada Bassa a Via Cantonale",
+        "road": "TI",
+        "category": 31,
+        "changedAt": "2026-10-16T16:26:20+02:00",
+        "priority": 5
+      },
       {
         "id": "Viasuisser_Viasuisse/2512768_TIC-Viasuisse/1",
         "text": "Lugano, Via Pretorio - a Lugano problemi di traffico, lavori stradali, corsie strette, fino a 06.11.2026 17:00",
@@ -2173,15 +2209,6 @@
         "priority": 0
       },
       {
-        "id": "Viasuisser_FAVM/659970_TIC-Viasuisse/1",
-        "text": "A2 - S. Gottardo direzione Chiasso tra Lugano Sud e la galleria San Nicolao colonna, traffico congestionato",
-        "location": "A2 - S. Gottardo direzione Chiasso",
-        "road": "A2",
-        "category": 12,
-        "changedAt": "2026-10-16T15:58:41+02:00",
-        "priority": 0
-      },
-      {
         "id": "Viasuisser_Viasuisse/2512753_TIC-Viasuisse/1",
         "text": "Via Antonio Riva, Via Ponte Tresa direzione Via Silvio Calloni - traffico fortemente rallentato, traffico congestionato",
         "location": "Via Antonio Riva, Via Ponte Tresa direzione Via Silvio Calloni",
@@ -2216,37 +2243,10 @@
         "category": 12,
         "changedAt": "2026-10-16T15:15:04+02:00",
         "priority": 0
-      },
-      {
-        "id": "Viasuisser_Viasuisse/2512698_TIC-Viasuisse/1",
-        "text": "398 - Lamone direzione Ponte Tresa tra Agno e frontiera Ponte Tresa traffico fortemente rallentato, traffico congestionato",
-        "location": "398 - Lamone direzione Ponte Tresa",
-        "road": "398",
-        "category": 13,
-        "changedAt": "2026-10-16T15:06:33+02:00",
-        "priority": 1
-      },
-      {
-        "id": "Viasuisser_FAVM/659895_TIC-Viasuisse/1",
-        "text": "A2 - Chiasso direzione S. Gottardo a Airolo chiuso raccordo autostradale in entrata",
-        "location": "A2 - Chiasso direzione S. Gottardo",
-        "road": "A2",
-        "category": 11,
-        "changedAt": "2026-10-16T11:09:31+02:00",
-        "priority": 3
-      },
-      {
-        "id": "Viasuisser_Viasuisse/2511707_TIC-Viasuisse/1",
-        "text": "Vezia, Via Kosciuszko - tra entrata di località e 2 in entrambe le direzioni problemi di traffico, lavori stradali durante la notte, operazioni di pavimentazione, fino a domani",
-        "location": "Vezia, Via Kosciuszko",
-        "road": "TI",
-        "category": 32,
-        "changedAt": "2026-10-12T15:40:04+02:00",
-        "priority": 6
       }
     ],
-    "total": 58,
-    "updatedAt": "2026-10-16T14:31:44.438203+00:00",
+    "total": 60,
+    "updatedAt": "2026-10-16T14:38:11.668891+00:00",
     "source": "Viasuisse"
   }
 }
