@@ -877,3 +877,9 @@ main{position:fixed}
 }
 @keyframes home-van-route-tv{from{transform:translate3d(var(--home-van-start,0px),0,0)}to{transform:translate3d(var(--home-van-end,0px),0,0)}}
 @media(prefers-reduced-motion:reduce){.home-delivery-van.is-running .travel-van-runner{animation:none}}
+
+/* Brief page hand-off; page animations stay at their first frame until visible. */
+@media (hover:hover) and (pointer:fine), (min-width:601px) and (min-height:601px){
+ .screen{transition:opacity .22s ease,visibility .22s}
+}
+.screen.screen-entering *{animation-play-state:paused!important}
