@@ -850,7 +850,7 @@ main{position:fixed}
 /* During screen travel, only the large card layers and van wheels animate.
    Pause weather, exhaust and map decorations to avoid repainting moving textures. */
 .is-screen-animating .content *,.is-screen-animating .clinic-content *,.is-screen-animating .clinic-title-row *,.is-screen-animating .swiss-map-card *{animation-play-state:paused!important;will-change:auto!important}
-.is-screen-animating .card,.is-screen-animating .clinic-day{box-shadow:none}
+.is-screen-animating .clinic-content .card,.is-screen-animating .clinic-day{box-shadow:none}
 .is-screen-animating .clinic-map-card iframe{contain:strict}
 
 /* Keep the home van's five-second delay aligned with its parking timer. */
@@ -892,3 +892,14 @@ main>.screen{transition:none}
 .wallpaper-van{position:absolute;inset:0;pointer-events:none;z-index:3}
 .van-screen .wallpaper-van .travel-van-runner{animation:none;transform:translate3d(-180px,0,0);will-change:transform}
 @media(prefers-reduced-motion:reduce){.van-screen .wallpaper-van .travel-van-runner{transform:translate3d(0,0,0)}}
+
+/* Keep the same card textures and shadows before, during and after their glide. */
+@media (hover:hover) and (pointer:fine), (min-width:601px) and (min-height:601px){
+ .dashboard.active>.content>.weather,
+ .dashboard.active>.content>.right-column>.news,
+ .dashboard.active>.content>.right-column>.traffic{
+  transform:translate3d(0,0,0);
+  will-change:transform!important;
+  backface-visibility:hidden;
+ }
+}
