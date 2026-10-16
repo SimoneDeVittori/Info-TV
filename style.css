@@ -887,3 +887,8 @@ main{position:fixed}
 /* Direct page hand-off over a persistent light background: no fade through black. */
 main{background:var(--screen-background,#efefef)}
 main>.screen{transition:none}
+
+/* The wallpaper van uses one continuous compositor animation, never a resumed CSS timer. */
+.wallpaper-van{position:absolute;inset:0;pointer-events:none;z-index:3}
+.van-screen .wallpaper-van .travel-van-runner{animation:none;transform:translate3d(-180px,0,0);will-change:transform}
+@media(prefers-reduced-motion:reduce){.van-screen .wallpaper-van .travel-van-runner{transform:translate3d(0,0,0)}}
