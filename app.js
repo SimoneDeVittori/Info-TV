@@ -285,9 +285,9 @@ function pp(){let a=Gg(),e=zg(),liveNews=useLiveTio(),[t,l]=(0,k.useState)(()=>o
  const reveal=()=>{active.classList.remove("screen-entering");if(active.classList.contains("active"))setReadyScreen(d)};
  if(previous.id===d||!previous.element||on()||window.matchMedia("(prefers-reduced-motion: reduce)").matches){reveal();return}
  if(!internal||typeof active.animate!=="function"){
-  let timer;const done=event=>{if(event&&event.target!==active)return;if(event&&event.propertyName!=="opacity")return;clearTimeout(timer);active.removeEventListener("transitionend",done);reveal()};
-  active.addEventListener("transitionend",done);timer=setTimeout(()=>done(),300);
-  return()=>{clearTimeout(timer);active.removeEventListener("transitionend",done);active.classList.remove("screen-entering")};
+  // The page itself switches directly; release animation clocks after it paints.
+  let second=0;const first=requestAnimationFrame(()=>{second=requestAnimationFrame(reveal)});
+  return()=>{cancelAnimationFrame(first);cancelAnimationFrame(second);active.classList.remove("screen-entering")};
  }
  const outgoing=previous.element,selector=":scope > .content,:scope > .swiss-map-card,:scope > .clinic-content,:scope > .clinic-title-row";
  const entering=homeEntry?[...active.querySelectorAll(".content>.weather,.right-column>.news,.right-column>.traffic")]:[...active.querySelectorAll(selector)];

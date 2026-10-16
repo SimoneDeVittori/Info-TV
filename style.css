@@ -883,3 +883,7 @@ main{position:fixed}
  .screen{transition:opacity .22s ease,visibility .22s}
 }
 .screen.screen-entering *{animation-play-state:paused!important}
+
+/* Direct page hand-off over a persistent light background: no fade through black. */
+main{background:var(--screen-background,#efefef)}
+main>.screen{transition:none}
