@@ -285,7 +285,7 @@ function pp(){let a=Gg(),e=zg(),liveNews=useLiveTio(),[t,l]=(0,k.useState)(()=>o
  const outgoing=previous.element,selector=":scope > .content,:scope > .swiss-map-card,:scope > .clinic-content,:scope > .clinic-title-row";
  const entering=homeEntry?[...active.querySelectorAll(".content>.weather,.right-column>.news,.right-column>.traffic")]:[...active.querySelectorAll(selector)];
  const leaving=isDashboard(previous.id)?[...outgoing.querySelectorAll(selector)]:[outgoing];
- const animations=[],duration=homeEntry?2400:1400,easing="cubic-bezier(.25,0,.75,1)";
+ const animations=[],duration=1400,easing=homeEntry?"cubic-bezier(.2,.7,.2,1)":"cubic-bezier(.25,0,.75,1)";
  let frameOne=0,frameTwo=0,disposed=false;
  const saved=[...entering,...leaving].map(element=>({element,transform:element.style.transform,opacity:element.style.opacity,willChange:element.style.willChange}));
  outgoing.classList.add("dashboard-outgoing");main.classList.add("is-screen-animating");
@@ -294,10 +294,16 @@ function pp(){let a=Gg(),e=zg(),liveNews=useLiveTio(),[t,l]=(0,k.useState)(()=>o
  frameOne=requestAnimationFrame(()=>{frameTwo=requestAnimationFrame(()=>{
   if(disposed)return;
   for(const element of leaving)animations.push(element.animate([{opacity:1},{opacity:0}],{duration:600,easing:"ease-out",fill:"both"}));
-  for(const element of entering){
-   const offset=homeEntry?(element.classList.contains("weather")?-720:1380):24;
+  for(const [index,element] of entering.entries()){
+   // A short glide avoids high pixel velocities on lower-refresh TV browsers.
+   const offset=homeEntry?(element.classList.contains("weather")?-110:130):24;
    const from=homeEntry?"translate3d("+offset+"px,0,0)":"translate3d(0,"+offset+"px,0)";
-   animations.push(element.animate([{opacity:0,transform:from},{opacity:1,transform:"translate3d(0,0,0)"}],{duration,easing,fill:"both"}));
+   const frames=homeEntry?[
+    {opacity:0,transform:from,offset:0},
+    {opacity:1,offset:.45},
+    {opacity:1,transform:"translate3d(0,0,0)",offset:1}
+   ]:[{opacity:0,transform:from},{opacity:1,transform:"translate3d(0,0,0)"}];
+   animations.push(element.animate(frames,{duration,delay:homeEntry?index*85:0,easing,fill:"both"}));
   }
   const commonStart=document.timeline?.currentTime;
   if(commonStart!=null)for(const animation of animations)animation.startTime=commonStart;
