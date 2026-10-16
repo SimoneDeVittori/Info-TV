@@ -871,3 +871,7 @@ main{position:fixed}
 .home-tow-overlay{display:block;position:absolute;z-index:6;pointer-events:none}
 .home-tow-overlay .travel-van-exhaust{display:none}
 .home-tow-overlay .travel-van-runner{backface-visibility:hidden}
+
+/* Keep unrelated dashboards hidden before the shared-shell class is removed.
+   Only the active screen and the explicit outgoing screen may be composited. */
+.internal-screen-transition>.dashboard:not(.active):not(.dashboard-outgoing){opacity:0;visibility:hidden;transition:none;pointer-events:none}
