@@ -1,6 +1,6 @@
 // Update these two values when a new plan is uploaded. The title follows its filename.
 export const PLAN_FILE = {name: 'Piano Ottobre.pdf', url: './Piano-Ottobre.pdf', uploadedAt: '2026-10-11T00:18:45+02:00'};
-export const NEXT_PLAN_FILE = {name:'Piano Novembre.pdf',url:'./Piano-Novembre.pdf',uploadedAt:'2026-10-11T00:46:46+02:00'};
+export const NEXT_PLAN_FILE = {name:'Piano Novembre.pdf',url:'./Piano-Novembre.pdf',uploadedAt:'2026-10-20T11:45:18+02:00'};
 const months=['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];
 function metadata(file,fallbackYear){
  const month=months.findIndex(value=>file.name.toLowerCase().includes(value));
