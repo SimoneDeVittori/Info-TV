@@ -984,3 +984,9 @@ main>.screen{transition:none}
 
 /* The weekday is grey within the header date. */
 .date .date-weekday{color:#737b83}
+
+/* A larger clock remains centered and uses crisp tabular digits. */
+.dashboard>header>.header-clock{font-size:132px}
+@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+ .dashboard>header>.header-clock{font-size:48px}
+}
