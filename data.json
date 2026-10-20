@@ -48,7 +48,7 @@
         "temperatureMin": 7
       }
     ],
-    "updatedAt": "2026-10-20T14:31:32.806980+00:00"
+    "updatedAt": "2026-10-20T14:34:06.966442+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1203,7 +1203,7 @@
       }
     ],
     "model": "202610201400",
-    "updatedAt": "2026-10-20T14:31:32.838612+00:00"
+    "updatedAt": "2026-10-20T14:34:07.067615+00:00"
   },
   "weekError": false,
   "news": {
@@ -1233,7 +1233,7 @@
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oqbk.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-10-20T14:31:32.806980+00:00",
+    "updatedAt": "2026-10-20T14:34:06.966442+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -2130,12 +2130,30 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-20T14:31:32.806980+00:00",
+    "updatedAt": "2026-10-20T14:34:06.966442+00:00",
     "version": "20261020_1410"
   },
   "swissWeatherError": false,
   "traffic": {
     "items": [
+      {
+        "id": "Viasuisser_Viasuisse/2513470_TIC-Viasuisse/1",
+        "text": "Via Trevano, Via Circonvallazione direzione Piazza Molino Nuovo - tra Canobbio e Cornaredo in Lugano colonna, traffico congestionato",
+        "location": "Via Trevano, Via Circonvallazione direzione Piazza Molino Nuovo",
+        "road": "TI",
+        "category": 12,
+        "changedAt": "2026-10-20T16:31:21+02:00",
+        "priority": 0
+      },
+      {
+        "id": "Viasuisser_Viasuisse/2513467_TIC-Viasuisse/1",
+        "text": "Lugano, Via Trevano - tra Via Beltramina e Via Sonvico colonna, traffico congestionato",
+        "location": "Lugano, Via Trevano",
+        "road": "TI",
+        "category": 12,
+        "changedAt": "2026-10-20T16:30:50+02:00",
+        "priority": 0
+      },
       {
         "id": "Viasuisser_Viasuisse/2513431_TIC-Viasuisse/1",
         "text": "398 - direzione Ponte Tresa tra Gravesano e Bioggio traffico fortemente rallentato, traffico congestionato",
@@ -2225,28 +2243,10 @@
         "category": 31,
         "changedAt": "2026-10-16T16:12:54+02:00",
         "priority": 5
-      },
-      {
-        "id": "Viasuisser_Viasuisse/2512738_TIC-Viasuisse/1",
-        "text": "Via Cossio, Via Pronuovo - in entrambe le direzioni problemi di traffico, lavori stradali, corsie strette, fino a venerdì 16:00",
-        "location": "Via Cossio, Via Pronuovo",
-        "road": "TI",
-        "category": 31,
-        "changedAt": "2026-10-16T15:34:46+02:00",
-        "priority": 5
-      },
-      {
-        "id": "Viasuisser_FAVM/659882_TIC-Viasuisse/1",
-        "text": "Gordola - Sonogno - tra 13 in Gordola e Berzona in entrambe le direzioni chiusa, lavori di manutenzione durante la notte, fino a 31.10.2026, tra 20:00 e 22:30, tra 22:50 e 00:30 e tra 00:50 e 05:30 chiusura strada all'altezza della galleria in zona Passaroro (comune Gordola) durante le notte dalle 20:00 alle 05:30. 2 aperture straordinarie dalle 22:30 alle 22:50 e dalle 00:30 alle 00:50.",
-        "location": "Gordola",
-        "road": "TI",
-        "category": 32,
-        "changedAt": "2026-10-16T09:36:19+02:00",
-        "priority": 6
       }
     ],
-    "total": 56,
-    "updatedAt": "2026-10-20T14:31:32.806980+00:00",
+    "total": 58,
+    "updatedAt": "2026-10-20T14:34:06.966442+00:00",
     "source": "Viasuisse"
   }
 }
