@@ -1022,3 +1022,8 @@ main>.screen{transition:none}
  .dashboard.home-screen>header .date{font-size:18px;line-height:1.2}
  .dashboard.home-screen>header>.header-clock{grid-column:2;grid-row:1;align-self:center}
 }
+
+/* Precipitation labels and drop icons use the same azure as the rainfall chart. */
+.weather.card .today-rain-heading,.weather.card .today-rain-title,
+.weather.card .rain-column,.weather.card .rain-column svg,
+.weather.card .rain-column small,.weather.card .forecast-rain-amount svg{color:#319bd0}
