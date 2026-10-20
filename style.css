@@ -999,3 +999,9 @@ main>.screen{transition:none}
 @media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
  .dashboard.home-screen>header>.header-clock{grid-column:1;grid-row:2;justify-self:end;text-align:right}
 }
+
+/* Home and pull-to-refresh match the orange mobile plan buttons. */
+@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+ .phone-navigation .phone-home-button{background:#df4d0b;color:#fff}
+ .phone-pull-refresh{color:#df4d0b}
+}
