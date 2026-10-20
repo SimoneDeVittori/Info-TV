@@ -3,8 +3,8 @@
     "current": {
       "icon": 5,
       "iconV2": 5,
-      "temperature": 15.0,
-      "time": 1792505400000
+      "temperature": 14.9,
+      "time": 1792506600000
     },
     "forecast": [
       {
@@ -48,7 +48,7 @@
         "temperatureMin": 7
       }
     ],
-    "updatedAt": "2026-10-20T14:16:33.971267+00:00"
+    "updatedAt": "2026-10-20T14:31:32.806980+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1203,11 +1203,19 @@
       }
     ],
     "model": "202610201400",
-    "updatedAt": "2026-10-20T14:16:34.072572+00:00"
+    "updatedAt": "2026-10-20T14:31:32.838612+00:00"
   },
   "weekError": false,
   "news": {
     "items": [
+      {
+        "title": "«Che fine faranno i 400 posteggi?»",
+        "description": "Un'interpellanza di Altin e Pusterla solleva dubbi sulla modifica del progetto di riqualifica del piazzale ex Scuole e chiede chiarezza sui posteggi sotterranei per moto e bici.",
+        "link": "https://www.tio.ch/ticino/politica/1958000/progetto-progettazione-posteggi-credito-stato",
+        "date": "Tue, 20 Oct 2026 16:25:41 +0200",
+        "category": "LUGANO",
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oqbx.jpg?v=1"
+      },
       {
         "title": "Troppi frontalieri? La Lega chiede di intervenire",
         "description": "Un'interrogazione presentata da Omar Wicht chiede al Municipio di Lugano di sollecitare il Cantone per valutare nuove misure a tutela dei residenti.",
@@ -1223,17 +1231,9 @@
         "date": "Tue, 20 Oct 2026 15:10:05 +0200",
         "category": "CANTONE",
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oqbk.jpg?v=1"
-      },
-      {
-        "title": "Strada cantonale chiusa per lavori",
-        "description": "Lo sbarramento è previsto lunedì 26 ottobre lungo via Guglielmo Branca Masa a Gambarogno per consentire lo svolgimento di lavori di pavimentazione.",
-        "link": "https://www.tio.ch/ticino/attualita/1957977/strada-cantonale-chiusa-per-lavori",
-        "date": "Tue, 20 Oct 2026 14:52:16 +0200",
-        "category": "GAMBAROGNO",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oqbe.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-10-20T14:16:33.971267+00:00",
+    "updatedAt": "2026-10-20T14:31:32.806980+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -2130,12 +2130,30 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-20T14:16:33.971267+00:00",
+    "updatedAt": "2026-10-20T14:31:32.806980+00:00",
     "version": "20261020_1410"
   },
   "swissWeatherError": false,
   "traffic": {
     "items": [
+      {
+        "id": "Viasuisser_Viasuisse/2513431_TIC-Viasuisse/1",
+        "text": "398 - direzione Ponte Tresa tra Gravesano e Bioggio traffico fortemente rallentato, traffico congestionato",
+        "location": "398 - direzione Ponte Tresa",
+        "road": "398",
+        "category": 13,
+        "changedAt": "2026-10-20T16:28:41+02:00",
+        "priority": 1
+      },
+      {
+        "id": "Viasuisser_Viasuisse/2513453_TIC-Viasuisse/1",
+        "text": "399 - Via Ponte Tresa direzione Via Silvio Calloni tra Sorengo e Loreto in Lugano colonna, traffico congestionato",
+        "location": "399 - Via Ponte Tresa direzione Via Silvio Calloni",
+        "road": "399",
+        "category": 12,
+        "changedAt": "2026-10-20T16:15:58+02:00",
+        "priority": 0
+      },
       {
         "id": "Viasuisser_FAVM/660620_TIC-Viasuisse/1",
         "text": "406 - Cadenazzo direzione Riazzino tra Cadenazzo e rotatoria Aeroporto di Locarno colonna, traffico congestionato",
@@ -2170,24 +2188,6 @@
         "road": "394",
         "category": 12,
         "changedAt": "2026-10-20T15:41:07+02:00",
-        "priority": 0
-      },
-      {
-        "id": "Viasuisser_Viasuisse/2513431_TIC-Viasuisse/1",
-        "text": "398 - tra Gravesano e Manno traffico fortemente rallentato, traffico congestionato",
-        "location": "398 - tra Gravesano e Manno traffico fortemente rallentato, traffico congestionato",
-        "road": "398",
-        "category": 13,
-        "changedAt": "2026-10-20T15:28:04+02:00",
-        "priority": 1
-      },
-      {
-        "id": "Viasuisser_FAVM/660594_TIC-Viasuisse/1",
-        "text": "A2 - Chiasso direzione S. Gottardo tra Quinto e Area di dosaggio Airolo traffico bloccato per 1 km, traffico congestionato, ritardi fino a 10 minuti",
-        "location": "A2 - Chiasso direzione S. Gottardo",
-        "road": "A2",
-        "category": 12,
-        "changedAt": "2026-10-20T14:56:55+02:00",
         "priority": 0
       },
       {
@@ -2246,7 +2246,7 @@
       }
     ],
     "total": 56,
-    "updatedAt": "2026-10-20T14:16:33.971267+00:00",
+    "updatedAt": "2026-10-20T14:31:32.806980+00:00",
     "source": "Viasuisse"
   }
 }
