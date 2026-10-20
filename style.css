@@ -976,3 +976,8 @@ main>.screen{transition:none}
 .news.card .eyebrow,.news.card .section-label,.news.card .news-location,.news.card .warning{color:#a80000}
 .weather.card .eyebrow,.weather.card .section-label,.weather.card .today-rain-title,
 .weather.card .rain-column,.weather.card .warning{color:#17466b}
+
+/* Weather symbols share the dark blue used by weather accent text. */
+.weather.card .weather-icon,.weather.card .weather-icon svg,
+.weather.card .forecast svg,.weather.card .week-row svg,
+.weather.card .ephemerides-compact svg,.weather.card .rain-column svg{color:#17466b}
