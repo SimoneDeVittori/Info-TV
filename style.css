@@ -959,3 +959,6 @@ main>.screen{transition:none}
  .dashboard.home-screen>header{grid-template-columns:minmax(0,1fr);row-gap:8px}
  .dashboard.home-screen>header>.header-clock{grid-column:1;grid-row:2;justify-self:center}
 }
+
+/* The screen timer matches the strong orange card text. */
+.progress{background:#df4d0b}
