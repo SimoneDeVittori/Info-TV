@@ -1,19 +1,19 @@
 {
   "weather": {
     "current": {
-      "icon": 5,
-      "iconV2": 5,
-      "temperature": 15.3,
-      "time": 1792501800000
+      "icon": 35,
+      "iconV2": 35,
+      "temperature": 15.1,
+      "time": 1792504800000
     },
     "forecast": [
       {
         "dayDate": "2026-10-20",
         "iconDay": 20,
         "iconDayV2": 20,
-        "precipitation": 22.0,
-        "precipitationMax": 39.0,
-        "precipitationMin": 10.7,
+        "precipitation": 19.1,
+        "precipitationMax": 34.3,
+        "precipitationMin": 10.1,
         "temperatureMax": 15,
         "temperatureMin": 12
       },
@@ -48,7 +48,7 @@
         "temperatureMin": 7
       }
     ],
-    "updatedAt": "2026-10-20T13:15:29.648716+00:00"
+    "updatedAt": "2026-10-20T14:04:21.169920+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -59,12 +59,12 @@
         "dayDate": "2026-10-20",
         "temperatureMin": 12,
         "temperatureMax": 15,
-        "iconDay": 20,
-        "precipitation": 22.0
+        "iconDay": 33,
+        "precipitation": 16.9
       },
       {
         "dayDate": "2026-10-21",
-        "temperatureMin": 12,
+        "temperatureMin": 11,
         "temperatureMax": 16,
         "iconDay": 20,
         "precipitation": 53.0
@@ -194,27 +194,27 @@
       {
         "start": "2026-10-20T14:00:00+00:00",
         "end": "2026-10-20T15:00:00+00:00",
-        "amount": 0.4
+        "amount": 0.1
       },
       {
         "start": "2026-10-20T15:00:00+00:00",
         "end": "2026-10-20T16:00:00+00:00",
-        "amount": 0.8
+        "amount": 0.4
       },
       {
         "start": "2026-10-20T16:00:00+00:00",
         "end": "2026-10-20T17:00:00+00:00",
-        "amount": 3.0
+        "amount": 2.1
       },
       {
         "start": "2026-10-20T17:00:00+00:00",
         "end": "2026-10-20T18:00:00+00:00",
-        "amount": 2.3
+        "amount": 0.7
       },
       {
         "start": "2026-10-20T18:00:00+00:00",
         "end": "2026-10-20T19:00:00+00:00",
-        "amount": 2.7
+        "amount": 0.4
       },
       {
         "start": "2026-10-20T19:00:00+00:00",
@@ -1202,12 +1202,20 @@
         "amount": 0.0
       }
     ],
-    "model": "202610201300",
-    "updatedAt": "2026-10-20T13:15:29.682923+00:00"
+    "model": "202610201400",
+    "updatedAt": "2026-10-20T14:04:21.194704+00:00"
   },
   "weekError": false,
   "news": {
     "items": [
+      {
+        "title": "Troppi frontalieri? La Lega chiede di intervenire",
+        "description": "Un'interrogazione presentata da Omar Wicht chiede al Municipio di Lugano di sollecitare il Cantone per valutare nuove misure a tutela dei residenti.",
+        "link": "https://www.tio.ch/ticino/attualita/1957988/troppi-frontalieri-la-lega-chiede-di-intervenire",
+        "date": "Tue, 20 Oct 2026 15:33:06 +0200",
+        "category": "LUGANO",
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oqbp.jpg?v=2"
+      },
       {
         "title": "Caccia e proprietà privata: quando il confine è una recinzione",
         "description": "Più Donne chiede al Governo di chiarire le regole per l’accesso ai fondi, soprattutto in presenza di recinzioni, coltivazioni e animali. «Non è infatti scontato» che il diritto di caccia consenta di entrare ovunque.",
@@ -1223,17 +1231,9 @@
         "date": "Tue, 20 Oct 2026 14:52:16 +0200",
         "category": "GAMBAROGNO",
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oqbe.jpg?v=1"
-      },
-      {
-        "title": "IA nella musica, stonatura o innovazione? Se ne discute (e poi si suona jazz)",
-        "description": "L'appuntamento è per questo mercoledì 21 ottobre alle Cantine Riva di Morocote. Dopo la conferenza, le note della Jugend Jazz Orchestra.",
-        "link": "https://www.tio.ch/ticino/attualita/1957963/jazz-stonatura-musica-jugend-cantine",
-        "date": "Tue, 20 Oct 2026 13:50:51 +0200",
-        "category": "CANTONE",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oqat.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-10-20T13:15:29.648716+00:00",
+    "updatedAt": "2026-10-20T14:04:21.169920+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -1252,7 +1252,7 @@
         "coord_y": "1152444",
         "location_id": "100300",
         "location_type": "city",
-        "timestamp": 1792501810,
+        "timestamp": 1792503612,
         "forecasts": [
           {
             "date": "20 ottobre 2026",
@@ -1341,7 +1341,7 @@
         "coord_y": "1118423",
         "location_id": "120100",
         "location_type": "city",
-        "timestamp": 1792501810,
+        "timestamp": 1792503612,
         "forecasts": [
           {
             "date": "20 ottobre 2026",
@@ -1430,7 +1430,7 @@
         "coord_y": "1119910",
         "location_id": "195000",
         "location_type": "city",
-        "timestamp": 1792501810,
+        "timestamp": 1792503612,
         "forecasts": [
           {
             "date": "20 ottobre 2026",
@@ -1519,7 +1519,7 @@
         "coord_y": "1202399",
         "location_id": "300400",
         "location_type": "city",
-        "timestamp": 1792501810,
+        "timestamp": 1792503612,
         "forecasts": [
           {
             "date": "20 ottobre 2026",
@@ -1608,16 +1608,16 @@
         "coord_y": "1267348",
         "location_id": "400100",
         "location_type": "city",
-        "timestamp": 1792501810,
+        "timestamp": 1792503612,
         "forecasts": [
           {
             "date": "20 ottobre 2026",
             "date_iso": "2026-10-20",
-            "weather_description": "symbol_id_3",
+            "weather_description": "symbol_id_6",
             "temp_high": 13,
             "weekday": "Heute",
             "temp_low": 11,
-            "weather_symbol_id": 3
+            "weather_symbol_id": 6
           },
           {
             "date": "21 ottobre 2026",
@@ -1697,7 +1697,7 @@
         "coord_y": "1211120",
         "location_id": "600300",
         "location_type": "city",
-        "timestamp": 1792501810,
+        "timestamp": 1792503612,
         "forecasts": [
           {
             "date": "20 ottobre 2026",
@@ -1786,13 +1786,13 @@
         "coord_y": "1096327",
         "location_id": "690000",
         "location_type": "city",
-        "timestamp": 1792501810,
+        "timestamp": 1792503612,
         "forecasts": [
           {
             "date": "20 ottobre 2026",
             "date_iso": "2026-10-20",
             "weather_description": "symbol_id_33",
-            "temp_high": 16,
+            "temp_high": 15,
             "weekday": "Heute",
             "temp_low": 12,
             "weather_symbol_id": 33
@@ -1875,7 +1875,7 @@
         "coord_y": "1191534",
         "location_id": "700000",
         "location_type": "city",
-        "timestamp": 1792501810,
+        "timestamp": 1792503612,
         "forecasts": [
           {
             "date": "20 ottobre 2026",
@@ -1964,13 +1964,13 @@
         "coord_y": "1247414",
         "location_id": "800100",
         "location_type": "city",
-        "timestamp": 1792501810,
+        "timestamp": 1792503612,
         "forecasts": [
           {
             "date": "20 ottobre 2026",
             "date_iso": "2026-10-20",
             "weather_description": "symbol_id_3",
-            "temp_high": 16,
+            "temp_high": 15,
             "weekday": "Heute",
             "temp_low": 11,
             "weather_symbol_id": 3
@@ -2053,13 +2053,13 @@
         "coord_y": "1254370",
         "location_id": "900000",
         "location_type": "city",
-        "timestamp": 1792501810,
+        "timestamp": 1792503612,
         "forecasts": [
           {
             "date": "20 ottobre 2026",
             "date_iso": "2026-10-20",
             "weather_description": "symbol_id_3",
-            "temp_high": 13,
+            "temp_high": 12,
             "weekday": "Heute",
             "temp_low": 8,
             "weather_symbol_id": 3
@@ -2130,19 +2130,46 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-20T13:15:29.648716+00:00",
-    "version": "20261020_1310"
+    "updatedAt": "2026-10-20T14:04:21.169920+00:00",
+    "version": "20261020_1340"
   },
   "swissWeatherError": false,
   "traffic": {
     "items": [
+      {
+        "id": "Viasuisser_FAVM/660611_TIC-Viasuisse/1",
+        "text": "A24 - Mendrisio direzione Stabio tra Mendrisio e Stabio colonna, traffico congestionato",
+        "location": "A24 - Mendrisio direzione Stabio",
+        "road": "A24",
+        "category": 12,
+        "changedAt": "2026-10-20T15:56:25+02:00",
+        "priority": 0
+      },
       {
         "id": "Viasuisser_Viasuisse/2513422_TIC-Viasuisse/1",
         "text": "398 - Lamone direzione Ponte Tresa tra Agno e frontiera Ponte Tresa traffico fortemente rallentato, traffico congestionato",
         "location": "398 - Lamone direzione Ponte Tresa",
         "road": "398",
         "category": 13,
-        "changedAt": "2026-10-20T15:07:13+02:00",
+        "changedAt": "2026-10-20T15:42:01+02:00",
+        "priority": 1
+      },
+      {
+        "id": "Viasuisser_FAVM/660606_TIC-Viasuisse/1",
+        "text": "394 - Mendrisio direzione Gaggiolo tra Stabio e Gaggiolo (Dogana) colonna, traffico congestionato",
+        "location": "394 - Mendrisio direzione Gaggiolo",
+        "road": "394",
+        "category": 12,
+        "changedAt": "2026-10-20T15:41:07+02:00",
+        "priority": 0
+      },
+      {
+        "id": "Viasuisser_Viasuisse/2513431_TIC-Viasuisse/1",
+        "text": "398 - tra Gravesano e Manno traffico fortemente rallentato, traffico congestionato",
+        "location": "398 - tra Gravesano e Manno traffico fortemente rallentato, traffico congestionato",
+        "road": "398",
+        "category": 13,
+        "changedAt": "2026-10-20T15:28:04+02:00",
         "priority": 1
       },
       {
@@ -2161,15 +2188,6 @@
         "road": "TI",
         "category": 31,
         "changedAt": "2026-10-16T18:21:36+02:00",
-        "priority": 5
-      },
-      {
-        "id": "Viasuisser_Viasuisse/2512816_TIC-Viasuisse/1",
-        "text": "Lugano, Via G. e F. Ciani - uscita di località in entrambe le direzioni problemi di traffico, lavori stradali, corsie strette, fino a oggi 16:00",
-        "location": "Lugano, Via G. e F. Ciani",
-        "road": "TI",
-        "category": 31,
-        "changedAt": "2026-10-16T17:11:39+02:00",
         "priority": 5
       },
       {
@@ -2225,28 +2243,10 @@
         "category": 31,
         "changedAt": "2026-10-12T09:42:09+02:00",
         "priority": 5
-      },
-      {
-        "id": "Viasuisser_FAVM/658331_TIC-Viasuisse/1",
-        "text": "A2 - Chiasso - S. Gottardo tra Chiasso Centro e Rivera in entrambe le direzioni problemi di traffico per 40.5 km, lavori stradali durante la notte, nuova gestione del traffico, carreggiata ridotta a una corsia, limite temporaneo di larghezza di 4.50 m, fino a venerdì, tra 21:00 e 04:30 - ID118247",
-        "location": "A2 - Chiasso - S. Gottardo",
-        "road": "A2",
-        "category": 32,
-        "changedAt": "2026-10-08T16:53:07+02:00",
-        "priority": 6
-      },
-      {
-        "id": "Viasuisser_FAVM/620496_TIC-Viasuisse/1",
-        "text": "2 - Göschenen - Airolo tra Göschenen e Airolo in entrambe le direzioni problemi di traffico, lavori stradali durante il giorno per 0.1 km, limite temporaneo di larghezza di 3.50 m, fino a 18.12.2026, lun - ven tra 07:00 e 17:00 - ID112048",
-        "location": "2 - Göschenen - Airolo",
-        "road": "2",
-        "category": 31,
-        "changedAt": "2026-10-07T07:31:34+02:00",
-        "priority": 5
       }
     ],
-    "total": 53,
-    "updatedAt": "2026-10-20T13:15:29.648716+00:00",
+    "total": 55,
+    "updatedAt": "2026-10-20T14:04:21.169920+00:00",
     "source": "Viasuisse"
   }
 }
