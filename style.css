@@ -918,3 +918,17 @@ main>.screen{transition:none}
  .dashboard>header>.header-clock{grid-column:2;grid-row:1;font-size:36px;letter-spacing:-.04em}
  .dashboard>header .date{font-size:18px;white-space:normal}
 }
+
+/* Orange once again identifies today's column on the current monthly plan. */
+.plan.screen:not(.next-plan) .plan-today-highlight{fill:#f58220;stroke:#c65300}
+.plan.screen:not(.next-plan) .plan-day-pop::after{border-color:#c65300;background:#f5822029}
+/* Tall seasonal still lifes fill the available left strip without covering shifts. */
+.plan.screen:not(.van-screen) .plan-season-scene{left:.25%;bottom:.35%;width:15.4%;height:auto;max-height:38%;aspect-ratio:4 / 5;object-fit:contain;object-position:center bottom}
+
+/* Center the date and time together above the three home cards. */
+.dashboard.home-screen>header{display:flex;justify-content:center;gap:80px}
+.dashboard.home-screen>header>.header-clock{justify-self:auto;text-align:center;flex:none}
+.dashboard.home-screen>header .date{text-align:center}
+@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+ .dashboard.home-screen>header{flex-direction:column;gap:6px}
+}
