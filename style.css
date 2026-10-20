@@ -932,3 +932,12 @@ main>.screen{transition:none}
 @media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
  .dashboard.home-screen>header{flex-direction:column;gap:6px}
 }
+
+/* Black date/time and distinct source colors on the home cards. */
+.date,.date-weekday,.date-rest,.dashboard>header>.header-clock{color:#000}
+.home-screen .weather.card{--tab-color:#48afe0;background:#fff;border-top-color:#48afe0}
+.home-screen .traffic.card{--tab-color:#ffed00;background:#fff;border-top-color:#ffed00}
+.home-screen .news.card{--tab-color:#a80000;background:#fff;border-top-color:#a80000}
+.home-screen .tio-logo{background:linear-gradient(to bottom,#a80000 0%,#b72222 25%,#a80000 62%)}
+
+.home-screen .tcs-logo{background:linear-gradient(to bottom,#ffed00 0%,#f2d800 25%,#ffed00 62%)}
