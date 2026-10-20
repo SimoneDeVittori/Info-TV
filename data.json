@@ -3,8 +3,8 @@
     "current": {
       "icon": 5,
       "iconV2": 5,
-      "temperature": 14.9,
-      "time": 1792507800000
+      "temperature": 14.8,
+      "time": 1792508400000
     },
     "forecast": [
       {
@@ -48,7 +48,7 @@
         "temperatureMin": 7
       }
     ],
-    "updatedAt": "2026-10-20T15:00:31.905604+00:00"
+    "updatedAt": "2026-10-20T15:02:36.664075+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1203,7 +1203,7 @@
       }
     ],
     "model": "202610201400",
-    "updatedAt": "2026-10-20T15:00:31.939843+00:00"
+    "updatedAt": "2026-10-20T15:02:36.690466+00:00"
   },
   "weekError": false,
   "news": {
@@ -1233,7 +1233,7 @@
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oqbk.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-10-20T15:00:31.905604+00:00",
+    "updatedAt": "2026-10-20T15:02:36.664075+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -2130,12 +2130,21 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-20T15:00:31.905604+00:00",
+    "updatedAt": "2026-10-20T15:02:36.664075+00:00",
     "version": "20261020_1440"
   },
   "swissWeatherError": false,
   "traffic": {
     "items": [
+      {
+        "id": "Viasuisser_Viasuisse/2513492_TIC-Viasuisse/1",
+        "text": "Via San Giorgio - tra Vernate e Magliaso colonna, traffico congestionato",
+        "location": "Via San Giorgio",
+        "road": "TI",
+        "category": 12,
+        "changedAt": "2026-10-20T16:59:34+02:00",
+        "priority": 0
+      },
       {
         "id": "Viasuisser_FAVM/660649_TIC-Viasuisse/1",
         "text": "A2 - S. Gottardo direzione Chiasso tra  Lugano Nord e Genestrerio colonna, traffico congestionato",
@@ -2234,19 +2243,10 @@
         "category": 31,
         "changedAt": "2026-10-16T17:09:12+02:00",
         "priority": 5
-      },
-      {
-        "id": "Viasuisser_Viasuisse/2512780_TIC-Viasuisse/1",
-        "text": "Cimadera, Strada Bassa a Via Cantonale - tra fine della strada e uscita di località in entrambe le direzioni problemi di traffico, lavori stradali, corsie strette, fino a 30.10.2026 17:00",
-        "location": "Cimadera, Strada Bassa a Via Cantonale",
-        "road": "TI",
-        "category": 31,
-        "changedAt": "2026-10-16T16:26:20+02:00",
-        "priority": 5
       }
     ],
-    "total": 57,
-    "updatedAt": "2026-10-20T15:00:31.905604+00:00",
+    "total": 58,
+    "updatedAt": "2026-10-20T15:02:36.664075+00:00",
     "source": "Viasuisse"
   }
 }
