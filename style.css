@@ -1015,3 +1015,10 @@ main>.screen{transition:none}
  .dashboard.home-screen>header .date{font-size:24px;line-height:1.2}
  .dashboard.home-screen>header>.header-clock{grid-column:1}
 }
+
+/* Mobile keeps its original date size and aligns it beside the clock. */
+@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+ .dashboard.home-screen>header{grid-template-columns:minmax(0,1fr) auto;column-gap:12px;row-gap:0;align-items:center}
+ .dashboard.home-screen>header .date{font-size:18px;line-height:1.2}
+ .dashboard.home-screen>header>.header-clock{grid-column:2;grid-row:1;align-self:center}
+}
