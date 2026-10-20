@@ -962,3 +962,6 @@ main>.screen{transition:none}
 
 /* The screen timer matches the strong orange card text. */
 .progress{background:#df4d0b}
+
+/* Traffic card border matches the strong orange text. */
+.home-screen .traffic.card{border-top-color:#df4d0b}
