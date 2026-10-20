@@ -1,19 +1,19 @@
 {
   "weather": {
     "current": {
-      "icon": 35,
-      "iconV2": 35,
-      "temperature": 15.4,
-      "time": 1792501200000
+      "icon": 5,
+      "iconV2": 5,
+      "temperature": 15.3,
+      "time": 1792501800000
     },
     "forecast": [
       {
         "dayDate": "2026-10-20",
         "iconDay": 20,
         "iconDayV2": 20,
-        "precipitation": 22.3,
-        "precipitationMax": 39.3,
-        "precipitationMin": 11.0,
+        "precipitation": 22.0,
+        "precipitationMax": 39.0,
+        "precipitationMin": 10.7,
         "temperatureMax": 15,
         "temperatureMin": 12
       },
@@ -48,7 +48,7 @@
         "temperatureMin": 7
       }
     ],
-    "updatedAt": "2026-10-20T13:04:54.356468+00:00"
+    "updatedAt": "2026-10-20T13:15:29.648716+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1203,11 +1203,19 @@
       }
     ],
     "model": "202610201300",
-    "updatedAt": "2026-10-20T13:04:54.781333+00:00"
+    "updatedAt": "2026-10-20T13:15:29.682923+00:00"
   },
   "weekError": false,
   "news": {
     "items": [
+      {
+        "title": "Caccia e proprietà privata: quando il confine è una recinzione",
+        "description": "Più Donne chiede al Governo di chiarire le regole per l’accesso ai fondi, soprattutto in presenza di recinzioni, coltivazioni e animali. «Non è infatti scontato» che il diritto di caccia consenta di entrare ovunque.",
+        "link": "https://www.tio.ch/ticino/politica/1957980/caccia-e-proprieta-privata-quando-il-confine-e-una-recinzione",
+        "date": "Tue, 20 Oct 2026 15:10:05 +0200",
+        "category": "CANTONE",
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oqbk.jpg?v=1"
+      },
       {
         "title": "Strada cantonale chiusa per lavori",
         "description": "Lo sbarramento è previsto lunedì 26 ottobre lungo via Guglielmo Branca Masa a Gambarogno per consentire lo svolgimento di lavori di pavimentazione.",
@@ -1223,17 +1231,9 @@
         "date": "Tue, 20 Oct 2026 13:50:51 +0200",
         "category": "CANTONE",
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oqat.jpg?v=1"
-      },
-      {
-        "title": "Frode da 60 milioni: «Non volevo truffarlo»",
-        "description": "Respinte le questioni pregiudiziali sollevate dalle difese. Cominciato l'interrogatorio. Il 60enne italiano: «Truffa? Non era il mio scopo»",
-        "link": "https://www.tio.ch/ticino/cronaca/1957954/frode-da-60-milioni-non-volevo-truffarlo",
-        "date": "Tue, 20 Oct 2026 13:01:25 +0200",
-        "category": "LUGANO",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oqai.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-10-20T13:04:54.356468+00:00",
+    "updatedAt": "2026-10-20T13:15:29.648716+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -1252,7 +1252,7 @@
         "coord_y": "1152444",
         "location_id": "100300",
         "location_type": "city",
-        "timestamp": 1792500012,
+        "timestamp": 1792501810,
         "forecasts": [
           {
             "date": "20 ottobre 2026",
@@ -1341,7 +1341,7 @@
         "coord_y": "1118423",
         "location_id": "120100",
         "location_type": "city",
-        "timestamp": 1792500012,
+        "timestamp": 1792501810,
         "forecasts": [
           {
             "date": "20 ottobre 2026",
@@ -1430,7 +1430,7 @@
         "coord_y": "1119910",
         "location_id": "195000",
         "location_type": "city",
-        "timestamp": 1792500012,
+        "timestamp": 1792501810,
         "forecasts": [
           {
             "date": "20 ottobre 2026",
@@ -1519,13 +1519,13 @@
         "coord_y": "1202399",
         "location_id": "300400",
         "location_type": "city",
-        "timestamp": 1792500012,
+        "timestamp": 1792501810,
         "forecasts": [
           {
             "date": "20 ottobre 2026",
             "date_iso": "2026-10-20",
             "weather_description": "symbol_id_3",
-            "temp_high": 14,
+            "temp_high": 15,
             "weekday": "Heute",
             "temp_low": 10,
             "weather_symbol_id": 3
@@ -1608,7 +1608,7 @@
         "coord_y": "1267348",
         "location_id": "400100",
         "location_type": "city",
-        "timestamp": 1792500012,
+        "timestamp": 1792501810,
         "forecasts": [
           {
             "date": "20 ottobre 2026",
@@ -1697,7 +1697,7 @@
         "coord_y": "1211120",
         "location_id": "600300",
         "location_type": "city",
-        "timestamp": 1792500012,
+        "timestamp": 1792501810,
         "forecasts": [
           {
             "date": "20 ottobre 2026",
@@ -1786,7 +1786,7 @@
         "coord_y": "1096327",
         "location_id": "690000",
         "location_type": "city",
-        "timestamp": 1792500012,
+        "timestamp": 1792501810,
         "forecasts": [
           {
             "date": "20 ottobre 2026",
@@ -1875,7 +1875,7 @@
         "coord_y": "1191534",
         "location_id": "700000",
         "location_type": "city",
-        "timestamp": 1792500012,
+        "timestamp": 1792501810,
         "forecasts": [
           {
             "date": "20 ottobre 2026",
@@ -1964,7 +1964,7 @@
         "coord_y": "1247414",
         "location_id": "800100",
         "location_type": "city",
-        "timestamp": 1792500012,
+        "timestamp": 1792501810,
         "forecasts": [
           {
             "date": "20 ottobre 2026",
@@ -2053,13 +2053,13 @@
         "coord_y": "1254370",
         "location_id": "900000",
         "location_type": "city",
-        "timestamp": 1792500012,
+        "timestamp": 1792501810,
         "forecasts": [
           {
             "date": "20 ottobre 2026",
             "date_iso": "2026-10-20",
             "weather_description": "symbol_id_3",
-            "temp_high": 12,
+            "temp_high": 13,
             "weekday": "Heute",
             "temp_low": 8,
             "weather_symbol_id": 3
@@ -2130,12 +2130,21 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-20T13:04:54.356468+00:00",
-    "version": "20261020_1240"
+    "updatedAt": "2026-10-20T13:15:29.648716+00:00",
+    "version": "20261020_1310"
   },
   "swissWeatherError": false,
   "traffic": {
     "items": [
+      {
+        "id": "Viasuisser_Viasuisse/2513422_TIC-Viasuisse/1",
+        "text": "398 - Lamone direzione Ponte Tresa tra Agno e frontiera Ponte Tresa traffico fortemente rallentato, traffico congestionato",
+        "location": "398 - Lamone direzione Ponte Tresa",
+        "road": "398",
+        "category": 13,
+        "changedAt": "2026-10-20T15:07:13+02:00",
+        "priority": 1
+      },
       {
         "id": "Viasuisser_FAVM/660594_TIC-Viasuisse/1",
         "text": "A2 - Chiasso direzione S. Gottardo tra Quinto e Area di dosaggio Airolo traffico bloccato per 1 km, traffico congestionato, ritardi fino a 10 minuti",
@@ -2234,19 +2243,10 @@
         "category": 31,
         "changedAt": "2026-10-07T07:31:34+02:00",
         "priority": 5
-      },
-      {
-        "id": "Viasuisser_Viasuisse/2510434_TIC-Viasuisse/1",
-        "text": "Caslano - Gravesano - tra Miglieglia e Mugena in entrambe le direzioni chiusa, lavori stradali, seguire deviazione locale, fino a venerdì, lun - ven tra 20:30 e 05:00",
-        "location": "Caslano",
-        "road": "TI",
-        "category": 31,
-        "changedAt": "2026-10-07T06:27:39+02:00",
-        "priority": 5
       }
     ],
-    "total": 52,
-    "updatedAt": "2026-10-20T13:04:54.356468+00:00",
+    "total": 53,
+    "updatedAt": "2026-10-20T13:15:29.648716+00:00",
     "source": "Viasuisse"
   }
 }
