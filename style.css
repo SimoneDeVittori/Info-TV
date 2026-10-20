@@ -971,3 +971,8 @@ main>.screen{transition:none}
  .phone-navigation .phone-plan-buttons button:not(:disabled){background:#df4d0b;color:#fff}
  .phone-navigation .phone-plan-buttons button[aria-pressed="true"]:not(:disabled){box-shadow:inset 0 0 0 2px #a93805}
 }
+
+/* Match accent text to each information source. */
+.news.card .eyebrow,.news.card .section-label,.news.card .news-location,.news.card .warning{color:#a80000}
+.weather.card .eyebrow,.weather.card .section-label,.weather.card .today-rain-title,
+.weather.card .rain-column,.weather.card .warning{color:#17466b}
