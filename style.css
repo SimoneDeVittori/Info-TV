@@ -1,17 +1,17 @@
 
-:root{--background:#e7ecef;--foreground:#242a31;--primary:#e65116;--primary-foreground:#fff;--card:#fff;--card-foreground:#242a31;--muted:#edf0f2;--muted-foreground:#65717c;--border:#dfe3e6;--radius:1rem;color-scheme:light}
-*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f1f3f4;color:var(--foreground)}a{color:inherit;text-decoration:none}main{width:1920.0px;height:100dvh;overflow:hidden}.screen{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .6s ease,visibility .6s}.screen.active{opacity:1;visibility:visible}.dashboard{padding:45.36px 72.96px 27.0px;display:flex;flex-direction:column;background:linear-gradient(115deg,#e9edef,#dfe6eb)}header{display:flex;justify-content:space-between;align-items:center;min-height:108.0px;margin-bottom:37.8px}.eyebrow,.section-label{font-size:clamp(14px,21.504px,26px);font-weight:700;letter-spacing:.16em;color:#de4d18}.eyebrow{margin-bottom:12.96px}.date{font-size:clamp(20px,38.4px,48px);text-transform:capitalize;font-weight:500}.logo{width:326.4px;max-width:390px;height:auto}.content{display:grid;grid-template-columns:31% 1fr;gap:42.24px;flex:1;min-height:0}.card{background:white;border-radius:21.12px;padding:46.08px;box-shadow:0 8px 40px #243f5510;display:flex;flex-direction:column}.weather{border-top:8.64px solid #e7531b}h1{font-size:clamp(30px,65.28px,80px);margin:16.2px 0 0;font-weight:600;letter-spacing:-.04em}.weather-now{display:flex;align-items:center;justify-content:space-between;margin-top:16.2px}.temperature{font-size:clamp(65px,153.6px,190px);line-height:1.15;font-weight:600;letter-spacing:-.07em}.weather-icon{color:#e85924}.weather-icon svg{width:134.4px;height:134.4px}.weather-note{font-size:clamp(14px,24.0px,28px);color:#6e7780;margin:5.4px 0 29.16px}.today{display:flex;justify-content:space-between;border-top:1px solid #e6e9eb;padding-top:27.0px}.today span{display:block;font-size:clamp(14px,19.2px,25px);color:#6e7780;margin-bottom:8.64px}.today strong{font-size:clamp(23px,38.4px,45px)}small{font-size:19.2px}.forecast{display:flex;justify-content:space-between;border-top:1px solid #e6e9eb;margin-top:27.0px;padding-top:24.84px}.forecast>div{display:flex;flex-direction:column;align-items:center;gap:10.8px}.forecast span{font-size:clamp(15px,23.04px,28px);text-transform:capitalize;color:#66707a}.forecast svg{color:#c96035;width:48.0px;height:48.0px}.forecast strong{font-size:clamp(17px,25.92px,30px)}.forecast em{font-style:normal;font-weight:400;color:#7a858e}.source{margin-top:auto;padding-top:21.6px;display:flex;justify-content:space-between;gap:10px;font-size:clamp(12px,17.28px,21px);color:#737f88}.weather .source{flex-direction:column}.warning{color:#9c571e}.news-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16.2px}.news h2{font-size:clamp(24px,44.16px,55px);font-weight:500;margin:12.96px 0}.rsi{font-weight:700;color:#fff;background:#bb1825;font-size:38.4px;letter-spacing:-.08em;padding:6.72px 11.52px;border-radius:3.84px}.news-list{display:flex;flex-direction:column;flex:1;min-height:0}.news-item{display:flex;gap:34.56px;align-items:center;flex:1;border-bottom:1px solid #e3e7ea;padding:16.2px 0}.news-item:last-child{border-bottom:0}.index{font-size:38.4px;color:#e4a68d;align-self:flex-start;padding-top:10.8px;font-weight:400}.news-meta{font-size:clamp(13px,19.2px,24px);color:#737f88;margin-bottom:6.48px}h3{font-size:clamp(20px,34.56px,45px);line-height:1.24;font-weight:600;margin:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.empty{margin:auto;color:#737f88;font-size:30.72px}footer{display:flex;justify-content:space-between;align-items:center;padding-top:29.16px;font-size:clamp(13px,19.2px,23px);color:#6c7984}footer time{font-size:38.4px;color:#26313a;font-variant-numeric:tabular-nums}.page-dots{display:flex;gap:11.52px}.page-dots i{width:8.64px;height:8.64px;border-radius:50%;background:#c9d0d5}.page-dots .selected{background:#e95319}.progress{position:absolute;bottom:0;left:0;width:100%;height:4px;background:#e7531b;transform-origin:left center;transform:translate3d(0,0,0) scaleX(0);will-change:transform;backface-visibility:hidden;animation:progress 20s linear forwards}.screen:not(.active) .progress{animation-play-state:paused}@keyframes progress{from{transform:translate3d(0,0,0) scaleX(0)}to{transform:translate3d(0,0,0) scaleX(1)}}.plan{background:white;display:flex;align-items:center;justify-content:center}.plan img{width:100%;height:100%;object-fit:contain}.fullscreen{position:fixed;bottom:14px;right:18px;padding:12px 20px;border:0;border-radius:8px;background:#26313ae8;color:white;font-size:14px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:3}.fullscreen.show,.fullscreen:focus-visible{opacity:1;pointer-events:auto}
+:root{--background:#e7ecef;--foreground:#242a31;--primary:#477b4c;--primary-foreground:#fff;--card:#fff;--card-foreground:#242a31;--muted:#edf0f2;--muted-foreground:#65717c;--border:#dfe3e6;--radius:1rem;color-scheme:light}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f1f3f4;color:var(--foreground)}a{color:inherit;text-decoration:none}main{width:1920.0px;height:100dvh;overflow:hidden}.screen{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .6s ease,visibility .6s}.screen.active{opacity:1;visibility:visible}.dashboard{padding:45.36px 72.96px 27.0px;display:flex;flex-direction:column;background:linear-gradient(115deg,#e9edef,#dfe6eb)}header{display:flex;justify-content:space-between;align-items:center;min-height:108.0px;margin-bottom:37.8px}.eyebrow,.section-label{font-size:clamp(14px,21.504px,26px);font-weight:700;letter-spacing:.16em;color:#477b4c}.eyebrow{margin-bottom:12.96px}.date{font-size:clamp(20px,38.4px,48px);text-transform:capitalize;font-weight:500}.logo{width:326.4px;max-width:390px;height:auto}.content{display:grid;grid-template-columns:31% 1fr;gap:42.24px;flex:1;min-height:0}.card{background:white;border-radius:21.12px;padding:46.08px;box-shadow:0 8px 40px #243f5510;display:flex;flex-direction:column}.weather{border-top:8.64px solid #98c58b}h1{font-size:clamp(30px,65.28px,80px);margin:16.2px 0 0;font-weight:600;letter-spacing:-.04em}.weather-now{display:flex;align-items:center;justify-content:space-between;margin-top:16.2px}.temperature{font-size:clamp(65px,153.6px,190px);line-height:1.15;font-weight:600;letter-spacing:-.07em}.weather-icon{color:#548352}.weather-icon svg{width:134.4px;height:134.4px}.weather-note{font-size:clamp(14px,24.0px,28px);color:#6e7780;margin:5.4px 0 29.16px}.today{display:flex;justify-content:space-between;border-top:1px solid #e6e9eb;padding-top:27.0px}.today span{display:block;font-size:clamp(14px,19.2px,25px);color:#6e7780;margin-bottom:8.64px}.today strong{font-size:clamp(23px,38.4px,45px)}small{font-size:19.2px}.forecast{display:flex;justify-content:space-between;border-top:1px solid #e6e9eb;margin-top:27.0px;padding-top:24.84px}.forecast>div{display:flex;flex-direction:column;align-items:center;gap:10.8px}.forecast span{font-size:clamp(15px,23.04px,28px);text-transform:capitalize;color:#66707a}.forecast svg{color:#548352;width:48.0px;height:48.0px}.forecast strong{font-size:clamp(17px,25.92px,30px)}.forecast em{font-style:normal;font-weight:400;color:#7a858e}.source{margin-top:auto;padding-top:21.6px;display:flex;justify-content:space-between;gap:10px;font-size:clamp(12px,17.28px,21px);color:#737f88}.weather .source{flex-direction:column}.warning{color:#477b4c}.news-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16.2px}.news h2{font-size:clamp(24px,44.16px,55px);font-weight:500;margin:12.96px 0}.rsi{font-weight:700;color:#fff;background:#bb1825;font-size:38.4px;letter-spacing:-.08em;padding:6.72px 11.52px;border-radius:3.84px}.news-list{display:flex;flex-direction:column;flex:1;min-height:0}.news-item{display:flex;gap:34.56px;align-items:center;flex:1;border-bottom:1px solid #e3e7ea;padding:16.2px 0}.news-item:last-child{border-bottom:0}.index{font-size:38.4px;color:#c5ddbd;align-self:flex-start;padding-top:10.8px;font-weight:400}.news-meta{font-size:clamp(13px,19.2px,24px);color:#737f88;margin-bottom:6.48px}h3{font-size:clamp(20px,34.56px,45px);line-height:1.24;font-weight:600;margin:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.empty{margin:auto;color:#737f88;font-size:30.72px}footer{display:flex;justify-content:space-between;align-items:center;padding-top:29.16px;font-size:clamp(13px,19.2px,23px);color:#6c7984}footer time{font-size:38.4px;color:#26313a;font-variant-numeric:tabular-nums}.page-dots{display:flex;gap:11.52px}.page-dots i{width:8.64px;height:8.64px;border-radius:50%;background:#c9d0d5}.page-dots .selected{background:#64965f}.progress{position:absolute;bottom:0;left:0;width:100%;height:4px;background:#98c58b;transform-origin:left center;transform:translate3d(0,0,0) scaleX(0);will-change:transform;backface-visibility:hidden;animation:progress 20s linear forwards}.screen:not(.active) .progress{animation-play-state:paused}@keyframes progress{from{transform:translate3d(0,0,0) scaleX(0)}to{transform:translate3d(0,0,0) scaleX(1)}}.plan{background:white;display:flex;align-items:center;justify-content:center}.plan img{width:100%;height:100%;object-fit:contain}.fullscreen{position:fixed;bottom:14px;right:18px;padding:12px 20px;border:0;border-radius:8px;background:#26313ae8;color:white;font-size:14px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:3}.fullscreen.show,.fullscreen:focus-visible{opacity:1;pointer-events:auto}
 body{background:#15191e;overflow:hidden}main{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform:translate(-50%,-50%) scale(var(--tv-scale,1));transform-origin:center;overflow:hidden}.screen{width:1920px;height:1080px}.plan img{width:1920px;height:1080px}.fullscreen{position:absolute}
 
 header{display:grid;grid-template-columns:1fr 1fr 1fr;position:relative;min-height:130px;margin-bottom:28px}.date{font-size:32px;white-space:nowrap}.header-clock{justify-self:center;font-size:108px;line-height:1;font-weight:600;letter-spacing:-.045em;font-variant-numeric:tabular-nums;color:#26313a}.logo{justify-self:end}.right-column{display:grid;grid-template-rows:430px 1fr;gap:26px;min-height:0}.news.card,.traffic.card{padding:30px 38px}.news h2,.traffic h2{font-size:36px;margin:10px 0 0;font-weight:500}.news-header{margin-bottom:8px}.rsi-logo{width:84px;height:62px;object-fit:contain}.news-item{gap:26px;padding:17px 0;min-height:0}.news-photo{width:210px;height:118px;object-fit:cover;flex-shrink:0;border-radius:8px;background:#e8edf0}.news-copy{min-width:0}.news-meta{font-size:18px;margin-bottom:8px}h3{font-size:30px;line-height:1.22;-webkit-line-clamp:3}.news .source{padding-top:10px}.traffic-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}.traffic-brand{font-size:24px;color:#6c7984;font-weight:600}.traffic-list{display:flex;flex:1;flex-direction:column;min-height:0}.traffic-item{display:flex;align-items:center;gap:20px;flex:1;border-bottom:1px solid #e3e7ea;padding:12px 0}.traffic-item:last-child{border:0}.road-badge{flex-shrink:0;min-width:60px;max-width:105px;text-align:center;background:#eaf0ed;color:#286344;padding:9px 12px;border-radius:6px;font-size:23px;font-weight:700}.traffic-item p{margin:0;font-size:25px;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.traffic .source{padding-top:12px}.traffic-empty{font-size:25px;color:#737f88;margin:auto 0}footer{justify-content:space-between}footer .page-dots{margin-left:auto}
 
-.weather.card{padding:30px 38px}.weather h1{font-size:48px;margin-top:10px}.weather .temperature{font-size:100px}.weather-now{margin-top:4px}.weather-icon svg{width:90px;height:90px}.weather-note{font-size:20px;margin:0 0 16px}.today{padding-top:16px}.today strong{font-size:30px}.today span{font-size:18px;margin-bottom:5px}.week-heading{display:flex;justify-content:space-between;border-top:1px solid #e6e9eb;margin-top:20px;padding-top:18px;font-size:17px;font-weight:700;letter-spacing:.08em;color:#697581}.week-heading span{font-weight:400;letter-spacing:0}.week-list{display:flex;flex-direction:column;margin-top:10px;flex:1;min-height:0}.week-row{display:grid;grid-template-columns:84px 32px 88px 1fr;gap:12px;align-items:center;flex:1;min-height:43px;border-bottom:1px solid #edf0f2}.week-row:last-child{border:0}.week-day{font-size:21px;text-transform:capitalize}.week-row svg{color:#c96035}.week-temperatures{font-size:21px;color:#7a858e;white-space:nowrap}.week-temperatures strong{color:#27313b;margin-left:7px}.week-rain{font-size:17px;font-weight:600;color:#319bd0;text-align:right;line-height:1.2}.week-rain.dry{color:#a3adb5}.rain-legend{font-size:16px;color:#737f88;margin-top:10px}.weather .source{padding-top:14px;font-size:16px}
+.weather.card{padding:30px 38px}.weather h1{font-size:48px;margin-top:10px}.weather .temperature{font-size:100px}.weather-now{margin-top:4px}.weather-icon svg{width:90px;height:90px}.weather-note{font-size:20px;margin:0 0 16px}.today{padding-top:16px}.today strong{font-size:30px}.today span{font-size:18px;margin-bottom:5px}.week-heading{display:flex;justify-content:space-between;border-top:1px solid #e6e9eb;margin-top:20px;padding-top:18px;font-size:17px;font-weight:700;letter-spacing:.08em;color:#697581}.week-heading span{font-weight:400;letter-spacing:0}.week-list{display:flex;flex-direction:column;margin-top:10px;flex:1;min-height:0}.week-row{display:grid;grid-template-columns:84px 32px 88px 1fr;gap:12px;align-items:center;flex:1;min-height:43px;border-bottom:1px solid #edf0f2}.week-row:last-child{border:0}.week-day{font-size:21px;text-transform:capitalize}.week-row svg{color:#548352}.week-temperatures{font-size:21px;color:#7a858e;white-space:nowrap}.week-temperatures strong{color:#27313b;margin-left:7px}.week-rain{font-size:17px;font-weight:600;color:#319bd0;text-align:right;line-height:1.2}.week-rain.dry{color:#a3adb5}.rain-legend{font-size:16px;color:#737f88;margin-top:10px}.weather .source{padding-top:14px;font-size:16px}
 
-.week-columns{display:grid;grid-template-columns:128px 88px 1fr;gap:12px;align-items:center;font-size:16px;color:#6e7b86;margin-top:12px}.rain-column{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:4px;color:#de4d18}.rain-column svg{flex-shrink:0}.rain-column small{display:block;flex-basis:100%;font-size:14px;text-align:right;color:#737f88}.week-list{margin-top:4px}.week-rain{display:flex;flex-direction:column;gap:4px}.week-rain strong{font-size:20px}.week-rain.dry{color:#737f88}.rain-hours{font-size:16px;font-weight:500}.weather .temperature{font-size:88px}.weather-note{margin-bottom:12px}.week-heading{margin-top:14px;padding-top:12px}.rain-legend{font-size:14px}.week-row{min-height:44px}
+.week-columns{display:grid;grid-template-columns:128px 88px 1fr;gap:12px;align-items:center;font-size:16px;color:#6e7b86;margin-top:12px}.rain-column{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:4px;color:#477b4c}.rain-column svg{flex-shrink:0}.rain-column small{display:block;flex-basis:100%;font-size:14px;text-align:right;color:#737f88}.week-list{margin-top:4px}.week-rain{display:flex;flex-direction:column;gap:4px}.week-rain strong{font-size:20px}.week-rain.dry{color:#737f88}.rain-hours{font-size:16px;font-weight:500}.weather .temperature{font-size:88px}.weather-note{margin-bottom:12px}.week-heading{margin-top:14px;padding-top:12px}.rain-legend{font-size:14px}.week-row{min-height:44px}
 
 .weather.card{min-height:0}.week-row{min-height:38px}.week-columns{margin-top:8px}
 
-.news.card,.traffic.card{border-top:8.64px solid #e7531b;padding-top:21.36px}
+.news.card,.traffic.card{border-top:8.64px solid #98c58b;padding-top:21.36px}
 
 .right-column{grid-template-rows:430px minmax(0,1fr)}.traffic.card{min-height:0}.traffic-item{min-height:0;padding:6px 0}
 
@@ -35,7 +35,7 @@ header{display:grid;grid-template-columns:1fr 1fr 1fr;position:relative;min-heig
 
 .dashboard{background:#efefef}.traffic-list{gap:16px}.traffic-item{padding:0;border-bottom:0}
 
-.traffic-item p{font-size:21px}.traffic-item time{color:#de4d18}.traffic-location{font-weight:700}
+.traffic-item p{font-size:21px}.traffic-item time{color:#477b4c}.traffic-location{font-weight:700}
 
 .week-day{display:grid;grid-template-columns:1fr 28px;align-items:center;column-gap:4px;font-variant-numeric:tabular-nums}.week-day-number{text-align:right}
 
@@ -43,17 +43,17 @@ header{display:grid;grid-template-columns:1fr 1fr 1fr;position:relative;min-heig
 
 .news.card,.traffic.card{position:relative}.news-header{height:62px;flex-shrink:0;padding-right:76px}.traffic-header{height:36px;flex-shrink:0;padding-right:76px}.tio-logo,.tcs-logo{position:absolute;top:-8.64px;right:38px;width:66px;height:66px;object-fit:contain;padding:9px;border-radius:0 0 12px 12px;box-shadow:0 3px 7px #00000012}.tio-logo{background:#a80000}.tcs-logo{background:#ffed00}
 
-.tio-logo{background:linear-gradient(to bottom,#e7531b 0%,#cf3212 22%,#a80000 58%)}.tcs-logo{background:linear-gradient(to bottom,#e7531b 0%,#f59c0e 24%,#ffed00 58%)}
+.tio-logo{background:linear-gradient(to bottom,#98c58b 0%,#617b3f 22%,#a80000 58%)}.tcs-logo{background:linear-gradient(to bottom,#98c58b 0%,#b1ca71 24%,#ffed00 58%)}
 
-.weather.card{position:relative}.meteoswiss-logo{position:absolute;top:-8.64px;right:38px;width:66px;height:66px;object-fit:contain;padding:12px;border-radius:0 0 12px 12px;box-shadow:0 3px 7px #00000012;background:linear-gradient(to bottom,#e7531b 0%,#ef3712 24%,#ff0000 58%)}.weather-heading h1{padding-top:36px}.weather-heading .section-label{align-self:flex-start;margin-top:8px}
+.weather.card{position:relative}.meteoswiss-logo{position:absolute;top:-8.64px;right:38px;width:66px;height:66px;object-fit:contain;padding:12px;border-radius:0 0 12px 12px;box-shadow:0 3px 7px #00000012;background:linear-gradient(to bottom,#98c58b 0%,#ae674f 24%,#ff0000 58%)}.weather-heading h1{padding-top:36px}.weather-heading .section-label{align-self:flex-start;margin-top:8px}
 
-.weather.card,.news.card,.traffic.card{border-top-color:transparent}.weather.card{--tab-color:#ff0000}.news.card{--tab-color:#a80000}.traffic.card{--tab-color:#ffed00}.weather.card::before,.news.card::before,.traffic.card::before{content:"";position:absolute;left:0;right:0;top:-8.64px;height:8.64px;border-radius:21.12px 21.12px 0 0;background:linear-gradient(to right,#e7531b 0%,#e7531b calc(100% - 160px),var(--tab-color) calc(100% - 104px),var(--tab-color) calc(100% - 38px),#e7531b 100%)}.tio-logo,.tcs-logo,.meteoswiss-logo{top:-8.64px;z-index:1;box-shadow:none;background:var(--tab-color)}
+.weather.card,.news.card,.traffic.card{border-top-color:transparent}.weather.card{--tab-color:#ff0000}.news.card{--tab-color:#a80000}.traffic.card{--tab-color:#ffed00}.weather.card::before,.news.card::before,.traffic.card::before{content:"";position:absolute;left:0;right:0;top:-8.64px;height:8.64px;border-radius:21.12px 21.12px 0 0;background:linear-gradient(to right,#98c58b 0%,#98c58b calc(100% - 160px),var(--tab-color) calc(100% - 104px),var(--tab-color) calc(100% - 38px),#98c58b 100%)}.tio-logo,.tcs-logo,.meteoswiss-logo{top:-8.64px;z-index:1;box-shadow:none;background:var(--tab-color)}
 
 .weather.card{--tab-color:#f7f7f7}.meteoswiss-logo{padding:0;object-fit:cover;object-position:center}
 
-.weather.card::before,.news.card::before,.traffic.card::before{display:none}.weather.card,.news.card,.traffic.card{background:linear-gradient(#fff,#fff) padding-box,linear-gradient(to right,#e7531b 0%,#e7531b calc(100% - 160px),var(--tab-color) calc(100% - 104px),var(--tab-color) calc(100% - 38px),#e7531b 100%) border-box;border-radius:21.12px}
+.weather.card::before,.news.card::before,.traffic.card::before{display:none}.weather.card,.news.card,.traffic.card{background:linear-gradient(#fff,#fff) padding-box,linear-gradient(to right,#98c58b 0%,#98c58b calc(100% - 160px),var(--tab-color) calc(100% - 104px),var(--tab-color) calc(100% - 38px),#98c58b 100%) border-box;border-radius:21.12px}
 
-.weather.card{background:#fff;border-top-color:#e7531b}.weather-heading h1{padding-top:0}.weather-heading .section-label{align-self:auto;margin-top:0}.right-column{gap:42.24px;grid-template-rows:500px minmax(0,1fr)}
+.weather.card{background:#fff;border-top-color:#98c58b}.weather-heading h1{padding-top:0}.weather-heading .section-label{align-self:auto;margin-top:0}.right-column{gap:42.24px;grid-template-rows:500px minmax(0,1fr)}
 
 .weather.card,.news.card,.traffic.card{border-top-width:8px}.tio-logo,.tcs-logo{top:-8px}
 
@@ -67,17 +67,17 @@ footer{position:relative;justify-content:center;min-height:50px}.creator-logo{le
 
 .tcs-logo{padding:2px}
 
-.swiss-map-card{flex:1;min-height:0;position:relative;border-top:8px solid #e7531b;padding:26px 38px 22px}.map-heading{display:flex;align-items:center;justify-content:space-between}.map-heading h2{font-size:34px;margin:8px 0 0;font-weight:600;letter-spacing:-.03em}.map-legend{font-size:22px;color:#737f88}.national-map{display:block;width:100%;flex:1;min-height:0;overflow:visible}.map-city-name{font-size:19px;font-weight:600;fill:#26313a}.map-city-temp{font-size:23px;font-weight:600;font-variant-numeric:tabular-nums}.swiss-map-card .source{padding-top:0;flex-shrink:0}.map-unavailable{position:absolute;left:0;right:0;top:50%;text-align:center;color:#737f88;font-size:28px}
+.swiss-map-card{flex:1;min-height:0;position:relative;border-top:8px solid #98c58b;padding:26px 38px 22px}.map-heading{display:flex;align-items:center;justify-content:space-between}.map-heading h2{font-size:34px;margin:8px 0 0;font-weight:600;letter-spacing:-.03em}.map-legend{font-size:22px;color:#737f88}.national-map{display:block;width:100%;flex:1;min-height:0;overflow:visible}.map-city-name{font-size:19px;font-weight:600;fill:#26313a}.map-city-temp{font-size:23px;font-weight:600;font-variant-numeric:tabular-nums}.swiss-map-card .source{padding-top:0;flex-shrink:0}.map-unavailable{position:absolute;left:0;right:0;top:50%;text-align:center;color:#737f88;font-size:28px}
 
 .news-item:not(:last-child){border-bottom:1px solid #edf0f2}.traffic-item{position:relative}.traffic-item:not(:last-child)::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:1px;background:#edf0f2}
 
 .van-screen img{object-fit:cover;width:100%;height:100%}.map-city rect{filter:drop-shadow(0 2px 3px #00000014)}
 
-.traffic.card{background:#fff;border-top-color:#e7531b}.traffic-header{padding-right:0}
+.traffic.card{background:#fff;border-top-color:#98c58b}.traffic-header{padding-right:0}
 
 .swiss-map-card .map-heading{flex-shrink:0;margin-bottom:32px}.national-map{overflow:hidden}
 
-.map-weather-icon{color:#c96035}.map-city-name{font-family:Arial,Helvetica,sans-serif;fill:#242a31}.map-city-temp{font-family:Arial,Helvetica,sans-serif;font-size:22px}
+.map-weather-icon{color:#548352}.map-city-name{font-family:Arial,Helvetica,sans-serif;fill:#242a31}.map-city-temp{font-family:Arial,Helvetica,sans-serif;font-size:22px}
 
 .swiss-map-screen header{min-height:108px;margin-bottom:16px}.swiss-map-card .map-heading{margin-bottom:12px}
 
@@ -88,7 +88,7 @@ footer{position:relative;justify-content:center;min-height:50px}.creator-logo{le
 
 .today-rain{margin-top:12px;padding-top:10px;border-top:1px solid #edf0f2;flex-shrink:0}
 .today-rain-heading{display:flex;justify-content:space-between;align-items:center;color:#737f88;font-size:14px}
-.today-rain-title{font-size:15px;font-weight:700;letter-spacing:.08em;color:#de4d18}
+.today-rain-title{font-size:15px;font-weight:700;letter-spacing:.08em;color:#477b4c}
 .today-rain-window{font-size:16px;line-height:1.25;font-weight:600;color:#65717c;margin:5px 0 3px}
 .today-rain-chart{height:38px;display:flex;gap:3px;align-items:flex-end;border-bottom:1px solid #edf0f2}
 .today-rain-slot{height:100%;flex:1;display:flex;align-items:flex-end}
@@ -171,7 +171,7 @@ main{position:fixed}
  body{height:auto;min-height:100dvh;overflow:visible;background:#efefef}
  main{position:relative;inset:auto;width:100%;height:auto;min-height:100dvh;transform:none;overflow:visible}
  .phone-navigation{position:sticky;top:0;z-index:5;display:flex;justify-content:flex-end;padding:10px 14px;padding-top:max(10px,env(safe-area-inset-top));background:#efefef;border-bottom:1px solid #dfe3e6}
- .phone-navigation button{min-height:44px;border:0;border-radius:11px;padding:10px 18px;background:#e7531b;color:#fff;font:600 16px system-ui,sans-serif;cursor:pointer}
+ .phone-navigation button{min-height:44px;border:0;border-radius:11px;padding:10px 18px;background:#98c58b;color:#fff;font:600 16px system-ui,sans-serif;cursor:pointer}
  .phone-navigation button:focus-visible{outline:3px solid #26313a;outline-offset:3px}
  .screen{display:none;position:relative;inset:auto;width:100%;height:auto;min-height:0;transition:none}
  .screen.active{display:flex}
@@ -204,7 +204,7 @@ main{position:fixed}
 }
 
 /* Orange transparent highlight for the current work-plan day. */
-.plan-today-highlight{fill:#f58220;stroke:#dc6512}
+.plan-today-highlight{fill:#98c58b;stroke:#548352}
 
 /* Keep the Unilabs symbol solid white inside the mobile home icon. */
 .phone-home-icon g{mask:none}
@@ -299,9 +299,9 @@ main{position:fixed}
 @media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){.news h3{font-size:15px;line-height:1.3}}
 
 /* Colors sampled from the Unilabs logo artwork. */
-.date{color:#de3c20}
-.date-weekday{color:#f09600}
-.date-rest{color:#de3c20}
+.date{color:#477b4c}
+.date-weekday{color:#477b4c}
+.date-rest{color:#477b4c}
 
 /* Shared home/map header centering and sharp vector corner watermark. */
 .swiss-map-screen{padding-top:30.68px}
@@ -357,14 +357,14 @@ main{position:fixed}
 @media (prefers-reduced-motion:reduce){.travel-van-body,.travel-van-wheel svg{animation:none}}
 
 /* The date comma inherits the same logo orange as the weekday. */
-.date{color:#f09600}
+.date{color:#477b4c}
 
 
 /* Render the uploaded PDF at the existing work-plan dimensions. */
 .plan-pdf-surface{position:relative;width:100%;height:100%;background:#fff}
 .plan-pdf-surface canvas{display:block;width:100%;height:100%}
 .plan-pdf-loading,.plan-pdf-error{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:28px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#555;background:#fff}
-.plan-pdf-error{display:none;color:#e86b00}
+.plan-pdf-error{display:none;color:#477b4c}
 .plan-pdf-surface[data-status="ready"] .plan-pdf-loading,.plan-pdf-surface[data-status="error"] .plan-pdf-loading{display:none}
 .plan-pdf-surface[data-status="error"] .plan-pdf-error{display:flex}
 
@@ -386,13 +386,13 @@ main{position:fixed}
  .phone-navigation .phone-plan-buttons button{flex-direction:column;gap:4px;padding:6px;font-size:14px;line-height:1.15;white-space:normal}
  .phone-navigation .phone-plan-buttons button small{font:10px/1.2 system-ui,sans-serif}
  .phone-navigation .phone-plan-buttons button:disabled{background:#a5a8ab;color:#fff;cursor:default;opacity:1}
- .phone-navigation .phone-plan-buttons button[aria-pressed="true"]{box-shadow:inset 0 0 0 2px #bd390e}
+ .phone-navigation .phone-plan-buttons button[aria-pressed="true"]{box-shadow:inset 0 0 0 2px #37623b}
  .phone-navigation .phone-home-button{width:56px;flex:0 0 56px;padding:8px}
 }
 
 /* Natural month/year text avoids stretched SVG digits and centers as one group. */
 .work-plan-stage{container-type:inline-size}
-.plan-month-title{--month-start:#f09600;--month-end:#de3c20;position:absolute;left:6.5789473684%;top:50%;width:max-content;display:flex;align-items:center;gap:1.0765550239cqw;transform:translate(-50%,-50%) rotate(-90deg);font:800 6.2200956938cqw/1 Arial,Helvetica,sans-serif;letter-spacing:-.015em;white-space:nowrap;pointer-events:none}
+.plan-month-title{--month-start:#477b4c;--month-end:#477b4c;position:absolute;left:6.5789473684%;top:50%;width:max-content;display:flex;align-items:center;gap:1.0765550239cqw;transform:translate(-50%,-50%) rotate(-90deg);font:800 6.2200956938cqw/1 Arial,Helvetica,sans-serif;letter-spacing:-.015em;white-space:nowrap;pointer-events:none}
 .plan-month-title span{display:block;background:linear-gradient(90deg,var(--month-start),var(--month-end));background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
 .next-plan .plan-month-title{--month-start:#48afe0;--month-end:#1766b2;left:7.8648325359%}
 
@@ -407,7 +407,7 @@ main{position:fixed}
 .phone-pull-refresh{display:none}
 @media (pointer: coarse) and (max-width: 600px), (pointer: coarse) and (max-height: 600px){
  html{overscroll-behavior-y:none}
- .phone-pull-refresh{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);left:50%;z-index:30;display:flex;align-items:center;gap:8px;padding:10px 15px;border-radius:24px;background:#fff;color:#b83e16;box-shadow:0 3px 16px #0002;font:600 13px/1.2 system-ui,sans-serif;white-space:nowrap;pointer-events:none}
+ .phone-pull-refresh{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);left:50%;z-index:30;display:flex;align-items:center;gap:8px;padding:10px 15px;border-radius:24px;background:#fff;color:#477b4c;box-shadow:0 3px 16px #0002;font:600 13px/1.2 system-ui,sans-serif;white-space:nowrap;pointer-events:none}
  .phone-pull-refresh-icon{font-size:23px;line-height:1}
  .phone-pull-refresh .phone-pull-refresh-icon{animation:phone-refresh-spin .8s linear infinite}
 }
@@ -435,7 +435,7 @@ main{position:fixed}
 
 
 /* Highlight the news location without changing its timestamp. */
-.news-location{color:#e7531b}
+.news-location{color:#98c58b}
 
 
 /* Match today's weather typography to the date and clock on home and map. */
@@ -452,22 +452,22 @@ main{position:fixed}
 /* New medical studio: shared home/map shell, address, weekday pickups, Google map. */
 .clinic-screen{background:#eee}
 .clinic-title-row{display:flex;justify-content:space-between;align-items:center;margin:0 0 24px}
-.clinic-title-row h2{margin:0;font-family:"SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;font-size:46px;font-weight:650;letter-spacing:-.025em;color:#e7531b}
+.clinic-title-row h2{margin:0;font-family:"SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;font-size:46px;font-weight:650;letter-spacing:-.025em;color:#98c58b}
 .clinic-title-row>span{font-size:23px;color:#737f88}
 .clinic-content{display:grid;grid-template-columns:43% minmax(0,1fr);gap:28px;flex:1;min-height:0}
 .clinic-details{display:grid;grid-template-rows:1fr auto;gap:28px;min-height:0}
-.clinic-address-card,.clinic-schedule-card,.clinic-map-card{border-top:6px solid #e7531b;padding:30px}
+.clinic-address-card,.clinic-schedule-card,.clinic-map-card{border-top:6px solid #98c58b;padding:30px}
 .clinic-address-card h1{font-family:"SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;font-size:48px;line-height:1.12;letter-spacing:-.035em;margin:26px 0;font-weight:650}
 .clinic-address-card address{display:flex;flex-direction:column;gap:12px;font-style:normal;font-size:38px;line-height:1.22}
 .clinic-address-card address strong{font-weight:600}
-.clinic-address-card address span{color:#e7531b;font-weight:600}
-.clinic-directions{font-size:20px;color:#e7531b;align-self:flex-start;margin-top:auto;padding-top:24px;text-decoration:underline;text-underline-offset:5px}
+.clinic-address-card address span{color:#98c58b;font-weight:600}
+.clinic-directions{font-size:20px;color:#98c58b;align-self:flex-start;margin-top:auto;padding-top:24px;text-decoration:underline;text-underline-offset:5px}
 .clinic-schedule-note{margin:10px 0 20px;font-size:21px;color:#737f88}
 .clinic-week{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
-.clinic-day{display:flex;flex-direction:column;align-items:center;gap:13px;padding:21px 7px;border:1px solid #ead6c9;border-radius:14px;background:#fff4ec;text-align:center}
+.clinic-day{display:flex;flex-direction:column;align-items:center;gap:13px;padding:21px 7px;border:1px solid #d8e5d2;border-radius:14px;background:#f2f8ee;text-align:center}
 .clinic-day>span{font-size:19px;font-weight:600}
-.clinic-day strong{font-size:31px;line-height:1.1;font-variant-numeric:tabular-nums;color:#e7531b}
-.clinic-day small{font-size:15px;color:#a35a33}
+.clinic-day strong{font-size:31px;line-height:1.1;font-variant-numeric:tabular-nums;color:#98c58b}
+.clinic-day small{font-size:15px;color:#55754b}
 .clinic-day.no-pickup{background:#f4f5f6;border-color:#e6e9eb;color:#798189}
 .clinic-day.no-pickup strong,.clinic-day.no-pickup small{color:#798189}
 .clinic-map-card{min-height:0}
@@ -476,7 +476,7 @@ main{position:fixed}
 .clinic-map-card iframe{display:block;border:0;border-radius:12px;width:100%;flex:1;min-height:0;background:#edf0f2}
 .clinic-map-card .source{margin-top:0;flex-shrink:0;padding-top:16px}
 
-.clinic-start-date{font-size:25px;line-height:1.2;font-weight:650;color:#e7531b;margin:0 0 18px}
+.clinic-start-date{font-size:25px;line-height:1.2;font-weight:650;color:#98c58b;margin:0 0 18px}
 .clinic-schedule-note{margin-bottom:10px}
 /* Includes dynamic medical studio service start label. */
 
@@ -498,9 +498,9 @@ main{position:fixed}
 .clinic-week{flex:1;align-items:stretch;min-height:0}
 .clinic-day{padding:16px 6px;background:#fff;border-color:#e6e9eb;gap:12px;justify-content:space-between}
 .clinic-day>span{color:#27313b}
-.clinic-slot{width:100%;border-radius:10px;padding:12px 5px;display:flex;flex-direction:column;align-items:center;gap:7px;background:#fff4ec;border:1px solid #f0d7c5}
-.clinic-slot small{font-size:16px;color:#a35a33}
-.clinic-slot strong{font-size:32px;color:#e7531b}
+.clinic-slot{width:100%;border-radius:10px;padding:12px 5px;display:flex;flex-direction:column;align-items:center;gap:7px;background:#f2f8ee;border:1px solid #d9e7d3}
+.clinic-slot small{font-size:16px;color:#55754b}
+.clinic-slot strong{font-size:32px;color:#98c58b}
 .clinic-slot.no-pickup{background:#f5f6f7;border-color:#edf0f2}
 .clinic-slot.no-pickup small,.clinic-slot.no-pickup strong{color:#798189}
 @media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
@@ -575,7 +575,7 @@ main{position:fixed}
 /* Give the weekly pickup table clear separation from the surrounding card. */
 .clinic-schedule-card{background:#edf1f4}
 .clinic-day{background:#fff;border-color:#bcc8d1;box-shadow:0 3px 8px #27313b12}
-.clinic-slot{background:#ffe5cf;border-color:#dfa67a}
+.clinic-slot{background:#eff7eb;border-color:#b8d0ad}
 .clinic-slot.no-pickup{background:#e8edf1;border-color:#bcc8d1}
 .clinic-slot.no-pickup small,.clinic-slot.no-pickup strong{color:#626f79}
 
@@ -595,14 +595,14 @@ main{position:fixed}
 /* Small solar icons and times sit with today's weather, above the rain chart. */
 .ephemerides-compact{display:flex;justify-content:flex-end;align-items:center;gap:20px;flex-shrink:0;margin-top:8px;color:#65717c}
 .ephemerides-compact>span{display:inline-flex;align-items:center;gap:6px}
-.ephemerides-compact svg{display:block;flex-shrink:0;color:#e7531b}
+.ephemerides-compact svg{display:block;flex-shrink:0;color:#98c58b}
 .ephemerides-compact time{font-size:15px;line-height:1.2;font-weight:500;font-variant-numeric:tabular-nums}
 @media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){.ephemerides-compact{gap:16px;margin-top:7px}.ephemerides-compact time{font-size:13px}.ephemerides-compact svg{width:16px;height:16px}}
 /* Lighter individual weekdays retain separation from the white outer card. */
 .clinic-day{background:#e9eef2;border-color:#c2cdd5}
 
 /* A steady orange column and a stronger border clearly mark today's plan. */
-.plan-today-highlight{animation:none!important;fill:#f58220;fill-opacity:.16;stroke:#c65300;stroke-opacity:1;stroke-width:3}
+.plan-today-highlight{animation:none!important;fill:#98c58b;fill-opacity:.16;stroke:#548352;stroke-opacity:1;stroke-width:3}
 
 /* Rainfall notes keep their own row height and never collide with the source footer. */
 .weather .week-list{flex:1 0 auto;min-height:0}
@@ -640,14 +640,14 @@ main{position:fixed}
 }
 
 /* Very pale orange individual weekdays inside the white pickup schedule card. */
-.clinic-day{background:#fff3e8;border-color:#ecd4c0}
+.clinic-day{background:#f0f7eb;border-color:#d4e4cc}
 
 /* Show the complete medical-studio slide at once on TV iframe compositors. */
 .clinic-screen{transition:none}
 
 /* Almost-white warm orange for the medical-studio weekday cards. */
-.clinic-day{background:#fff9f3;border-color:#efdfd2}
-.clinic-day .clinic-slot:not(.no-pickup){background:#fff3e8;border-color:#efd9c6}
+.clinic-day{background:#f6faf2;border-color:#dce8d5}
+.clinic-day .clinic-slot:not(.no-pickup){background:#f0f7eb;border-color:#dae8d4}
 
 /* Reduce empty margins around the Swiss map while retaining all city labels. */
 @media (pointer:fine),(min-width:601px) and (min-height:601px){
@@ -676,9 +676,9 @@ main{position:fixed}
 .travel-van-exhaust i{left:-7px;top:-5px}
 
 /* Today's column gently stands above the complete plan, without flashing. */
-.plan-day-pop{position:absolute;z-index:4;pointer-events:none;background:#fff;transform:translate3d(0,0,0);transform-origin:center;backface-visibility:hidden;left:calc(var(--plan-day-left) - var(--plan-day-width)*.06);top:calc(var(--plan-day-top) - var(--plan-day-height)*.006);width:calc(var(--plan-day-width)*1.12);height:calc(var(--plan-day-height)*1.012);box-shadow:0 2px 10px #40261166;opacity:0}
+.plan-day-pop{position:absolute;z-index:4;pointer-events:none;background:#fff;transform:translate3d(0,0,0);transform-origin:center;backface-visibility:hidden;left:calc(var(--plan-day-left) - var(--plan-day-width)*.06);top:calc(var(--plan-day-top) - var(--plan-day-height)*.006);width:calc(var(--plan-day-width)*1.12);height:calc(var(--plan-day-height)*1.012);box-shadow:0 2px 10px #243b2466;opacity:0}
 .plan-day-pop-image{position:absolute;inset:0;background-repeat:no-repeat}
-.plan-day-pop::after{content:"";position:absolute;inset:0;border:3px solid #c65300;background:#f5822029;box-sizing:border-box}
+.plan-day-pop::after{content:"";position:absolute;inset:0;border:3px solid #548352;background:#98c58b29;box-sizing:border-box}
 .plan-pdf-surface[data-status="ready"]~.plan-day-pop{opacity:1}
 .plan-pdf-surface[data-status="ready"]~.work-plan-overlay .plan-today-highlight{opacity:0}
 
@@ -696,12 +696,12 @@ main{position:fixed}
 /* Desktop release information uses the blank upper-left strip of the current plan. */
 .plan-release-note{display:none;position:absolute;top:12px;left:16px;width:calc(15.7% - 32px);z-index:5;color:#65717c;font:14px/1.35 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;pointer-events:none}
 .plan-release-note strong,.plan-release-note span{display:block}
-.plan-release-note strong{font-weight:600;color:#a85121;margin-bottom:2px}
+.plan-release-note strong{font-weight:600;color:#477b4c;margin-bottom:2px}
 @media (hover:hover) and (pointer:fine){.plan-release-note{display:block}}
 
 /* Small desktop information box with an orange information symbol. */
-.plan-release-note{padding:9px 10px;border:1px solid #efcfb4;border-radius:8px;background:#fffaf5;align-items:flex-start;gap:8px}
-.plan-release-info{display:block;flex:0 0 22px;color:#e7531b;margin-top:1px}
+.plan-release-note{padding:9px 10px;border:1px solid #ccdfc3;border-radius:8px;background:#f7faf4;align-items:flex-start;gap:8px}
+.plan-release-info{display:block;flex:0 0 22px;color:#98c58b;margin-top:1px}
 .plan-release-copy{min-width:0}
 @media (hover:hover) and (pointer:fine){.plan-release-note{display:flex}}
 
@@ -902,4 +902,19 @@ main>.screen{transition:none}
   will-change:transform!important;
   backface-visibility:hidden;
  }
+}
+
+
+/* Neutral Info-TV header: the clock occupies the former logo position. */
+.dashboard>header{grid-template-columns:minmax(0,1fr) auto}
+.dashboard>header>.header-clock{grid-column:2;grid-row:1;justify-self:end;text-align:right;color:#477b4c}
+.date,.date-weekday,.date-rest{color:#477b4c}
+/* Darker green text stays readable against pale green accents. */
+.eyebrow,.section-label,.news-location,.traffic-item time,.today-rain-title,.rain-column,
+.clinic-title-row h2,.clinic-address-card address span,.clinic-directions,
+.clinic-day strong,.clinic-slot strong,.clinic-start-date,.plan-release-info{color:#477b4c}
+.plan-month-title{background:linear-gradient(110deg,#548352,#37623b);background-clip:text;-webkit-background-clip:text;color:transparent}
+@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+ .dashboard>header>.header-clock{grid-column:2;grid-row:1;font-size:36px;letter-spacing:-.04em}
+ .dashboard>header .date{font-size:18px;white-space:normal}
 }
