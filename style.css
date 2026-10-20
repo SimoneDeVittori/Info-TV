@@ -1005,3 +1005,13 @@ main>.screen{transition:none}
  .phone-navigation .phone-home-button{background:#df4d0b;color:#fff}
  .phone-pull-refresh{color:#df4d0b}
 }
+
+/* Use the space beside the right-aligned clock for a much larger home date. */
+.dashboard.home-screen>header{grid-template-columns:minmax(0,1fr) auto;column-gap:64px}
+.dashboard.home-screen>header .date{font-size:64px;line-height:1.15;max-width:none}
+.dashboard.home-screen>header>.header-clock{grid-column:2}
+@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+ .dashboard.home-screen>header{grid-template-columns:minmax(0,1fr);column-gap:0}
+ .dashboard.home-screen>header .date{font-size:24px;line-height:1.2}
+ .dashboard.home-screen>header>.header-clock{grid-column:1}
+}
