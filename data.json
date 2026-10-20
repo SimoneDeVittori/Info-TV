@@ -48,7 +48,7 @@
         "temperatureMin": 7
       }
     ],
-    "updatedAt": "2026-10-20T16:15:49.438364+00:00"
+    "updatedAt": "2026-10-20T16:18:40.209277+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1203,7 +1203,7 @@
       }
     ],
     "model": "202610201600",
-    "updatedAt": "2026-10-20T16:15:49.483904+00:00"
+    "updatedAt": "2026-10-20T16:18:40.233901+00:00"
   },
   "weekError": false,
   "news": {
@@ -1233,7 +1233,7 @@
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oqbp.jpg?v=2"
       }
     ],
-    "updatedAt": "2026-10-20T16:15:49.438364+00:00",
+    "updatedAt": "2026-10-20T16:18:40.209277+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -2130,7 +2130,7 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-20T16:15:49.438364+00:00",
+    "updatedAt": "2026-10-20T16:18:40.209277+00:00",
     "version": "20261020_1610"
   },
   "swissWeatherError": false,
@@ -2246,7 +2246,7 @@
       }
     ],
     "total": 54,
-    "updatedAt": "2026-10-20T16:15:49.438364+00:00",
+    "updatedAt": "2026-10-20T16:18:40.209277+00:00",
     "source": "Viasuisse"
   }
 }
