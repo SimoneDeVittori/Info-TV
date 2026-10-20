@@ -990,3 +990,6 @@ main>.screen{transition:none}
 @media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
  .dashboard>header>.header-clock{font-size:48px}
 }
+
+/* Weather card border matches its dark blue text and icons. */
+.home-screen .weather.card{border-top-color:#17466b}
