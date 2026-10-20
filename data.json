@@ -9,11 +9,11 @@
     "forecast": [
       {
         "dayDate": "2026-10-20",
-        "iconDay": 33,
-        "iconDayV2": 33,
-        "precipitation": 16.9,
-        "precipitationMax": 33.5,
-        "precipitationMin": 8.1,
+        "iconDay": 9,
+        "iconDayV2": 9,
+        "precipitation": 13.4,
+        "precipitationMax": 30.2,
+        "precipitationMin": 7.5,
         "temperatureMax": 15,
         "temperatureMin": 12
       },
@@ -21,9 +21,9 @@
         "dayDate": "2026-10-21",
         "iconDay": 20,
         "iconDayV2": 20,
-        "precipitation": 53.0,
-        "precipitationMax": 78.4,
-        "precipitationMin": 34.3,
+        "precipitation": 56.3,
+        "precipitationMax": 80.1,
+        "precipitationMin": 35.6,
         "temperatureMax": 16,
         "temperatureMin": 11
       },
@@ -42,13 +42,13 @@
         "iconDay": 3,
         "iconDayV2": 3,
         "precipitation": 0.1,
-        "precipitationMax": 2.8,
+        "precipitationMax": 2.9,
         "precipitationMin": 0.0,
         "temperatureMax": 14,
         "temperatureMin": 7
       }
     ],
-    "updatedAt": "2026-10-20T14:37:46.999998+00:00"
+    "updatedAt": "2026-10-20T14:38:53.278390+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1203,7 +1203,7 @@
       }
     ],
     "model": "202610201400",
-    "updatedAt": "2026-10-20T14:37:47.028534+00:00"
+    "updatedAt": "2026-10-20T14:38:53.301226+00:00"
   },
   "weekError": false,
   "news": {
@@ -1233,7 +1233,7 @@
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oqbk.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-10-20T14:37:46.999998+00:00",
+    "updatedAt": "2026-10-20T14:38:53.278390+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -2130,7 +2130,7 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-20T14:37:46.999998+00:00",
+    "updatedAt": "2026-10-20T14:38:53.278390+00:00",
     "version": "20261020_1410"
   },
   "swissWeatherError": false,
@@ -2246,7 +2246,7 @@
       }
     ],
     "total": 58,
-    "updatedAt": "2026-10-20T14:37:46.999998+00:00",
+    "updatedAt": "2026-10-20T14:38:53.278390+00:00",
     "source": "Viasuisse"
   }
 }
