@@ -941,3 +941,21 @@ main>.screen{transition:none}
 .home-screen .tio-logo{background:linear-gradient(to bottom,#a80000 0%,#b72222 25%,#a80000 62%)}
 
 .home-screen .tcs-logo{background:linear-gradient(to bottom,#ffed00 0%,#f2d800 25%,#ffed00 62%)}
+
+/* Home: date on the left, with the time at the exact center of the screen. */
+.dashboard.home-screen>header{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0}
+.dashboard.home-screen>header>div:first-child{grid-column:1;grid-row:1;justify-self:start;min-width:0}
+.dashboard.home-screen>header .date{text-align:left}
+.dashboard.home-screen>header>.header-clock{grid-column:2;grid-row:1;justify-self:center;text-align:center}
+/* Strong orange replaces green accent text inside the information cards. */
+.card .eyebrow,.card .section-label,.card .news-location,.card .traffic-item time,
+.card .today-rain-title,.card .rain-column,.card .warning,.card .road-badge,
+.card address span,.card .clinic-directions,.card .clinic-day strong,
+.card .clinic-day small,.card .clinic-slot strong,.card .clinic-slot small,
+.card .clinic-start-date,.card .plan-release-info,
+.clinic-day.has-day-pickup .clinic-slot.has-pickup small,
+.clinic-day.has-day-pickup .clinic-slot.has-pickup strong{color:#df4d0b}
+@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+ .dashboard.home-screen>header{grid-template-columns:minmax(0,1fr);row-gap:8px}
+ .dashboard.home-screen>header>.header-clock{grid-column:1;grid-row:2;justify-self:center}
+}
