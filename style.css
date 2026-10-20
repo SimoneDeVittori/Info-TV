@@ -981,3 +981,6 @@ main>.screen{transition:none}
 .weather.card .weather-icon,.weather.card .weather-icon svg,
 .weather.card .forecast svg,.weather.card .week-row svg,
 .weather.card .ephemerides-compact svg,.weather.card .rain-column svg{color:#17466b}
+
+/* The weekday is grey within the header date. */
+.date .date-weekday{color:#737b83}
