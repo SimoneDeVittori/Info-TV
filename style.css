@@ -1035,3 +1035,10 @@ main>.screen{transition:none}
 .home-screen .news.card{border-top-color:#df4d0b}
 .news.card .eyebrow,.news.card .section-label,.news.card .news-location,.news.card .warning{color:#df4d0b}
 .home-screen .tio-logo{background:linear-gradient(to bottom,#df4d0b 0%,#cf3212 25%,#a80000 62%)}
+
+/* Restore the smooth orange-to-red transition into the TIO ribbon. */
+.home-screen .news.card{border-top-color:transparent;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(to right,#df4d0b 0%,#df4d0b calc(100% - 154px),#a80000 calc(100% - 98px),#a80000 calc(100% - 32px),#df4d0b 100%) border-box}
+.home-screen .tio-logo{background:#a80000}
+@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+ .home-screen .news.card{background:linear-gradient(#fff,#fff) padding-box,linear-gradient(to right,#df4d0b 0%,#df4d0b calc(100% - 106px),#a80000 calc(100% - 62px),#a80000 calc(100% - 18px),#df4d0b 100%) border-box}
+}
