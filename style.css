@@ -993,3 +993,9 @@ main>.screen{transition:none}
 
 /* Weather card border matches its dark blue text and icons. */
 .home-screen .weather.card{border-top-color:#17466b}
+
+/* Put the enlarged home clock at the right edge of the header. */
+.dashboard.home-screen>header>.header-clock{grid-column:3;grid-row:1;justify-self:end;text-align:right}
+@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+ .dashboard.home-screen>header>.header-clock{grid-column:1;grid-row:2;justify-self:end;text-align:right}
+}
