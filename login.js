@@ -36,6 +36,7 @@ function clearAccess(){
 }
 
 async function openDashboard(){
+ document.title="Unilabs · Manno TV";
  document.documentElement.classList.remove("auth-pending");
  document.getElementById("root").replaceChildren();
  try{
@@ -56,10 +57,10 @@ async function openDashboard(){
 }
 
 function showLogin(){
+ document.title="Accesso riservato";
  document.documentElement.classList.add("auth-pending");
  document.getElementById("root").innerHTML=`
   <div class="auth-screen"><form class="auth-card" id="auth-form">
-   <div class="auth-brand">Unilabs<span>Manno TV</span></div>
    <h1>Accesso riservato</h1><p>Inserisci le tue credenziali per continuare.</p>
    <label for="auth-user">Utente</label>
    <input id="auth-user" name="username" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" required autofocus>
