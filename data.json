@@ -4,16 +4,16 @@
       "icon": 20,
       "iconV2": 20,
       "temperature": 13.0,
-      "time": 1792564200000
+      "time": 1792566600000
     },
     "forecast": [
       {
         "dayDate": "2026-10-21",
         "iconDay": 20,
         "iconDayV2": 20,
-        "precipitation": 70.9,
-        "precipitationMax": 85.5,
-        "precipitationMin": 53.3,
+        "precipitation": 62.8,
+        "precipitationMax": 80.3,
+        "precipitationMin": 51.6,
         "temperatureMax": 15,
         "temperatureMin": 11
       },
@@ -48,7 +48,7 @@
         "temperatureMin": 7
       }
     ],
-    "updatedAt": "2026-10-21T06:33:06.585146+00:00"
+    "updatedAt": "2026-10-21T07:17:26.049273+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -60,7 +60,7 @@
         "temperatureMin": 11,
         "temperatureMax": 15,
         "iconDay": 20,
-        "precipitation": 70.9
+        "precipitation": 62.8
       },
       {
         "dayDate": "2026-10-22",
@@ -149,32 +149,32 @@
       {
         "start": "2026-10-21T05:00:00+00:00",
         "end": "2026-10-21T06:00:00+00:00",
-        "amount": 5.9
+        "amount": 5.7
       },
       {
         "start": "2026-10-21T06:00:00+00:00",
         "end": "2026-10-21T07:00:00+00:00",
-        "amount": 4.4
+        "amount": 3.9
       },
       {
         "start": "2026-10-21T07:00:00+00:00",
         "end": "2026-10-21T08:00:00+00:00",
-        "amount": 3.4
+        "amount": 2.5
       },
       {
         "start": "2026-10-21T08:00:00+00:00",
         "end": "2026-10-21T09:00:00+00:00",
-        "amount": 3.7
+        "amount": 3.0
       },
       {
         "start": "2026-10-21T09:00:00+00:00",
         "end": "2026-10-21T10:00:00+00:00",
-        "amount": 2.3
+        "amount": 1.7
       },
       {
         "start": "2026-10-21T10:00:00+00:00",
         "end": "2026-10-21T11:00:00+00:00",
-        "amount": 7.2
+        "amount": 5.2
       },
       {
         "start": "2026-10-21T11:00:00+00:00",
@@ -1202,8 +1202,8 @@
         "amount": 0.0
       }
     ],
-    "model": "202610210600",
-    "updatedAt": "2026-10-21T06:33:06.615686+00:00"
+    "model": "202610210700",
+    "updatedAt": "2026-10-21T07:17:26.081519+00:00"
   },
   "weekError": false,
   "news": {
@@ -1233,7 +1233,7 @@
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oq6s.jpg"
       }
     ],
-    "updatedAt": "2026-10-21T06:33:06.585146+00:00",
+    "updatedAt": "2026-10-21T07:17:26.049273+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -1252,7 +1252,7 @@
         "coord_y": "1152444",
         "location_id": "100300",
         "location_type": "city",
-        "timestamp": 1792563013,
+        "timestamp": 1792566613,
         "forecasts": [
           {
             "date": "21 ottobre 2026",
@@ -1341,7 +1341,7 @@
         "coord_y": "1118423",
         "location_id": "120100",
         "location_type": "city",
-        "timestamp": 1792563013,
+        "timestamp": 1792566613,
         "forecasts": [
           {
             "date": "21 ottobre 2026",
@@ -1430,7 +1430,7 @@
         "coord_y": "1119910",
         "location_id": "195000",
         "location_type": "city",
-        "timestamp": 1792563013,
+        "timestamp": 1792566613,
         "forecasts": [
           {
             "date": "21 ottobre 2026",
@@ -1519,16 +1519,16 @@
         "coord_y": "1202399",
         "location_id": "300400",
         "location_type": "city",
-        "timestamp": 1792563013,
+        "timestamp": 1792566613,
         "forecasts": [
           {
             "date": "21 ottobre 2026",
             "date_iso": "2026-10-21",
-            "weather_description": "symbol_id_17",
+            "weather_description": "symbol_id_20",
             "temp_high": 12,
             "weekday": "Heute",
             "temp_low": 7,
-            "weather_symbol_id": 17
+            "weather_symbol_id": 20
           },
           {
             "date": "22 ottobre 2026",
@@ -1536,7 +1536,7 @@
             "weather_description": "symbol_id_2",
             "temp_high": 13,
             "weekday": "giovedì",
-            "temp_low": 5,
+            "temp_low": 6,
             "weather_symbol_id": 2
           },
           {
@@ -1608,7 +1608,7 @@
         "coord_y": "1267348",
         "location_id": "400100",
         "location_type": "city",
-        "timestamp": 1792563013,
+        "timestamp": 1792566613,
         "forecasts": [
           {
             "date": "21 ottobre 2026",
@@ -1625,7 +1625,7 @@
             "weather_description": "symbol_id_3",
             "temp_high": 15,
             "weekday": "giovedì",
-            "temp_low": 8,
+            "temp_low": 7,
             "weather_symbol_id": 3
           },
           {
@@ -1697,7 +1697,7 @@
         "coord_y": "1211120",
         "location_id": "600300",
         "location_type": "city",
-        "timestamp": 1792563013,
+        "timestamp": 1792566613,
         "forecasts": [
           {
             "date": "21 ottobre 2026",
@@ -1786,7 +1786,7 @@
         "coord_y": "1096327",
         "location_id": "690000",
         "location_type": "city",
-        "timestamp": 1792563013,
+        "timestamp": 1792566613,
         "forecasts": [
           {
             "date": "21 ottobre 2026",
@@ -1875,7 +1875,7 @@
         "coord_y": "1191534",
         "location_id": "700000",
         "location_type": "city",
-        "timestamp": 1792563013,
+        "timestamp": 1792566613,
         "forecasts": [
           {
             "date": "21 ottobre 2026",
@@ -1964,7 +1964,7 @@
         "coord_y": "1247414",
         "location_id": "800100",
         "location_type": "city",
-        "timestamp": 1792563013,
+        "timestamp": 1792566613,
         "forecasts": [
           {
             "date": "21 ottobre 2026",
@@ -2053,7 +2053,7 @@
         "coord_y": "1254370",
         "location_id": "900000",
         "location_type": "city",
-        "timestamp": 1792563013,
+        "timestamp": 1792566613,
         "forecasts": [
           {
             "date": "21 ottobre 2026",
@@ -2130,12 +2130,30 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-21T06:33:06.585146+00:00",
-    "version": "20261021_0610"
+    "updatedAt": "2026-10-21T07:17:26.049273+00:00",
+    "version": "20261021_0710"
   },
   "swissWeatherError": false,
   "traffic": {
     "items": [
+      {
+        "id": "Viasuisser_FAVM/660820_TIC-Viasuisse/1",
+        "text": "A2 - S. Gottardo direzione Chiasso tra Bellinzona Sud e la galleria Monte Ceneri problemi di traffico, veicolo in avaria, corsia di destra bloccata",
+        "location": "A2 - S. Gottardo direzione Chiasso",
+        "road": "A2",
+        "category": 13,
+        "changedAt": "2026-10-21T09:08:01+02:00",
+        "priority": 1
+      },
+      {
+        "id": "Viasuisser_FAVM/660817_TIC-Viasuisse/1",
+        "text": "A24 - Mendrisio direzione Stabio tra Genestrerio e 394, Stabio colonna, traffico congestionato",
+        "location": "A24 - Mendrisio direzione Stabio",
+        "road": "A24",
+        "category": 12,
+        "changedAt": "2026-10-21T08:31:30+02:00",
+        "priority": 0
+      },
       {
         "id": "Viasuisser_FAVM/660729_TIC-Viasuisse/1",
         "text": "A2 - Chiasso direzione S. Gottardo tra Genestrerio e Melide/Bissone colonna, traffico congestionato",
@@ -2144,60 +2162,6 @@
         "category": 12,
         "changedAt": "2026-10-21T08:23:55+02:00",
         "priority": 0
-      },
-      {
-        "id": "Viasuisser_Viasuisse/2513662_TIC-Viasuisse/1",
-        "text": "Via Cantonale, Bellinzona direzione Chiasso - tra Lamone e Massagno traffico fortemente rallentato, traffico congestionato",
-        "location": "Via Cantonale, Bellinzona direzione Chiasso",
-        "road": "TI",
-        "category": 13,
-        "changedAt": "2026-10-21T08:18:46+02:00",
-        "priority": 1
-      },
-      {
-        "id": "Viasuisser_Viasuisse/2513663_TIC-Viasuisse/1",
-        "text": "Via Cantonale direzione Riva Vincenzo Vela - tra Paradiso e Lugano traffico fortemente rallentato, traffico congestionato",
-        "location": "Via Cantonale direzione Riva Vincenzo Vela",
-        "road": "TI",
-        "category": 13,
-        "changedAt": "2026-10-21T08:16:41+02:00",
-        "priority": 1
-      },
-      {
-        "id": "Viasuisser_Viasuisse/2513661_TIC-Viasuisse/1",
-        "text": "Via Locarno direzione Via Galbisio - tra Monte Carasso e Carasso traffico fortemente rallentato, traffico congestionato",
-        "location": "Via Locarno direzione Via Galbisio",
-        "road": "TI",
-        "category": 13,
-        "changedAt": "2026-10-21T08:14:20+02:00",
-        "priority": 1
-      },
-      {
-        "id": "Viasuisser_Viasuisse/2513658_TIC-Viasuisse/1",
-        "text": "Via San Gottardo, Strada Cantonale direzione Via Henri Guisan - tra Arbedo-Castione e Bellinzona traffico fortemente rallentato, traffico congestionato",
-        "location": "Via San Gottardo, Strada Cantonale direzione Via Henri Guisan",
-        "road": "TI",
-        "category": 13,
-        "changedAt": "2026-10-21T08:13:08+02:00",
-        "priority": 1
-      },
-      {
-        "id": "Viasuisser_Viasuisse/2513657_TIC-Viasuisse/1",
-        "text": "Ascona direzione Bellinzona - tra Ascona e Locarno traffico fortemente rallentato, traffico congestionato",
-        "location": "Ascona direzione Bellinzona",
-        "road": "TI",
-        "category": 13,
-        "changedAt": "2026-10-21T08:11:37+02:00",
-        "priority": 1
-      },
-      {
-        "id": "Viasuisser_Viasuisse/2513656_TIC-Viasuisse/1",
-        "text": "398 - direzione Ponte Tresa tra Gravesano e Bioggio traffico fortemente rallentato, traffico congestionato",
-        "location": "398 - direzione Ponte Tresa",
-        "road": "398",
-        "category": 13,
-        "changedAt": "2026-10-21T08:09:10+02:00",
-        "priority": 1
       },
       {
         "id": "Viasuisser_FAVM/660752_TIC-Viasuisse/1",
@@ -2209,44 +2173,80 @@
         "priority": 0
       },
       {
-        "id": "Viasuisser_Viasuisse/2513583_TIC-Viasuisse/1",
-        "text": "398 - Ponte Tresa direzione Lamone tra Ponte Tresa e Bioggio traffico fortemente rallentato, traffico congestionato",
-        "location": "398 - Ponte Tresa direzione Lamone",
-        "road": "398",
-        "category": 13,
-        "changedAt": "2026-10-21T07:57:50+02:00",
-        "priority": 1
-      },
-      {
-        "id": "Viasuisser_FAVM/660785_TIC-Viasuisse/1",
-        "text": "A2 - Chiasso direzione S. Gottardo tra Lugano Sud e  Lugano Nord traffico fortemente rallentato, traffico congestionato",
-        "location": "A2 - Chiasso direzione S. Gottardo",
-        "road": "A2",
-        "category": 13,
-        "changedAt": "2026-10-21T07:28:59+02:00",
-        "priority": 1
-      },
-      {
-        "id": "Viasuisser_Viasuisse/2513593_TIC-Viasuisse/1",
-        "text": "Bizzarone direzione Genestrerio - tra frontiera Bizzarone e Genestrerio traffico fortemente rallentato, traffico congestionato",
-        "location": "Bizzarone direzione Genestrerio",
+        "id": "Viasuisser_Viasuisse/2512750_TIC-Viasuisse/1",
+        "text": "Castagnola, Via San Giorgio - a Castagnola in entrambe le direzioni problemi di traffico, lavori stradali, corsie strette, fino a 28.10.2026 17:00",
+        "location": "Castagnola, Via San Giorgio",
         "road": "TI",
-        "category": 13,
-        "changedAt": "2026-10-21T06:52:16+02:00",
-        "priority": 1
+        "category": 31,
+        "changedAt": "2026-10-16T18:21:36+02:00",
+        "priority": 5
       },
       {
-        "id": "Viasuisser_FAVM/660719_TIC-Viasuisse/1",
-        "text": "Via Val Malvaglia, Malvaglia - Dagro - in entrambe le direzioni chiusa, caduta massi",
-        "location": "Via Val Malvaglia, Malvaglia",
+        "id": "Viasuisser_Viasuisse/2512815_TIC-Viasuisse/1",
+        "text": "Viganello, Via Aldesago - entrata di località in entrambe le direzioni problemi di traffico, lavori stradali, corsie strette, fino a oggi 16:30",
+        "location": "Viganello, Via Aldesago",
         "road": "TI",
-        "category": 21,
-        "changedAt": "2026-10-21T06:03:29+02:00",
-        "priority": 4
+        "category": 31,
+        "changedAt": "2026-10-16T17:09:12+02:00",
+        "priority": 5
+      },
+      {
+        "id": "Viasuisser_Viasuisse/2512808_TIC-Viasuisse/1",
+        "text": "Lugano, Via Tesserete - tra rotatoria e uscita di località in entrambe le direzioni problemi di traffico, lavori stradali, corsie strette, fino a oggi 17:30",
+        "location": "Lugano, Via Tesserete",
+        "road": "TI",
+        "category": 31,
+        "changedAt": "2026-10-16T16:59:45+02:00",
+        "priority": 5
+      },
+      {
+        "id": "Viasuisser_Viasuisse/2512780_TIC-Viasuisse/1",
+        "text": "Cimadera, Strada Bassa a Via Cantonale - tra fine della strada e uscita di località in entrambe le direzioni problemi di traffico, lavori stradali, corsie strette, fino a 30.10.2026 17:00",
+        "location": "Cimadera, Strada Bassa a Via Cantonale",
+        "road": "TI",
+        "category": 31,
+        "changedAt": "2026-10-16T16:26:20+02:00",
+        "priority": 5
+      },
+      {
+        "id": "Viasuisser_Viasuisse/2512778_TIC-Viasuisse/1",
+        "text": "Lugano, Via Bertaro Lambertenghi - a Lugano problemi di traffico, lavori stradali, corsie strette, fino a domani 17:00",
+        "location": "Lugano, Via Bertaro Lambertenghi",
+        "road": "TI",
+        "category": 31,
+        "changedAt": "2026-10-16T16:23:35+02:00",
+        "priority": 5
+      },
+      {
+        "id": "Viasuisser_Viasuisse/2512768_TIC-Viasuisse/1",
+        "text": "Lugano, Via Pretorio - a Lugano problemi di traffico, lavori stradali, corsie strette, fino a 06.11.2026 17:00",
+        "location": "Lugano, Via Pretorio",
+        "road": "TI",
+        "category": 31,
+        "changedAt": "2026-10-16T16:12:54+02:00",
+        "priority": 5
+      },
+      {
+        "id": "Viasuisser_Viasuisse/2512757_TIC-Viasuisse/1",
+        "text": "Ruvigliana, Via Ceresio di Suvigliana - a Ruvigliana in entrambe le direzioni problemi di traffico, taglio alberi, corsie strette, fino a oggi 16:30",
+        "location": "Ruvigliana, Via Ceresio di Suvigliana",
+        "road": "TI",
+        "category": 31,
+        "changedAt": "2026-10-16T15:55:53+02:00",
+        "priority": 5
+      },
+      {
+        "id": "Viasuisser_Viasuisse/2512756_TIC-Viasuisse/1",
+        "text": "Castagnola, Via Tamporiva - uscita di località chiusa, lavori stradali, fino a oggi 12:00",
+        "location": "Castagnola, Via Tamporiva",
+        "road": "TI",
+        "category": 11,
+        "changedAt": "2026-10-16T15:53:04+02:00",
+        "priority": 3
       }
     ],
-    "total": 64,
-    "updatedAt": "2026-10-21T06:33:06.585146+00:00",
+    "total": 56,
+    "updatedAt": "2026-10-21T07:17:26.049273+00:00",
     "source": "Viasuisse"
   }
 }
