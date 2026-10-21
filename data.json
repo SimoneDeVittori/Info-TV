@@ -3,17 +3,17 @@
     "current": {
       "icon": 120,
       "iconV2": 120,
-      "temperature": 13.1,
-      "time": 1792538400000
+      "temperature": 12.8,
+      "time": 1792547400000
     },
     "forecast": [
       {
         "dayDate": "2026-10-21",
         "iconDay": 20,
         "iconDayV2": 20,
-        "precipitation": 64.5,
-        "precipitationMax": 83.0,
-        "precipitationMin": 48.9,
+        "precipitation": 65.4,
+        "precipitationMax": 83.6,
+        "precipitationMin": 55.5,
         "temperatureMax": 15,
         "temperatureMin": 11
       },
@@ -48,7 +48,7 @@
         "temperatureMin": 7
       }
     ],
-    "updatedAt": "2026-10-20T23:28:25.932212+00:00"
+    "updatedAt": "2026-10-21T01:56:20.887771+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -60,7 +60,7 @@
         "temperatureMin": 11,
         "temperatureMax": 15,
         "iconDay": 20,
-        "precipitation": 64.5
+        "precipitation": 63.4
       },
       {
         "dayDate": "2026-10-22",
@@ -107,126 +107,6 @@
     ],
     "hourly": [
       {
-        "start": "2026-10-19T21:00:00+00:00",
-        "end": "2026-10-19T22:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-10-19T22:00:00+00:00",
-        "end": "2026-10-19T23:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-10-19T23:00:00+00:00",
-        "end": "2026-10-20T00:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-10-20T00:00:00+00:00",
-        "end": "2026-10-20T01:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-10-20T01:00:00+00:00",
-        "end": "2026-10-20T02:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-10-20T02:00:00+00:00",
-        "end": "2026-10-20T03:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-10-20T03:00:00+00:00",
-        "end": "2026-10-20T04:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-10-20T04:00:00+00:00",
-        "end": "2026-10-20T05:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-10-20T05:00:00+00:00",
-        "end": "2026-10-20T06:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-10-20T06:00:00+00:00",
-        "end": "2026-10-20T07:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-10-20T07:00:00+00:00",
-        "end": "2026-10-20T08:00:00+00:00",
-        "amount": 0.1
-      },
-      {
-        "start": "2026-10-20T08:00:00+00:00",
-        "end": "2026-10-20T09:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-10-20T09:00:00+00:00",
-        "end": "2026-10-20T10:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-10-20T10:00:00+00:00",
-        "end": "2026-10-20T11:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-10-20T11:00:00+00:00",
-        "end": "2026-10-20T12:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-10-20T12:00:00+00:00",
-        "end": "2026-10-20T13:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-10-20T13:00:00+00:00",
-        "end": "2026-10-20T14:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-10-20T14:00:00+00:00",
-        "end": "2026-10-20T15:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-10-20T15:00:00+00:00",
-        "end": "2026-10-20T16:00:00+00:00",
-        "amount": 0.5
-      },
-      {
-        "start": "2026-10-20T16:00:00+00:00",
-        "end": "2026-10-20T17:00:00+00:00",
-        "amount": 2.7
-      },
-      {
-        "start": "2026-10-20T17:00:00+00:00",
-        "end": "2026-10-20T18:00:00+00:00",
-        "amount": 1.1
-      },
-      {
-        "start": "2026-10-20T18:00:00+00:00",
-        "end": "2026-10-20T19:00:00+00:00",
-        "amount": 0.5
-      },
-      {
-        "start": "2026-10-20T19:00:00+00:00",
-        "end": "2026-10-20T20:00:00+00:00",
-        "amount": 0.6
-      },
-      {
-        "start": "2026-10-20T20:00:00+00:00",
-        "end": "2026-10-20T21:00:00+00:00",
-        "amount": 2.7
-      },
-      {
         "start": "2026-10-20T21:00:00+00:00",
         "end": "2026-10-20T22:00:00+00:00",
         "amount": 3.9
@@ -234,97 +114,97 @@
       {
         "start": "2026-10-20T22:00:00+00:00",
         "end": "2026-10-20T23:00:00+00:00",
-        "amount": 4.0
+        "amount": 4.1
       },
       {
         "start": "2026-10-20T23:00:00+00:00",
         "end": "2026-10-21T00:00:00+00:00",
-        "amount": 2.8
+        "amount": 3.4
       },
       {
         "start": "2026-10-21T00:00:00+00:00",
         "end": "2026-10-21T01:00:00+00:00",
-        "amount": 4.0
+        "amount": 3.7
       },
       {
         "start": "2026-10-21T01:00:00+00:00",
         "end": "2026-10-21T02:00:00+00:00",
-        "amount": 2.5
+        "amount": 1.8
       },
       {
         "start": "2026-10-21T02:00:00+00:00",
         "end": "2026-10-21T03:00:00+00:00",
-        "amount": 3.2
+        "amount": 2.1
       },
       {
         "start": "2026-10-21T03:00:00+00:00",
         "end": "2026-10-21T04:00:00+00:00",
-        "amount": 6.5
+        "amount": 4.0
       },
       {
         "start": "2026-10-21T04:00:00+00:00",
         "end": "2026-10-21T05:00:00+00:00",
-        "amount": 3.5
+        "amount": 8.9
       },
       {
         "start": "2026-10-21T05:00:00+00:00",
         "end": "2026-10-21T06:00:00+00:00",
-        "amount": 2.8
+        "amount": 5.4
       },
       {
         "start": "2026-10-21T06:00:00+00:00",
         "end": "2026-10-21T07:00:00+00:00",
-        "amount": 2.2
+        "amount": 2.9
       },
       {
         "start": "2026-10-21T07:00:00+00:00",
         "end": "2026-10-21T08:00:00+00:00",
-        "amount": 4.3
+        "amount": 3.4
       },
       {
         "start": "2026-10-21T08:00:00+00:00",
         "end": "2026-10-21T09:00:00+00:00",
-        "amount": 3.5
+        "amount": 3.6
       },
       {
         "start": "2026-10-21T09:00:00+00:00",
         "end": "2026-10-21T10:00:00+00:00",
-        "amount": 3.5
+        "amount": 3.6
       },
       {
         "start": "2026-10-21T10:00:00+00:00",
         "end": "2026-10-21T11:00:00+00:00",
-        "amount": 3.1
+        "amount": 2.7
       },
       {
         "start": "2026-10-21T11:00:00+00:00",
         "end": "2026-10-21T12:00:00+00:00",
-        "amount": 2.1
+        "amount": 1.5
       },
       {
         "start": "2026-10-21T12:00:00+00:00",
         "end": "2026-10-21T13:00:00+00:00",
-        "amount": 2.0
+        "amount": 1.2
       },
       {
         "start": "2026-10-21T13:00:00+00:00",
         "end": "2026-10-21T14:00:00+00:00",
-        "amount": 0.6
+        "amount": 0.5
       },
       {
         "start": "2026-10-21T14:00:00+00:00",
         "end": "2026-10-21T15:00:00+00:00",
-        "amount": 0.6
+        "amount": 0.4
       },
       {
         "start": "2026-10-21T15:00:00+00:00",
         "end": "2026-10-21T16:00:00+00:00",
-        "amount": 0.5
+        "amount": 0.3
       },
       {
         "start": "2026-10-21T16:00:00+00:00",
         "end": "2026-10-21T17:00:00+00:00",
-        "amount": 0.2
+        "amount": 0.0
       },
       {
         "start": "2026-10-21T17:00:00+00:00",
@@ -334,7 +214,7 @@
       {
         "start": "2026-10-21T18:00:00+00:00",
         "end": "2026-10-21T19:00:00+00:00",
-        "amount": 0.4
+        "amount": 0.2
       },
       {
         "start": "2026-10-21T19:00:00+00:00",
@@ -1200,10 +1080,130 @@
         "start": "2026-10-28T23:00:00+00:00",
         "end": "2026-10-29T00:00:00+00:00",
         "amount": 0.0
+      },
+      {
+        "start": "2026-10-29T00:00:00+00:00",
+        "end": "2026-10-29T01:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-10-29T01:00:00+00:00",
+        "end": "2026-10-29T02:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-10-29T02:00:00+00:00",
+        "end": "2026-10-29T03:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-10-29T03:00:00+00:00",
+        "end": "2026-10-29T04:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-10-29T04:00:00+00:00",
+        "end": "2026-10-29T05:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-10-29T05:00:00+00:00",
+        "end": "2026-10-29T06:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-10-29T06:00:00+00:00",
+        "end": "2026-10-29T07:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-10-29T07:00:00+00:00",
+        "end": "2026-10-29T08:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-10-29T08:00:00+00:00",
+        "end": "2026-10-29T09:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-10-29T09:00:00+00:00",
+        "end": "2026-10-29T10:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-10-29T10:00:00+00:00",
+        "end": "2026-10-29T11:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-10-29T11:00:00+00:00",
+        "end": "2026-10-29T12:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-10-29T12:00:00+00:00",
+        "end": "2026-10-29T13:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-10-29T13:00:00+00:00",
+        "end": "2026-10-29T14:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-10-29T14:00:00+00:00",
+        "end": "2026-10-29T15:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-10-29T15:00:00+00:00",
+        "end": "2026-10-29T16:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-10-29T16:00:00+00:00",
+        "end": "2026-10-29T17:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-10-29T17:00:00+00:00",
+        "end": "2026-10-29T18:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-10-29T18:00:00+00:00",
+        "end": "2026-10-29T19:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-10-29T19:00:00+00:00",
+        "end": "2026-10-29T20:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-10-29T20:00:00+00:00",
+        "end": "2026-10-29T21:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-10-29T21:00:00+00:00",
+        "end": "2026-10-29T22:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-10-29T22:00:00+00:00",
+        "end": "2026-10-29T23:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-10-29T23:00:00+00:00",
+        "end": "2026-10-30T00:00:00+00:00",
+        "amount": 0.0
       }
     ],
-    "model": "202610202300",
-    "updatedAt": "2026-10-20T23:28:26.026313+00:00"
+    "model": "202610210100",
+    "updatedAt": "2026-10-21T01:56:20.905358+00:00"
   },
   "weekError": false,
   "news": {
@@ -1233,7 +1233,7 @@
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oqdx.jpg?v=2"
       }
     ],
-    "updatedAt": "2026-10-20T23:28:25.932212+00:00",
+    "updatedAt": "2026-10-21T01:56:20.887771+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -1252,7 +1252,7 @@
         "coord_y": "1152444",
         "location_id": "100300",
         "location_type": "city",
-        "timestamp": 1792537815,
+        "timestamp": 1792546809,
         "forecasts": [
           {
             "date": "21 ottobre 2026",
@@ -1266,11 +1266,11 @@
           {
             "date": "22 ottobre 2026",
             "date_iso": "2026-10-22",
-            "weather_description": "symbol_id_1",
+            "weather_description": "symbol_id_2",
             "temp_high": 13,
             "weekday": "giovedì",
             "temp_low": 8,
-            "weather_symbol_id": 1
+            "weather_symbol_id": 2
           },
           {
             "date": "23 ottobre 2026",
@@ -1316,6 +1316,15 @@
             "weekday": "martedì",
             "temp_low": 9,
             "weather_symbol_id": 29
+          },
+          {
+            "date": "28 ottobre 2026",
+            "date_iso": "2026-10-28",
+            "weather_description": "symbol_id_2",
+            "temp_high": 14,
+            "weekday": "mercoledì",
+            "temp_low": 9,
+            "weather_symbol_id": 2
           }
         ]
       },
@@ -1332,7 +1341,7 @@
         "coord_y": "1118423",
         "location_id": "120100",
         "location_type": "city",
-        "timestamp": 1792537815,
+        "timestamp": 1792546809,
         "forecasts": [
           {
             "date": "21 ottobre 2026",
@@ -1396,6 +1405,15 @@
             "weekday": "martedì",
             "temp_low": 7,
             "weather_symbol_id": 29
+          },
+          {
+            "date": "28 ottobre 2026",
+            "date_iso": "2026-10-28",
+            "weather_description": "symbol_id_2",
+            "temp_high": 15,
+            "weekday": "mercoledì",
+            "temp_low": 8,
+            "weather_symbol_id": 2
           }
         ]
       },
@@ -1412,7 +1430,7 @@
         "coord_y": "1119910",
         "location_id": "195000",
         "location_type": "city",
-        "timestamp": 1792537815,
+        "timestamp": 1792546809,
         "forecasts": [
           {
             "date": "21 ottobre 2026",
@@ -1476,6 +1494,15 @@
             "weekday": "martedì",
             "temp_low": 5,
             "weather_symbol_id": 3
+          },
+          {
+            "date": "28 ottobre 2026",
+            "date_iso": "2026-10-28",
+            "weather_description": "symbol_id_2",
+            "temp_high": 16,
+            "weekday": "mercoledì",
+            "temp_low": 4,
+            "weather_symbol_id": 2
           }
         ]
       },
@@ -1492,7 +1519,7 @@
         "coord_y": "1202399",
         "location_id": "300400",
         "location_type": "city",
-        "timestamp": 1792537815,
+        "timestamp": 1792546809,
         "forecasts": [
           {
             "date": "21 ottobre 2026",
@@ -1506,11 +1533,11 @@
           {
             "date": "22 ottobre 2026",
             "date_iso": "2026-10-22",
-            "weather_description": "symbol_id_1",
+            "weather_description": "symbol_id_2",
             "temp_high": 13,
             "weekday": "giovedì",
             "temp_low": 5,
-            "weather_symbol_id": 1
+            "weather_symbol_id": 2
           },
           {
             "date": "23 ottobre 2026",
@@ -1556,6 +1583,15 @@
             "weekday": "martedì",
             "temp_low": 6,
             "weather_symbol_id": 3
+          },
+          {
+            "date": "28 ottobre 2026",
+            "date_iso": "2026-10-28",
+            "weather_description": "symbol_id_2",
+            "temp_high": 14,
+            "weekday": "mercoledì",
+            "temp_low": 6,
+            "weather_symbol_id": 2
           }
         ]
       },
@@ -1572,7 +1608,7 @@
         "coord_y": "1267348",
         "location_id": "400100",
         "location_type": "city",
-        "timestamp": 1792537815,
+        "timestamp": 1792546809,
         "forecasts": [
           {
             "date": "21 ottobre 2026",
@@ -1636,6 +1672,15 @@
             "weekday": "martedì",
             "temp_low": 9,
             "weather_symbol_id": 3
+          },
+          {
+            "date": "28 ottobre 2026",
+            "date_iso": "2026-10-28",
+            "weather_description": "symbol_id_2",
+            "temp_high": 16,
+            "weekday": "mercoledì",
+            "temp_low": 8,
+            "weather_symbol_id": 2
           }
         ]
       },
@@ -1652,7 +1697,7 @@
         "coord_y": "1211120",
         "location_id": "600300",
         "location_type": "city",
-        "timestamp": 1792537815,
+        "timestamp": 1792546809,
         "forecasts": [
           {
             "date": "21 ottobre 2026",
@@ -1716,6 +1761,15 @@
             "weekday": "martedì",
             "temp_low": 7,
             "weather_symbol_id": 3
+          },
+          {
+            "date": "28 ottobre 2026",
+            "date_iso": "2026-10-28",
+            "weather_description": "symbol_id_2",
+            "temp_high": 14,
+            "weekday": "mercoledì",
+            "temp_low": 7,
+            "weather_symbol_id": 2
           }
         ]
       },
@@ -1732,7 +1786,7 @@
         "coord_y": "1096327",
         "location_id": "690000",
         "location_type": "city",
-        "timestamp": 1792537815,
+        "timestamp": 1792546809,
         "forecasts": [
           {
             "date": "21 ottobre 2026",
@@ -1773,11 +1827,11 @@
           {
             "date": "25 ottobre 2026",
             "date_iso": "2026-10-25",
-            "weather_description": "symbol_id_6",
+            "weather_description": "symbol_id_3",
             "temp_high": 14,
             "weekday": "domenica",
             "temp_low": 7,
-            "weather_symbol_id": 6
+            "weather_symbol_id": 3
           },
           {
             "date": "26 ottobre 2026",
@@ -1796,6 +1850,15 @@
             "weekday": "martedì",
             "temp_low": 8,
             "weather_symbol_id": 2
+          },
+          {
+            "date": "28 ottobre 2026",
+            "date_iso": "2026-10-28",
+            "weather_description": "symbol_id_1",
+            "temp_high": 16,
+            "weekday": "mercoledì",
+            "temp_low": 8,
+            "weather_symbol_id": 1
           }
         ]
       },
@@ -1812,7 +1875,7 @@
         "coord_y": "1191534",
         "location_id": "700000",
         "location_type": "city",
-        "timestamp": 1792537815,
+        "timestamp": 1792546809,
         "forecasts": [
           {
             "date": "21 ottobre 2026",
@@ -1876,6 +1939,15 @@
             "weekday": "martedì",
             "temp_low": 5,
             "weather_symbol_id": 3
+          },
+          {
+            "date": "28 ottobre 2026",
+            "date_iso": "2026-10-28",
+            "weather_description": "symbol_id_2",
+            "temp_high": 17,
+            "weekday": "mercoledì",
+            "temp_low": 8,
+            "weather_symbol_id": 2
           }
         ]
       },
@@ -1892,13 +1964,13 @@
         "coord_y": "1247414",
         "location_id": "800100",
         "location_type": "city",
-        "timestamp": 1792537815,
+        "timestamp": 1792546809,
         "forecasts": [
           {
             "date": "21 ottobre 2026",
             "date_iso": "2026-10-21",
             "weather_description": "symbol_id_20",
-            "temp_high": 12,
+            "temp_high": 13,
             "weekday": "Heute",
             "temp_low": 9,
             "weather_symbol_id": 20
@@ -1906,11 +1978,11 @@
           {
             "date": "22 ottobre 2026",
             "date_iso": "2026-10-22",
-            "weather_description": "symbol_id_1",
+            "weather_description": "symbol_id_2",
             "temp_high": 14,
             "weekday": "giovedì",
             "temp_low": 7,
-            "weather_symbol_id": 1
+            "weather_symbol_id": 2
           },
           {
             "date": "23 ottobre 2026",
@@ -1951,11 +2023,20 @@
           {
             "date": "27 ottobre 2026",
             "date_iso": "2026-10-27",
-            "weather_description": "symbol_id_29",
+            "weather_description": "symbol_id_3",
             "temp_high": 15,
             "weekday": "martedì",
             "temp_low": 7,
-            "weather_symbol_id": 29
+            "weather_symbol_id": 3
+          },
+          {
+            "date": "28 ottobre 2026",
+            "date_iso": "2026-10-28",
+            "weather_description": "symbol_id_2",
+            "temp_high": 15,
+            "weekday": "mercoledì",
+            "temp_low": 8,
+            "weather_symbol_id": 2
           }
         ]
       },
@@ -1972,7 +2053,7 @@
         "coord_y": "1254370",
         "location_id": "900000",
         "location_type": "city",
-        "timestamp": 1792537815,
+        "timestamp": 1792546809,
         "forecasts": [
           {
             "date": "21 ottobre 2026",
@@ -2036,23 +2117,32 @@
             "weekday": "martedì",
             "temp_low": 8,
             "weather_symbol_id": 29
+          },
+          {
+            "date": "28 ottobre 2026",
+            "date_iso": "2026-10-28",
+            "weather_description": "symbol_id_2",
+            "temp_high": 13,
+            "weekday": "mercoledì",
+            "temp_low": 7,
+            "weather_symbol_id": 2
           }
         ]
       }
     ],
-    "updatedAt": "2026-10-20T23:28:25.932212+00:00",
-    "version": "20261020_2310"
+    "updatedAt": "2026-10-21T01:56:20.887771+00:00",
+    "version": "20261021_0140"
   },
   "swissWeatherError": false,
   "traffic": {
     "items": [
       {
-        "id": "Viasuisser_FAVM/660714_TIC-Viasuisse/1",
-        "text": "tra Curio e Pura in entrambe le direzioni problemi di traffico, alberi caduti, circolazione a corsie alternate",
-        "location": "tra Curio e Pura in entrambe le direzioni problemi di traffico, alberi caduti, circolazione a corsie alternate",
+        "id": "Viasuisser_FAVM/660715_TIC-Viasuisse/1",
+        "text": "Capolago direzione Porte Ceresio - tra Riva San Vitale e Brusino Arsizio problemi di traffico, caduta massi, corsie strette",
+        "location": "Capolago direzione Porte Ceresio",
         "road": "TI",
         "category": 13,
-        "changedAt": "2026-10-21T00:55:20+02:00",
+        "changedAt": "2026-10-21T02:06:22+02:00",
         "priority": 1
       },
       {
@@ -2156,7 +2246,7 @@
       }
     ],
     "total": 50,
-    "updatedAt": "2026-10-20T23:28:25.932212+00:00",
+    "updatedAt": "2026-10-21T01:56:20.887771+00:00",
     "source": "Viasuisse"
   }
 }
