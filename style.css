@@ -1042,3 +1042,7 @@ main>.screen{transition:none}
 @media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
  .home-screen .news.card{background:linear-gradient(#fff,#fff) padding-box,linear-gradient(to right,#df4d0b 0%,#df4d0b calc(100% - 106px),#a80000 calc(100% - 62px),#a80000 calc(100% - 18px),#df4d0b 100%) border-box}
 }
+
+/* Match the Swiss map card accents to the orange dashboard theme. */
+.swiss-map-card{border-top-color:#df4d0b}
+.swiss-map-card .section-label,.swiss-map-card .eyebrow,.swiss-map-card .map-weather-icon{color:#df4d0b}
