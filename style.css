@@ -1071,3 +1071,9 @@ main>.screen{transition:none}
 /* Olive date and clock, keeping the weekday grey. */
 .date,.date .date-rest,.dashboard>header>.header-clock{color:#8a824c}
 .date .date-weekday{color:#737b83}
+
+/* Phones keep the original orange cards and an unframed page. */
+@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+ .home-screen{--home-accent:#df4d0b}
+ .home-screen::after,.swiss-map-screen::after{display:none}
+}
