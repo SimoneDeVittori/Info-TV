@@ -1,8 +1,8 @@
 {
   "weather": {
     "current": {
-      "icon": 3,
-      "iconV2": 3,
+      "icon": 1,
+      "iconV2": 1,
       "temperature": 17.2,
       "time": 1792672200000
     },
@@ -48,7 +48,7 @@
         "temperatureMin": 6
       }
     ],
-    "updatedAt": "2026-10-22T12:33:04.290039+00:00"
+    "updatedAt": "2026-10-22T12:37:44.042545+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1203,11 +1203,19 @@
       }
     ],
     "model": "202610221200",
-    "updatedAt": "2026-10-22T12:33:04.310697+00:00"
+    "updatedAt": "2026-10-22T12:37:44.161543+00:00"
   },
   "weekError": false,
   "news": {
     "items": [
+      {
+        "title": "Natale in Piazza, una novità (gratuita) davanti al LAC",
+        "description": "Il centro di Lugano si anima con mercatini, spettacoli e una nuova novità gratuita al LAC Winter Village.",
+        "link": "https://www.tio.ch/ticino/attualita/1958474/piazza-lugano-centro-lac-manifestazione-albero-riforma-ciani-villaggio",
+        "date": "Thu, 22 Oct 2026 14:32:44 +0200",
+        "category": "LUGANO",
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oqul.jpg"
+      },
       {
         "title": "Scontro frontale a Poschiavo",
         "description": "Un 74enne britannico avrebbe invaso la corsia opposta, scontrandosi con l'auto guidata da un 26enne italiano.",
@@ -1223,17 +1231,9 @@
         "date": "Thu, 22 Oct 2026 13:32:42 +0200",
         "category": "ACQUAROSSA",
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oqsx.jpg"
-      },
-      {
-        "title": "Maxifrode da 60 milioni: «È un pasticcione, non un truffatore»",
-        "description": "Parla la difesa del 60enne italiano: «Gli investimenti esistono, erano scellerati, non finti». Richiesta l'assoluzione sia per lui sia per l'imprenditore iraniano",
-        "link": "https://www.tio.ch/ticino/attualita/1958449/maxifrode-da-60-milioni-e-un-pasticcione-non-un-truffatore",
-        "date": "Thu, 22 Oct 2026 13:00:00 +0200",
-        "category": "CANTONE",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oqtn.jpg?v=2"
       }
     ],
-    "updatedAt": "2026-10-22T12:33:04.290039+00:00",
+    "updatedAt": "2026-10-22T12:37:44.042545+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -2130,7 +2130,7 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-22T12:33:04.290039+00:00",
+    "updatedAt": "2026-10-22T12:37:44.042545+00:00",
     "version": "20261022_1210"
   },
   "swissWeatherError": false,
@@ -2246,7 +2246,7 @@
       }
     ],
     "total": 49,
-    "updatedAt": "2026-10-22T12:33:04.290039+00:00",
+    "updatedAt": "2026-10-22T12:37:44.042545+00:00",
     "source": "Viasuisse"
   }
 }
