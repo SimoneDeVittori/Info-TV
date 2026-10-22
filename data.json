@@ -1,10 +1,10 @@
 {
   "weather": {
     "current": {
-      "icon": 1,
-      "iconV2": 1,
-      "temperature": 17.2,
-      "time": 1792672200000
+      "icon": 2,
+      "iconV2": 2,
+      "temperature": 17.3,
+      "time": 1792672800000
     },
     "forecast": [
       {
@@ -48,7 +48,7 @@
         "temperatureMin": 6
       }
     ],
-    "updatedAt": "2026-10-22T12:40:11.516816+00:00"
+    "updatedAt": "2026-10-22T12:44:52.266077+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1203,7 +1203,7 @@
       }
     ],
     "model": "202610221200",
-    "updatedAt": "2026-10-22T12:40:11.543362+00:00"
+    "updatedAt": "2026-10-22T12:44:52.303163+00:00"
   },
   "weekError": false,
   "news": {
@@ -1233,7 +1233,7 @@
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oqsx.jpg"
       }
     ],
-    "updatedAt": "2026-10-22T12:40:11.516816+00:00",
+    "updatedAt": "2026-10-22T12:44:52.266077+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -1252,7 +1252,7 @@
         "coord_y": "1152444",
         "location_id": "100300",
         "location_type": "city",
-        "timestamp": 1792671012,
+        "timestamp": 1792672813,
         "forecasts": [
           {
             "date": "22 ottobre 2026",
@@ -1341,7 +1341,7 @@
         "coord_y": "1118423",
         "location_id": "120100",
         "location_type": "city",
-        "timestamp": 1792671012,
+        "timestamp": 1792672813,
         "forecasts": [
           {
             "date": "22 ottobre 2026",
@@ -1430,7 +1430,7 @@
         "coord_y": "1119910",
         "location_id": "195000",
         "location_type": "city",
-        "timestamp": 1792671012,
+        "timestamp": 1792672813,
         "forecasts": [
           {
             "date": "22 ottobre 2026",
@@ -1519,7 +1519,7 @@
         "coord_y": "1202399",
         "location_id": "300400",
         "location_type": "city",
-        "timestamp": 1792671012,
+        "timestamp": 1792672813,
         "forecasts": [
           {
             "date": "22 ottobre 2026",
@@ -1608,7 +1608,7 @@
         "coord_y": "1267348",
         "location_id": "400100",
         "location_type": "city",
-        "timestamp": 1792671012,
+        "timestamp": 1792672813,
         "forecasts": [
           {
             "date": "22 ottobre 2026",
@@ -1697,13 +1697,13 @@
         "coord_y": "1211120",
         "location_id": "600300",
         "location_type": "city",
-        "timestamp": 1792671012,
+        "timestamp": 1792672813,
         "forecasts": [
           {
             "date": "22 ottobre 2026",
             "date_iso": "2026-10-22",
             "weather_description": "symbol_id_1",
-            "temp_high": 13,
+            "temp_high": 14,
             "weekday": "Heute",
             "temp_low": 5,
             "weather_symbol_id": 1
@@ -1786,7 +1786,7 @@
         "coord_y": "1096327",
         "location_id": "690000",
         "location_type": "city",
-        "timestamp": 1792671012,
+        "timestamp": 1792672813,
         "forecasts": [
           {
             "date": "22 ottobre 2026",
@@ -1875,7 +1875,7 @@
         "coord_y": "1191534",
         "location_id": "700000",
         "location_type": "city",
-        "timestamp": 1792671012,
+        "timestamp": 1792672813,
         "forecasts": [
           {
             "date": "22 ottobre 2026",
@@ -1964,7 +1964,7 @@
         "coord_y": "1247414",
         "location_id": "800100",
         "location_type": "city",
-        "timestamp": 1792671012,
+        "timestamp": 1792672813,
         "forecasts": [
           {
             "date": "22 ottobre 2026",
@@ -2053,7 +2053,7 @@
         "coord_y": "1254370",
         "location_id": "900000",
         "location_type": "city",
-        "timestamp": 1792671012,
+        "timestamp": 1792672813,
         "forecasts": [
           {
             "date": "22 ottobre 2026",
@@ -2130,8 +2130,8 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-22T12:40:11.516816+00:00",
-    "version": "20261022_1210"
+    "updatedAt": "2026-10-22T12:44:52.266077+00:00",
+    "version": "20261022_1240"
   },
   "swissWeatherError": false,
   "traffic": {
@@ -2246,7 +2246,7 @@
       }
     ],
     "total": 48,
-    "updatedAt": "2026-10-22T12:40:11.516816+00:00",
+    "updatedAt": "2026-10-22T12:44:52.266077+00:00",
     "source": "Viasuisse"
   }
 }
