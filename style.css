@@ -1079,3 +1079,9 @@ main>.screen{transition:none}
  .date,.date .date-rest,.dashboard>header>.header-clock{color:#000}
  .date .date-weekday{color:#737b83}
 }
+
+/* Each monthly plan shares its title palette with the timer. */
+.plan.screen:not(.van-screen) .progress{background:linear-gradient(90deg,var(--plan-timer-start,#477b4c),var(--plan-timer-end,#477b4c))}
+@media (hover:none) and (min-width:601px) and (min-height:601px),(pointer:coarse) and (min-width:601px) and (min-height:601px){
+ .plan.screen:not(.van-screen) .progress{background:var(--plan-timer-end,#477b4c)}
+}
