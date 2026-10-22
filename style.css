@@ -1061,3 +1061,6 @@ main>.screen{transition:none}
 @media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
  .home-screen .news.card{background:linear-gradient(#fff,#fff) padding-box,linear-gradient(to right,var(--home-accent) 0%,var(--home-accent) calc(100% - 106px),#a80000 calc(100% - 62px),#a80000 calc(100% - 18px),var(--home-accent) 100%) border-box}
 }
+
+/* Thin page frame, painted inside the screen without shifting the TV layout. */
+.home-screen::after,.swiss-map-screen::after{content:"";position:absolute;inset:0;border:2px solid #8a824c;box-sizing:border-box;pointer-events:none;z-index:5}
