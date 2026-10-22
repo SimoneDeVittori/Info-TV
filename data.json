@@ -48,7 +48,7 @@
         "temperatureMin": 6
       }
     ],
-    "updatedAt": "2026-10-22T12:37:44.042545+00:00"
+    "updatedAt": "2026-10-22T12:40:11.516816+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1203,13 +1203,13 @@
       }
     ],
     "model": "202610221200",
-    "updatedAt": "2026-10-22T12:37:44.161543+00:00"
+    "updatedAt": "2026-10-22T12:40:11.543362+00:00"
   },
   "weekError": false,
   "news": {
     "items": [
       {
-        "title": "Natale in Piazza, una novità (gratuita) davanti al LAC",
+        "title": "Natale in Piazza, arriva una novità (gratuita) davanti al LAC",
         "description": "Il centro di Lugano si anima con mercatini, spettacoli e una nuova novità gratuita al LAC Winter Village.",
         "link": "https://www.tio.ch/ticino/attualita/1958474/piazza-lugano-centro-lac-manifestazione-albero-riforma-ciani-villaggio",
         "date": "Thu, 22 Oct 2026 14:32:44 +0200",
@@ -1233,7 +1233,7 @@
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oqsx.jpg"
       }
     ],
-    "updatedAt": "2026-10-22T12:37:44.042545+00:00",
+    "updatedAt": "2026-10-22T12:40:11.516816+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -2130,21 +2130,12 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-22T12:37:44.042545+00:00",
+    "updatedAt": "2026-10-22T12:40:11.516816+00:00",
     "version": "20261022_1210"
   },
   "swissWeatherError": false,
   "traffic": {
     "items": [
-      {
-        "id": "Viasuisser_FAVM/661211_TIC-Viasuisse/1",
-        "text": "406 - Cadenazzo direzione Riazzino tra Cadenazzo e A13, rotatoria Aeroporto di Locarno traffico fortemente rallentato, traffico congestionato",
-        "location": "406 - Cadenazzo direzione Riazzino",
-        "road": "406",
-        "category": 13,
-        "changedAt": "2026-10-22T13:19:00+02:00",
-        "priority": 1
-      },
       {
         "id": "Viasuisser_FAVM/661074_TIC-Viasuisse/1",
         "text": "416 - Passo del Lucomagno, Disentis/Mustér - Biasca a Acquacalda in entrambe le direzioni problemi di traffico, nevicata - Passo Lucomagno transitabile con equipaggiamento invernale",
@@ -2243,10 +2234,19 @@
         "category": 31,
         "changedAt": "2026-10-07T07:31:34+02:00",
         "priority": 5
+      },
+      {
+        "id": "Viasuisser_Viasuisse/2510434_TIC-Viasuisse/1",
+        "text": "Caslano - Gravesano - tra Miglieglia e Mugena in entrambe le direzioni chiusa, lavori stradali, seguire deviazione locale, fino a domani, lun - ven tra 20:30 e 05:00",
+        "location": "Caslano",
+        "road": "TI",
+        "category": 31,
+        "changedAt": "2026-10-07T06:27:39+02:00",
+        "priority": 5
       }
     ],
-    "total": 49,
-    "updatedAt": "2026-10-22T12:37:44.042545+00:00",
+    "total": 48,
+    "updatedAt": "2026-10-22T12:40:11.516816+00:00",
     "source": "Viasuisse"
   }
 }
