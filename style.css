@@ -1063,10 +1063,10 @@ main>.screen{transition:none}
 }
 
 /* Thin page frame, painted inside the screen without shifting the TV layout. */
-.home-screen::after,.swiss-map-screen::after{content:"";position:absolute;inset:0;border:8px solid #8a824c;box-sizing:border-box;pointer-events:none;z-index:5}
+.home-screen::after,.swiss-map-screen::after{content:"";position:absolute;inset:0;border:12px solid #8a824c;box-sizing:border-box;pointer-events:none;z-index:5}
 
 /* Keep the timer above and clear of the page frame, including its side edges. */
-.home-screen .progress,.swiss-map-screen .progress{left:12px;bottom:12px;width:calc(100% - 24px);height:5px;z-index:6}
+.home-screen .progress,.swiss-map-screen .progress{left:16px;bottom:16px;width:calc(100% - 32px);height:5px;z-index:6}
 
 /* Olive date and clock, keeping the weekday grey. */
 .date,.date .date-rest,.dashboard>header>.header-clock{color:#8a824c}
