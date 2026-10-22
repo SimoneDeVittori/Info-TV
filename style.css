@@ -1067,3 +1067,7 @@ main>.screen{transition:none}
 
 /* Keep the timer above and clear of the page frame, including its side edges. */
 .home-screen .progress,.swiss-map-screen .progress{left:12px;bottom:12px;width:calc(100% - 24px);height:5px;z-index:6}
+
+/* Olive date and clock, keeping the weekday grey. */
+.date,.date .date-rest,.dashboard>header>.header-clock{color:#8a824c}
+.date .date-weekday{color:#737b83}
