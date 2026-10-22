@@ -1046,3 +1046,18 @@ main>.screen{transition:none}
 /* Match the Swiss map card accents to the orange dashboard theme. */
 .swiss-map-card{border-top-color:#df4d0b}
 .swiss-map-card .section-label,.swiss-map-card .eyebrow,.swiss-map-card .map-weather-icon{color:#df4d0b}
+
+/* Olive accents sampled from the reference chair, scoped to the home cards. */
+.home-screen{--home-accent:#8a824c}
+.home-screen .weather.card,.home-screen .traffic.card{border-top-color:var(--home-accent)}
+.home-screen .card .eyebrow,.home-screen .card .section-label,
+.home-screen .card .news-location,.home-screen .card .traffic-item time,
+.home-screen .card .warning,.home-screen .card .road-badge,
+.home-screen .weather.card .weather-icon,.home-screen .weather.card .weather-icon svg,
+.home-screen .weather.card .forecast svg,.home-screen .weather.card .week-row svg,
+.home-screen .weather.card .ephemerides-compact svg{color:var(--home-accent)}
+.home-screen .progress{background:var(--home-accent)}
+.home-screen .news.card{border-top-color:transparent;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(to right,var(--home-accent) 0%,var(--home-accent) calc(100% - 154px),#a80000 calc(100% - 98px),#a80000 calc(100% - 32px),var(--home-accent) 100%) border-box}
+@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+ .home-screen .news.card{background:linear-gradient(#fff,#fff) padding-box,linear-gradient(to right,var(--home-accent) 0%,var(--home-accent) calc(100% - 106px),#a80000 calc(100% - 62px),#a80000 calc(100% - 18px),var(--home-accent) 100%) border-box}
+}
