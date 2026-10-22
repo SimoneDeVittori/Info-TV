@@ -1063,4 +1063,4 @@ main>.screen{transition:none}
 }
 
 /* Thin page frame, painted inside the screen without shifting the TV layout. */
-.home-screen::after,.swiss-map-screen::after{content:"";position:absolute;inset:0;border:2px solid #8a824c;box-sizing:border-box;pointer-events:none;z-index:5}
+.home-screen::after,.swiss-map-screen::after{content:"";position:absolute;inset:0;border:4px solid #8a824c;box-sizing:border-box;pointer-events:none;z-index:5}
