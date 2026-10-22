@@ -1076,4 +1076,6 @@ main>.screen{transition:none}
 @media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
  .home-screen{--home-accent:#df4d0b}
  .home-screen::after,.swiss-map-screen::after{display:none}
+ .date,.date .date-rest,.dashboard>header>.header-clock{color:#000}
+ .date .date-weekday{color:#737b83}
 }
