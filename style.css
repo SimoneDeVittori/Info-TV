@@ -1085,3 +1085,13 @@ main>.screen{transition:none}
 @media (hover:none) and (min-width:601px) and (min-height:601px),(pointer:coarse) and (min-width:601px) and (min-height:601px){
  .plan.screen:not(.van-screen) .progress{background:var(--plan-timer-end,#477b4c)}
 }
+
+/* Swiss map accents share the olive palette on TV and desktop. */
+.swiss-map-screen{--map-accent:#8a824c}
+.swiss-map-card{border-top-color:var(--map-accent)}
+.swiss-map-card .section-label,.swiss-map-card .eyebrow,.swiss-map-card .map-weather-icon,
+.swiss-map-card .warning{color:var(--map-accent)}
+.swiss-map-screen .progress{background:var(--map-accent)}
+@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+ .swiss-map-screen{--map-accent:#df4d0b}
+}
