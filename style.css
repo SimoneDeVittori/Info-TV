@@ -102,7 +102,7 @@ footer{position:relative;justify-content:center;min-height:50px}.creator-logo{le
 /* Phone portrait: readable cards in the available viewport. */
 html,body{width:100%;height:100%;overflow:hidden}
 main{position:fixed}
-@media (pointer: coarse) and (max-width: 600px), (pointer: coarse) and (max-height: 600px){
+@media (pointer: coarse) and (max-width:1024px), (pointer: coarse) and (max-height: 600px){
  html{height:auto;min-height:100%;overflow-x:hidden;overflow-y:auto}
  body{height:auto;min-height:100dvh;overflow:visible;background:#efefef}
  main{position:relative;left:auto;top:auto;width:100%;height:auto;min-height:100dvh;transform:none;overflow:hidden}
@@ -166,7 +166,7 @@ main{position:fixed}
 
 /* Phone navigation is manual; television rotation is unchanged. */
 .phone-navigation{display:none}
-@media (pointer: coarse) and (max-width: 600px), (pointer: coarse) and (max-height: 600px){
+@media (pointer: coarse) and (max-width:1024px), (pointer: coarse) and (max-height: 600px){
  html{height:auto;min-height:100%;overflow-x:hidden;overflow-y:auto}
  body{height:auto;min-height:100dvh;overflow:visible;background:#efefef}
  main{position:relative;inset:auto;width:100%;height:auto;min-height:100dvh;transform:none;overflow:visible}
@@ -193,13 +193,13 @@ main{position:fixed}
 
 
 /* Full-width phone navigation button. */
-@media (pointer: coarse) and (max-width: 600px), (pointer: coarse) and (max-height: 600px){
+@media (pointer: coarse) and (max-width:1024px), (pointer: coarse) and (max-height: 600px){
  .phone-navigation button{width:100%;display:block}
 }
 
 /* Overlay follows the plan image in desktop and phone layouts. */
 .work-plan{display:block;width:100%;height:100%;flex-shrink:0}
-@media (pointer: coarse) and (max-width: 600px), (pointer: coarse) and (max-height: 600px){
+@media (pointer: coarse) and (max-width:1024px), (pointer: coarse) and (max-height: 600px){
  .plan.screen:not(.van-screen) .work-plan{width:100%;height:auto;max-height:calc(100dvh - 65px)}
 }
 
@@ -210,7 +210,7 @@ main{position:fixed}
 .phone-home-icon g{mask:none}
 
 /* Same button height for the plan label and the home icon. */
-@media (pointer: coarse) and (max-width: 600px), (pointer: coarse) and (max-height: 600px){
+@media (pointer: coarse) and (max-width:1024px), (pointer: coarse) and (max-height: 600px){
  .phone-navigation button{height:56px;min-height:56px;display:flex;align-items:center;justify-content:center;padding:10px 18px;line-height:1}
 }
 
@@ -264,13 +264,13 @@ main{position:fixed}
 /* Equal upper and lower space centers the home header in its grey band. */
 .dashboard:not(.swiss-map-screen){padding-top:36.68px}
 .dashboard:not(.swiss-map-screen)>header{margin-bottom:36.68px;align-items:center}
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){
  .dashboard:not(.swiss-map-screen){padding-top:20px}
  .dashboard:not(.swiss-map-screen)>header{margin-bottom:20px}
 }
 
 /* Tighter card gutters with balanced information spacing. */
-@media (pointer:fine),(min-width:601px) and (min-height:601px){
+@media (pointer:fine),(min-width:1025px) and (min-height:601px){
  .dashboard:not(.swiss-map-screen) .content{gap:28px}
  .dashboard:not(.swiss-map-screen) .right-column{gap:28px}
  .weather.card{padding:36px}
@@ -288,15 +288,15 @@ main{position:fixed}
  .today{padding-top:14px}
  .source{flex-shrink:0}
 }
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){
  .content,.right-column{gap:14px}
  .news-item{gap:12px}
  .news-copy{flex:1;min-width:0}
  .traffic-item p{line-height:1.4}
 }
 
-@media (pointer:fine),(min-width:601px) and (min-height:601px){.news h3{font-size:24px;line-height:1.2}}
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){.news h3{font-size:15px;line-height:1.3}}
+@media (pointer:fine),(min-width:1025px) and (min-height:601px){.news h3{font-size:24px;line-height:1.2}}
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){.news h3{font-size:15px;line-height:1.3}}
 
 /* Colors sampled from the Unilabs logo artwork. */
 .date{color:#477b4c}
@@ -308,7 +308,7 @@ main{position:fixed}
 .swiss-map-screen>header{margin-bottom:30.68px;align-items:center}
 .swiss-map-card{padding-left:32px;padding-right:32px}
 .dashboard>header,.dashboard>.content,.dashboard>.swiss-map-card,.dashboard>footer{position:relative;z-index:1}
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){
  .swiss-map-screen{padding-top:20px}
  .swiss-map-screen>header{margin-bottom:20px}
  .swiss-map-card{padding-left:18px;padding-right:18px}
@@ -319,7 +319,7 @@ main{position:fixed}
 .weather-now .weather-icon{position:absolute;right:0;top:-2px;bottom:-34px;width:130px;display:flex;align-items:center;justify-content:center}
 .weather-heading h1{width:130px;text-align:center}
 .weather-note{line-height:24px;margin:0 0 10px;max-width:calc(100% - 144px)}
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){
  .weather-heading h1{width:96px}
  .weather-now .weather-icon{width:96px;bottom:-30px}
  .weather-note{line-height:20px;max-width:calc(100% - 108px)}
@@ -336,7 +336,7 @@ main{position:fixed}
 .section-label,.eyebrow{font-family:"SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;font-weight:600;letter-spacing:.065em;line-height:1.25;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 
 /* Shared heading center across weather and news, including Manno. */
-@media (pointer:fine),(min-width:601px) and (min-height:601px){
+@media (pointer:fine),(min-width:1025px) and (min-height:601px){
  .weather.card{padding-top:28px}
  .weather-heading{height:52px;min-height:52px;align-items:center}
  .weather-now .weather-icon{top:-6px}
@@ -374,13 +374,13 @@ main{position:fixed}
 .work-plan-stage .plan-pdf-surface{position:absolute;left:15.7296650718%;top:.6376195537%;width:83.7320574163%;height:97.9808714134%;overflow:hidden}
 .work-plan-stage .plan-pdf-surface canvas{position:absolute;inset:0;display:block;width:100%;height:100%;max-width:100%;max-height:100%;margin:0}
 .work-plan-overlay{position:absolute;inset:0;display:block;width:100%;height:100%;pointer-events:none}
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){
  .plan.screen:not(.van-screen){height:auto;min-height:calc(100dvh - 77px);padding:0}
  .plan.screen:not(.van-screen) .work-plan{width:100%;height:auto;aspect-ratio:1672 / 941;max-height:none;margin:0}
 }
 
 /* Two month buttons share the phone navigation; the next plan unlocks on the 15th. */
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){
  .phone-navigation{gap:8px}
  .phone-navigation .phone-plan-buttons{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;flex:1;min-width:0}
  .phone-navigation .phone-plan-buttons button{flex-direction:column;gap:4px;padding:6px;font-size:14px;line-height:1.15;white-space:normal}
@@ -405,7 +405,7 @@ main{position:fixed}
 
 /* Phone-only pull to refresh; suppress the browser's duplicate overscroll action. */
 .phone-pull-refresh{display:none}
-@media (pointer: coarse) and (max-width: 600px), (pointer: coarse) and (max-height: 600px){
+@media (pointer: coarse) and (max-width:1024px), (pointer: coarse) and (max-height: 600px){
  html{overscroll-behavior-y:none}
  .phone-pull-refresh{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);left:50%;z-index:30;display:flex;align-items:center;gap:8px;padding:10px 15px;border-radius:24px;background:#fff;color:#477b4c;box-shadow:0 3px 16px #0002;font:600 13px/1.2 system-ui,sans-serif;white-space:nowrap;pointer-events:none}
  .phone-pull-refresh-icon{font-size:23px;line-height:1}
@@ -414,11 +414,11 @@ main{position:fixed}
 @keyframes phone-refresh-spin{to{transform:rotate(360deg)}}
 @media (prefers-reduced-motion:reduce){.phone-pull-refresh .phone-pull-refresh-icon{animation:none}}
 
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){body,main{overscroll-behavior-y:none}}
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){body,main{overscroll-behavior-y:none}}
 
 
 /* Phone header: date and logo share a single vertically centered row. */
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){
  .dashboard>header{grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:12px}
  .dashboard>header>div{grid-column:1;grid-row:1;min-width:0}
  .dashboard>header .date{white-space:normal;line-height:1.3;text-align:left}
@@ -480,7 +480,7 @@ main{position:fixed}
 .clinic-schedule-note{margin-bottom:10px}
 /* Includes dynamic medical studio service start label. */
 
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){
  .clinic-title-row{display:block;margin-bottom:18px}.clinic-title-row h2{font-size:28px}.clinic-title-row>span{display:block;font-size:14px;margin-top:8px}
  .clinic-content{display:flex;flex-direction:column;gap:18px}.clinic-details{display:flex;flex-direction:column;gap:18px}
  .clinic-address-card,.clinic-schedule-card,.clinic-map-card{padding:18px;flex:none}.clinic-address-card h1{font-size:30px;margin:18px 0}.clinic-address-card address{font-size:26px}
@@ -503,7 +503,7 @@ main{position:fixed}
 .clinic-slot strong{font-size:32px;color:#98c58b}
 .clinic-slot.no-pickup{background:#f5f6f7;border-color:#edf0f2}
 .clinic-slot.no-pickup small,.clinic-slot.no-pickup strong{color:#798189}
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){
  .clinic-address-card{padding:18px}.clinic-address-card h1{font-size:30px;margin:16px 0}.clinic-address-card address{font-size:26px}
  .clinic-day{padding:12px 3px;gap:10px}.clinic-slot{padding:10px 2px;gap:8px}.clinic-slot small{font-size:9px}.clinic-slot strong{font-size:20px}
 }
@@ -521,7 +521,7 @@ main{position:fixed}
 .studio-map-marker{position:absolute;left:50%;top:50%;transform:translate(-50%,-100%);filter:drop-shadow(0 2px 3px #0005)}
 .studio-map-attribution{position:absolute;right:0;bottom:0;padding:3px 6px;background:#fffffff0;color:#53616b;font:12px/1.2 Arial,sans-serif}
 .studio-map-status{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:22px;color:#737f88}
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){
  .dashboard>header>.unilabs-brand{grid-column:2;grid-row:1;width:130px;min-width:0;align-self:center;gap:0}
  .unilabs-brand>span{font-size:9px;top:calc(72% + 2px)}
  .studio-map{height:320px;min-height:320px;flex:none}
@@ -535,7 +535,7 @@ main{position:fixed}
 .clinic-map-card .google-map-sequence iframe{position:absolute;inset:0;width:100%;height:100%;min-height:0;opacity:0;pointer-events:none;transform:scale(.94);transition:opacity .85s ease,transform 1.1s ease}
 .clinic-map-card .google-map-sequence iframe.is-current{opacity:1;pointer-events:auto;transform:scale(1);z-index:2}
 .clinic-map-card .google-map-sequence iframe.is-past{transform:scale(1.08);z-index:1}
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){.google-map-sequence{height:320px;min-height:320px;flex:none}}
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){.google-map-sequence{height:320px;min-height:320px;flex:none}}
 @media (prefers-reduced-motion:reduce){.clinic-map-card .google-map-sequence iframe{transition:none;transform:none}}
 
 .plan-month-title,.next-plan .plan-month-title{gap:.3cqw}
@@ -551,7 +551,7 @@ main{position:fixed}
 .studio-map-with-note{display:flex;flex-direction:column;flex:1;min-height:0}
 .streetview-date-note{display:flex;align-items:baseline;gap:9px;flex-shrink:0;margin:13px 0 0;color:#c62828;font-size:18px;font-weight:500;line-height:1.35}
 .streetview-date-note svg{flex-shrink:0;margin-top:0;transform:translateY(2px)}
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){.studio-map-with-note{flex:none}.streetview-date-note{font-size:12px;gap:7px;margin-top:10px}.streetview-date-note svg{width:18px;height:18px;transform:translateY(1.5px)}}
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){.studio-map-with-note{flex:none}.streetview-date-note{font-size:12px;gap:7px;margin-top:10px}.streetview-date-note svg{width:18px;height:18px;transform:translateY(1.5px)}}
 
 /* Shared home background on both monthly plan pages and all display sizes. */
 :root{--screen-background:#efefef}
@@ -566,7 +566,7 @@ main{position:fixed}
 .clinic-map-card .studio-map-single iframe{position:absolute;inset:0;width:100%;height:100%;min-height:0;border:0;border-radius:0;opacity:1;transform:none;transition:none}
 .studio-map-loading{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:20px;text-align:center;color:#737f88;background:#edf0f2;pointer-events:none}
 .studio-map-loading strong{font-size:27px;color:#27313b}.studio-map-loading span{font-size:22px}.studio-map-loading small{font-size:17px}
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){.studio-map-single{height:320px;min-height:320px;flex:none}.studio-map-loading strong{font-size:20px}.studio-map-loading span{font-size:17px}.studio-map-loading small{font-size:13px}}
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){.studio-map-single{height:320px;min-height:320px;flex:none}.studio-map-loading strong{font-size:20px}.studio-map-loading span{font-size:17px}.studio-map-loading small{font-size:13px}}
 
 /* Cached map stages fade without GPU scaling; only the current frame is visible. */
 .clinic-map-card .google-map-sequence iframe{transform:none;transition:opacity .35s ease}
@@ -590,14 +590,14 @@ main{position:fixed}
 .ephemerides-values>div{display:flex;flex-direction:column;gap:3px}
 .ephemerides-values span{font-size:13px;color:#737f88}
 .ephemerides-values strong{font-size:22px;line-height:1.1;font-weight:600;color:#27313b;font-variant-numeric:tabular-nums}
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){.ephemerides-heading{font-size:11px}.ephemerides-values span{font-size:12px}.ephemerides-values strong{font-size:19px}}
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){.ephemerides-heading{font-size:11px}.ephemerides-values span{font-size:12px}.ephemerides-values strong{font-size:19px}}
 
 /* Small solar icons and times sit with today's weather, above the rain chart. */
 .ephemerides-compact{display:flex;justify-content:flex-end;align-items:center;gap:20px;flex-shrink:0;margin-top:8px;color:#65717c}
 .ephemerides-compact>span{display:inline-flex;align-items:center;gap:6px}
 .ephemerides-compact svg{display:block;flex-shrink:0;color:#98c58b}
 .ephemerides-compact time{font-size:15px;line-height:1.2;font-weight:500;font-variant-numeric:tabular-nums}
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){.ephemerides-compact{gap:16px;margin-top:7px}.ephemerides-compact time{font-size:13px}.ephemerides-compact svg{width:16px;height:16px}}
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){.ephemerides-compact{gap:16px;margin-top:7px}.ephemerides-compact time{font-size:13px}.ephemerides-compact svg{width:16px;height:16px}}
 /* Lighter individual weekdays retain separation from the white outer card. */
 .clinic-day{background:#e9eef2;border-color:#c2cdd5}
 
@@ -610,10 +610,10 @@ main{position:fixed}
 .weather .week-rain{min-width:0;line-height:1.25}
 .weather .rain-hours{display:block;line-height:1.25;overflow-wrap:break-word}
 .weather .source{flex-shrink:0;margin-top:12px;padding-top:12px;border-top:1px solid #e6e9eb;line-height:1.35}
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){.weather .week-row{min-height:48px;padding:5px 0}.weather .source{margin-top:10px;padding-top:10px}}
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){.weather .week-row{min-height:48px;padding:5px 0}.weather .source{margin-top:10px;padding-top:10px}}
 
 /* Fit the entire local-weather card inside the fixed TV canvas. */
-@media (pointer:fine),(min-width:601px) and (min-height:601px){
+@media (pointer:fine),(min-width:1025px) and (min-height:601px){
  .weather.card{padding:24px 30px;overflow:hidden}
  .weather .weather-heading{height:44px;min-height:44px;flex-shrink:0}
  .weather .weather-now{margin-top:6px;min-height:76px;flex-shrink:0}
@@ -650,7 +650,7 @@ main{position:fixed}
 .clinic-day .clinic-slot:not(.no-pickup){background:#f0f7eb;border-color:#dae8d4}
 
 /* Reduce empty margins around the Swiss map while retaining all city labels. */
-@media (pointer:fine),(min-width:601px) and (min-height:601px){
+@media (pointer:fine),(min-width:1025px) and (min-height:601px){
  .swiss-map-card{padding:18px 24px 14px}
  .swiss-map-card .map-heading{margin-bottom:6px}
  .swiss-map-card .map-heading h2{font-size:30px;margin-top:4px}
@@ -688,7 +688,7 @@ main{position:fixed}
 @media (prefers-reduced-motion:reduce){.plan.screen.active .plan-pdf-surface[data-status="ready"]~.plan-day-pop{animation:none}}
 
 /* A finer current-day outline at phone display sizes. */
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){
  .plan-day-pop::after{border-width:1px}
  .plan-today-highlight{stroke-width:1.5}
 }
@@ -711,10 +711,10 @@ main{position:fixed}
 
 /* TVs may not advertise mouse hover; use the established phone breakpoint. */
 .plan-release-note{display:flex}
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){.plan-release-note{display:none}}
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){.plan-release-note{display:none}}
 /* Give rotated month/year glyphs independent space instead of clipping their fill. */
 .plan-month-title .plan-month-name,.plan-month-title .plan-month-year{flex-shrink:0;overflow:visible;padding:.08em .08em;line-height:1.3}
-@media (hover:none) and (min-width:601px) and (min-height:601px),(pointer:coarse) and (min-width:601px) and (min-height:601px){
+@media (hover:none) and (min-width:1025px) and (min-height:601px),(pointer:coarse) and (min-width:1025px) and (min-height:601px){
  .plan-month-title span{background:none;color:var(--month-end);-webkit-text-fill-color:var(--month-end)}
 }
 
@@ -732,7 +732,7 @@ main{position:fixed}
 .clinic-pickup-van{--pickup-van-scale:.62;--pickup-van-shift:6px;position:absolute;bottom:calc(100% + 12px);left:0;width:100%;height:74px;pointer-events:none}
 .clinic-pickup-van .travel-van-runner{position:absolute;top:0;bottom:auto;left:50%;margin-left:-90px;width:180px;height:120px;transform-origin:top center;animation:clinic-pickup-van-drive 3s ease-in-out infinite}
 @keyframes clinic-pickup-van-drive{0%,100%{transform:translate3d(calc(-1 * var(--pickup-van-shift)),0,0) scale(var(--pickup-van-scale))}50%{transform:translate3d(var(--pickup-van-shift),0,0) scale(var(--pickup-van-scale))}}
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){.clinic-pickup-van{--pickup-van-scale:.28;--pickup-van-shift:2px;height:34px;bottom:calc(100% + 8px)}}
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){.clinic-pickup-van{--pickup-van-scale:.28;--pickup-van-shift:2px;height:34px;bottom:calc(100% + 8px)}}
 @media (prefers-reduced-motion:reduce){.clinic-pickup-van .travel-van-runner{animation:none;transform:scale(var(--pickup-van-scale))}}
 
 /* Drive once from the service-start label to Friday, then park. */
@@ -755,7 +755,7 @@ main{position:fixed}
 /* Lower the pickup van slightly to leave the service-start text unobstructed. */
 .clinic-pickup-van{bottom:calc(100% - 2px)}
 .clinic-pickup-van .travel-van-exhaust i{background:radial-gradient(ellipse,#8a9199 0%,#a2a9b2f2 38%,#b2b9c2b3 62%,#b2b9c200 82%)}
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){.clinic-pickup-van{bottom:calc(100% - 2px)}}
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){.clinic-pickup-van{bottom:calc(100% - 2px)}}
 
 /* Start from rest, accelerate smoothly and slow down at Friday; wheels match the van. */
 .clinic-pickup-van.is-running .travel-van-runner,.clinic-pickup-van.is-running .travel-van-wheel svg{animation-timing-function:cubic-bezier(.45,0,.3,1)}
@@ -777,7 +777,7 @@ main{position:fixed}
 .clinic-slot .clinic-pickup-time{position:relative;display:inline-block;white-space:nowrap}
 .clinic-pickup-check{position:absolute;left:calc(100% + 6px);top:50%;transform:translateY(-50%);width:23px;height:23px;display:block}
 .clinic-pickup-check svg{display:block;width:100%;height:100%}
-@media(pointer:coarse) and (max-width:600px){.clinic-pickup-check{width:14px;height:14px;left:calc(100% + 3px)}}
+@media(pointer:coarse) and (max-width:1024px){.clinic-pickup-check{width:14px;height:14px;left:calc(100% + 3px)}}
 
 /* Composite the small van and wheel layers instead of animating SVG contents. */
 .travel-van-runner{will-change:transform;backface-visibility:hidden;isolation:isolate}
@@ -804,7 +804,7 @@ main{position:fixed}
 @keyframes forecast-rain-fall{0%{transform:translate3d(2px,-7px,0);opacity:0}20%{opacity:.85}75%{opacity:.85}100%{transform:translate3d(-2px,24px,0);opacity:0}}
 .screen:not(.active) .forecast-rain-drops i{animation-play-state:paused}
 @media(prefers-reduced-motion:reduce){.forecast-rain-drops i{animation:none;transform:translateY(8px);opacity:.75}}
-@media(pointer:coarse) and (max-width:600px){.forecast-rain-drops{height:20px;flex-basis:18px;width:18px}.forecast-rain-drops i{width:2px;height:6px}.week-rain .forecast-rain-amount{gap:4px}}
+@media(pointer:coarse) and (max-width:1024px){.forecast-rain-drops{height:20px;flex-basis:18px;width:18px}.forecast-rain-drops i{width:2px;height:6px}.week-rain .forecast-rain-amount{gap:4px}}
 
 /* Animate only the orange rain strokes; the cloud remains still. */
 .week-row>svg path[d="M16 14v6"],.week-row>svg path[d="M8 14v6"],.week-row>svg path[d="M12 16v6"]{animation:forecast-icon-rain 1.6s linear infinite;transform-box:fill-box;transform-origin:center}
@@ -819,7 +819,7 @@ main{position:fixed}
 @keyframes forecast-rain-fall{0%{transform:translate3d(2px,-8px,0) rotate(45deg);opacity:0}20%,75%{opacity:.85}100%{transform:translate3d(-2px,24px,0) rotate(45deg);opacity:0}}
 .week-row>svg .forecast-icon-drop{animation:forecast-icon-rain 1.6s linear infinite}
 .screen:not(.active) .week-row>svg .forecast-icon-drop{animation-play-state:paused}
-@media(pointer:coarse) and (max-width:600px){.forecast-rain-drops i{width:4px;height:4px}}
+@media(pointer:coarse) and (max-width:1024px){.forecast-rain-drops i{width:4px;height:4px}}
 @media(prefers-reduced-motion:reduce){.forecast-rain-drops i{transform:translateY(8px) rotate(45deg)}.week-row>svg .forecast-icon-drop{animation:none}}
 
 /* Orange forecast drops stay still; their count continues to reflect rainfall. */
@@ -832,7 +832,7 @@ main{position:fixed}
 
 
 /* Shared dashboard chrome stays fixed while compositor layers open from the centre. */
-@media (hover:hover) and (pointer:fine), (min-width:601px) and (min-height:601px){
+@media (hover:hover) and (pointer:fine), (min-width:1025px) and (min-height:601px){
  .dashboard,.dashboard:not(.swiss-map-screen),.swiss-map-screen{padding-top:36.68px}
  .dashboard>header,.dashboard:not(.swiss-map-screen)>header,.swiss-map-screen>header{min-height:130px;margin-bottom:36.68px;align-items:center}
  main.internal-screen-transition{background:var(--screen-background)}
@@ -865,7 +865,7 @@ main{position:fixed}
 .is-screen-animating .home-card-entering{will-change:transform,opacity!important;backface-visibility:hidden}
 
 /* Draw the home van at its final size once; animate translation only. */
-@media (hover:hover) and (pointer:fine), (min-width:601px) and (min-height:601px){
+@media (hover:hover) and (pointer:fine), (min-width:1025px) and (min-height:601px){
  .home-delivery-van .travel-van-runner{width:112px;height:74.667px;transform:translate3d(var(--home-van-start,0px),0,0);transform-origin:initial}
  .home-delivery-van .travel-van-body,.home-delivery-van .travel-van-body>img{width:112px;height:74.667px}
  .home-delivery-van.is-running .travel-van-runner{animation:home-van-route-tv 14s cubic-bezier(.25,0,.75,1) 5s both}
@@ -879,7 +879,7 @@ main{position:fixed}
 @media(prefers-reduced-motion:reduce){.home-delivery-van.is-running .travel-van-runner{animation:none}}
 
 /* Brief page hand-off; page animations stay at their first frame until visible. */
-@media (hover:hover) and (pointer:fine), (min-width:601px) and (min-height:601px){
+@media (hover:hover) and (pointer:fine), (min-width:1025px) and (min-height:601px){
  .screen{transition:opacity .22s ease,visibility .22s}
 }
 .screen.screen-entering *{animation-play-state:paused!important}
@@ -894,7 +894,7 @@ main>.screen{transition:none}
 @media(prefers-reduced-motion:reduce){.van-screen .wallpaper-van .travel-van-runner{transform:translate3d(0,0,0)}}
 
 /* Keep the same card textures and shadows before, during and after their glide. */
-@media (hover:hover) and (pointer:fine), (min-width:601px) and (min-height:601px){
+@media (hover:hover) and (pointer:fine), (min-width:1025px) and (min-height:601px){
  .dashboard.active>.content>.weather,
  .dashboard.active>.content>.right-column>.news,
  .dashboard.active>.content>.right-column>.traffic{
@@ -914,7 +914,7 @@ main>.screen{transition:none}
 .clinic-title-row h2,.clinic-address-card address span,.clinic-directions,
 .clinic-day strong,.clinic-slot strong,.clinic-start-date,.plan-release-info{color:#477b4c}
 .plan-month-title{background:linear-gradient(110deg,#548352,#37623b);background-clip:text;-webkit-background-clip:text;color:transparent}
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){
  .dashboard>header>.header-clock{grid-column:2;grid-row:1;font-size:36px;letter-spacing:-.04em}
  .dashboard>header .date{font-size:18px;white-space:normal}
 }
@@ -929,7 +929,7 @@ main>.screen{transition:none}
 .dashboard.home-screen>header{display:flex;justify-content:center;gap:80px}
 .dashboard.home-screen>header>.header-clock{justify-self:auto;text-align:center;flex:none}
 .dashboard.home-screen>header .date{text-align:center}
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){
  .dashboard.home-screen>header{flex-direction:column;gap:6px}
 }
 
@@ -955,7 +955,7 @@ main>.screen{transition:none}
 .card .clinic-start-date,.card .plan-release-info,
 .clinic-day.has-day-pickup .clinic-slot.has-pickup small,
 .clinic-day.has-day-pickup .clinic-slot.has-pickup strong{color:#df4d0b}
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){
  .dashboard.home-screen>header{grid-template-columns:minmax(0,1fr);row-gap:8px}
  .dashboard.home-screen>header>.header-clock{grid-column:1;grid-row:2;justify-self:center}
 }
@@ -967,7 +967,7 @@ main>.screen{transition:none}
 .home-screen .traffic.card{border-top-color:#df4d0b}
 
 /* Orange monthly-plan buttons in the mobile navigation. */
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){
  .phone-navigation .phone-plan-buttons button:not(:disabled){background:#df4d0b;color:#fff}
  .phone-navigation .phone-plan-buttons button[aria-pressed="true"]:not(:disabled){box-shadow:inset 0 0 0 2px #a93805}
 }
@@ -987,7 +987,7 @@ main>.screen{transition:none}
 
 /* A larger clock remains centered and uses crisp tabular digits. */
 .dashboard>header>.header-clock{font-size:132px}
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){
  .dashboard>header>.header-clock{font-size:48px}
 }
 
@@ -996,12 +996,12 @@ main>.screen{transition:none}
 
 /* Put the enlarged home clock at the right edge of the header. */
 .dashboard.home-screen>header>.header-clock{grid-column:3;grid-row:1;justify-self:end;text-align:right}
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){
  .dashboard.home-screen>header>.header-clock{grid-column:1;grid-row:2;justify-self:end;text-align:right}
 }
 
 /* Home and pull-to-refresh match the orange mobile plan buttons. */
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){
  .phone-navigation .phone-home-button{background:#df4d0b;color:#fff}
  .phone-pull-refresh{color:#df4d0b}
 }
@@ -1010,14 +1010,14 @@ main>.screen{transition:none}
 .dashboard.home-screen>header{grid-template-columns:minmax(0,1fr) auto;column-gap:64px}
 .dashboard.home-screen>header .date{font-size:64px;line-height:1.15;max-width:none}
 .dashboard.home-screen>header>.header-clock{grid-column:2}
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){
  .dashboard.home-screen>header{grid-template-columns:minmax(0,1fr);column-gap:0}
  .dashboard.home-screen>header .date{font-size:24px;line-height:1.2}
  .dashboard.home-screen>header>.header-clock{grid-column:1}
 }
 
 /* Mobile keeps its original date size and aligns it beside the clock. */
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){
  .dashboard.home-screen>header{grid-template-columns:minmax(0,1fr) auto;column-gap:12px;row-gap:0;align-items:center}
  .dashboard.home-screen>header .date{font-size:18px;line-height:1.2}
  .dashboard.home-screen>header>.header-clock{grid-column:2;grid-row:1;align-self:center}
@@ -1039,7 +1039,7 @@ main>.screen{transition:none}
 /* Restore the smooth orange-to-red transition into the TIO ribbon. */
 .home-screen .news.card{border-top-color:transparent;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(to right,#df4d0b 0%,#df4d0b calc(100% - 154px),#a80000 calc(100% - 98px),#a80000 calc(100% - 32px),#df4d0b 100%) border-box}
 .home-screen .tio-logo{background:#a80000}
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){
  .home-screen .news.card{background:linear-gradient(#fff,#fff) padding-box,linear-gradient(to right,#df4d0b 0%,#df4d0b calc(100% - 106px),#a80000 calc(100% - 62px),#a80000 calc(100% - 18px),#df4d0b 100%) border-box}
 }
 
@@ -1058,7 +1058,7 @@ main>.screen{transition:none}
 .home-screen .weather.card .ephemerides-compact svg{color:var(--home-accent)}
 .home-screen .progress{background:var(--home-accent)}
 .home-screen .news.card{border-top-color:transparent;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(to right,var(--home-accent) 0%,var(--home-accent) calc(100% - 154px),#a80000 calc(100% - 98px),#a80000 calc(100% - 32px),var(--home-accent) 100%) border-box}
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){
  .home-screen .news.card{background:linear-gradient(#fff,#fff) padding-box,linear-gradient(to right,var(--home-accent) 0%,var(--home-accent) calc(100% - 106px),#a80000 calc(100% - 62px),#a80000 calc(100% - 18px),var(--home-accent) 100%) border-box}
 }
 
@@ -1073,7 +1073,7 @@ main>.screen{transition:none}
 .date .date-weekday{color:#737b83}
 
 /* Phones keep the original orange cards and an unframed page. */
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){
  .home-screen{--home-accent:#df4d0b}
  .home-screen::after,.swiss-map-screen::after{display:none}
  .date,.date .date-rest,.dashboard>header>.header-clock{color:#000}
@@ -1082,7 +1082,7 @@ main>.screen{transition:none}
 
 /* Each monthly plan shares its title palette with the timer. */
 .plan.screen:not(.van-screen) .progress{background:linear-gradient(90deg,var(--plan-timer-start,#477b4c),var(--plan-timer-end,#477b4c))}
-@media (hover:none) and (min-width:601px) and (min-height:601px),(pointer:coarse) and (min-width:601px) and (min-height:601px){
+@media (hover:none) and (min-width:1025px) and (min-height:601px),(pointer:coarse) and (min-width:1025px) and (min-height:601px){
  .plan.screen:not(.van-screen) .progress{background:var(--plan-timer-end,#477b4c)}
 }
 
@@ -1092,6 +1092,6 @@ main>.screen{transition:none}
 .swiss-map-card .section-label,.swiss-map-card .eyebrow,.swiss-map-card .map-weather-icon,
 .swiss-map-card .warning{color:var(--map-accent)}
 .swiss-map-screen .progress{background:var(--map-accent)}
-@media (pointer:coarse) and (max-width:600px),(pointer:coarse) and (max-height:600px){
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){
  .swiss-map-screen{--map-accent:#df4d0b}
 }
