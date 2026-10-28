@@ -1095,3 +1095,5 @@ main>.screen{transition:none}
 @media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){
  .swiss-map-screen{--map-accent:#df4d0b}
 }
+
+.clinic-screen.address-change .card .section-label,.clinic-screen.address-change .card address span,.clinic-screen.address-change .card .clinic-start-date,.clinic-screen.address-change .card .clinic-day small,.clinic-screen.address-change .card .clinic-day strong{color:#477b4c}
