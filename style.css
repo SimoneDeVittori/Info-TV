@@ -1097,3 +1097,14 @@ main>.screen{transition:none}
 }
 
 .clinic-screen.address-change .card .section-label,.clinic-screen.address-change .card address span,.clinic-screen.address-change .card .clinic-start-date,.clinic-screen.address-change .card .clinic-day small,.clinic-screen.address-change .card .clinic-day strong{color:#477b4c}
+
+/* Fit the address-change weekday cards inside the schedule. */
+.clinic-screen.address-change .clinic-week{min-height:0;gap:6px}
+.clinic-screen.address-change .clinic-day.no-day-pickup{min-width:0;min-height:0;padding:6px 3px;gap:4px;justify-content:space-evenly;background:#edf6e8;border-color:#c7dfbd}
+.clinic-screen.address-change .clinic-day.no-day-pickup .clinic-slot.no-pickup{padding:4px 2px;gap:2px;background:#f5faf2;border-color:#d4e7cb}
+.clinic-screen.address-change .clinic-day>span{font-size:clamp(11px,1vw,19px)}
+.clinic-screen.address-change .clinic-day small{font-size:clamp(9px,.8vw,15px)}
+.clinic-screen.address-change .clinic-day strong{font-size:clamp(16px,1.4vw,25px)}
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){
+ .clinic-screen.address-change .clinic-week{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
