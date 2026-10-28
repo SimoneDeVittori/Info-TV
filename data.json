@@ -4,7 +4,7 @@
       "icon": 1,
       "iconV2": 1,
       "temperature": 17.5,
-      "time": 1793195400000
+      "time": 1793196000000
     },
     "forecast": [
       {
@@ -48,7 +48,7 @@
         "temperatureMin": 8
       }
     ],
-    "updatedAt": "2026-10-28T13:58:39.181695+00:00"
+    "updatedAt": "2026-10-28T14:04:08.581626+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1212,7 +1212,7 @@
         "title": "Lo trova nella sua auto, lui si dà alla fuga",
         "description": "È accaduto domenica scorsa a Gudo. L'uomo ─ un 32enne algerino ─ è stato in seguito fermato dalla polizia e rilasciato dopo gli accertamenti del caso",
         "link": "https://www.tio.ch/ticino/cronaca/1959591/lo-trova-nella-sua-auto-lui-si-da-alla-fuga",
-        "date": "Wed, 28 Oct 2026 14:54:57 +0100",
+        "date": "Wed, 28 Oct 2026 14:55:55 +0100",
         "category": "BELLINZONA",
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1os9q.jpg?v=1"
       },
@@ -1233,7 +1233,7 @@
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1os99.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-10-28T13:58:39.181695+00:00",
+    "updatedAt": "2026-10-28T14:04:08.581626+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -2130,7 +2130,7 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-28T13:58:39.181695+00:00",
+    "updatedAt": "2026-10-28T14:04:08.581626+00:00",
     "version": "20261028_1340"
   },
   "swissWeatherError": false,
@@ -2246,7 +2246,7 @@
       }
     ],
     "total": 46,
-    "updatedAt": "2026-10-28T13:58:39.181695+00:00",
+    "updatedAt": "2026-10-28T14:04:08.581626+00:00",
     "source": "Viasuisse"
   }
 }
