@@ -32,6 +32,18 @@
       },
       "streetViewEmbedUrl": "https://www.google.com/maps/embed?pb=!4v1791754473875!6m8!1m7!1sKUfcN_de16AuwXaXU8HW7g!2m2!1d45.85106768266762!2d8.943776088120396!3f253.7192!4f0!5f0.7820865974627469",
       "streetViewCapturedOn": "2014-10"
+    },
+    {
+      "id": "bruzzone-lo-presti-serocca-agno",
+      "name": "Dr.ssa Giulia Bruzzone e Giorgia Lo Presti",
+      "heading": "Cambio di indirizzo",
+      "noticeType": "address-change",
+      "street": "Strada Regina 157B",
+      "postalCode": "6982",
+      "locality": "Serocca d'Agno",
+      "pickups": {},
+      "pickupNote": "Nessun passaggio fisso",
+      "createdOn": "2026-10-28"
     }
   ]
 }
