@@ -1126,3 +1126,16 @@ main>.screen{transition:none}
 @media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){
  .clinic-screen.address-change::after{display:none}
 }
+
+/* Keep the two doctors' names on one line within the address card. */
+.clinic-screen.address-change .clinic-address-card{container-type:inline-size}
+.clinic-screen.address-change .clinic-address-card h1{white-space:nowrap;font-size:26px;letter-spacing:-.04em}
+@supports (font-size:1cqw){
+ .clinic-screen.address-change .clinic-address-card h1{font-size:clamp(10px,3.6cqw,30px)}
+}
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){
+ .clinic-screen.address-change .clinic-address-card h1{font-size:clamp(10px,3.2vw,22px)}
+ @supports (font-size:1cqw){
+  .clinic-screen.address-change .clinic-address-card h1{font-size:clamp(10px,3.6cqw,22px)}
+ }
+}
