@@ -1139,3 +1139,14 @@ main>.screen{transition:none}
   .clinic-screen.address-change .clinic-address-card h1{font-size:clamp(10px,3.6cqw,22px)}
  }
 }
+
+/* Give the doctors' names more space and a larger readable size. */
+.clinic-screen.address-change .clinic-content{grid-template-columns:52% minmax(0,1fr)}
+.clinic-screen.address-change .clinic-address-card h1{font-size:35px;letter-spacing:-.045em}
+@supports (font-size:1cqw){
+ .clinic-screen.address-change .clinic-address-card h1{font-size:clamp(12px,4.2cqw,38px)}
+}
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){
+ .clinic-screen.address-change .clinic-address-card h1{font-size:clamp(12px,3.8vw,26px)}
+ @supports (font-size:1cqw){.clinic-screen.address-change .clinic-address-card h1{font-size:clamp(12px,4.2cqw,26px)}}
+}
