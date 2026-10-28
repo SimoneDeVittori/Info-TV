@@ -48,7 +48,7 @@
         "temperatureMin": 8
       }
     ],
-    "updatedAt": "2026-10-28T13:52:58.378597+00:00"
+    "updatedAt": "2026-10-28T13:58:39.181695+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1209,6 +1209,14 @@
   "news": {
     "items": [
       {
+        "title": "Lo trova nella sua auto, lui si dà alla fuga",
+        "description": "È accaduto domenica scorsa a Gudo. L'uomo ─ un 32enne algerino ─ è stato in seguito fermato dalla polizia e rilasciato dopo gli accertamenti del caso",
+        "link": "https://www.tio.ch/ticino/cronaca/1959591/lo-trova-nella-sua-auto-lui-si-da-alla-fuga",
+        "date": "Wed, 28 Oct 2026 14:54:57 +0100",
+        "category": "BELLINZONA",
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1os9q.jpg?v=1"
+      },
+      {
         "title": "Preventivo in rosso, ma il comune «resta solido»",
         "description": "I conti presentano un disavanzo di 6.2 milioni. Confermati i moltiplicatori al 77% per le persone fisiche e all'82% per le persone giuridiche",
         "link": "https://www.tio.ch/ticino/politica/1959584/conferma-municipio-disavanzo-mendrisio-servizi",
@@ -1223,17 +1231,9 @@
         "date": "Wed, 28 Oct 2026 13:46:43 +0100",
         "category": "CANTONE",
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1os99.jpg?v=1"
-      },
-      {
-        "title": "Manno e Gravesano insieme per festeggiare i diciottenni",
-        "description": "Evento congiunto per rafforzare il senso di comunità tra i giovani e promuovere il dialogo con le istituzioni locali.",
-        "link": "https://www.tio.ch/ticino/attualita/1959579/manno-gravesano-diciottenni-giovani-comuni",
-        "date": "Wed, 28 Oct 2026 13:42:02 +0100",
-        "category": "MANNO",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1os96.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-10-28T13:52:58.378597+00:00",
+    "updatedAt": "2026-10-28T13:58:39.181695+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -2130,7 +2130,7 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-28T13:52:58.378597+00:00",
+    "updatedAt": "2026-10-28T13:58:39.181695+00:00",
     "version": "20261028_1340"
   },
   "swissWeatherError": false,
@@ -2246,7 +2246,7 @@
       }
     ],
     "total": 46,
-    "updatedAt": "2026-10-28T13:52:58.378597+00:00",
+    "updatedAt": "2026-10-28T13:58:39.181695+00:00",
     "source": "Viasuisse"
   }
 }
