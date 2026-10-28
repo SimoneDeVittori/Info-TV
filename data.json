@@ -3,8 +3,8 @@
     "current": {
       "icon": 1,
       "iconV2": 1,
-      "temperature": 17.5,
-      "time": 1793196000000
+      "temperature": 17.2,
+      "time": 1793197800000
     },
     "forecast": [
       {
@@ -14,7 +14,7 @@
         "precipitation": 0.0,
         "precipitationMax": 0.0,
         "precipitationMin": 0.0,
-        "temperatureMax": 17,
+        "temperatureMax": 18,
         "temperatureMin": 7
       },
       {
@@ -32,7 +32,7 @@
         "iconDay": 3,
         "iconDayV2": 3,
         "precipitation": 0.0,
-        "precipitationMax": 0.2,
+        "precipitationMax": 0.1,
         "precipitationMin": 0.0,
         "temperatureMax": 16,
         "temperatureMin": 8
@@ -48,7 +48,7 @@
         "temperatureMin": 8
       }
     ],
-    "updatedAt": "2026-10-28T14:04:08.581626+00:00"
+    "updatedAt": "2026-10-28T14:36:37.580958+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1209,31 +1209,31 @@
   "news": {
     "items": [
       {
-        "title": "Lo trova nella sua auto, lui si dà alla fuga",
-        "description": "È accaduto domenica scorsa a Gudo. L'uomo ─ un 32enne algerino ─ è stato in seguito fermato dalla polizia e rilasciato dopo gli accertamenti del caso",
-        "link": "https://www.tio.ch/ticino/cronaca/1959591/lo-trova-nella-sua-auto-lui-si-da-alla-fuga",
-        "date": "Wed, 28 Oct 2026 14:55:55 +0100",
-        "category": "BELLINZONA",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1os9q.jpg?v=1"
+        "title": "Scuola e abusi insabbiati: «Serve uno sportello indipendente per denunciare»",
+        "description": "Il SISA denuncia falle nel sistema di gestione delle segnalazioni e chiede una riforma per tutelare studenti e apprendisti.",
+        "link": "https://www.tio.ch/ticino/attualita/1959616/studenti-segnalazioni-sisa-decs-csia-apprendisti-gestione-sistema-abusi-sportello",
+        "date": "Wed, 28 Oct 2026 15:30:48 +0100",
+        "category": "LUGANO",
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1osaa.jpg?v=1"
       },
       {
-        "title": "Preventivo in rosso, ma il comune «resta solido»",
-        "description": "I conti presentano un disavanzo di 6.2 milioni. Confermati i moltiplicatori al 77% per le persone fisiche e all'82% per le persone giuridiche",
-        "link": "https://www.tio.ch/ticino/politica/1959584/conferma-municipio-disavanzo-mendrisio-servizi",
-        "date": "Wed, 28 Oct 2026 14:24:28 +0100",
-        "category": "MENDRISIO",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1os9k.jpg?v=1"
+        "title": "Lugano si prepara agli scenari peggiori, ecco chi prenderà il comando",
+        "description": "Federico Chiesa guiderà, a partire dal primo di novembre, l'Unità di coordinamento della Città (UCCL) nelle emergenze.",
+        "link": "https://www.tio.ch/ticino/attualita/1959608/lugano-si-prepara-agli-scenari-peggiori-ecco-chi-prendera-il-comando",
+        "date": "Wed, 28 Oct 2026 15:21:15 +0100",
+        "category": "LUGANO",
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1osa3.jpg?v=1"
       },
       {
-        "title": "Salari bassi e poche opportunità: anche l’OCST scende in piazza",
-        "description": "La manifestazione a Bellinzona del prossimo 20 novembre punta i riflettori sulla necessità di salari adeguati e di opportunità concrete per costruire un futuro nel Cantone.",
-        "link": "https://www.tio.ch/ticino/politica/1959578/opportunita-salari-ocst-cantone-giovani",
-        "date": "Wed, 28 Oct 2026 13:46:43 +0100",
-        "category": "CANTONE",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1os99.jpg?v=1"
+        "title": "Dalle pistole ai taser: ecco quante volte la polizia ha dovuto usarli",
+        "description": "Cresce del 29% in un anno l’impiego dei taser da parte della polizia svizzera, mentre il ricorso alle armi da fuoco resta limitato e senza vittime.",
+        "link": "https://www.tio.ch/ticino/attualita/1959601/polizia-fuoco-armi-impiego-pistole-ricorso-taser-svizzera",
+        "date": "Wed, 28 Oct 2026 15:02:25 +0100",
+        "category": "CANTONE/SVIZZERA",
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1os9v.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-10-28T14:04:08.581626+00:00",
+    "updatedAt": "2026-10-28T14:36:37.580958+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -1252,7 +1252,7 @@
         "coord_y": "1152444",
         "location_id": "100300",
         "location_type": "city",
-        "timestamp": 1793194814,
+        "timestamp": 1793196612,
         "forecasts": [
           {
             "date": "28 ottobre 2026",
@@ -1341,7 +1341,7 @@
         "coord_y": "1118423",
         "location_id": "120100",
         "location_type": "city",
-        "timestamp": 1793194814,
+        "timestamp": 1793196612,
         "forecasts": [
           {
             "date": "28 ottobre 2026",
@@ -1430,7 +1430,7 @@
         "coord_y": "1119910",
         "location_id": "195000",
         "location_type": "city",
-        "timestamp": 1793194814,
+        "timestamp": 1793196612,
         "forecasts": [
           {
             "date": "28 ottobre 2026",
@@ -1519,7 +1519,7 @@
         "coord_y": "1202399",
         "location_id": "300400",
         "location_type": "city",
-        "timestamp": 1793194814,
+        "timestamp": 1793196612,
         "forecasts": [
           {
             "date": "28 ottobre 2026",
@@ -1527,7 +1527,7 @@
             "weather_description": "symbol_id_0",
             "temp_high": 11,
             "weekday": "Heute",
-            "temp_low": 6,
+            "temp_low": 7,
             "weather_symbol_id": 0
           },
           {
@@ -1608,13 +1608,13 @@
         "coord_y": "1267348",
         "location_id": "400100",
         "location_type": "city",
-        "timestamp": 1793194814,
+        "timestamp": 1793196612,
         "forecasts": [
           {
             "date": "28 ottobre 2026",
             "date_iso": "2026-10-28",
             "weather_description": "symbol_id_0",
-            "temp_high": 14,
+            "temp_high": 15,
             "weekday": "Heute",
             "temp_low": 7,
             "weather_symbol_id": 0
@@ -1697,7 +1697,7 @@
         "coord_y": "1211120",
         "location_id": "600300",
         "location_type": "city",
-        "timestamp": 1793194814,
+        "timestamp": 1793196612,
         "forecasts": [
           {
             "date": "28 ottobre 2026",
@@ -1714,7 +1714,7 @@
             "weather_description": "symbol_id_35",
             "temp_high": 10,
             "weekday": "giovedì",
-            "temp_low": 6,
+            "temp_low": 7,
             "weather_symbol_id": 35
           },
           {
@@ -1786,7 +1786,7 @@
         "coord_y": "1096327",
         "location_id": "690000",
         "location_type": "city",
-        "timestamp": 1793194814,
+        "timestamp": 1793196612,
         "forecasts": [
           {
             "date": "28 ottobre 2026",
@@ -1875,7 +1875,7 @@
         "coord_y": "1191534",
         "location_id": "700000",
         "location_type": "city",
-        "timestamp": 1793194814,
+        "timestamp": 1793196612,
         "forecasts": [
           {
             "date": "28 ottobre 2026",
@@ -1964,7 +1964,7 @@
         "coord_y": "1247414",
         "location_id": "800100",
         "location_type": "city",
-        "timestamp": 1793194814,
+        "timestamp": 1793196612,
         "forecasts": [
           {
             "date": "28 ottobre 2026",
@@ -1972,7 +1972,7 @@
             "weather_description": "symbol_id_0",
             "temp_high": 12,
             "weekday": "Heute",
-            "temp_low": 8,
+            "temp_low": 7,
             "weather_symbol_id": 0
           },
           {
@@ -2053,7 +2053,7 @@
         "coord_y": "1254370",
         "location_id": "900000",
         "location_type": "city",
-        "timestamp": 1793194814,
+        "timestamp": 1793196612,
         "forecasts": [
           {
             "date": "28 ottobre 2026",
@@ -2130,12 +2130,57 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-28T14:04:08.581626+00:00",
-    "version": "20261028_1340"
+    "updatedAt": "2026-10-28T14:36:37.580958+00:00",
+    "version": "20261028_1410"
   },
   "swissWeatherError": false,
   "traffic": {
     "items": [
+      {
+        "id": "Viasuisser_Viasuisse/2515662_TIC-Viasuisse/1",
+        "text": "398 - direzione Ponte Tresa tra Gravesano e Manno traffico fortemente rallentato, traffico congestionato",
+        "location": "398 - direzione Ponte Tresa",
+        "road": "398",
+        "category": 13,
+        "changedAt": "2026-10-28T15:28:03+01:00",
+        "priority": 1
+      },
+      {
+        "id": "Viasuisser_Viasuisse/2515659_TIC-Viasuisse/1",
+        "text": "398 - Lamone direzione Ponte Tresa tra Agno e frontiera Ponte Tresa traffico fortemente rallentato, traffico congestionato",
+        "location": "398 - Lamone direzione Ponte Tresa",
+        "road": "398",
+        "category": 13,
+        "changedAt": "2026-10-28T15:27:05+01:00",
+        "priority": 1
+      },
+      {
+        "id": "Viasuisser_Viasuisse/2515658_TIC-Viasuisse/1",
+        "text": "H2 - tra Cadempino e Vezia traffico fortemente rallentato, traffico congestionato",
+        "location": "H2 - tra Cadempino e Vezia traffico fortemente rallentato, traffico congestionato",
+        "road": "H2",
+        "category": 13,
+        "changedAt": "2026-10-28T15:24:59+01:00",
+        "priority": 1
+      },
+      {
+        "id": "Viasuisser_FAVM/662691_TIC-Viasuisse/1",
+        "text": "A24 - Mendrisio direzione Stabio tra Mendrisio e Stabio colonna, traffico congestionato",
+        "location": "A24 - Mendrisio direzione Stabio",
+        "road": "A24",
+        "category": 12,
+        "changedAt": "2026-10-28T15:19:59+01:00",
+        "priority": 0
+      },
+      {
+        "id": "Viasuisser_FAVM/662690_TIC-Viasuisse/1",
+        "text": "406 - Riazzino - Cadenazzo tra rotatoria Aeroporto di Locarno e Cadenazzo in entrambe le direzioni traffico fortemente rallentato, traffico congestionato",
+        "location": "406 - Riazzino - Cadenazzo",
+        "road": "406",
+        "category": 13,
+        "changedAt": "2026-10-28T15:17:57+01:00",
+        "priority": 1
+      },
       {
         "id": "Viasuisser_FAVM/659882_TIC-Viasuisse/1",
         "text": "Gordola - Sonogno - tra 13 in Gordola e Berzona in entrambe le direzioni chiusa, lavori di manutenzione durante la notte, fino a sabato, tra 20:00 e 22:30, tra 22:50 e 00:30 e tra 00:50 e 05:30 chiusura strada all'altezza della galleria in zona Passaroro (comune Gordola) durante le notte dalle 20:00 alle 05:30. 2 aperture straordinarie dalle 22:30 alle 22:50 e dalle 00:30 alle 00:50.",
@@ -2198,55 +2243,10 @@
         "category": 31,
         "changedAt": "2026-10-16T16:26:20+02:00",
         "priority": 5
-      },
-      {
-        "id": "Viasuisser_Viasuisse/2512768_TIC-Viasuisse/1",
-        "text": "Lugano, Via Pretorio - a Lugano problemi di traffico, lavori stradali, corsie strette, fino a 06.11.2026 17:00",
-        "location": "Lugano, Via Pretorio",
-        "road": "TI",
-        "category": 31,
-        "changedAt": "2026-10-16T16:12:54+02:00",
-        "priority": 5
-      },
-      {
-        "id": "Viasuisser_FAVM/659826_TIC-Viasuisse/1",
-        "text": "A2 - Chiasso direzione S. Gottardo tra Faido e Quinto problemi di traffico, lavori stradali durante il giorno per 0.1 km, corsia d'emergenza chiusa, limite temporaneo di larghezza di 7.75 m, fino a oggi, tra 08:00 e 17:00 - ID118487",
-        "location": "A2 - Chiasso direzione S. Gottardo",
-        "road": "A2",
-        "category": 31,
-        "changedAt": "2026-10-15T18:16:42+02:00",
-        "priority": 5
-      },
-      {
-        "id": "Viasuisser_FAVM/658513_TIC-Viasuisse/1",
-        "text": "A2 - Chiasso direzione S. Gottardo tra frontiera Chiasso Brogeda e Melide/Bissone problemi di traffico, lavori stradali durante la notte per 16.1 km, nuova gestione del traffico, carreggiata ridotta a una corsia, limite temporaneo di larghezza di 3.80 m, fino a venerdì, tra 21:00 e 04:30 - ID118297",
-        "location": "A2 - Chiasso direzione S. Gottardo",
-        "road": "A2",
-        "category": 32,
-        "changedAt": "2026-10-09T13:34:19+02:00",
-        "priority": 6
-      },
-      {
-        "id": "Viasuisser_FAVM/620496_TIC-Viasuisse/1",
-        "text": "2 - Göschenen - Airolo tra Göschenen e Airolo in entrambe le direzioni problemi di traffico, lavori stradali durante il giorno per 0.1 km, limite temporaneo di larghezza di 3.50 m, fino a 18.12.2026, lun - ven tra 07:00 e 17:00 - ID112048",
-        "location": "2 - Göschenen - Airolo",
-        "road": "2",
-        "category": 31,
-        "changedAt": "2026-10-07T07:31:34+02:00",
-        "priority": 5
-      },
-      {
-        "id": "Viasuisser_Viasuisse/2509750_TIC-Viasuisse/1",
-        "text": "Lugano, Viale Stefano Franscini a Via Serafino Balestra - a Lugano problemi di traffico, lavori stradali, corsie strette, fino a sabato 07:15",
-        "location": "Lugano, Viale Stefano Franscini a Via Serafino Balestra",
-        "road": "TI",
-        "category": 31,
-        "changedAt": "2026-10-03T13:25:16+02:00",
-        "priority": 5
       }
     ],
-    "total": 46,
-    "updatedAt": "2026-10-28T14:04:08.581626+00:00",
+    "total": 51,
+    "updatedAt": "2026-10-28T14:36:37.580958+00:00",
     "source": "Viasuisse"
   }
 }
