@@ -1195,3 +1195,12 @@ main>.screen{transition:none}
  .route-direct .route-card li{white-space:normal}
  .route-direct .route-reminder{font-size:27px;line-height:1.1;margin:20px 0}
 }
+
+/* Larger route descriptions with times in a common right-hand column. */
+.route-changes .route-card ul{list-style:none;padding-left:0;font-size:30px;gap:5px}
+.route-changes .route-card li{display:grid;grid-template-columns:minmax(0,1fr) 110px;column-gap:24px;align-items:baseline}
+.route-changes .route-time{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){
+ .route-direct .route-card ul{font-size:18px;gap:10px}
+ .route-direct .route-card li{grid-template-columns:minmax(0,1fr) auto;column-gap:12px}
+}

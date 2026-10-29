@@ -290,11 +290,11 @@ function useLiveTio(){
 }
 function RouteChanges({date,active}){
  const h=k.createElement;
- const groups=[["FUORI 2",["Ritiro anticipato: Dr.ssa Paltenghi ed eventuali alla St. Anna — 11:15","Dr.ssa Bruzzone — 12:20 nella nuova sede","Aggiunto Dr. Nussbaumer — 12:35","Aggiunto MedicalVillage Manno — 12:45"]],["FUORI 1",["Aggiunto MedicalVillage Vezia — 11:15, scendendo da Tesserete"]],["LUGANO CENTRO",["Dopo il Centro Prelievi, libero per eventuali urgenze"]]];
+ const groups=[["FUORI 2",[["Ritiro anticipato: Dr.ssa Paltenghi ed eventuali alla St. Anna","11:15"],["Dr.ssa Bruzzone nella nuova sede","12:20"],["Aggiunto Dr. Nussbaumer","12:35"],["Aggiunto MedicalVillage Manno","12:45"]]],["FUORI 1",[["Aggiunto MedicalVillage Vezia, scendendo da Tesserete","11:15"]]],["LUGANO CENTRO",[["Dopo il Centro Prelievi, libero per eventuali urgenze",null]]]];
  return h("section",{className:"dashboard route-changes screen "+(active?"active":""),"aria-hidden":!active},
   h("header",null,h("div",{className:"date"},un(date)),h("time",{className:"header-clock"},date?me(date):"—")),
   h("div",{className:"route-heading"},h("h1",null,"MODIFICHE GIRI"),h("p",null,"Da lunedì 2 novembre")),
-  h("div",{className:"route-cards"},...groups.map(([title,items])=>h("article",{className:"card route-card",key:title},h("h2",null,title),h("ul",null,...items.map((item,index)=>h("li",{key:index},item)))))),
+  h("div",{className:"route-cards"},...groups.map(([title,items])=>h("article",{className:"card route-card",key:title},h("h2",null,title),h("ul",null,...items.map(([description,time],index)=>h("li",{key:index},h("span",{className:"route-description"},description),time?h("time",{className:"route-time"},time):null)))))),
   h("p",{className:"route-reminder"},"RISPETTATE GLI ORARI!!"),
   h("div",{className:"progress",style:{animationDuration:"35s"}}));
 }
@@ -421,4 +421,5 @@ lucide-react/dist/esm/lucide-react.mjs:
    * See the LICENSE file in the root directory of this source tree.
    *)
 */
+
 
