@@ -1289,3 +1289,9 @@ main>.screen{transition:none}
 .route-changes .route-heading p,.route-changes .route-reminder{color:#315b70}
 .route-changes .route-time,.route-changes .route-heading p{background:#eaf2f5}
 .route-changes .route-time:empty{background:transparent}
+
+/* Black text, coordinated with the olive route labels. */
+.route-changes .route-description,.route-changes .route-time,
+.route-changes .route-heading p,.route-changes .route-reminder{color:#151515}
+.route-changes .route-time,.route-changes .route-heading p{background:#f1f1ee}
+.route-changes .route-time:empty{background:transparent}
