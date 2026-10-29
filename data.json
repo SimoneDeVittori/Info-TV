@@ -3,8 +3,8 @@
     "current": {
       "icon": 1,
       "iconV2": 1,
-      "temperature": 17.7,
-      "time": 1793284800000
+      "temperature": 17.5,
+      "time": 1793286000000
     },
     "forecast": [
       {
@@ -29,8 +29,8 @@
       },
       {
         "dayDate": "2026-10-31",
-        "iconDay": 3,
-        "iconDayV2": 3,
+        "iconDay": 2,
+        "iconDayV2": 2,
         "precipitation": 0.0,
         "precipitationMax": 0.0,
         "precipitationMin": 0.0,
@@ -48,7 +48,7 @@
         "temperatureMin": 4
       }
     ],
-    "updatedAt": "2026-10-29T14:48:20.822706+00:00"
+    "updatedAt": "2026-10-29T15:08:05.007616+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -73,7 +73,7 @@
         "dayDate": "2026-10-31",
         "temperatureMin": 7,
         "temperatureMax": 15,
-        "iconDay": 3,
+        "iconDay": 2,
         "precipitation": 0.0
       },
       {
@@ -1202,12 +1202,20 @@
         "amount": 0.0
       }
     ],
-    "model": "202610291400",
-    "updatedAt": "2026-10-29T14:48:20.854265+00:00"
+    "model": "202610291500",
+    "updatedAt": "2026-10-29T15:08:05.129767+00:00"
   },
   "weekError": false,
   "news": {
     "items": [
+      {
+        "title": "Porsche, Lamborghini e casa in Florida: 4 anni e 7 mesi all’ex dipendente FFS",
+        "description": "Il giudice del TPF ha riconosciuto anche il coinvolgimento di complici e l'utilizzo di società di copertura per il riciclaggio.",
+        "link": "https://www.tio.ch/ticino/cronaca/1959877/anni-dipendente-ffs-casa-lamborghini-porsche-florida",
+        "date": "Thu, 29 Oct 2026 15:49:11 +0100",
+        "category": "BELLINZONA / SVIZZERA",
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oslf.jpg?v=1"
+      },
       {
         "title": "«La capitale non può perdere questo servizio»",
         "description": "La chiusura festiva della biglietteria FFS di Bellinzona solleva interrogativi. La questione arriva sui banchi del Municipio.",
@@ -1223,17 +1231,9 @@
         "date": "Thu, 29 Oct 2026 14:41:41 +0100",
         "category": "CANTONE",
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oskg.jpg?v=1"
-      },
-      {
-        "title": "Lo sciopero non si fa: treni regolari tra Italia e Ticino",
-        "description": "La protesta ferroviaria prevista tra il 29 e il 30 ottobre è stata rinviata dopo l'intervento del Ministero italiano dei Trasporti.",
-        "link": "https://www.tio.ch/ticino/cronaca/1959852/sciopero-ottobre-treni-ticino-italia",
-        "date": "Thu, 29 Oct 2026 14:39:59 +0100",
-        "category": "CONFINE",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1oske.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-10-29T14:48:20.822706+00:00",
+    "updatedAt": "2026-10-29T15:08:05.007616+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -2130,12 +2130,30 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-29T14:48:20.822706+00:00",
+    "updatedAt": "2026-10-29T15:08:05.007616+00:00",
     "version": "20261029_1440"
   },
   "swissWeatherError": false,
   "traffic": {
     "items": [
+      {
+        "id": "Viasuisser_FAVM/662987_TIC-Viasuisse/1",
+        "text": "406 - Cadenazzo direzione Riazzino tra Cadenazzo e Contone traffico fortemente rallentato, traffico congestionato",
+        "location": "406 - Cadenazzo direzione Riazzino",
+        "road": "406",
+        "category": 13,
+        "changedAt": "2026-10-29T16:04:05+01:00",
+        "priority": 1
+      },
+      {
+        "id": "Viasuisser_FAVM/662986_TIC-Viasuisse/1",
+        "text": "2 - In Busciurina direzione Chiasso tra Comelina e 406 in Cadenazzo colonna, traffico congestionato",
+        "location": "2 - In Busciurina direzione Chiasso",
+        "road": "2",
+        "category": 12,
+        "changedAt": "2026-10-29T16:03:58+01:00",
+        "priority": 0
+      },
       {
         "id": "Viasuisser_FAVM/662943_TIC-Viasuisse/1",
         "text": "A2 - Chiasso direzione S. Gottardo tra Quinto e Area di dosaggio Airolo traffico congestionato, traffico bloccato per 2 km, ritardi fino a 20 minuti - Ricordiamo anche che la corsia preferenziale CUPRA è aperta.",
@@ -2225,28 +2243,10 @@
         "category": 11,
         "changedAt": "2026-10-22T15:47:29+02:00",
         "priority": 3
-      },
-      {
-        "id": "Viasuisser_Viasuisse/2511918_TIC-Viasuisse/1",
-        "text": "Lugano, Via Giuseppe Mazzini - tra Riva Antonio Caccia e 2, Via Clemente Maraini chiusa, lavori stradali, fino a domani, tra 20:00 e 06:00 L'accesso a via Mazzini, che per l'occasione sarà disciplinata in doppio senso di marcia, sarà possibile da Riva A. Caccia rispettivamente via Maraini in base all'avanzamento delle fasi di lavoro.",
-        "location": "Lugano, Via Giuseppe Mazzini",
-        "road": "TI",
-        "category": 31,
-        "changedAt": "2026-10-20T09:38:35+02:00",
-        "priority": 5
-      },
-      {
-        "id": "Viasuisser_Viasuisse/2512813_TIC-Viasuisse/1",
-        "text": "Noranco, Strada di Furnas a Via ai Pree - uscita di località problemi di traffico, lavori stradali, corsie strette, fino a sabato 04:30",
-        "location": "Noranco, Strada di Furnas a Via ai Pree",
-        "road": "TI",
-        "category": 31,
-        "changedAt": "2026-10-16T17:07:14+02:00",
-        "priority": 5
       }
     ],
-    "total": 49,
-    "updatedAt": "2026-10-29T14:48:20.822706+00:00",
+    "total": 51,
+    "updatedAt": "2026-10-29T15:08:05.007616+00:00",
     "source": "Viasuisse"
   }
 }
