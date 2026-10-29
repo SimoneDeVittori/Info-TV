@@ -43,28 +43,29 @@
       "locality": "Serocca d'Agno",
       "pickups": {
         "Lu": {
-          "morning": null,
-          "afternoon": "12:20"
+          "morning": "12:20",
+          "afternoon": null
         },
         "Ma": {
-          "morning": null,
-          "afternoon": "12:20"
+          "morning": "12:20",
+          "afternoon": null
         },
         "Me": {
-          "morning": null,
-          "afternoon": "12:20"
+          "morning": "12:20",
+          "afternoon": null
         },
         "Gio": {
-          "morning": null,
-          "afternoon": "12:20"
+          "morning": "12:20",
+          "afternoon": null
         },
         "Ve": {
-          "morning": null,
-          "afternoon": "12:20"
+          "morning": "12:20",
+          "afternoon": null
         }
       },
       "createdOn": "2026-10-28",
-      "expiresOn": "2026-11-05"
+      "expiresOn": "2026-11-05",
+      "startsOn": "2026-11-02"
     }
   ]
 }
