@@ -317,7 +317,7 @@ function pp(){let a=Gg(),e=zg(),liveNews=useLiveTio(),[t,l]=(0,k.useState)(()=>o
   let second=0;const first=requestAnimationFrame(()=>{second=requestAnimationFrame(reveal)});
   return()=>{cancelAnimationFrame(first);cancelAnimationFrame(second);active.classList.remove("screen-entering")};
  }
- const outgoing=previous.element,selector=":scope > .content,:scope > .swiss-map-card,:scope > .clinic-content,:scope > .clinic-title-row";
+ const outgoing=previous.element,selector=":scope > .content,:scope > .swiss-map-card,:scope > .clinic-content,:scope > .clinic-title-row,:scope > .route-heading,:scope > .route-cards,:scope > .route-reminder";
  const entering=homeEntry?[...active.querySelectorAll(".content>.weather,.right-column>.news,.right-column>.traffic")]:[...active.querySelectorAll(selector)];
  const leaving=isDashboard(previous.id)?[...outgoing.querySelectorAll(selector)]:[outgoing];
  const animations=[],duration=homeEntry?2800:700,easing="cubic-bezier(.25,0,.75,1)";
@@ -335,7 +335,7 @@ function pp(){let a=Gg(),e=zg(),liveNews=useLiveTio(),[t,l]=(0,k.useState)(()=>o
    const frames=homeEntry?[
     {opacity:1,transform:from},{opacity:1,transform:"translate3d(0,0,0)"}
    ]:[{opacity:0,transform:from},{opacity:1,transform:"translate3d(0,0,0)"}];
-   animations.push(element.animate(frames,{duration,delay:homeEntry?index*55:0,easing,fill:"both"}));
+   animations.push(element.animate(frames,{duration,delay:homeEntry?(outgoing.classList.contains("route-changes")?250:0)+index*55:0,easing,fill:"both"}));
   }
   const commonStart=document.timeline?.currentTime;
   if(commonStart!=null)for(const animation of animations)animation.startTime=commonStart;
