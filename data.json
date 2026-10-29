@@ -48,7 +48,7 @@
         "temperatureMin": 4
       }
     ],
-    "updatedAt": "2026-10-29T10:14:18.198651+00:00"
+    "updatedAt": "2026-10-29T10:20:28.566705+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1203,37 +1203,37 @@
       }
     ],
     "model": "202610291000",
-    "updatedAt": "2026-10-29T10:14:18.218456+00:00"
+    "updatedAt": "2026-10-29T10:20:28.582627+00:00"
   },
   "weekError": false,
   "news": {
     "items": [
       {
-        "title": "Capolago, lavori e chiusure stradali: ecco cosa cambia dal 2 novembre",
-        "description": "L'intervento rientra nel progetto di introduzione di una Zona 30 nel quartiere di Mendrisio e punta a migliorare le condizioni di una mobilità dolce del quartiere.",
-        "link": "https://www.tio.ch/ticino/attualita/1959764/capolago-lavori-e-chiusure-stradali-ecco-cosa-cambia-dal-2-novembre",
-        "date": "Thu, 29 Oct 2026 09:34:23 +0100",
-        "category": "MENDRISIO",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1osgw.jpg?v=1"
+        "title": "Rosso di oltre 10 milioni e una task force per risanare le finanze",
+        "description": "Presentato il Preventivo 2027 della Città. Si va verso una serie di misure e investimenti strategici per riportare in equilibrio i conti cittadini entro il 2030.",
+        "link": "https://www.tio.ch/ticino/economia/1959801/rosso-di-oltre-10-milioni-e-una-task-force-per-risanare-le-finanze",
+        "date": "Thu, 29 Oct 2026 11:18:31 +0100",
+        "category": "BELLINZONA",
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1osih.jpg?v=1"
       },
       {
-        "title": "Abusi a scuola, la Lega chiede chiarezza: «Basta proteggere i \"compagni\" che sbagliano»",
-        "description": "Il partito di via Monte Boglia interroga il Governo sul caso dell'ex docente della Csia accusato di comportamenti sessisti e abuso d'autorità.",
-        "link": "https://www.tio.ch/ticino/politica/1959759/abusi-a-scuola-la-lega-chiede-chiarezza-basta-proteggere-i-compagni-che-sbagliano",
-        "date": "Thu, 29 Oct 2026 09:00:52 +0100",
-        "category": "CANTONE",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1osgl.jpg?v=1"
+        "title": "Addio biglietteria nei giorni festivi",
+        "description": "La chiusura nei giorni festivi a Bellinzona preoccupa utenti e sindacati per la riduzione dell’accessibilità ai servizi ferroviari.",
+        "link": "https://www.tio.ch/ticino/attualita/1959799/sev-sindacato-stazione-ffs-biglietterie",
+        "date": "Thu, 29 Oct 2026 11:16:11 +0100",
+        "category": "BELLINZONA",
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1osie.jpg?v=1"
       },
       {
-        "title": "Dal Ticino al Kenya: nasce \"Per un sorriso in più\", un'associazione per aiutare i bambini in difficoltà",
-        "description": "Dalla costruzione di un pozzo all'aiuto nelle scuole e negli orfanotrofi, i primi progetti si concentrano sulle necessità fondamentali dei bambini keniani. Il 29 novembre a Riva San Vitale la presentazione ufficiale dell'associazione",
-        "link": "https://www.tio.ch/ticino/attualita/1959270/associazione-bambini-kenya-interventi-progetti-novembre-sorriso-pozzo-difficolta-ticino",
-        "date": "Thu, 29 Oct 2026 06:30:00 +0100",
-        "category": "GIUBIASCO",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1orvm.jpg?v=1"
+        "title": "Posata la prima pietra della rete Tram Treno del Luganese",
+        "description": "Dopo anni di attese e ricorsi, prende ufficialmente il via il progetto che rivoluzionerà la mobilità della regione.",
+        "link": "https://www.tio.ch/ticino/attualita/1959570/posata-la-prima-pietra-della-rete-tram-treno-del-luganese",
+        "date": "Thu, 29 Oct 2026 11:12:22 +0100",
+        "category": "LUGANESE",
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc2/1osid.jpg"
       }
     ],
-    "updatedAt": "2026-10-29T10:14:18.198651+00:00",
+    "updatedAt": "2026-10-29T10:20:28.566705+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -2130,7 +2130,7 @@
         ]
       }
     ],
-    "updatedAt": "2026-10-29T10:14:18.198651+00:00",
+    "updatedAt": "2026-10-29T10:20:28.566705+00:00",
     "version": "20261029_1010"
   },
   "swissWeatherError": false,
@@ -2246,7 +2246,7 @@
       }
     ],
     "total": 42,
-    "updatedAt": "2026-10-29T10:14:18.198651+00:00",
+    "updatedAt": "2026-10-29T10:20:28.566705+00:00",
     "source": "Viasuisse"
   }
 }
