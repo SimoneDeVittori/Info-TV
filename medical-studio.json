@@ -61,18 +61,9 @@
         "Ve": {
           "morning": null,
           "afternoon": "12:20"
-        },
-        "Sa": {
-          "morning": null,
-          "afternoon": "12:20"
-        },
-        "Do": {
-          "morning": null,
-          "afternoon": "12:20"
         }
       },
-      "createdOn": "2026-10-28",
-      "showWeekends": true
+      "createdOn": "2026-10-28"
     }
   ]
 }
