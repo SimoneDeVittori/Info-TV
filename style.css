@@ -1218,3 +1218,5 @@ main>.screen{transition:none}
  .route-direct .route-reminder{font-size:clamp(23px,5vw,34px);gap:9px;line-height:1.1}
  .route-direct .route-reminder-clock{width:40px;height:40px}
 }
+
+.route-changes .route-cards{grid-template-rows:1fr 1.7fr 1fr}

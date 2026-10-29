@@ -290,7 +290,7 @@ function useLiveTio(){
 }
 function RouteChanges({date,active}){
  const h=k.createElement;
- const groups=[["FUORI 2",[["Ritiro anticipato: Dr.ssa Paltenghi ed eventuali alla St. Anna","11:15"],["Dr.ssa Bruzzone nella nuova sede","12:20"],["Aggiunto Dr. Nussbaumer","12:35"],["Aggiunto MedicalVillage Manno","12:45"]]],["FUORI 1",[["Aggiunto MedicalVillage Vezia, scendendo da Tesserete","11:15"]]],["LUGANO CENTRO",[["Dopo il Centro Prelievi, libero per eventuali urgenze",null]]]];
+ const groups=[["FUORI 1",[["Aggiunto MedicalVillage Vezia, scendendo da Tesserete","11:15"]]],["FUORI 2",[["Ritiro anticipato: Dr.ssa Paltenghi ed eventuali alla St. Anna","11:15"],["Dr.ssa Bruzzone nella nuova sede","12:20"],["Aggiunto Dr. Nussbaumer","12:35"],["Aggiunto MedicalVillage Manno","12:45"]]],["LUGANO CENTRO",[["Dopo il Centro Prelievi, libero per eventuali urgenze",null]]]];
  return h("section",{className:"dashboard route-changes screen "+(active?"active":""),"aria-hidden":!active},
   h("header",null,h("div",{className:"date"},un(date)),h("time",{className:"header-clock"},date?me(date):"—")),
   h("div",{className:"route-heading"},h("h1",null,"MODIFICHE GIRI"),h("p",null,"DA DOMANI 30 OTTOBRE")),
