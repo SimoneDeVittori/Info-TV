@@ -1240,3 +1240,27 @@ main>.screen{transition:none}
  .route-direct .route-card h2{font-size:21px}
  .route-direct .route-changes .progress{position:fixed;left:0;bottom:0;width:100%;height:4px}
 }
+
+/* Route notice: clear horizontal grouping and a consistent time column. */
+.route-changes .route-heading{display:flex;align-items:center;justify-content:space-between;gap:24px;margin:0 0 20px}
+.route-changes .route-heading h1{font-size:56px;line-height:1.05;letter-spacing:-.035em;color:#333a2f}
+.route-changes .route-heading p{margin:0;padding:12px 20px;border-radius:12px;background:#fff0ed;color:#ba2020;font-size:27px;font-weight:800;white-space:nowrap}
+.route-changes .route-cards{grid-template-columns:minmax(0,1fr);grid-template-rows:1fr 2fr 1fr;gap:16px}
+.route-changes .route-card{display:grid;grid-template-columns:235px minmax(0,1fr);align-items:center;gap:24px;min-width:0;min-height:0;padding:15px 28px;border-top:6px solid #8a824c;border-radius:16px;background:#fff;box-shadow:0 3px 12px #27313b12}
+.route-changes .route-card h2{margin:0;padding:12px 16px;border-radius:10px;background:#f3f2e7;color:#68663d;font-size:25px;line-height:1.15;letter-spacing:.03em}
+.route-changes .route-card ul{min-width:0;margin:0;padding:0;gap:4px;font-size:29px;line-height:1.15}
+.route-changes .route-card li{display:grid;grid-template-columns:105px minmax(0,1fr);align-items:center;gap:20px;min-width:0;padding:3px 0}
+.route-changes .route-time{display:block;padding:5px 9px;border-radius:8px;background:#fff0ed;color:#ba2020;text-align:center;font-weight:800;font-variant-numeric:tabular-nums}
+.route-changes .route-time:empty{background:transparent}
+.route-changes .route-description{color:#ba2020;font-weight:700}
+.route-changes .route-reminder{margin:14px 0 16px;gap:18px;color:#ba2020}
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){
+ .route-direct .route-heading{display:flex;align-items:flex-start;flex-direction:column;gap:10px;margin-bottom:16px}
+ .route-direct .route-heading h1{font-size:30px}
+ .route-direct .route-heading p{font-size:16px;padding:8px 12px}
+ .route-direct .route-card{display:flex;flex-direction:column;align-items:stretch;gap:10px;padding:16px 18px}
+ .route-direct .route-card h2{font-size:20px;margin:0;padding:8px 10px}
+ .route-direct .route-card ul{font-size:17px;gap:8px}
+ .route-direct .route-card li{grid-template-columns:62px minmax(0,1fr);gap:10px;white-space:normal}
+ .route-direct .route-time{padding:4px}
+}
