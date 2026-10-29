@@ -1150,3 +1150,8 @@ main>.screen{transition:none}
  .clinic-screen.address-change .clinic-address-card h1{font-size:clamp(12px,3.8vw,26px)}
  @supports (font-size:1cqw){.clinic-screen.address-change .clinic-address-card h1{font-size:clamp(12px,4.2cqw,26px)}}
 }
+
+.clinic-screen.address-change .clinic-week{grid-template-columns:repeat(7,minmax(0,1fr))}
+.clinic-screen.address-change .clinic-day.has-day-pickup{min-width:0;min-height:0;padding:6px 3px;gap:4px;justify-content:space-evenly;background:#f3f2e7;border-color:#d5d1af}
+.clinic-screen.address-change .clinic-day.has-day-pickup .clinic-slot{padding:4px 2px;gap:2px}
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){.clinic-screen.address-change .clinic-week{grid-template-columns:repeat(2,minmax(0,1fr))}}
