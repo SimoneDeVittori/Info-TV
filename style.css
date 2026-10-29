@@ -1306,3 +1306,13 @@ main>.screen{transition:none}
 .clinic-screen.address-change .clinic-day.has-day-pickup .clinic-slot.has-pickup strong{color:#2e6a36}
 .clinic-screen.address-change .clinic-day .clinic-slot.no-pickup small,
 .clinic-screen.address-change .clinic-day .clinic-slot.no-pickup strong{color:#798189}
+
+/* Larger weekday and pickup labels for the medical screens. */
+.clinic-screen .clinic-week .clinic-day>span{font-size:24px}
+.clinic-screen .clinic-week .clinic-day small{font-size:18px}
+.clinic-screen .clinic-week .clinic-day strong{font-size:30px}
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){
+ .clinic-screen .clinic-week .clinic-day>span{font-size:16px}
+ .clinic-screen .clinic-week .clinic-day small{font-size:13px}
+ .clinic-screen .clinic-week .clinic-day strong{font-size:24px}
+}
