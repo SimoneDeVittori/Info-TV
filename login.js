@@ -5,7 +5,7 @@ const SALT="025df18a3a043c6a837fe011f848f3f6";
 const VERIFIER="7b60320243f44f4b2568105187204841ee01445f76534939f0f89156a45d154d";
 const ITERATIONS=120000;
 const ACCESS_KEY="unilabs-manno-tv-access-v1";
-const APP_SOURCE="./app.js?v=20261029-giri-fuori1-prima";
+const APP_SOURCE="./app.js?v=20261029-giri-senza-aggiunto";
 const bytesFromHex=value=>Uint8Array.from(value.match(/../g),pair=>parseInt(pair,16));
 
 export async function verifyCredentials(username,password){
