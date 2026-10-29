@@ -294,7 +294,7 @@ function RouteChanges({date,active}){
  return h("section",{className:"dashboard route-changes screen "+(active?"active":""),"aria-hidden":!active},
   h("header",null,h("div",{className:"date"},un(date)),h("time",{className:"header-clock"},date?me(date):"—")),
   h("div",{className:"route-heading"},h("h1",null,"MODIFICHE GIRI"),h("p",null,"Da lunedì 2 novembre")),
-  h("div",{className:"route-cards"},...groups.map(([title,items])=>h("article",{className:"card route-card",key:title},h("h2",null,title),h("ul",null,...items.map(([description,time],index)=>h("li",{key:index},h("span",{className:"route-description"},description),time?h("time",{className:"route-time"},time):null)))))),
+  h("div",{className:"route-cards"},...groups.map(([title,items])=>h("article",{className:"card route-card",key:title},h("h2",null,title),h("ul",null,...items.map(([description,time],index)=>h("li",{key:index},time?h("time",{className:"route-time"},time):h("span",{className:"route-time","aria-hidden":true}),h("span",{className:"route-description"},description))))))),
   h("p",{className:"route-reminder"},"RISPETTATE GLI ORARI!!"),
   h("div",{className:"progress",style:{animationDuration:"35s"}}));
 }
