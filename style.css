@@ -1208,3 +1208,5 @@ main>.screen{transition:none}
 .route-changes .route-card li{grid-template-columns:110px minmax(0,1fr)}
 .route-changes .route-time{text-align:left}
 @media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){.route-direct .route-card li{grid-template-columns:58px minmax(0,1fr)}}
+
+.route-changes .route-description{text-transform:uppercase}
