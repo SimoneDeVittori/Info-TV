@@ -1220,3 +1220,5 @@ main>.screen{transition:none}
 }
 
 .route-changes .route-cards{grid-template-rows:1fr 1.7fr 1fr}
+
+.route-changes .route-heading p{color:#ba2020}
