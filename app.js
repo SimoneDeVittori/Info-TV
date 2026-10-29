@@ -295,6 +295,7 @@ function RouteChanges({date,active}){
   h("header",null,h("div",{className:"date"},un(date)),h("time",{className:"header-clock"},date?me(date):"—")),
   h("div",{className:"route-heading"},h("h1",null,"MODIFICHE GIRI"),h("p",null,"Da lunedì 2 novembre")),
   h("div",{className:"route-cards"},...groups.map(([title,items])=>h("article",{className:"card route-card",key:title},h("h2",null,title),h("ul",null,...items.map((item,index)=>h("li",{key:index},item)))))),
+  h("p",{className:"route-reminder"},"RISPETTATE GLI ORARI!!"),
   h("div",{className:"progress",style:{animationDuration:"35s"}}));
 }
 function pp(){let a=Gg(),e=zg(),liveNews=useLiveTio(),[t,l]=(0,k.useState)(()=>on()),u=qg(t),[f,o]=(0,k.useState)(null),[d,s]=(0,k.useState)(()=>ho()?5:rp()?1:ip()?vg()?4:1:0),[n,h]=(0,k.useState)({}),[g,m]=(0,k.useState)(!1),[p,I]=(0,k.useState)(!1);const [readyScreen,setReadyScreen]=(0,k.useState)(-1);let previousScreen=(0,k.useRef)({id:d,element:null});(0,k.useLayoutEffect)(()=>{
