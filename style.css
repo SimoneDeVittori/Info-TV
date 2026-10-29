@@ -1210,3 +1210,11 @@ main>.screen{transition:none}
 @media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){.route-direct .route-card li{grid-template-columns:58px minmax(0,1fr)}}
 
 .route-changes .route-description{text-transform:uppercase}
+
+/* Large clock reminder, static to keep TV playback smooth. */
+.route-changes .route-reminder{display:flex;align-items:center;justify-content:center;gap:22px;margin:10px 0 14px;font-size:68px;font-weight:850;line-height:1;color:#ba2020}
+.route-changes .route-reminder-clock{width:74px;height:74px;flex:none}
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){
+ .route-direct .route-reminder{font-size:clamp(23px,5vw,34px);gap:9px;line-height:1.1}
+ .route-direct .route-reminder-clock{width:40px;height:40px}
+}
