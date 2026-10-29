@@ -1270,3 +1270,10 @@ main>.screen{transition:none}
 .route-changes .route-heading p,.route-changes .route-reminder{color:#208a31}
 .route-changes .route-time,.route-changes .route-heading p{background:#ebf8e9}
 .route-changes .route-time:empty{background:transparent}
+
+/* Strong labels make each route easy to identify from a distance. */
+.route-changes .route-card{grid-template-columns:300px minmax(0,1fr)}
+.route-changes .route-card h2{display:flex;align-items:center;justify-content:center;min-height:66px;padding:12px 10px;background:#8a824c;color:#fff;font-size:29px;font-weight:800;text-align:center;letter-spacing:.025em}
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){
+ .route-direct .route-card h2{justify-content:flex-start;min-height:0;font-size:21px;padding:10px 12px;text-align:left}
+}
