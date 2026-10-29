@@ -299,7 +299,7 @@ function RouteChanges({date,active}){
   h("div",{className:"route-heading"},h("h1",null,"MODIFICHE GIRI"),h("p",null,routeNoticeLabel(date))),
   h("div",{className:"route-cards"},...groups.map(([title,items])=>h("article",{className:"card route-card",key:title},h("h2",null,title),h("ul",null,...items.map(([description,time],index)=>h("li",{key:index},time?h("time",{className:"route-time"},time):h("span",{className:"route-time","aria-hidden":true}),h("span",{className:"route-description"},description))))))),
   h("p",{className:"route-reminder"},h("svg",{className:"route-reminder-clock",viewBox:"0 0 64 64","aria-hidden":true},h("circle",{cx:32,cy:32,r:27,fill:"#fff",stroke:"currentColor",strokeWidth:5}),h("path",{d:"M32 15v18l12 7",fill:"none",stroke:"currentColor",strokeWidth:5,strokeLinecap:"round",strokeLinejoin:"round"}),h("path",{d:"M10 9 5 15M54 9l5 6",fill:"none",stroke:"currentColor",strokeWidth:4,strokeLinecap:"round"})),h("span",null,"RISPETTATE GLI ORARI!!")),
-  h("div",{className:"progress",style:{animationDuration:"35s"}}));
+  h("div",{key:active?"route-running":"route-paused",className:"progress",style:{animationDuration:"35s"}}));
 }
 function pp(){let a=Gg(),e=zg(),liveNews=useLiveTio(),[t,l]=(0,k.useState)(()=>on()),u=qg(t),[f,o]=(0,k.useState)(null),[d,s]=(0,k.useState)(()=>ho()?5:rp()?1:ip()?vg()?4:1:0),[n,h]=(0,k.useState)({}),[g,m]=(0,k.useState)(!1),[p,I]=(0,k.useState)(!1);const [readyScreen,setReadyScreen]=(0,k.useState)(-1);let previousScreen=(0,k.useRef)({id:d,element:null});(0,k.useLayoutEffect)(()=>{
  const main=document.querySelector("#root>main");if(!main)return;

@@ -1222,3 +1222,21 @@ main>.screen{transition:none}
 .route-changes .route-cards{grid-template-rows:1fr 1.7fr 1fr}
 
 .route-changes .route-heading p{color:#ba2020}
+
+/* Clean route notice: aligned times, quiet cards and a timer that remains visible. */
+.route-changes .route-heading{margin-bottom:18px}
+.route-changes .route-heading h1{font-size:56px;letter-spacing:-.03em}
+.route-changes .route-heading p{margin-top:7px}
+.route-changes .route-cards{gap:16px}
+.route-changes .route-card{background:#fff;border-radius:18px;padding:15px 28px;box-shadow:0 4px 16px #27313b12}
+.route-changes .route-card h2{font-size:26px;letter-spacing:.04em;margin-bottom:9px}
+.route-changes .route-card ul{gap:6px}
+.route-changes .route-card li{align-items:center}
+.route-changes .route-time{font-weight:800;color:#ba2020}
+.route-changes .route-reminder{gap:18px}
+.route-direct .route-changes .progress{display:block;animation-iteration-count:infinite}
+@media (pointer:coarse) and (max-width:1024px),(pointer:coarse) and (max-height:600px){
+ .route-direct .route-card{padding:16px 18px}
+ .route-direct .route-card h2{font-size:21px}
+ .route-direct .route-changes .progress{position:fixed;left:0;bottom:0;width:100%;height:4px}
+}
