@@ -1264,3 +1264,9 @@ main>.screen{transition:none}
  .route-direct .route-card li{grid-template-columns:62px minmax(0,1fr);gap:10px;white-space:normal}
  .route-direct .route-time{padding:4px}
 }
+
+/* Bright green replaces red text on the route notice. */
+.route-changes .route-description,.route-changes .route-time,
+.route-changes .route-heading p,.route-changes .route-reminder{color:#208a31}
+.route-changes .route-time,.route-changes .route-heading p{background:#ebf8e9}
+.route-changes .route-time:empty{background:transparent}
