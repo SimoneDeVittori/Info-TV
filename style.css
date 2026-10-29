@@ -1295,3 +1295,14 @@ main>.screen{transition:none}
 .route-changes .route-heading p,.route-changes .route-reminder{color:#151515}
 .route-changes .route-time,.route-changes .route-heading p{background:#f1f1ee}
 .route-changes .route-time:empty{background:transparent}
+
+/* Restore the medical weekday cards and highlight the route reminder. */
+.route-changes .route-reminder{color:#ba2020}
+.clinic-screen.address-change .clinic-day.has-day-pickup{background:#eff8ef;border-color:#c9dfca}
+.clinic-screen.address-change .clinic-day.no-day-pickup{background:#fff0f0;border-color:#eccaca}
+.clinic-screen.address-change .clinic-day.has-day-pickup .clinic-slot.has-pickup{background:#e3f2e4;border-color:#bdd9c0}
+.clinic-screen.address-change .clinic-day .clinic-slot.no-pickup{background:#f5f6f7;border-color:#edf0f2}
+.clinic-screen.address-change .clinic-day.has-day-pickup .clinic-slot.has-pickup small{color:#607e64}
+.clinic-screen.address-change .clinic-day.has-day-pickup .clinic-slot.has-pickup strong{color:#2e6a36}
+.clinic-screen.address-change .clinic-day .clinic-slot.no-pickup small,
+.clinic-screen.address-change .clinic-day .clinic-slot.no-pickup strong{color:#798189}
