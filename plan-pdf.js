@@ -1,6 +1,6 @@
 // Update these two values when a new plan is uploaded. The title follows its filename.
-export const PLAN_FILE = {name: 'Piano Ottobre.pdf', url: './Piano-Ottobre.pdf', uploadedAt: '2026-10-22T14:27:45+02:00'};
-export const NEXT_PLAN_FILE = {name:'Piano Novembre.pdf',url:'./Piano-Novembre.pdf',uploadedAt:'2026-10-30T22:28:12+01:00'};
+export const PLAN_FILE = {name: 'Piano Ottobre.pdf', url: './Piano-Ottobre.pdf', retired:true, uploadedAt: '2026-10-22T14:27:45+02:00'};
+export const NEXT_PLAN_FILE = {name:'Piano Novembre.pdf',url:'./Piano-Novembre.pdf',promoteEarly:true,uploadedAt:'2026-10-30T22:28:12+01:00'};
 const months=['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];
 function metadata(file,fallbackYear){
  const month=months.findIndex(value=>file.name.toLowerCase().includes(value));
@@ -30,11 +30,14 @@ export function getPlanState(now=new Date()){
  const entries=[
  {file:PLAN_FILE,meta:PLAN_METADATA,renderer:renderWorkPlanPdf,crop:{x:17,y:53,width:1056,height:695,dayStart:156.02,dayStep:29.52,bottom:746.856}},
  {file:NEXT_PLAN_FILE,meta:NEXT_PLAN_METADATA,renderer:renderNextPlanPdf,crop:{x:17,y:53,width:998,height:674,dayStart:151.7,dayStep:28.68,bottom:725.62}}];
- const current=entries.find(p=>p.meta.year===year&&p.meta.month===month);
- const upcoming=entries.find(p=>p.meta.year===followingYear&&p.meta.month===followingMonth);
- const release=nextPlanRelease(year,month);
+ const visible=entries.filter(p=>!p.file.retired);
+ const current=visible.find(p=>p.meta.year===year&&p.meta.month===month)||visible.find(p=>p.file.promoteEarly&&(p.meta.year*12+p.meta.month>year*12+month));
+ const displayYear=current?.meta.year||year,displayMonth=current?.meta.month||month;
+ const nextMonth=displayMonth===12?1:displayMonth+1,nextYear=displayYear+(displayMonth===12?1:0);
+ const upcoming=visible.find(p=>p.meta.year===nextYear&&p.meta.month===nextMonth);
+ const release=nextPlanRelease(displayYear,displayMonth);
  const unlocked=day>=release.date;
- return {current,upcoming,currentMonthName:months[month-1],upcomingMonthName:months[followingMonth-1],period:day.slice(0,7),availableDate:release.date,availableLabel:release.label,unlocked,nextAvailable:Boolean(upcoming)&&(unlocked||isNextPlanPreview())};
+ return {current,upcoming,currentMonthName:months[displayMonth-1],upcomingMonthName:months[nextMonth-1],period:day.slice(0,7),availableDate:release.date,availableLabel:release.label,unlocked,nextAvailable:Boolean(upcoming)&&(unlocked||isNextPlanPreview())};
 }
 export function isNextPlanAvailable(now=new Date()){
  return getPlanState(now).nextAvailable;
