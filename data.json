@@ -4,7 +4,7 @@
       "icon": 103,
       "iconV2": 103,
       "temperature": 8.3,
-      "time": 1793912400000
+      "time": 1793913000000
     },
     "forecast": [
       {
@@ -48,7 +48,7 @@
         "temperatureMin": 6
       }
     ],
-    "updatedAt": "2026-11-05T21:10:05.052405+00:00"
+    "updatedAt": "2026-11-05T21:14:49.082157+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1203,7 +1203,7 @@
       }
     ],
     "model": "202611052100",
-    "updatedAt": "2026-11-05T21:10:05.073877+00:00"
+    "updatedAt": "2026-11-05T21:14:49.106298+00:00"
   },
   "weekError": false,
   "news": {
@@ -1233,7 +1233,7 @@
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc3/1ouc8.jpg"
       }
     ],
-    "updatedAt": "2026-11-05T21:10:05.052405+00:00",
+    "updatedAt": "2026-11-05T21:14:49.082157+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -1252,7 +1252,7 @@
         "coord_y": "1152444",
         "location_id": "100300",
         "location_type": "city",
-        "timestamp": 1793911212,
+        "timestamp": 1793913012,
         "forecasts": [
           {
             "date": "5 novembre 2026",
@@ -1341,7 +1341,7 @@
         "coord_y": "1118423",
         "location_id": "120100",
         "location_type": "city",
-        "timestamp": 1793911212,
+        "timestamp": 1793913012,
         "forecasts": [
           {
             "date": "5 novembre 2026",
@@ -1430,7 +1430,7 @@
         "coord_y": "1119910",
         "location_id": "195000",
         "location_type": "city",
-        "timestamp": 1793911212,
+        "timestamp": 1793913012,
         "forecasts": [
           {
             "date": "5 novembre 2026",
@@ -1519,7 +1519,7 @@
         "coord_y": "1202399",
         "location_id": "300400",
         "location_type": "city",
-        "timestamp": 1793911212,
+        "timestamp": 1793913012,
         "forecasts": [
           {
             "date": "5 novembre 2026",
@@ -1534,7 +1534,7 @@
             "date": "6 novembre 2026",
             "date_iso": "2026-11-06",
             "weather_description": "symbol_id_17",
-            "temp_high": 7,
+            "temp_high": 8,
             "weekday": "venerdì",
             "temp_low": 4,
             "weather_symbol_id": 17
@@ -1608,7 +1608,7 @@
         "coord_y": "1267348",
         "location_id": "400100",
         "location_type": "city",
-        "timestamp": 1793911212,
+        "timestamp": 1793913012,
         "forecasts": [
           {
             "date": "5 novembre 2026",
@@ -1697,7 +1697,7 @@
         "coord_y": "1211120",
         "location_id": "600300",
         "location_type": "city",
-        "timestamp": 1793911212,
+        "timestamp": 1793913012,
         "forecasts": [
           {
             "date": "5 novembre 2026",
@@ -1786,7 +1786,7 @@
         "coord_y": "1096327",
         "location_id": "690000",
         "location_type": "city",
-        "timestamp": 1793911212,
+        "timestamp": 1793913012,
         "forecasts": [
           {
             "date": "5 novembre 2026",
@@ -1801,7 +1801,7 @@
             "date": "6 novembre 2026",
             "date_iso": "2026-11-06",
             "weather_description": "symbol_id_17",
-            "temp_high": 11,
+            "temp_high": 12,
             "weekday": "venerdì",
             "temp_low": 9,
             "weather_symbol_id": 17
@@ -1875,7 +1875,7 @@
         "coord_y": "1191534",
         "location_id": "700000",
         "location_type": "city",
-        "timestamp": 1793911212,
+        "timestamp": 1793913012,
         "forecasts": [
           {
             "date": "5 novembre 2026",
@@ -1964,7 +1964,7 @@
         "coord_y": "1247414",
         "location_id": "800100",
         "location_type": "city",
-        "timestamp": 1793911212,
+        "timestamp": 1793913012,
         "forecasts": [
           {
             "date": "5 novembre 2026",
@@ -2053,7 +2053,7 @@
         "coord_y": "1254370",
         "location_id": "900000",
         "location_type": "city",
-        "timestamp": 1793911212,
+        "timestamp": 1793913012,
         "forecasts": [
           {
             "date": "5 novembre 2026",
@@ -2130,8 +2130,8 @@
         ]
       }
     ],
-    "updatedAt": "2026-11-05T21:10:05.052405+00:00",
-    "version": "20261105_2040"
+    "updatedAt": "2026-11-05T21:14:49.082157+00:00",
+    "version": "20261105_2110"
   },
   "swissWeatherError": false,
   "traffic": {
@@ -2246,7 +2246,7 @@
       }
     ],
     "total": 41,
-    "updatedAt": "2026-11-05T21:10:05.052405+00:00",
+    "updatedAt": "2026-11-05T21:14:49.082157+00:00",
     "source": "Viasuisse"
   }
 }
