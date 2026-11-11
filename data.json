@@ -3,8 +3,8 @@
     "current": {
       "icon": 103,
       "iconV2": 103,
-      "temperature": 7.5,
-      "time": 1794352800000
+      "temperature": 8.4,
+      "time": 1794365400000
     },
     "forecast": [
       {
@@ -12,7 +12,7 @@
         "iconDay": 35,
         "iconDayV2": 35,
         "precipitation": 0.1,
-        "precipitationMax": 1.1,
+        "precipitationMax": 0.4,
         "precipitationMin": 0.0,
         "temperatureMax": 12,
         "temperatureMin": 8
@@ -21,9 +21,9 @@
         "dayDate": "2026-11-12",
         "iconDay": 20,
         "iconDayV2": 20,
-        "precipitation": 17.7,
+        "precipitation": 17.9,
         "precipitationMax": 28.0,
-        "precipitationMin": 10.2,
+        "precipitationMin": 10.1,
         "temperatureMax": 11,
         "temperatureMin": 9
       },
@@ -31,8 +31,8 @@
         "dayDate": "2026-11-13",
         "iconDay": 3,
         "iconDayV2": 3,
-        "precipitation": 0.4,
-        "precipitationMax": 3.7,
+        "precipitation": 0.9,
+        "precipitationMax": 3.4,
         "precipitationMin": 0.0,
         "temperatureMax": 16,
         "temperatureMin": 6
@@ -48,7 +48,7 @@
         "temperatureMin": 6
       }
     ],
-    "updatedAt": "2026-11-10T23:22:22.006663+00:00"
+    "updatedAt": "2026-11-11T02:53:42.927965+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -94,138 +94,18 @@
         "dayDate": "2026-11-16",
         "temperatureMin": 5,
         "temperatureMax": 10,
-        "iconDay": 6,
-        "precipitation": 1.2
+        "iconDay": 3,
+        "precipitation": 1.1
       },
       {
         "dayDate": "2026-11-17",
         "temperatureMin": 5,
         "temperatureMax": 11,
-        "iconDay": 3,
-        "precipitation": 0.3
+        "iconDay": 2,
+        "precipitation": 0.4
       }
     ],
     "hourly": [
-      {
-        "start": "2026-11-09T21:00:00+00:00",
-        "end": "2026-11-09T22:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-11-09T22:00:00+00:00",
-        "end": "2026-11-09T23:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-11-09T23:00:00+00:00",
-        "end": "2026-11-10T00:00:00+00:00",
-        "amount": 0.1
-      },
-      {
-        "start": "2026-11-10T00:00:00+00:00",
-        "end": "2026-11-10T01:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-11-10T01:00:00+00:00",
-        "end": "2026-11-10T02:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-11-10T02:00:00+00:00",
-        "end": "2026-11-10T03:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-11-10T03:00:00+00:00",
-        "end": "2026-11-10T04:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-11-10T04:00:00+00:00",
-        "end": "2026-11-10T05:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-11-10T05:00:00+00:00",
-        "end": "2026-11-10T06:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-11-10T06:00:00+00:00",
-        "end": "2026-11-10T07:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-11-10T07:00:00+00:00",
-        "end": "2026-11-10T08:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-11-10T08:00:00+00:00",
-        "end": "2026-11-10T09:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-11-10T09:00:00+00:00",
-        "end": "2026-11-10T10:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-11-10T10:00:00+00:00",
-        "end": "2026-11-10T11:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-11-10T11:00:00+00:00",
-        "end": "2026-11-10T12:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-11-10T12:00:00+00:00",
-        "end": "2026-11-10T13:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-11-10T13:00:00+00:00",
-        "end": "2026-11-10T14:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-11-10T14:00:00+00:00",
-        "end": "2026-11-10T15:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-11-10T15:00:00+00:00",
-        "end": "2026-11-10T16:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-11-10T16:00:00+00:00",
-        "end": "2026-11-10T17:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-11-10T17:00:00+00:00",
-        "end": "2026-11-10T18:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-11-10T18:00:00+00:00",
-        "end": "2026-11-10T19:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-11-10T19:00:00+00:00",
-        "end": "2026-11-10T20:00:00+00:00",
-        "amount": 0.0
-      },
-      {
-        "start": "2026-11-10T20:00:00+00:00",
-        "end": "2026-11-10T21:00:00+00:00",
-        "amount": 0.0
-      },
       {
         "start": "2026-11-10T21:00:00+00:00",
         "end": "2026-11-10T22:00:00+00:00",
@@ -244,7 +124,7 @@
       {
         "start": "2026-11-11T00:00:00+00:00",
         "end": "2026-11-11T01:00:00+00:00",
-        "amount": 0.1
+        "amount": 0.0
       },
       {
         "start": "2026-11-11T01:00:00+00:00",
@@ -259,7 +139,7 @@
       {
         "start": "2026-11-11T03:00:00+00:00",
         "end": "2026-11-11T04:00:00+00:00",
-        "amount": 0.0
+        "amount": 0.1
       },
       {
         "start": "2026-11-11T04:00:00+00:00",
@@ -1200,10 +1080,130 @@
         "start": "2026-11-18T23:00:00+00:00",
         "end": "2026-11-19T00:00:00+00:00",
         "amount": 0.0
+      },
+      {
+        "start": "2026-11-19T00:00:00+00:00",
+        "end": "2026-11-19T01:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-11-19T01:00:00+00:00",
+        "end": "2026-11-19T02:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-11-19T02:00:00+00:00",
+        "end": "2026-11-19T03:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-11-19T03:00:00+00:00",
+        "end": "2026-11-19T04:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-11-19T04:00:00+00:00",
+        "end": "2026-11-19T05:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-11-19T05:00:00+00:00",
+        "end": "2026-11-19T06:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-11-19T06:00:00+00:00",
+        "end": "2026-11-19T07:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-11-19T07:00:00+00:00",
+        "end": "2026-11-19T08:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-11-19T08:00:00+00:00",
+        "end": "2026-11-19T09:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-11-19T09:00:00+00:00",
+        "end": "2026-11-19T10:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-11-19T10:00:00+00:00",
+        "end": "2026-11-19T11:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-11-19T11:00:00+00:00",
+        "end": "2026-11-19T12:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-11-19T12:00:00+00:00",
+        "end": "2026-11-19T13:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-11-19T13:00:00+00:00",
+        "end": "2026-11-19T14:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-11-19T14:00:00+00:00",
+        "end": "2026-11-19T15:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-11-19T15:00:00+00:00",
+        "end": "2026-11-19T16:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-11-19T16:00:00+00:00",
+        "end": "2026-11-19T17:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-11-19T17:00:00+00:00",
+        "end": "2026-11-19T18:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-11-19T18:00:00+00:00",
+        "end": "2026-11-19T19:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-11-19T19:00:00+00:00",
+        "end": "2026-11-19T20:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-11-19T20:00:00+00:00",
+        "end": "2026-11-19T21:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-11-19T21:00:00+00:00",
+        "end": "2026-11-19T22:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-11-19T22:00:00+00:00",
+        "end": "2026-11-19T23:00:00+00:00",
+        "amount": 0.0
+      },
+      {
+        "start": "2026-11-19T23:00:00+00:00",
+        "end": "2026-11-20T00:00:00+00:00",
+        "amount": 0.0
       }
     ],
-    "model": "202611102300",
-    "updatedAt": "2026-11-10T23:22:22.034604+00:00"
+    "model": "202611110200",
+    "updatedAt": "2026-11-11T02:53:42.950586+00:00"
   },
   "weekError": false,
   "news": {
@@ -1233,7 +1233,7 @@
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc3/1ovg5.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-11-10T23:22:22.006663+00:00",
+    "updatedAt": "2026-11-11T02:53:42.927965+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -1252,7 +1252,7 @@
         "coord_y": "1152444",
         "location_id": "100300",
         "location_type": "city",
-        "timestamp": 1794352212,
+        "timestamp": 1794364812,
         "forecasts": [
           {
             "date": "11 novembre 2026",
@@ -1311,9 +1311,18 @@
           {
             "date": "17 novembre 2026",
             "date_iso": "2026-11-17",
-            "weather_description": "symbol_id_9",
+            "weather_description": "symbol_id_6",
             "temp_high": 10,
             "weekday": "martedì",
+            "temp_low": 7,
+            "weather_symbol_id": 6
+          },
+          {
+            "date": "18 novembre 2026",
+            "date_iso": "2026-11-18",
+            "weather_description": "symbol_id_9",
+            "temp_high": 10,
+            "weekday": "mercoledì",
             "temp_low": 7,
             "weather_symbol_id": 9
           }
@@ -1332,7 +1341,7 @@
         "coord_y": "1118423",
         "location_id": "120100",
         "location_type": "city",
-        "timestamp": 1794352212,
+        "timestamp": 1794364812,
         "forecasts": [
           {
             "date": "11 novembre 2026",
@@ -1340,7 +1349,7 @@
             "weather_description": "symbol_id_17",
             "temp_high": 15,
             "weekday": "Heute",
-            "temp_low": 9,
+            "temp_low": 10,
             "weather_symbol_id": 17
           },
           {
@@ -1349,7 +1358,7 @@
             "weather_description": "symbol_id_20",
             "temp_high": 12,
             "weekday": "giovedì",
-            "temp_low": 8,
+            "temp_low": 9,
             "weather_symbol_id": 20
           },
           {
@@ -1382,11 +1391,11 @@
           {
             "date": "16 novembre 2026",
             "date_iso": "2026-11-16",
-            "weather_description": "symbol_id_9",
+            "weather_description": "symbol_id_17",
             "temp_high": 10,
             "weekday": "lunedì",
             "temp_low": 5,
-            "weather_symbol_id": 9
+            "weather_symbol_id": 17
           },
           {
             "date": "17 novembre 2026",
@@ -1394,6 +1403,15 @@
             "weather_description": "symbol_id_9",
             "temp_high": 11,
             "weekday": "martedì",
+            "temp_low": 6,
+            "weather_symbol_id": 9
+          },
+          {
+            "date": "18 novembre 2026",
+            "date_iso": "2026-11-18",
+            "weather_description": "symbol_id_9",
+            "temp_high": 11,
+            "weekday": "mercoledì",
             "temp_low": 6,
             "weather_symbol_id": 9
           }
@@ -1412,7 +1430,7 @@
         "coord_y": "1119910",
         "location_id": "195000",
         "location_type": "city",
-        "timestamp": 1794352212,
+        "timestamp": 1794364812,
         "forecasts": [
           {
             "date": "11 novembre 2026",
@@ -1476,6 +1494,15 @@
             "weekday": "martedì",
             "temp_low": 4,
             "weather_symbol_id": 6
+          },
+          {
+            "date": "18 novembre 2026",
+            "date_iso": "2026-11-18",
+            "weather_description": "symbol_id_17",
+            "temp_high": 10,
+            "weekday": "mercoledì",
+            "temp_low": 3,
+            "weather_symbol_id": 17
           }
         ]
       },
@@ -1492,16 +1519,16 @@
         "coord_y": "1202399",
         "location_id": "300400",
         "location_type": "city",
-        "timestamp": 1794352212,
+        "timestamp": 1794364812,
         "forecasts": [
           {
             "date": "11 novembre 2026",
             "date_iso": "2026-11-11",
-            "weather_description": "symbol_id_20",
+            "weather_description": "symbol_id_17",
             "temp_high": 13,
             "weekday": "Heute",
             "temp_low": 9,
-            "weather_symbol_id": 20
+            "weather_symbol_id": 17
           },
           {
             "date": "12 novembre 2026",
@@ -1551,11 +1578,20 @@
           {
             "date": "17 novembre 2026",
             "date_iso": "2026-11-17",
-            "weather_description": "symbol_id_6",
+            "weather_description": "symbol_id_9",
             "temp_high": 8,
             "weekday": "martedì",
             "temp_low": 4,
-            "weather_symbol_id": 6
+            "weather_symbol_id": 9
+          },
+          {
+            "date": "18 novembre 2026",
+            "date_iso": "2026-11-18",
+            "weather_description": "symbol_id_9",
+            "temp_high": 9,
+            "weekday": "mercoledì",
+            "temp_low": 6,
+            "weather_symbol_id": 9
           }
         ]
       },
@@ -1572,7 +1608,7 @@
         "coord_y": "1267348",
         "location_id": "400100",
         "location_type": "city",
-        "timestamp": 1794352212,
+        "timestamp": 1794364812,
         "forecasts": [
           {
             "date": "11 novembre 2026",
@@ -1580,7 +1616,7 @@
             "weather_description": "symbol_id_20",
             "temp_high": 13,
             "weekday": "Heute",
-            "temp_low": 9,
+            "temp_low": 8,
             "weather_symbol_id": 20
           },
           {
@@ -1595,11 +1631,11 @@
           {
             "date": "13 novembre 2026",
             "date_iso": "2026-11-13",
-            "weather_description": "symbol_id_2",
+            "weather_description": "symbol_id_3",
             "temp_high": 7,
             "weekday": "venerdì",
             "temp_low": 2,
-            "weather_symbol_id": 2
+            "weather_symbol_id": 3
           },
           {
             "date": "14 novembre 2026",
@@ -1636,6 +1672,15 @@
             "weekday": "martedì",
             "temp_low": 6,
             "weather_symbol_id": 9
+          },
+          {
+            "date": "18 novembre 2026",
+            "date_iso": "2026-11-18",
+            "weather_description": "symbol_id_9",
+            "temp_high": 12,
+            "weekday": "mercoledì",
+            "temp_low": 7,
+            "weather_symbol_id": 9
           }
         ]
       },
@@ -1652,16 +1697,16 @@
         "coord_y": "1211120",
         "location_id": "600300",
         "location_type": "city",
-        "timestamp": 1794352212,
+        "timestamp": 1794364812,
         "forecasts": [
           {
             "date": "11 novembre 2026",
             "date_iso": "2026-11-11",
-            "weather_description": "symbol_id_20",
+            "weather_description": "symbol_id_9",
             "temp_high": 14,
             "weekday": "Heute",
-            "temp_low": 9,
-            "weather_symbol_id": 20
+            "temp_low": 10,
+            "weather_symbol_id": 9
           },
           {
             "date": "12 novembre 2026",
@@ -1716,6 +1761,15 @@
             "weekday": "martedì",
             "temp_low": 4,
             "weather_symbol_id": 6
+          },
+          {
+            "date": "18 novembre 2026",
+            "date_iso": "2026-11-18",
+            "weather_description": "symbol_id_9",
+            "temp_high": 10,
+            "weekday": "mercoledì",
+            "temp_low": 5,
+            "weather_symbol_id": 9
           }
         ]
       },
@@ -1732,7 +1786,7 @@
         "coord_y": "1096327",
         "location_id": "690000",
         "location_type": "city",
-        "timestamp": 1794352212,
+        "timestamp": 1794364812,
         "forecasts": [
           {
             "date": "11 novembre 2026",
@@ -1782,11 +1836,11 @@
           {
             "date": "16 novembre 2026",
             "date_iso": "2026-11-16",
-            "weather_description": "symbol_id_4",
+            "weather_description": "symbol_id_6",
             "temp_high": 10,
             "weekday": "lunedì",
             "temp_low": 6,
-            "weather_symbol_id": 4
+            "weather_symbol_id": 6
           },
           {
             "date": "17 novembre 2026",
@@ -1795,6 +1849,15 @@
             "temp_high": 11,
             "weekday": "martedì",
             "temp_low": 5,
+            "weather_symbol_id": 2
+          },
+          {
+            "date": "18 novembre 2026",
+            "date_iso": "2026-11-18",
+            "weather_description": "symbol_id_2",
+            "temp_high": 11,
+            "weekday": "mercoledì",
+            "temp_low": 6,
             "weather_symbol_id": 2
           }
         ]
@@ -1812,7 +1875,7 @@
         "coord_y": "1191534",
         "location_id": "700000",
         "location_type": "city",
-        "timestamp": 1794352212,
+        "timestamp": 1794364812,
         "forecasts": [
           {
             "date": "11 novembre 2026",
@@ -1820,7 +1883,7 @@
             "weather_description": "symbol_id_3",
             "temp_high": 16,
             "weekday": "Heute",
-            "temp_low": 7,
+            "temp_low": 8,
             "weather_symbol_id": 3
           },
           {
@@ -1862,11 +1925,11 @@
           {
             "date": "16 novembre 2026",
             "date_iso": "2026-11-16",
-            "weather_description": "symbol_id_3",
+            "weather_description": "symbol_id_4",
             "temp_high": 11,
             "weekday": "lunedì",
             "temp_low": 5,
-            "weather_symbol_id": 3
+            "weather_symbol_id": 4
           },
           {
             "date": "17 novembre 2026",
@@ -1876,6 +1939,15 @@
             "weekday": "martedì",
             "temp_low": 5,
             "weather_symbol_id": 4
+          },
+          {
+            "date": "18 novembre 2026",
+            "date_iso": "2026-11-18",
+            "weather_description": "symbol_id_9",
+            "temp_high": 12,
+            "weekday": "mercoledì",
+            "temp_low": 6,
+            "weather_symbol_id": 9
           }
         ]
       },
@@ -1892,7 +1964,7 @@
         "coord_y": "1247414",
         "location_id": "800100",
         "location_type": "city",
-        "timestamp": 1794352212,
+        "timestamp": 1794364812,
         "forecasts": [
           {
             "date": "11 novembre 2026",
@@ -1900,7 +1972,7 @@
             "weather_description": "symbol_id_20",
             "temp_high": 14,
             "weekday": "Heute",
-            "temp_low": 10,
+            "temp_low": 11,
             "weather_symbol_id": 20
           },
           {
@@ -1909,17 +1981,17 @@
             "weather_description": "symbol_id_17",
             "temp_high": 11,
             "weekday": "giovedì",
-            "temp_low": 8,
+            "temp_low": 9,
             "weather_symbol_id": 17
           },
           {
             "date": "13 novembre 2026",
             "date_iso": "2026-11-13",
-            "weather_description": "symbol_id_2",
+            "weather_description": "symbol_id_3",
             "temp_high": 9,
             "weekday": "venerdì",
             "temp_low": 2,
-            "weather_symbol_id": 2
+            "weather_symbol_id": 3
           },
           {
             "date": "14 novembre 2026",
@@ -1951,11 +2023,20 @@
           {
             "date": "17 novembre 2026",
             "date_iso": "2026-11-17",
-            "weather_description": "symbol_id_6",
+            "weather_description": "symbol_id_9",
             "temp_high": 9,
             "weekday": "martedì",
             "temp_low": 5,
-            "weather_symbol_id": 6
+            "weather_symbol_id": 9
+          },
+          {
+            "date": "18 novembre 2026",
+            "date_iso": "2026-11-18",
+            "weather_description": "symbol_id_9",
+            "temp_high": 10,
+            "weekday": "mercoledì",
+            "temp_low": 5,
+            "weather_symbol_id": 9
           }
         ]
       },
@@ -1972,16 +2053,16 @@
         "coord_y": "1254370",
         "location_id": "900000",
         "location_type": "city",
-        "timestamp": 1794352212,
+        "timestamp": 1794364812,
         "forecasts": [
           {
             "date": "11 novembre 2026",
             "date_iso": "2026-11-11",
-            "weather_description": "symbol_id_20",
+            "weather_description": "symbol_id_17",
             "temp_high": 13,
             "weekday": "Heute",
             "temp_low": 9,
-            "weather_symbol_id": 20
+            "weather_symbol_id": 17
           },
           {
             "date": "12 novembre 2026",
@@ -2036,12 +2117,21 @@
             "weekday": "martedì",
             "temp_low": 5,
             "weather_symbol_id": 6
+          },
+          {
+            "date": "18 novembre 2026",
+            "date_iso": "2026-11-18",
+            "weather_description": "symbol_id_9",
+            "temp_high": 8,
+            "weekday": "mercoledì",
+            "temp_low": 5,
+            "weather_symbol_id": 9
           }
         ]
       }
     ],
-    "updatedAt": "2026-11-10T23:22:22.006663+00:00",
-    "version": "20261110_2310"
+    "updatedAt": "2026-11-11T02:53:42.927965+00:00",
+    "version": "20261111_0240"
   },
   "swissWeatherError": false,
   "traffic": {
@@ -2156,7 +2246,7 @@
       }
     ],
     "total": 41,
-    "updatedAt": "2026-11-10T23:22:22.006663+00:00",
+    "updatedAt": "2026-11-11T02:53:42.927965+00:00",
     "source": "Viasuisse"
   }
 }
