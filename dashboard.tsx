@@ -172,9 +172,10 @@ function renderTodayRain(hourly,now){
  h('div',{className:'today-rain-axis'},...['00','02','04','06','08','10','12','14','16','18','20','22','24'].map(t=>h('span',{key:t},t))));
 }
 
-function renderPlanSeason(month){
- const theme=['winter','winter','spring','spring','spring','summer','summer','summer','autumn','halloween','autumn','christmas'][month-1];
- return rainElement('img',{className:'plan-season-scene',src:'./plan-scene-'+theme+'.png',alt:'','aria-hidden':true,loading:'eager',decoding:'async'});
+function renderPlanSeason(month,year,now=new Date()){
+ const day=now.toLocaleDateString('sv-SE',{timeZone:'Europe/Zurich'});
+ const theme=month===12&&day<String(year)+'-12-11'?'winter':['winter','winter','spring','spring','spring','summer','summer','summer','autumn','halloween','autumn','christmas'][month-1];
+ return rainElement('img',{className:'plan-season-scene',src:'./season-decoration-'+theme+'.png?v=20261020',alt:'','aria-hidden':true,loading:'eager',decoding:'async'});
 }
 
 function WorkPlanStage({children}:{children:any}){
@@ -247,7 +248,7 @@ function renderWorkPlan(now,nextMonth=false){
  h('canvas',{key:file.url,ref:renderer,'aria-label':'Tabella del piano '+meta.title}),
  h('span',{className:'plan-pdf-loading'},'Caricamento del piano…'),
  h('a',{className:'plan-pdf-error',href:file.url,target:'_blank',rel:'noreferrer'},'Apri il piano PDF')),
- renderPlanSeason(meta.month),
+ renderPlanSeason(meta.month,meta.year,now||new Date()),
  h('div',{className:'plan-month-title',style:{'--month-start':colors[0],'--month-end':colors[1],'--plan-month-font':(meta.name.length>8?'6.7':'7.5')+'cqw'},'aria-hidden':true},h('span',{className:'plan-month-name'},meta.name.toUpperCase()),h('span',{className:'plan-month-year'},String(meta.year))),
  h('svg',{className:'work-plan-overlay',viewBox:'0 0 1672 941','aria-hidden':true,preserveAspectRatio:'none'},
  nextMonth?null:h('text',{className:'plan-updated-text',transform:'translate(198 750) rotate(-90)',textAnchor:'start',fontSize:28,fontWeight:700,fontFamily:'Arial, sans-serif',fill:'#454545'},'AGGIORNATO '+age),
