@@ -174,7 +174,7 @@ function renderTodayRain(hourly,now){
 
 function renderPlanSeason(month,year,now=new Date()){
  const day=now.toLocaleDateString('sv-SE',{timeZone:'Europe/Zurich'});
- const theme=month===12&&day<String(year)+'-12-11'?'winter':['winter','winter','spring','spring','spring','summer','summer','summer','autumn','halloween','autumn','christmas'][month-1];
+ const theme=month===12&&day<String(year)+'-12-11'&&new URLSearchParams(window.location.search).get('decorazioni')!=='natale'?'winter':['winter','winter','spring','spring','spring','summer','summer','summer','autumn','halloween','autumn','christmas'][month-1];
  return rainElement('img',{className:'plan-season-scene',src:'./season-decoration-'+theme+'.png?v=20261020',alt:'','aria-hidden':true,loading:'eager',decoding:'async'});
 }
 
