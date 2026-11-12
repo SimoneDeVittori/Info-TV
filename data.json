@@ -48,7 +48,7 @@
         "temperatureMin": 5
       }
     ],
-    "updatedAt": "2026-11-12T13:56:28.894761+00:00"
+    "updatedAt": "2026-11-12T14:00:38.340697+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1203,7 +1203,7 @@
       }
     ],
     "model": "202611121300",
-    "updatedAt": "2026-11-12T13:56:28.920236+00:00"
+    "updatedAt": "2026-11-12T14:00:38.368862+00:00"
   },
   "weekError": false,
   "news": {
@@ -1233,7 +1233,7 @@
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc3/1ow3t.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-11-12T13:56:28.894761+00:00",
+    "updatedAt": "2026-11-12T14:00:38.340697+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -2130,7 +2130,7 @@
         ]
       }
     ],
-    "updatedAt": "2026-11-12T13:56:28.894761+00:00",
+    "updatedAt": "2026-11-12T14:00:38.340697+00:00",
     "version": "20261112_1340"
   },
   "swissWeatherError": false,
@@ -2179,15 +2179,6 @@
         "road": "TI",
         "category": 31,
         "changedAt": "2026-11-07T12:12:41+01:00",
-        "priority": 5
-      },
-      {
-        "id": "Viasuisser_Viasuisse/2518095_TIC-Viasuisse/1",
-        "text": "399 - attraversamento Ruvigliana, Strada di Fulmigniano in entrambe le direzioni taglio alberi, corsie strette, fino a oggi 15:00",
-        "location": "399 - attraversamento Ruvigliana, Strada di Fulmigniano",
-        "road": "399",
-        "category": 31,
-        "changedAt": "2026-11-07T12:09:57+01:00",
         "priority": 5
       },
       {
@@ -2243,10 +2234,19 @@
         "category": 11,
         "changedAt": "2026-11-04T09:25:03+01:00",
         "priority": 3
+      },
+      {
+        "id": "Viasuisser_FAVM/654433_TIC-Viasuisse/1",
+        "text": "A2 - S. Gottardo - Chiasso a Faido in entrambe le direzioni problemi di traffico, lavori stradali per 0.1 km sui raccordi autostradali, corsie strette, carreggiata ridotta a una corsia, limite temporaneo di larghezza di 4 m, fino a lunedì 20:00 - ID117663",
+        "location": "A2 - S. Gottardo - Chiasso",
+        "road": "A2",
+        "category": 31,
+        "changedAt": "2026-11-02T16:07:44+01:00",
+        "priority": 5
       }
     ],
-    "total": 40,
-    "updatedAt": "2026-11-12T13:56:28.894761+00:00",
+    "total": 39,
+    "updatedAt": "2026-11-12T14:00:38.340697+00:00",
     "source": "Viasuisse"
   }
 }
