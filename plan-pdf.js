@@ -1,6 +1,6 @@
 // Update these two values when a new plan is uploaded. The title follows its filename.
-export const PLAN_FILE = {name: 'Piano Ottobre.pdf', url: './Piano-Ottobre.pdf', retired:true, uploadedAt: '2026-10-22T14:27:45+02:00'};
-export const NEXT_PLAN_FILE = {name:'Piano Novembre.pdf',url:'./Piano-Novembre.pdf',promoteEarly:true,uploadedAt:'2026-11-06T22:32:48+01:00'};
+export const PLAN_FILE = {name:'Piano Novembre.pdf',url:'./Piano-Novembre.pdf',uploadedAt:'2026-11-12T14:49:28+01:00'};
+export const NEXT_PLAN_FILE = {name:'Piano Dicembre.pdf',url:'./Piano-Dicembre.pdf',uploadedAt:'2026-11-12T14:49:28+01:00'};
 const months=['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];
 function metadata(file,fallbackYear){
  const month=months.findIndex(value=>file.name.toLowerCase().includes(value));
@@ -21,15 +21,15 @@ const initialRelease=nextPlanRelease(PLAN_METADATA.year,PLAN_METADATA.month);
 export const NEXT_PLAN_AVAILABLE_DATE=initialRelease.date;
 export const NEXT_PLAN_AVAILABLE_LABEL=initialRelease.label;
 export function isNextPlanPreview(){
- return typeof window!=='undefined'&&new URLSearchParams(window.location.search).get('anteprima')==='novembre';
+ return typeof window!=='undefined'&&new URLSearchParams(window.location.search).get('anteprima')==='dicembre';
 }
 export function getPlanState(now=new Date()){
  const day=now.toLocaleDateString('sv-SE',{timeZone:'Europe/Zurich'});
  const year=Number(day.slice(0,4)),month=Number(day.slice(5,7));
  const followingMonth=month===12?1:month+1,followingYear=year+(month===12?1:0);
  const entries=[
- {file:PLAN_FILE,meta:PLAN_METADATA,renderer:renderWorkPlanPdf,crop:{x:17,y:53,width:1056,height:695,dayStart:156.02,dayStep:29.52,bottom:746.856}},
- {file:NEXT_PLAN_FILE,meta:NEXT_PLAN_METADATA,renderer:renderNextPlanPdf,crop:{x:17,y:53,width:998,height:674,dayStart:151.7,dayStep:28.68,bottom:725.62}}];
+ {file:PLAN_FILE,meta:PLAN_METADATA,renderer:renderWorkPlanPdf,crop:{x:17,y:53,width:998,height:674,dayStart:151.7,dayStep:28.68,bottom:725.62}},
+ {file:NEXT_PLAN_FILE,meta:NEXT_PLAN_METADATA,renderer:renderNextPlanPdf,crop:{x:17,y:0,width:1122,height:738,dayStart:164,dayStep:31.44,bottom:737}}];
  const visible=entries.filter(p=>!p.file.retired);
  const current=visible.find(p=>p.meta.year===year&&p.meta.month===month)||visible.find(p=>p.file.promoteEarly&&(p.meta.year*12+p.meta.month>year*12+month));
  const displayYear=current?.meta.year||year,displayMonth=current?.meta.month||month;
@@ -87,7 +87,7 @@ function createPlanRenderer(file,crop){
    if(!context)throw new Error('Canvas unavailable');
    context.drawImage(image,0,0);
    context.fillStyle='#fff';
-   context.fillRect((65-crop.x)/crop.width*canvas.width,(55-crop.y)/crop.height*canvas.height,16/crop.width*canvas.width,16/crop.height*canvas.height);
+   if(crop.y>0)context.fillRect((65-crop.x)/crop.width*canvas.width,(55-crop.y)/crop.height*canvas.height,16/crop.width*canvas.width,16/crop.height*canvas.height);
    surface.dataset.status='ready';
   }).catch(error=>{
    rendered.delete(canvas);
@@ -96,6 +96,6 @@ function createPlanRenderer(file,crop){
   });
  };
 }
-export const renderWorkPlanPdf=createPlanRenderer(PLAN_FILE,{x:17,y:53,width:1056,height:695});
-export const renderNextPlanPdf=createPlanRenderer(NEXT_PLAN_FILE,{x:17,y:53,width:998,height:674});
+export const renderWorkPlanPdf=createPlanRenderer(PLAN_FILE,{x:17,y:53,width:998,height:674});
+export const renderNextPlanPdf=createPlanRenderer(NEXT_PLAN_FILE,{x:17,y:0,width:1122,height:738});
 // Medical studio pages are appended dynamically by the dashboard.

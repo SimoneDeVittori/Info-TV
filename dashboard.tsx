@@ -214,7 +214,7 @@ function WorkPlanStage({children}:{children:any}){
 }
 function isCurrentPlanPreview(){return new URLSearchParams(window.location.search).get('anteprima')==='piano';}
 function renderDayPop(file,crop,current){
- const h=rainElement,sourceX=crop.dayStart-crop.x+(current-1)*crop.dayStep,sourceY=1,sourceHeight=crop.bottom-54;
+ const h=rainElement,sourceX=crop.dayStart-crop.x+(current-1)*crop.dayStep,sourceY=1,sourceHeight=crop.bottom-crop.y-1;
  const left=(263+sourceX/crop.width*1400)/1672*100,top=(6+sourceY/crop.height*922)/941*100;
  const width=crop.dayStep/crop.width*1400/1672*100,height=sourceHeight/crop.height*922/941*100;
  return h('div',{className:'plan-day-pop','aria-hidden':true,style:{'--plan-day-left':left+'%','--plan-day-top':top+'%','--plan-day-width':width+'%','--plan-day-height':height+'%'}},
