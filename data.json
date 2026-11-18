@@ -1,19 +1,19 @@
 {
   "weather": {
     "current": {
-      "icon": 104,
-      "iconV2": 104,
-      "temperature": 6.2,
-      "time": 1794985800000
+      "icon": 3,
+      "iconV2": 3,
+      "temperature": 6.5,
+      "time": 1794988200000
     },
     "forecast": [
       {
         "dayDate": "2026-11-18",
-        "iconDay": 3,
-        "iconDayV2": 3,
-        "precipitation": 0.0,
-        "precipitationMax": 0.0,
-        "precipitationMin": 0.0,
+        "iconDay": 32,
+        "iconDayV2": 32,
+        "precipitation": 0.9,
+        "precipitationMax": 0.9,
+        "precipitationMin": 0.1,
         "temperatureMax": 13,
         "temperatureMin": 5
       },
@@ -48,7 +48,7 @@
         "temperatureMin": 6
       }
     ],
-    "updatedAt": "2026-11-18T07:12:04.319622+00:00"
+    "updatedAt": "2026-11-18T08:06:18.738015+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -1203,11 +1203,27 @@
       }
     ],
     "model": "202611180700",
-    "updatedAt": "2026-11-18T07:12:04.343828+00:00"
+    "updatedAt": "2026-11-18T08:06:18.754364+00:00"
   },
   "weekError": false,
   "news": {
     "items": [
+      {
+        "title": "Cinque notti di lavori in via Basilea a Besso",
+        "description": "La prossima settimana verrà demolito un fabbricato che confina con il campo stradale",
+        "link": "https://www.tio.ch/ticino/cronaca/1963528/cinque-notti-di-lavori-in-via-basilea-a-besso",
+        "date": "Wed, 18 Nov 2026 08:52:42 +0100",
+        "category": "LUGANO",
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc3/1oxad.jpg?v=1"
+      },
+      {
+        "title": "«I cittadini devono poter verificare»",
+        "description": "Un'interrogazione chiede al Municipio una maggiore completezza di informazioni sulla qualità dell'acqua nel comune",
+        "link": "https://www.tio.ch/ticino/politica/1963518/i-cittadini-devono-poter-verificare",
+        "date": "Wed, 18 Nov 2026 08:32:46 +0100",
+        "category": "LOCARNO",
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc3/1oxa8.jpg?v=1"
+      },
       {
         "title": "Paradiso tiene il moltiplicatore al 58% e investe 7,5 milioni",
         "description": "I conti preventivi per il 2027 saranno sottoposti al Consiglio comunale il 14 dicembre. Il disavanzo è di 2,6 milioni",
@@ -1215,25 +1231,9 @@
         "date": "Wed, 18 Nov 2026 07:24:39 +0100",
         "category": "PARADISO",
         "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc3/1ox9s.jpg?v=1"
-      },
-      {
-        "title": "Pestaggio al Parco Ciani, in quattro a processo",
-        "description": "Chiusa l'inchiesta per l'aggressione ai danni di un 32enne kosovaro, avvenuta lo scorso mese di luglio",
-        "link": "https://www.tio.ch/ticino/cronaca/1963507/ciani-lugano-parco-pestaggio-aggressione",
-        "date": "Wed, 18 Nov 2026 06:49:30 +0100",
-        "category": "LUGANO",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc3/1ox9n.jpg?v=1"
-      },
-      {
-        "title": "Due giorni di storie da scoprire",
-        "description": "Il programma di Castellinaria di mercoledì 18 e giovedì 19 novembre",
-        "link": "https://www.tio.ch/ticino/attualita/1963386/due-giorni-di-storie-da-scoprire",
-        "date": "Wed, 18 Nov 2026 06:30:00 +0100",
-        "category": "BELLINZONA",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc3/1ox4i.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-11-18T07:12:04.319622+00:00",
+    "updatedAt": "2026-11-18T08:06:18.738015+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -1252,7 +1252,7 @@
         "coord_y": "1152444",
         "location_id": "100300",
         "location_type": "city",
-        "timestamp": 1794985811,
+        "timestamp": 1794987614,
         "forecasts": [
           {
             "date": "18 novembre 2026",
@@ -1341,7 +1341,7 @@
         "coord_y": "1118423",
         "location_id": "120100",
         "location_type": "city",
-        "timestamp": 1794985811,
+        "timestamp": 1794987614,
         "forecasts": [
           {
             "date": "18 novembre 2026",
@@ -1430,7 +1430,7 @@
         "coord_y": "1119910",
         "location_id": "195000",
         "location_type": "city",
-        "timestamp": 1794985811,
+        "timestamp": 1794987614,
         "forecasts": [
           {
             "date": "18 novembre 2026",
@@ -1519,7 +1519,7 @@
         "coord_y": "1202399",
         "location_id": "300400",
         "location_type": "city",
-        "timestamp": 1794985811,
+        "timestamp": 1794987614,
         "forecasts": [
           {
             "date": "18 novembre 2026",
@@ -1608,7 +1608,7 @@
         "coord_y": "1267348",
         "location_id": "400100",
         "location_type": "city",
-        "timestamp": 1794985811,
+        "timestamp": 1794987614,
         "forecasts": [
           {
             "date": "18 novembre 2026",
@@ -1697,7 +1697,7 @@
         "coord_y": "1211120",
         "location_id": "600300",
         "location_type": "city",
-        "timestamp": 1794985811,
+        "timestamp": 1794987614,
         "forecasts": [
           {
             "date": "18 novembre 2026",
@@ -1786,13 +1786,13 @@
         "coord_y": "1096327",
         "location_id": "690000",
         "location_type": "city",
-        "timestamp": 1794985811,
+        "timestamp": 1794987614,
         "forecasts": [
           {
             "date": "18 novembre 2026",
             "date_iso": "2026-11-18",
             "weather_description": "symbol_id_2",
-            "temp_high": 13,
+            "temp_high": 14,
             "weekday": "Heute",
             "temp_low": 5,
             "weather_symbol_id": 2
@@ -1875,7 +1875,7 @@
         "coord_y": "1191534",
         "location_id": "700000",
         "location_type": "city",
-        "timestamp": 1794985811,
+        "timestamp": 1794987614,
         "forecasts": [
           {
             "date": "18 novembre 2026",
@@ -1964,7 +1964,7 @@
         "coord_y": "1247414",
         "location_id": "800100",
         "location_type": "city",
-        "timestamp": 1794985811,
+        "timestamp": 1794987614,
         "forecasts": [
           {
             "date": "18 novembre 2026",
@@ -2053,7 +2053,7 @@
         "coord_y": "1254370",
         "location_id": "900000",
         "location_type": "city",
-        "timestamp": 1794985811,
+        "timestamp": 1794987614,
         "forecasts": [
           {
             "date": "18 novembre 2026",
@@ -2130,20 +2130,38 @@
         ]
       }
     ],
-    "updatedAt": "2026-11-18T07:12:04.319622+00:00",
-    "version": "20261118_0710"
+    "updatedAt": "2026-11-18T08:06:18.738015+00:00",
+    "version": "20261118_0740"
   },
   "swissWeatherError": false,
   "traffic": {
     "items": [
       {
         "id": "Viasuisser_FAVM/668242_TIC-Viasuisse/1",
-        "text": "A2 - Chiasso direzione S. Gottardo tra Genestrerio e  Lugano Nord colonna, traffico congestionato, ritardi fino a 20 minuti",
+        "text": "A2 - Chiasso direzione S. Gottardo tra Genestrerio e  Lugano Nord colonna, traffico congestionato, ritardi fino a 15 minuti",
         "location": "A2 - Chiasso direzione S. Gottardo",
         "road": "A2",
         "category": 12,
-        "changedAt": "2026-11-18T08:00:38+01:00",
+        "changedAt": "2026-11-18T08:52:08+01:00",
         "priority": 0
+      },
+      {
+        "id": "Viasuisser_FAVM/668325_TIC-Viasuisse/1",
+        "text": "A24 - Mendrisio direzione Stabio tra A2, Mendrisio e 394, Stabio traffico fortemente rallentato, traffico congestionato",
+        "location": "A24 - Mendrisio direzione Stabio",
+        "road": "A24",
+        "category": 13,
+        "changedAt": "2026-11-18T08:51:53+01:00",
+        "priority": 1
+      },
+      {
+        "id": "Viasuisser_FAVM/668323_TIC-Viasuisse/1",
+        "text": "Giubiasco, Via Mondari - entrata di località in entrambe le direzioni problemi di traffico, incidente",
+        "location": "Giubiasco, Via Mondari",
+        "road": "TI",
+        "category": 13,
+        "changedAt": "2026-11-18T08:44:59+01:00",
+        "priority": 1
       },
       {
         "id": "Viasuisser_Viasuisse/2521064_TIC-Viasuisse/1",
@@ -2164,39 +2182,12 @@
         "priority": 1
       },
       {
-        "id": "Viasuisser_FAVM/668299_TIC-Viasuisse/1",
-        "text": "A2 - S. Gottardo direzione Chiasso tra l'area di servizio di Coldrerio e frontiera Chiasso Brogeda traffico bloccato per veicoli pesanti, traffico congestionato",
-        "location": "A2 - S. Gottardo direzione Chiasso",
-        "road": "A2",
-        "category": 12,
-        "changedAt": "2026-11-18T07:53:08+01:00",
-        "priority": 0
-      },
-      {
-        "id": "Viasuisser_FAVM/668281_TIC-Viasuisse/1",
-        "text": "406 - Riazzino direzione Cadenazzo tra Quartino e Cadenazzo traffico fortemente rallentato, traffico congestionato",
-        "location": "406 - Riazzino direzione Cadenazzo",
-        "road": "406",
-        "category": 13,
-        "changedAt": "2026-11-18T07:46:19+01:00",
-        "priority": 1
-      },
-      {
         "id": "Viasuisser_Viasuisse/2521035_TIC-Viasuisse/1",
         "text": "2 - Via Monte Ceneri, Chiasso direzione Bellinzona a Cadenazzo traffico fortemente rallentato, traffico congestionato",
         "location": "2 - Via Monte Ceneri, Chiasso direzione Bellinzona",
         "road": "2",
         "category": 13,
         "changedAt": "2026-11-18T07:14:53+01:00",
-        "priority": 1
-      },
-      {
-        "id": "Viasuisser_FAVM/668282_TIC-Viasuisse/1",
-        "text": "406 - Cadenazzo direzione Riazzino tra Cadenazzo e Quartino traffico fortemente rallentato, traffico congestionato",
-        "location": "406 - Cadenazzo direzione Riazzino",
-        "road": "406",
-        "category": 13,
-        "changedAt": "2026-11-18T07:08:45+01:00",
         "priority": 1
       },
       {
@@ -2243,10 +2234,19 @@
         "category": 31,
         "changedAt": "2026-11-09T15:31:53+01:00",
         "priority": 5
+      },
+      {
+        "id": "Viasuisser_FAVM/665820_TIC-Viasuisse/1",
+        "text": "Breno - Agno - tra Neggio e Cassina d'Agno in entrambe le direzioni chiusa, lavori stradali durante la notte, seguire segnali di deviazione, fino a sabato, tra 20:00 e 05:00",
+        "location": "Breno",
+        "road": "TI",
+        "category": 32,
+        "changedAt": "2026-11-09T10:57:45+01:00",
+        "priority": 6
       }
     ],
-    "total": 48,
-    "updatedAt": "2026-11-18T07:12:04.319622+00:00",
+    "total": 47,
+    "updatedAt": "2026-11-18T08:06:18.738015+00:00",
     "source": "Viasuisse"
   }
 }
