@@ -1,21 +1,21 @@
 {
   "weather": {
     "current": {
-      "icon": 101,
-      "iconV2": 101,
-      "temperature": 3.1,
-      "time": 1795747200000
+      "icon": 2,
+      "iconV2": 2,
+      "temperature": 7.1,
+      "time": 1795778400000
     },
     "forecast": [
       {
         "dayDate": "2026-11-27",
-        "iconDay": 3,
-        "iconDayV2": 3,
+        "iconDay": 2,
+        "iconDayV2": 2,
         "precipitation": 0.0,
         "precipitationMax": 0.0,
         "precipitationMin": 0.0,
-        "temperatureMax": 9,
-        "temperatureMin": 3
+        "temperatureMax": 8,
+        "temperatureMin": 1
       },
       {
         "dayDate": "2026-11-28",
@@ -24,7 +24,7 @@
         "precipitation": 0.0,
         "precipitationMax": 0.0,
         "precipitationMin": 0.0,
-        "temperatureMax": 9,
+        "temperatureMax": 8,
         "temperatureMin": 1
       },
       {
@@ -45,10 +45,10 @@
         "precipitationMax": 0.0,
         "precipitationMin": 0.0,
         "temperatureMax": 8,
-        "temperatureMin": 3
+        "temperatureMin": 2
       }
     ],
-    "updatedAt": "2026-11-27T02:49:30.386701+00:00"
+    "updatedAt": "2026-11-27T11:29:02.076834+00:00"
   },
   "weatherError": false,
   "newsError": false,
@@ -57,15 +57,15 @@
     "days": [
       {
         "dayDate": "2026-11-27",
-        "temperatureMin": 3,
-        "temperatureMax": 9,
-        "iconDay": 3,
+        "temperatureMin": 1,
+        "temperatureMax": 8,
+        "iconDay": 2,
         "precipitation": 0.0
       },
       {
         "dayDate": "2026-11-28",
         "temperatureMin": 1,
-        "temperatureMax": 9,
+        "temperatureMax": 8,
         "iconDay": 1,
         "precipitation": 0.0
       },
@@ -87,14 +87,14 @@
         "dayDate": "2026-12-01",
         "temperatureMin": 2,
         "temperatureMax": 8,
-        "iconDay": 1,
+        "iconDay": 2,
         "precipitation": 0.0
       },
       {
         "dayDate": "2026-12-02",
-        "temperatureMin": 2,
+        "temperatureMin": 1,
         "temperatureMax": 8,
-        "iconDay": 27,
+        "iconDay": 2,
         "precipitation": 0.0
       },
       {
@@ -1202,38 +1202,38 @@
         "amount": 0.0
       }
     ],
-    "model": "202611270200",
-    "updatedAt": "2026-11-27T02:49:30.435405+00:00"
+    "model": "202611271100",
+    "updatedAt": "2026-11-27T11:29:02.102127+00:00"
   },
   "weekError": false,
   "news": {
     "items": [
       {
-        "title": "Viale Stazione blindato dalla polizia",
-        "description": "Diverse pattuglie sono intervenute nella tarda serata di giovedì: ancora ignoti i motivi dell'operazione.",
-        "link": "https://www.tio.ch/ticino/cronaca/1965370/polizia-stazione-viale-zona-bellinzona",
-        "date": "Thu, 26 Nov 2026 23:50:37 +0100",
-        "category": "BELLINZONA",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc3/1ozq0.jpg?v=1"
-      },
-      {
-        "title": "Scontro all'incrocio, un veicolo si ribalta",
-        "description": "L'incidente è avvenuto attorno alle ore 20. Pompieri e polizia al lavoro per la messa in sicurezza e il ripristino della viabilità.",
-        "link": "https://www.tio.ch/ticino/cronaca/1965360/incrocio-scontro-incidente-viabilita-giubiasco",
-        "date": "Thu, 26 Nov 2026 21:42:37 +0100",
-        "category": "GIUBIASCO",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc3/1ozp2.jpg"
-      },
-      {
-        "title": "Il Luganese del futuro passa da cinque sfide",
-        "description": "Dai negozi di paese all’attrazione di talenti: l’ERSL ridisegna le priorità della regione per i prossimi cinque anni. E mette sul piatto 120mila franchi per finanziare progetti nel 2027.",
-        "link": "https://www.tio.ch/ticino/attualita/1965353/il-luganese-del-futuro-passa-da-cinque-sfide",
-        "date": "Thu, 26 Nov 2026 20:23:13 +0100",
+        "title": "Dopo la scuola media cresce la voglia di apprendistato",
+        "description": "Il Ticino vede un nuovo record di apprendisti, nonostante il calo demografico tra gli allievi in uscita.",
+        "link": "https://www.tio.ch/ticino/attualita/1965479/formazione-scuola-apprendistato-allievi-aziende-scelte-contratti-posti-stato-professioni",
+        "date": "Fri, 27 Nov 2026 12:04:04 +0100",
         "category": "CANTONE",
-        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc3/1ozoo.jpg?v=1"
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc3/1ozul.jpg?v=1"
+      },
+      {
+        "title": "Educazione sessuale a scuola, le lacune che preoccupano",
+        "description": "Un'interrogazione al Consiglio di Stato sollecita il rafforzamento delle risorse didattiche e del dialogo tra scuola e famiglie su temi affettivi e sessuali.",
+        "link": "https://www.tio.ch/ticino/politica/1965477/formazione-scuola-docenti-educazione-sessuale",
+        "date": "Fri, 27 Nov 2026 11:49:27 +0100",
+        "category": "CANTONE",
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc3/1ozue.jpg?v=1"
+      },
+      {
+        "title": "Vino, carne e olio di contrabbando: tre fermi in pochi giorni",
+        "description": "Le autorità svizzere hanno recuperato tributi elusi e inflitto multe dopo aver intercettato tre casi di contrabbando tra Sopraceneri e Sottoceneri.",
+        "link": "https://www.tio.ch/ticino/cronaca/1965475/litri-carne-vino-olio-contrabbando",
+        "date": "Fri, 27 Nov 2026 11:18:14 +0100",
+        "category": "CANTONE",
+        "image": "https://media.tio.ch/files/domains/tio.ch/images/4cc3/1ozu9.jpg?v=1"
       }
     ],
-    "updatedAt": "2026-11-27T02:49:30.386701+00:00",
+    "updatedAt": "2026-11-27T11:29:02.076834+00:00",
     "scope": "ticino",
     "provider": "tio"
   },
@@ -1252,13 +1252,13 @@
         "coord_y": "1152444",
         "location_id": "100300",
         "location_type": "city",
-        "timestamp": 1795747208,
+        "timestamp": 1795777810,
         "forecasts": [
           {
             "date": "27 novembre 2026",
             "date_iso": "2026-11-27",
             "weather_description": "symbol_id_3",
-            "temp_high": 5,
+            "temp_high": 6,
             "weekday": "Heute",
             "temp_low": 2,
             "weather_symbol_id": 3
@@ -1267,7 +1267,7 @@
             "date": "28 novembre 2026",
             "date_iso": "2026-11-28",
             "weather_description": "symbol_id_3",
-            "temp_high": 3,
+            "temp_high": 4,
             "weekday": "sabato",
             "temp_low": -1,
             "weather_symbol_id": 3
@@ -1284,17 +1284,17 @@
           {
             "date": "30 novembre 2026",
             "date_iso": "2026-11-30",
-            "weather_description": "symbol_id_2",
+            "weather_description": "symbol_id_3",
             "temp_high": 7,
             "weekday": "lunedì",
             "temp_low": 3,
-            "weather_symbol_id": 2
+            "weather_symbol_id": 3
           },
           {
             "date": "1 dicembre 2026",
             "date_iso": "2026-12-01",
             "weather_description": "symbol_id_3",
-            "temp_high": 6,
+            "temp_high": 5,
             "weekday": "martedì",
             "temp_low": 3,
             "weather_symbol_id": 3
@@ -1311,20 +1311,20 @@
           {
             "date": "3 dicembre 2026",
             "date_iso": "2026-12-03",
-            "weather_description": "symbol_id_3",
-            "temp_high": 6,
+            "weather_description": "symbol_id_2",
+            "temp_high": 7,
             "weekday": "giovedì",
             "temp_low": 3,
-            "weather_symbol_id": 3
+            "weather_symbol_id": 2
           },
           {
             "date": "4 dicembre 2026",
             "date_iso": "2026-12-04",
-            "weather_description": "symbol_id_3",
+            "weather_description": "symbol_id_2",
             "temp_high": 6,
             "weekday": "venerdì",
             "temp_low": 2,
-            "weather_symbol_id": 3
+            "weather_symbol_id": 2
           }
         ]
       },
@@ -1341,13 +1341,13 @@
         "coord_y": "1118423",
         "location_id": "120100",
         "location_type": "city",
-        "timestamp": 1795747208,
+        "timestamp": 1795777810,
         "forecasts": [
           {
             "date": "27 novembre 2026",
             "date_iso": "2026-11-27",
             "weather_description": "symbol_id_3",
-            "temp_high": 6,
+            "temp_high": 7,
             "weekday": "Heute",
             "temp_low": 3,
             "weather_symbol_id": 3
@@ -1358,7 +1358,7 @@
             "weather_description": "symbol_id_3",
             "temp_high": 4,
             "weekday": "sabato",
-            "temp_low": -1,
+            "temp_low": 0,
             "weather_symbol_id": 3
           },
           {
@@ -1374,7 +1374,7 @@
             "date": "30 novembre 2026",
             "date_iso": "2026-11-30",
             "weather_description": "symbol_id_3",
-            "temp_high": 6,
+            "temp_high": 7,
             "weekday": "lunedì",
             "temp_low": 3,
             "weather_symbol_id": 3
@@ -1385,14 +1385,14 @@
             "weather_description": "symbol_id_3",
             "temp_high": 6,
             "weekday": "martedì",
-            "temp_low": 1,
+            "temp_low": 2,
             "weather_symbol_id": 3
           },
           {
             "date": "2 dicembre 2026",
             "date_iso": "2026-12-02",
             "weather_description": "symbol_id_2",
-            "temp_high": 7,
+            "temp_high": 6,
             "weekday": "mercoledì",
             "temp_low": 0,
             "weather_symbol_id": 2
@@ -1400,20 +1400,20 @@
           {
             "date": "3 dicembre 2026",
             "date_iso": "2026-12-03",
-            "weather_description": "symbol_id_3",
+            "weather_description": "symbol_id_2",
             "temp_high": 7,
             "weekday": "giovedì",
             "temp_low": 2,
-            "weather_symbol_id": 3
+            "weather_symbol_id": 2
           },
           {
             "date": "4 dicembre 2026",
             "date_iso": "2026-12-04",
-            "weather_description": "symbol_id_3",
+            "weather_description": "symbol_id_2",
             "temp_high": 6,
             "weekday": "venerdì",
             "temp_low": 2,
-            "weather_symbol_id": 3
+            "weather_symbol_id": 2
           }
         ]
       },
@@ -1430,33 +1430,33 @@
         "coord_y": "1119910",
         "location_id": "195000",
         "location_type": "city",
-        "timestamp": 1795747208,
+        "timestamp": 1795777810,
         "forecasts": [
           {
             "date": "27 novembre 2026",
             "date_iso": "2026-11-27",
-            "weather_description": "symbol_id_2",
-            "temp_high": 6,
+            "weather_description": "symbol_id_3",
+            "temp_high": 7,
             "weekday": "Heute",
             "temp_low": -2,
-            "weather_symbol_id": 2
+            "weather_symbol_id": 3
           },
           {
             "date": "28 novembre 2026",
             "date_iso": "2026-11-28",
             "weather_description": "symbol_id_1",
-            "temp_high": 4,
+            "temp_high": 5,
             "weekday": "sabato",
-            "temp_low": -5,
+            "temp_low": -3,
             "weather_symbol_id": 1
           },
           {
             "date": "29 novembre 2026",
             "date_iso": "2026-11-29",
             "weather_description": "symbol_id_3",
-            "temp_high": 6,
+            "temp_high": 5,
             "weekday": "domenica",
-            "temp_low": -3,
+            "temp_low": -4,
             "weather_symbol_id": 3
           },
           {
@@ -1519,34 +1519,34 @@
         "coord_y": "1202399",
         "location_id": "300400",
         "location_type": "city",
-        "timestamp": 1795747208,
+        "timestamp": 1795777810,
         "forecasts": [
           {
             "date": "27 novembre 2026",
             "date_iso": "2026-11-27",
-            "weather_description": "symbol_id_35",
-            "temp_high": 2,
+            "weather_description": "symbol_id_3",
+            "temp_high": 3,
             "weekday": "Heute",
             "temp_low": -1,
-            "weather_symbol_id": 35
+            "weather_symbol_id": 3
           },
           {
             "date": "28 novembre 2026",
             "date_iso": "2026-11-28",
             "weather_description": "symbol_id_3",
-            "temp_high": 0,
+            "temp_high": 1,
             "weekday": "sabato",
-            "temp_low": -3,
+            "temp_low": -2,
             "weather_symbol_id": 3
           },
           {
             "date": "29 novembre 2026",
             "date_iso": "2026-11-29",
-            "weather_description": "symbol_id_35",
-            "temp_high": 1,
+            "weather_description": "symbol_id_3",
+            "temp_high": 2,
             "weekday": "domenica",
             "temp_low": -4,
-            "weather_symbol_id": 35
+            "weather_symbol_id": 3
           },
           {
             "date": "30 novembre 2026",
@@ -1554,17 +1554,17 @@
             "weather_description": "symbol_id_3",
             "temp_high": 4,
             "weekday": "lunedì",
-            "temp_low": 0,
+            "temp_low": 1,
             "weather_symbol_id": 3
           },
           {
             "date": "1 dicembre 2026",
             "date_iso": "2026-12-01",
-            "weather_description": "symbol_id_3",
-            "temp_high": 4,
+            "weather_description": "symbol_id_35",
+            "temp_high": 3,
             "weekday": "martedì",
-            "temp_low": -1,
-            "weather_symbol_id": 3
+            "temp_low": 0,
+            "weather_symbol_id": 35
           },
           {
             "date": "2 dicembre 2026",
@@ -1579,7 +1579,7 @@
             "date": "3 dicembre 2026",
             "date_iso": "2026-12-03",
             "weather_description": "symbol_id_3",
-            "temp_high": 5,
+            "temp_high": 4,
             "weekday": "giovedì",
             "temp_low": 0,
             "weather_symbol_id": 3
@@ -1608,13 +1608,13 @@
         "coord_y": "1267348",
         "location_id": "400100",
         "location_type": "city",
-        "timestamp": 1795747208,
+        "timestamp": 1795777810,
         "forecasts": [
           {
             "date": "27 novembre 2026",
             "date_iso": "2026-11-27",
             "weather_description": "symbol_id_35",
-            "temp_high": 2,
+            "temp_high": 3,
             "weekday": "Heute",
             "temp_low": 0,
             "weather_symbol_id": 35
@@ -1623,7 +1623,7 @@
             "date": "28 novembre 2026",
             "date_iso": "2026-11-28",
             "weather_description": "symbol_id_2",
-            "temp_high": 2,
+            "temp_high": 3,
             "weekday": "sabato",
             "temp_low": -2,
             "weather_symbol_id": 2
@@ -1632,7 +1632,7 @@
             "date": "29 novembre 2026",
             "date_iso": "2026-11-29",
             "weather_description": "symbol_id_3",
-            "temp_high": 4,
+            "temp_high": 5,
             "weekday": "domenica",
             "temp_low": -2,
             "weather_symbol_id": 3
@@ -1640,35 +1640,35 @@
           {
             "date": "30 novembre 2026",
             "date_iso": "2026-11-30",
-            "weather_description": "symbol_id_35",
-            "temp_high": 4,
+            "weather_description": "symbol_id_3",
+            "temp_high": 5,
             "weekday": "lunedì",
-            "temp_low": 2,
-            "weather_symbol_id": 35
+            "temp_low": 3,
+            "weather_symbol_id": 3
           },
           {
             "date": "1 dicembre 2026",
             "date_iso": "2026-12-01",
-            "weather_description": "symbol_id_2",
+            "weather_description": "symbol_id_3",
             "temp_high": 5,
             "weekday": "martedì",
-            "temp_low": 1,
-            "weather_symbol_id": 2
+            "temp_low": 2,
+            "weather_symbol_id": 3
           },
           {
             "date": "2 dicembre 2026",
             "date_iso": "2026-12-02",
             "weather_description": "symbol_id_2",
-            "temp_high": 6,
+            "temp_high": 7,
             "weekday": "mercoledì",
-            "temp_low": 0,
+            "temp_low": 1,
             "weather_symbol_id": 2
           },
           {
             "date": "3 dicembre 2026",
             "date_iso": "2026-12-03",
             "weather_description": "symbol_id_3",
-            "temp_high": 7,
+            "temp_high": 6,
             "weekday": "giovedì",
             "temp_low": 1,
             "weather_symbol_id": 3
@@ -1697,7 +1697,7 @@
         "coord_y": "1211120",
         "location_id": "600300",
         "location_type": "city",
-        "timestamp": 1795747208,
+        "timestamp": 1795777810,
         "forecasts": [
           {
             "date": "27 novembre 2026",
@@ -1720,11 +1720,11 @@
           {
             "date": "29 novembre 2026",
             "date_iso": "2026-11-29",
-            "weather_description": "symbol_id_35",
+            "weather_description": "symbol_id_3",
             "temp_high": 2,
             "weekday": "domenica",
             "temp_low": -2,
-            "weather_symbol_id": 35
+            "weather_symbol_id": 3
           },
           {
             "date": "30 novembre 2026",
@@ -1738,38 +1738,38 @@
           {
             "date": "1 dicembre 2026",
             "date_iso": "2026-12-01",
-            "weather_description": "symbol_id_3",
+            "weather_description": "symbol_id_35",
             "temp_high": 4,
             "weekday": "martedì",
             "temp_low": 1,
-            "weather_symbol_id": 3
+            "weather_symbol_id": 35
           },
           {
             "date": "2 dicembre 2026",
             "date_iso": "2026-12-02",
-            "weather_description": "symbol_id_3",
+            "weather_description": "symbol_id_2",
             "temp_high": 4,
             "weekday": "mercoledì",
             "temp_low": 0,
-            "weather_symbol_id": 3
+            "weather_symbol_id": 2
           },
           {
             "date": "3 dicembre 2026",
             "date_iso": "2026-12-03",
-            "weather_description": "symbol_id_4",
+            "weather_description": "symbol_id_3",
             "temp_high": 4,
             "weekday": "giovedì",
             "temp_low": 0,
-            "weather_symbol_id": 4
+            "weather_symbol_id": 3
           },
           {
             "date": "4 dicembre 2026",
             "date_iso": "2026-12-04",
-            "weather_description": "symbol_id_35",
+            "weather_description": "symbol_id_3",
             "temp_high": 4,
             "weekday": "venerdì",
             "temp_low": 1,
-            "weather_symbol_id": 35
+            "weather_symbol_id": 3
           }
         ]
       },
@@ -1786,16 +1786,16 @@
         "coord_y": "1096327",
         "location_id": "690000",
         "location_type": "city",
-        "timestamp": 1795747208,
+        "timestamp": 1795777810,
         "forecasts": [
           {
             "date": "27 novembre 2026",
             "date_iso": "2026-11-27",
-            "weather_description": "symbol_id_3",
+            "weather_description": "symbol_id_2",
             "temp_high": 9,
             "weekday": "Heute",
-            "temp_low": 4,
-            "weather_symbol_id": 3
+            "temp_low": 2,
+            "weather_symbol_id": 2
           },
           {
             "date": "28 novembre 2026",
@@ -1819,7 +1819,7 @@
             "date": "30 novembre 2026",
             "date_iso": "2026-11-30",
             "weather_description": "symbol_id_1",
-            "temp_high": 8,
+            "temp_high": 7,
             "weekday": "lunedì",
             "temp_low": 3,
             "weather_symbol_id": 1
@@ -1830,7 +1830,7 @@
             "weather_description": "symbol_id_2",
             "temp_high": 8,
             "weekday": "martedì",
-            "temp_low": 3,
+            "temp_low": 2,
             "weather_symbol_id": 2
           },
           {
@@ -1875,16 +1875,16 @@
         "coord_y": "1191534",
         "location_id": "700000",
         "location_type": "city",
-        "timestamp": 1795747208,
+        "timestamp": 1795777810,
         "forecasts": [
           {
             "date": "27 novembre 2026",
             "date_iso": "2026-11-27",
-            "weather_description": "symbol_id_2",
-            "temp_high": 2,
+            "weather_description": "symbol_id_3",
+            "temp_high": 0,
             "weekday": "Heute",
-            "temp_low": -3,
-            "weather_symbol_id": 2
+            "temp_low": -5,
+            "weather_symbol_id": 3
           },
           {
             "date": "28 novembre 2026",
@@ -1901,17 +1901,17 @@
             "weather_description": "symbol_id_3",
             "temp_high": 6,
             "weekday": "domenica",
-            "temp_low": -1,
+            "temp_low": 0,
             "weather_symbol_id": 3
           },
           {
             "date": "30 novembre 2026",
             "date_iso": "2026-11-30",
-            "weather_description": "symbol_id_2",
+            "weather_description": "symbol_id_3",
             "temp_high": 5,
             "weekday": "lunedì",
-            "temp_low": -1,
-            "weather_symbol_id": 2
+            "temp_low": 0,
+            "weather_symbol_id": 3
           },
           {
             "date": "1 dicembre 2026",
@@ -1919,14 +1919,14 @@
             "weather_description": "symbol_id_1",
             "temp_high": 6,
             "weekday": "martedì",
-            "temp_low": 0,
+            "temp_low": -2,
             "weather_symbol_id": 1
           },
           {
             "date": "2 dicembre 2026",
             "date_iso": "2026-12-02",
             "weather_description": "symbol_id_1",
-            "temp_high": 7,
+            "temp_high": 6,
             "weekday": "mercoledì",
             "temp_low": -2,
             "weather_symbol_id": 1
@@ -1946,7 +1946,7 @@
             "weather_description": "symbol_id_3",
             "temp_high": 5,
             "weekday": "venerdì",
-            "temp_low": -2,
+            "temp_low": -1,
             "weather_symbol_id": 3
           }
         ]
@@ -1964,7 +1964,7 @@
         "coord_y": "1247414",
         "location_id": "800100",
         "location_type": "city",
-        "timestamp": 1795747208,
+        "timestamp": 1795777810,
         "forecasts": [
           {
             "date": "27 novembre 2026",
@@ -1988,7 +1988,7 @@
             "date": "29 novembre 2026",
             "date_iso": "2026-11-29",
             "weather_description": "symbol_id_35",
-            "temp_high": 2,
+            "temp_high": 3,
             "weekday": "domenica",
             "temp_low": -2,
             "weather_symbol_id": 35
@@ -1997,7 +1997,7 @@
             "date": "30 novembre 2026",
             "date_iso": "2026-11-30",
             "weather_description": "symbol_id_3",
-            "temp_high": 4,
+            "temp_high": 5,
             "weekday": "lunedì",
             "temp_low": 2,
             "weather_symbol_id": 3
@@ -2005,17 +2005,17 @@
           {
             "date": "1 dicembre 2026",
             "date_iso": "2026-12-01",
-            "weather_description": "symbol_id_3",
-            "temp_high": 3,
+            "weather_description": "symbol_id_35",
+            "temp_high": 4,
             "weekday": "martedì",
-            "temp_low": 0,
-            "weather_symbol_id": 3
+            "temp_low": 2,
+            "weather_symbol_id": 35
           },
           {
             "date": "2 dicembre 2026",
             "date_iso": "2026-12-02",
             "weather_description": "symbol_id_3",
-            "temp_high": 3,
+            "temp_high": 4,
             "weekday": "mercoledì",
             "temp_low": -1,
             "weather_symbol_id": 3
@@ -2023,11 +2023,11 @@
           {
             "date": "3 dicembre 2026",
             "date_iso": "2026-12-03",
-            "weather_description": "symbol_id_35",
+            "weather_description": "symbol_id_3",
             "temp_high": 4,
             "weekday": "giovedì",
-            "temp_low": 0,
-            "weather_symbol_id": 35
+            "temp_low": -1,
+            "weather_symbol_id": 3
           },
           {
             "date": "4 dicembre 2026",
@@ -2035,7 +2035,7 @@
             "weather_description": "symbol_id_3",
             "temp_high": 4,
             "weekday": "venerdì",
-            "temp_low": -1,
+            "temp_low": 0,
             "weather_symbol_id": 3
           }
         ]
@@ -2053,16 +2053,16 @@
         "coord_y": "1254370",
         "location_id": "900000",
         "location_type": "city",
-        "timestamp": 1795747208,
+        "timestamp": 1795777810,
         "forecasts": [
           {
             "date": "27 novembre 2026",
             "date_iso": "2026-11-27",
-            "weather_description": "symbol_id_5",
+            "weather_description": "symbol_id_35",
             "temp_high": 0,
             "weekday": "Heute",
-            "temp_low": -1,
-            "weather_symbol_id": 5
+            "temp_low": -2,
+            "weather_symbol_id": 35
           },
           {
             "date": "28 novembre 2026",
@@ -2070,7 +2070,7 @@
             "weather_description": "symbol_id_3",
             "temp_high": -1,
             "weekday": "sabato",
-            "temp_low": -4,
+            "temp_low": -3,
             "weather_symbol_id": 3
           },
           {
@@ -2085,35 +2085,35 @@
           {
             "date": "30 novembre 2026",
             "date_iso": "2026-11-30",
-            "weather_description": "symbol_id_3",
+            "weather_description": "symbol_id_35",
             "temp_high": 3,
             "weekday": "lunedì",
-            "temp_low": -1,
-            "weather_symbol_id": 3
+            "temp_low": 0,
+            "weather_symbol_id": 35
           },
           {
             "date": "1 dicembre 2026",
             "date_iso": "2026-12-01",
-            "weather_description": "symbol_id_3",
-            "temp_high": 0,
+            "weather_description": "symbol_id_35",
+            "temp_high": 1,
             "weekday": "martedì",
             "temp_low": -2,
-            "weather_symbol_id": 3
+            "weather_symbol_id": 35
           },
           {
             "date": "2 dicembre 2026",
             "date_iso": "2026-12-02",
             "weather_description": "symbol_id_2",
-            "temp_high": 2,
+            "temp_high": 3,
             "weekday": "mercoledì",
-            "temp_low": -2,
+            "temp_low": -3,
             "weather_symbol_id": 2
           },
           {
             "date": "3 dicembre 2026",
             "date_iso": "2026-12-03",
             "weather_description": "symbol_id_3",
-            "temp_high": 3,
+            "temp_high": 4,
             "weekday": "giovedì",
             "temp_low": 0,
             "weather_symbol_id": 3
@@ -2121,21 +2121,30 @@
           {
             "date": "4 dicembre 2026",
             "date_iso": "2026-12-04",
-            "weather_description": "symbol_id_35",
-            "temp_high": 1,
+            "weather_description": "symbol_id_3",
+            "temp_high": 2,
             "weekday": "venerdì",
-            "temp_low": -2,
-            "weather_symbol_id": 35
+            "temp_low": -1,
+            "weather_symbol_id": 3
           }
         ]
       }
     ],
-    "updatedAt": "2026-11-27T02:49:30.386701+00:00",
-    "version": "20261127_0240"
+    "updatedAt": "2026-11-27T11:29:02.076834+00:00",
+    "version": "20261127_1110"
   },
   "swissWeatherError": false,
   "traffic": {
     "items": [
+      {
+        "id": "Viasuisser_FAVM/670899_TIC-Viasuisse/1",
+        "text": "A2 - Chiasso direzione S. Gottardo tra Quinto e Area di dosaggio Airolo traffico bloccato per 1 km, traffico congestionato, ritardi fino a 10 minuti",
+        "location": "A2 - Chiasso direzione S. Gottardo",
+        "road": "A2",
+        "category": 12,
+        "changedAt": "2026-11-27T11:47:56+01:00",
+        "priority": 0
+      },
       {
         "id": "Viasuisser_Viasuisse/2520169_TIC-Viasuisse/1",
         "text": "416 - Disentis/Mustér - Biasca tra Disentis/Mustér e Camperio in entrambe le direzioni neve sulla strada",
@@ -2143,15 +2152,6 @@
         "road": "416",
         "category": 21,
         "changedAt": "2026-11-26T12:49:46+01:00",
-        "priority": 4
-      },
-      {
-        "id": "Viasuisser_FAVM/670520_TIC-Viasuisse/1",
-        "text": "A13 - Coira - Bellinzona tra Thusis-Süd e  Bellinzona Nord in entrambe le direzioni chiusa per mezzi pesanti, nevicata - (eccezione veicoli con quattro ruote motrici)",
-        "location": "A13 - Coira - Bellinzona",
-        "road": "A13",
-        "category": 21,
-        "changedAt": "2026-11-26T07:16:31+01:00",
         "priority": 4
       },
       {
@@ -2200,15 +2200,6 @@
         "priority": 5
       },
       {
-        "id": "Viasuisser_Viasuisse/2521978_TIC-Viasuisse/1",
-        "text": "Lugano, Via Cantonale - a Lugano problemi di traffico, lavori stradali, corsie strette, fino a oggi 06:00",
-        "location": "Lugano, Via Cantonale",
-        "road": "TI",
-        "category": 31,
-        "changedAt": "2026-11-20T19:02:40+01:00",
-        "priority": 5
-      },
-      {
         "id": "Viasuisser_Viasuisse/2521887_TIC-Viasuisse/1",
         "text": "Lugano, Via Bertaro Lambertenghi - a Lugano problemi di traffico, lavori stradali, corsie strette, fino a oggi 17:00",
         "location": "Lugano, Via Bertaro Lambertenghi",
@@ -2236,17 +2227,26 @@
         "priority": 5
       },
       {
-        "id": "Viasuisser_Viasuisse/2521790_TIC-Viasuisse/1",
-        "text": "Lugano, Viale Stefano Franscini - a Lugano problemi di traffico, operazioni di pavimentazione, seguire deviazione locale, fino a oggi, tra 21:00 e 06:00",
-        "location": "Lugano, Viale Stefano Franscini",
-        "road": "TI",
+        "id": "Viasuisser_FAVM/667882_TIC-Viasuisse/1",
+        "text": "A2 - Chiasso direzione S. Gottardo tra Faido e Quinto problemi di traffico per 0.8 km, lavori stradali durante il giorno, corsie strette, carreggiata ridotta a due corsie, limite temporaneo di larghezza di 8.60 m, fino a 04.12.2026, lun - ven tra 07:30 e 17:30 - ID120033",
+        "location": "A2 - Chiasso direzione S. Gottardo",
+        "road": "A2",
         "category": 31,
-        "changedAt": "2026-11-20T13:22:30+01:00",
+        "changedAt": "2026-11-17T07:43:30+01:00",
+        "priority": 5
+      },
+      {
+        "id": "Viasuisser_FAVM/667662_TIC-Viasuisse/1",
+        "text": "A2 - Chiasso direzione S. Gottardo tra  Lugano Nord e Rivera problemi di traffico, lavori stradali durante il giorno per 1.5 km, corsia d'emergenza chiusa, limite temporaneo di larghezza di 7.50 m, fino a 12.02.2027, tra 07:30 e 17:30 - ID119991",
+        "location": "A2 - Chiasso direzione S. Gottardo",
+        "road": "A2",
+        "category": 31,
+        "changedAt": "2026-11-16T13:14:26+01:00",
         "priority": 5
       }
     ],
-    "total": 44,
-    "updatedAt": "2026-11-27T02:49:30.386701+00:00",
+    "total": 40,
+    "updatedAt": "2026-11-27T11:29:02.076834+00:00",
     "source": "Viasuisse"
   }
 }
